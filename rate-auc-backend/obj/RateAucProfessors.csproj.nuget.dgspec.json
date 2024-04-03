@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "E:\\Rate-AUC-Professors\\rate-auc-backend\\RateAucProfessors.csproj": {}
+    "D:\\Rate-AUC-Professors\\rate-auc-backend\\RateAucProfessors.csproj": {}
   },
   "projects": {
-    "E:\\Rate-AUC-Professors\\rate-auc-backend\\RateAucProfessors.csproj": {
+    "D:\\Rate-AUC-Professors\\rate-auc-backend\\RateAucProfessors.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\Rate-AUC-Professors\\rate-auc-backend\\RateAucProfessors.csproj",
+        "projectUniqueName": "D:\\Rate-AUC-Professors\\rate-auc-backend\\RateAucProfessors.csproj",
         "projectName": "RateAucProfessors",
-        "projectPath": "E:\\Rate-AUC-Professors\\rate-auc-backend\\RateAucProfessors.csproj",
+        "projectPath": "D:\\Rate-AUC-Professors\\rate-auc-backend\\RateAucProfessors.csproj",
         "packagesPath": "C:\\Users\\AUC\\.nuget\\packages\\",
-        "outputPath": "E:\\Rate-AUC-Professors\\rate-auc-backend\\obj\\",
+        "outputPath": "D:\\Rate-AUC-Professors\\rate-auc-backend\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\AUC\\AppData\\Roaming\\NuGet\\NuGet.Config",
