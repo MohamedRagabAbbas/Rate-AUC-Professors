@@ -1,4 +1,4 @@
-import * as React from "react";
+import React, { useState } from "react";
 import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
 import Toolbar from "@mui/material/Toolbar";
@@ -12,14 +12,16 @@ import Button from "@mui/material/Button";
 import Tooltip from "@mui/material/Tooltip";
 import MenuItem from "@mui/material/MenuItem";
 import AdbIcon from "@mui/icons-material/Adb";
-import "../index.css";
+import { useHistory } from "react-router-dom"; // Import useHistory hook for navigation
 
-const pages = ["Feed", "Professors"];
+
+const pages = ["Feed", "Professors", "Departments"]; // Add "Departments" to the pages array
 const settings = ["Profile", "Logout"];
 
 function ResponsiveAppBar() {
-  const [anchorElNav, setAnchorElNav] = React.useState(null);
-  const [anchorElUser, setAnchorElUser] = React.useState(null);
+  const [anchorElNav, setAnchorElNav] = useState(null);
+  const [anchorElUser, setAnchorElUser] = useState(null);
+  const history = useHistory(); // Initialize useHistory hook
 
   const handleOpenNavMenu = (event) => {
     setAnchorElNav(event.currentTarget);
@@ -36,17 +38,15 @@ function ResponsiveAppBar() {
     setAnchorElUser(null);
   };
 
+  const handleNavigateToDepartments = () => {
+    this.props.history.push("./departments.js"); // Navigate to the department page
+    handleCloseNavMenu(); // Close the menu after navigation
+  };
+
   return (
     <AppBar position="static" style={{ backgroundColor: "#121212" }}>
-      <Container
-        maxWidth="xl"
-        // sx={{
-        //   margin: "0 30 0 30",
-        //   // margin: "0px 140px",
-        // }}
-      >
+      <Container maxWidth="xl">
         <Toolbar disableGutters>
-          {/* <AdbIcon sx={{ display: { xs: "none", md: "flex" }, mr: 1 }} /> */}
           <Typography
             variant="h6"
             noWrap
@@ -60,7 +60,7 @@ function ResponsiveAppBar() {
               letterSpacing: ".3rem",
               color: "inherit",
               textDecoration: "none",
-              fontSize: "1.5  rem",
+              fontSize: "1.5rem",
               color: "#71BC78",
             }}
           >
@@ -133,9 +133,7 @@ function ResponsiveAppBar() {
             {pages.map((page) => (
               <Button
                 key={page}
-                onClick={handleCloseNavMenu}
-                // on hover make color #ACE1AF
-
+                onClick={page === "Departments" ? handleNavigateToDepartments : handleCloseNavMenu}
                 sx={{
                   my: 2,
                   color: "white",
@@ -143,7 +141,6 @@ function ResponsiveAppBar() {
                   fontFamily: "Mulish",
                   textTransform: "none",
                   fontSize: "1.2rem",
-                  // letterSpacing: ".1rem",
                   margin: "0 2rem",
                   "&:hover": {
                     color: "#DDA0DD",
