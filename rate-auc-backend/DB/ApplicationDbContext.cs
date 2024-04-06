@@ -34,42 +34,42 @@ namespace RateAucProfessors.DB
             modelBuilder.Entity<Student>()
                 .HasMany(s => s.Ratings)
                 .WithOne(r => r.Student)
-                .HasForeignKey(r => r.StudentId);
+                .HasForeignKey(r => r.UserId);
 
             modelBuilder.Entity<Student>()
                 .HasMany(s => s.Feeds)
                 .WithOne(f => f.Student)
-                .HasForeignKey(f => f.StudentId);
+                .HasForeignKey(f => f.UserId);
 
             modelBuilder.Entity<Student>()
                 .HasMany(s => s.Comments)
                 .WithOne(c => c.Student)
-                .HasForeignKey(c => c.StudentId);
+                .HasForeignKey(c => c.UserId);
 
             modelBuilder.Entity<Student>()
                 .HasMany(s => s.Reactions)
                 .WithOne(r => r.Student)
-                .HasForeignKey(r => r.StudentId);
+                .HasForeignKey(r => r.UserId);
 
             modelBuilder.Entity<Student>()
                 .HasMany(s => s.Syllabuses)
                 .WithOne(s => s.Student)
-                .HasForeignKey(s => s.StudentId);
+                .HasForeignKey(s => s.UserId);
 
             modelBuilder.Entity<Student>()
                 .HasMany(s => s.Notes)
                 .WithOne(n => n.Student)
-                .HasForeignKey(n => n.StudentId);
+                .HasForeignKey(n => n.UserId);
 
             modelBuilder.Entity<Student>()
                 .HasMany(s => s.Lectures)
                 .WithOne(l => l.Student)
-                .HasForeignKey(l => l.StudentId);
+                .HasForeignKey(l => l.UserId);
 
             modelBuilder.Entity<Student>()
                 .HasMany(s => s.Assignments)
                 .WithOne(a => a.Student)
-                .HasForeignKey(a => a.StudentId);
+                .HasForeignKey(a => a.UserId);
 
 
 
@@ -117,10 +117,10 @@ namespace RateAucProfessors.DB
                 .WithMany(d => d.Courses)
                 .HasForeignKey(c => c.DepartmentId);
 
-            modelBuilder.Entity<Course>()
-                .HasMany(c => c.Professors)
-                .WithMany(p => p.Courses)
-                .UsingEntity(j => j.ToTable("CourseProfessors"));
+            //modelBuilder.Entity<Course>()
+            //    .HasMany(c => c.Professors)
+            //    .WithMany(p => p.Courses)
+            //    .UsingEntity(j => j.ToTable("CourseProfessors"));
 
             modelBuilder.Entity<Course>()
                 .HasMany(c => c.Syllabuses)

@@ -10,7 +10,7 @@ namespace RateAucProfessors.Models
         public string Content { get; set; } = string.Empty;
         public DateTime Timestamp { get; set; } = DateTime.Now;
 
-        public int StudentId { get; set; }
+        public string UserId { get; set; }
         public Student? Student { get; set; }
 
         public ICollection<Comment>? Comments { get; set; }

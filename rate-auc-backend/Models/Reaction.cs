@@ -14,7 +14,7 @@ namespace RateAucProfessors.Models
         public int FeedId { get; set; }
         public Feed? Feed { get; set; }
 
-        public int StudentId { get; set; }
+        public string UserId { get; set; }
         public Student? Student { get; set; }
     }
 }

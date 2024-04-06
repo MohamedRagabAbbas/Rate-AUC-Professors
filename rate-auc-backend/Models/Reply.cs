@@ -14,7 +14,7 @@ namespace RateAucProfessors.Models
         // Relationships
         public int CommentId { get; set; }
         public Comment? Comment { get; set; }
-        public int StudentId { get; set; }
+        public string UserId { get; set; }
         public Student? Student { get; set; }
     }
 }

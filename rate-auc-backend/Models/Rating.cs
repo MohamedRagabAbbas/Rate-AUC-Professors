@@ -13,7 +13,7 @@ namespace RateAucProfessors.Models
         public string Comments { get; set; } = string.Empty;
 
         //Relationships
-        public int StudentId { get; set; }
+        public string UserId { get; set; }
         public Student? Student { get; set; }
 
         public int ProfessorId { get; set; }

@@ -10,7 +10,7 @@ namespace RateAucProfessors.Models
         public DateTime UploadDate { get; set; } = DateTime.Now;
 
         //Relationships
-        public int StudentId { get; set; }
+        public string UserId { get; set; }
         public Student? Student { get; set; } 
         public int ProfessorId { get; set; }
         public Professor? Professor { get; set; }
