@@ -11,10 +11,6 @@ namespace RateAucProfessors.Models
         public string GraduationYear { get; set; } = string.Empty;
 
         // Relationship
-
-        public int DepartmentId { get; set; }
-        public Department? Department { get; set; }
-
         public ICollection<Rating>? Ratings { get; set; }
         public ICollection<Feed>? Feeds { get; set; }
         public ICollection<Comment>? Comments { get; set; }
