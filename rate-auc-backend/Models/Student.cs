@@ -16,6 +16,12 @@ namespace RateAucProfessors.Models
         public ICollection<Comment>? Comments { get; set; }
         public ICollection<Reply>? Replys { get; set; }
         public ICollection<Reaction>? Reactions { get; set; }
+        public ICollection<Syllabus>? Syllabuses { get; set; }
+        public ICollection<Note>? Notes { get; set; }
+        public ICollection<Lecture>? Lectures { get; set; }
+        public ICollection<Assignment>? Assignments { get; set; }
+
+
 
     }
 }

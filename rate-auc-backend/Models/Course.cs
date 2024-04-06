@@ -8,12 +8,10 @@ namespace RateAucProfessors.Models
         [Required]
         public string Name { get; set; } = string.Empty;
 
+        // Relationships
         public int DepartmentId { get; set; }
         public Department? Department { get; set; }
-
-        public int ProfessorId { get; set; }
-        public Professor? Professor { get; set; }
-
+        public ICollection<Professor>? Professors { get; set; }
         public ICollection<Syllabus>? Syllabuses { get; set; }
         public ICollection<Lecture>? Lectures { get; set; }
         public ICollection<Note>? Notes { get; set; }

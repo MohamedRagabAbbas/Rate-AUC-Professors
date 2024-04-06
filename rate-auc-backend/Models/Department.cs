@@ -10,5 +10,6 @@ namespace RateAucProfessors.Models
         public string Description { get; set; } = string.Empty;
 
         public ICollection<Professor>? Professors { get; set; }
+        public ICollection<Course>? Courses { get; set; }
     }
 }

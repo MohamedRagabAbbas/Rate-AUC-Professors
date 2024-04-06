@@ -17,5 +17,6 @@ namespace RateAucProfessors.Models
 
         public int StudentId { get; set; }
         public Student? Student { get; set; }
+        public ICollection<Reply>? Replies { get; set; }
     }
 }
