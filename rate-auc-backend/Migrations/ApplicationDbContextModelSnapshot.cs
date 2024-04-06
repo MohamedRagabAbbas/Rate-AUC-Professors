@@ -718,19 +718,19 @@ namespace RateAucProfessors.Migrations
                     b.HasOne("RateAucProfessors.Models.Course", "Course")
                         .WithMany("Assignments")
                         .HasForeignKey("CourseId")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.NoAction)
                         .IsRequired();
 
                     b.HasOne("RateAucProfessors.Models.Professor", "Professor")
                         .WithMany("Assignments")
                         .HasForeignKey("ProfessorId")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.NoAction)
                         .IsRequired();
 
                     b.HasOne("RateAucProfessors.Models.Student", "Student")
                         .WithMany("Assignments")
                         .HasForeignKey("UserId")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.NoAction)
                         .IsRequired();
 
                     b.Navigation("Course");
@@ -745,13 +745,13 @@ namespace RateAucProfessors.Migrations
                     b.HasOne("RateAucProfessors.Models.Feed", "Feed")
                         .WithMany("Comments")
                         .HasForeignKey("FeedId")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.NoAction)
                         .IsRequired();
 
                     b.HasOne("RateAucProfessors.Models.Student", "Student")
                         .WithMany("Comments")
                         .HasForeignKey("UserId")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.NoAction)
                         .IsRequired();
 
                     b.Navigation("Feed");
@@ -764,7 +764,7 @@ namespace RateAucProfessors.Migrations
                     b.HasOne("RateAucProfessors.Models.Department", "Department")
                         .WithMany("Courses")
                         .HasForeignKey("DepartmentId")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.NoAction)
                         .IsRequired();
 
                     b.Navigation("Department");
@@ -775,7 +775,7 @@ namespace RateAucProfessors.Migrations
                     b.HasOne("RateAucProfessors.Models.Student", "Student")
                         .WithMany("Feeds")
                         .HasForeignKey("UserId")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.NoAction)
                         .IsRequired();
 
                     b.Navigation("Student");
@@ -786,19 +786,19 @@ namespace RateAucProfessors.Migrations
                     b.HasOne("RateAucProfessors.Models.Course", "Course")
                         .WithMany("Lectures")
                         .HasForeignKey("CourseId")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.NoAction)
                         .IsRequired();
 
                     b.HasOne("RateAucProfessors.Models.Professor", "Professor")
                         .WithMany("Lectures")
                         .HasForeignKey("ProfessorId")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.NoAction)
                         .IsRequired();
 
                     b.HasOne("RateAucProfessors.Models.Student", "Student")
                         .WithMany("Lectures")
                         .HasForeignKey("UserId")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.NoAction)
                         .IsRequired();
 
                     b.Navigation("Course");
@@ -813,19 +813,19 @@ namespace RateAucProfessors.Migrations
                     b.HasOne("RateAucProfessors.Models.Course", "Course")
                         .WithMany("Notes")
                         .HasForeignKey("CourseId")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.NoAction)
                         .IsRequired();
 
                     b.HasOne("RateAucProfessors.Models.Professor", "Professor")
                         .WithMany("Notes")
                         .HasForeignKey("ProfessorId")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.NoAction)
                         .IsRequired();
 
                     b.HasOne("RateAucProfessors.Models.Student", "Student")
                         .WithMany("Notes")
                         .HasForeignKey("UserId")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.NoAction)
                         .IsRequired();
 
                     b.Navigation("Course");
@@ -840,7 +840,7 @@ namespace RateAucProfessors.Migrations
                     b.HasOne("RateAucProfessors.Models.Department", "Department")
                         .WithMany("Professors")
                         .HasForeignKey("DepartmentId")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.NoAction)
                         .IsRequired();
 
                     b.Navigation("Department");
@@ -851,19 +851,19 @@ namespace RateAucProfessors.Migrations
                     b.HasOne("RateAucProfessors.Models.Course", "Course")
                         .WithMany("Ratings")
                         .HasForeignKey("CourseId")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.NoAction)
                         .IsRequired();
 
                     b.HasOne("RateAucProfessors.Models.Professor", "Professor")
                         .WithMany("Ratings")
                         .HasForeignKey("ProfessorId")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.NoAction)
                         .IsRequired();
 
                     b.HasOne("RateAucProfessors.Models.Student", "Student")
                         .WithMany("Ratings")
                         .HasForeignKey("UserId")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.NoAction)
                         .IsRequired();
 
                     b.Navigation("Course");
@@ -878,13 +878,13 @@ namespace RateAucProfessors.Migrations
                     b.HasOne("RateAucProfessors.Models.Feed", "Feed")
                         .WithMany("Reactions")
                         .HasForeignKey("FeedId")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.NoAction)
                         .IsRequired();
 
                     b.HasOne("RateAucProfessors.Models.Student", "Student")
                         .WithMany("Reactions")
                         .HasForeignKey("UserId")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.NoAction)
                         .IsRequired();
 
                     b.Navigation("Feed");
@@ -897,7 +897,7 @@ namespace RateAucProfessors.Migrations
                     b.HasOne("RateAucProfessors.Models.Comment", "Comment")
                         .WithMany("Replies")
                         .HasForeignKey("CommentId")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.NoAction)
                         .IsRequired();
 
                     b.HasOne("RateAucProfessors.Models.Student", "Student")
@@ -914,19 +914,19 @@ namespace RateAucProfessors.Migrations
                     b.HasOne("RateAucProfessors.Models.Course", "Course")
                         .WithMany("Syllabuses")
                         .HasForeignKey("CourseId")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.NoAction)
                         .IsRequired();
 
                     b.HasOne("RateAucProfessors.Models.Professor", "Professor")
                         .WithMany("Syllabuses")
                         .HasForeignKey("ProfessorId")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.NoAction)
                         .IsRequired();
 
                     b.HasOne("RateAucProfessors.Models.Student", "Student")
                         .WithMany("Syllabuses")
                         .HasForeignKey("UserId")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.NoAction)
                         .IsRequired();
 
                     b.Navigation("Course");
