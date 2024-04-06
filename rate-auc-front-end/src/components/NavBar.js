@@ -37,7 +37,7 @@ function ResponsiveAppBar() {
   };
 
   return (
-    <AppBar position="static" style={{ backgroundColor: "#121212" }}>
+    <AppBar position="static" style={{ backgroundColor: "#191919" }}>
       <Container
         maxWidth="xl"
         // sx={{
@@ -61,7 +61,7 @@ function ResponsiveAppBar() {
               color: "inherit",
               textDecoration: "none",
               fontSize: "1.5  rem",
-              color: "#71BC78",
+              color: "#9c80c4",
             }}
           >
             RateAUC
@@ -146,7 +146,7 @@ function ResponsiveAppBar() {
                   // letterSpacing: ".1rem",
                   margin: "0 2rem",
                   "&:hover": {
-                    color: "#DDA0DD",
+                    color: "#31b0cd",
                   },
                 }}
               >
@@ -158,7 +158,11 @@ function ResponsiveAppBar() {
           <Box sx={{ flexGrow: 0 }}>
             <Tooltip title="Open settings">
               <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
-                <Avatar alt="Remy Sharp" src="/static/images/avatar/2.jpg" />
+                <Avatar
+                  sx={{ backgroundColor: "#cd7bb0" }}
+                  alt="Remy Sharp"
+                  src="/static/images/avatar/2.jpg"
+                />
               </IconButton>
             </Tooltip>
             <Menu

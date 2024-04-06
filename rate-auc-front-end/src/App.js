@@ -1,6 +1,7 @@
 import logo from "./logo.svg";
 import "./App.css";
 import NavBar from "./components/NavBar";
+import Feed from "./pages/feed";
 
 // const AppContainer = styled.div`
 //   max-width: 1200px;
@@ -9,9 +10,16 @@ import NavBar from "./components/NavBar";
 
 function App() {
   return (
-    <div>
+    <div /*style={{ backgroundColor: "#191919", height: "100vh " }}*/>
       <NavBar />
-      {/* Your app content goes here */}
+      <div
+        style={{
+          width: "800px",
+          margin: "auto",
+        }}
+      >
+        <Feed />
+      </div>
     </div>
   );
 }
