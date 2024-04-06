@@ -1,9 +1,9 @@
-﻿namespace RateAucProfessors.Models
+﻿using Microsoft.AspNetCore.Identity;
+
+namespace RateAucProfessors.Models
 {
-    public class Student
+    public class Student : IdentityUser
     {
-        public int Id { get; set; }
         public string Name { get; set; } = string.Empty;
-        public string Email { get; set; } = string.Empty;
     }
 }
