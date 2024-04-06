@@ -2,23 +2,18 @@
 
 namespace RateAucProfessors.Models
 {
-    public class Rating
+    public class Lecture
     {
         public int Id { get; set; }
-        public DateTime Timestamp { get; set; } = DateTime.Now;
-
         [Required]
-        [Range(1, 5)]
-        public int Value { get; set; }
-        public string Comments { get; set; } = string.Empty;
+        public string Content { get; set; } = string.Empty;
+        public DateTime UploadDate { get; set; } = DateTime.Now;
 
         //Relationships
         public string UserId { get; set; }
         public Student? Student { get; set; }
-
         public int ProfessorId { get; set; }
         public Professor? Professor { get; set; }
-
         public int CourseId { get; set; }
         public Course? Course { get; set; }
     }

@@ -2,7 +2,7 @@
 
 namespace RateAucProfessors.Models
 {
-    public class Feed
+    public class Reply
     {
         public int Id { get; set; }
 
@@ -10,10 +10,11 @@ namespace RateAucProfessors.Models
         public string Content { get; set; } = string.Empty;
         public DateTime Timestamp { get; set; } = DateTime.Now;
 
+
+        // Relationships
+        public int CommentId { get; set; }
+        public Comment? Comment { get; set; }
         public string UserId { get; set; }
         public Student? Student { get; set; }
-
-        public ICollection<Comment>? Comments { get; set; }
-        public ICollection<Reaction>? Reactions { get; set; }
     }
 }
