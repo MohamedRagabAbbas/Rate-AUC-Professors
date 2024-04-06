@@ -1,11 +1,19 @@
-﻿namespace RateAucProfessors.Models
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace RateAucProfessors.Models
 {
     public class Feed
     {
         public int Id { get; set; }
-        public string Title { get; set; } = string.Empty;
+
+        [Required]
         public string Content { get; set; } = string.Empty;
-        public DateTime DatePosted { get; set; } = DateTime.Now;
-        public DateTime DateUpdated { get; set; } = DateTime.Now;
+        public DateTime Timestamp { get; set; } = DateTime.Now;
+
+        public int StudentId { get; set; }
+        public Student? Student { get; set; }
+
+        public ICollection<Comment>? Comments { get; set; }
+        public ICollection<Reaction>? Reactions { get; set; }
     }
 }
