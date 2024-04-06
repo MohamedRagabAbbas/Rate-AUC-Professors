@@ -18,7 +18,7 @@ import { useHistory } from "react-router-dom"; // Import useHistory hook for nav
 const pages = ["Feed", "Professors", "Departments"]; // Add "Departments" to the pages array
 const settings = ["Profile", "Logout"];
 
-function ResponsiveAppBar() {
+function ResponsiveAppBar({ onPageChange }) {
   const [anchorElNav, setAnchorElNav] = useState(null);
   const [anchorElUser, setAnchorElUser] = useState(null);
   const history = useHistory(); // Initialize useHistory hook
@@ -39,8 +39,10 @@ function ResponsiveAppBar() {
   };
 
   const handleNavigateToDepartments = () => {
-    this.props.history.push("./departments.js"); // Navigate to the department page
+    const page = "Departments"; // Or any other page you want to navigate to
+    onPageChange(page);
     handleCloseNavMenu(); // Close the menu after navigation
+
   };
 
   return (
