@@ -24,9 +24,7 @@ jobs:
         node-version: '14'
 
     - name: Install dependencies
-      run: npm install
-      run: npm install react-scripts
-      run: npm install @mui/material
+      run: npm install react-scripts @mui/material
 
     - name: Run tests
       run: npm test
