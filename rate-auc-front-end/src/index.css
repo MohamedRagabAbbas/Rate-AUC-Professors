@@ -13,3 +13,13 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+@font-face {
+  font-family: "SF Pro Display Light";
+  src: url("assets/fonts/SF-Pro-Display-Light.otf") format("truetype");
+}
+
+@font-face {
+  font-family: "SF Pro Display Regular";
+  src: url("assets/fonts/SF-Pro-Display-Regular.otf") format("truetype");
+}
