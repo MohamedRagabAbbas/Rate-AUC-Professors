@@ -23,3 +23,35 @@ code {
   font-family: "SF Pro Display Regular";
   src: url("assets/fonts/SF-Pro-Display-Regular.otf") format("truetype");
 }
+
+.custom-file-input {
+  display: none; /* Hide the default file input button */
+}
+
+.custom-file-label {
+  padding: 8px 20px;
+  background-color: rgb(156, 128, 196);
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 1.003rem;
+  cursor: pointer;
+  font-family: "SF-Pro-Display-Regular", sans-serif; /* Change to desired font */
+  margin-right: 10px;
+}
+.custom-file-label:hover {
+  background-color: #7389ea; /* Change to desired color */
+}
+.custom-button {
+  padding: 8px 20px;
+  background-color: rgb(156, 128, 196);
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-family: SF Pro Display Light;
+  font-size: 1.003rem;
+}
+.custom-button:hover {
+  background-color: #7389ea;
+}
