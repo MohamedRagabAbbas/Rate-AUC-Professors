@@ -13,6 +13,7 @@ import {
 import ThumbUpIcon from "@mui/icons-material/ThumbUp";
 import CommentIcon from "@mui/icons-material/Comment";
 import ThumbDownIcon from "@mui/icons-material/ThumbDown";
+import TextField from "@mui/material/TextField";
 import "../index.css";
 
 export default function Feed() {
@@ -291,17 +292,81 @@ export default function Feed() {
   };
 
   return (
-    <Box
-      sx={{
-        display: "flex",
-        flexDirection: "column",
-        alignItems: "center",
-        margin: "0 auto", // Center horizontally
-        mt: 2, // Add some top margin
-      }}
-    >
-      <div>{renderPosts()}</div>
-    </Box>
+    <div>
+      <Box
+        sx={{
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "center",
+          margin: "0 auto", // Center horizontally
+          mt: 2, // Add some top margin
+          zIndex: 0,
+          marginBottom: "200px",
+        }}
+      >
+        <div
+          style={{
+            position: "relative",
+            height: "400px",
+            marginBottom: "500px",
+            // overflowY: "auto",
+          }}
+        >
+          {renderPosts()}
+        </div>
+      </Box>
+      <Box
+        sx={{
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "center",
+          position: "fixed",
+          bottom: "10px",
+          mt: 2, // Add some top margin
+          zIndex: 999,
+          backgroundColor: "white",
+          left: "50%",
+          transform: "translateX(-50%)",
+          width: "800px",
+          padding: "20px",
+          // boxShadow: "0px 0px 10px rgba(0, 0, 0, 0.1)",
+          borderRadius: "8px",
+        }}
+      >
+        <textarea
+          placeholder="Add a new post?"
+          style={{
+            width: "100%",
+            minHeight: "100px",
+            padding: "10px",
+            borderRadius: "4px",
+            border: "1px solid #ccc",
+            resize: "vertical",
+            marginBottom: "10px",
+            fontFamily: "SF Pro Display Light",
+            fontSize: "1.02rem",
+            // change the border color when text area is clicked on
+            // ":focus": {
+            //   border: "1px solid red",
+            // },
+          }}
+        />
+        <div style={{ display: "flex", flexDirection: "row" }}>
+          {/* Input for uploading images */}
+          <label htmlFor="file-upload" className="custom-file-label">
+            Choose file
+          </label>
+          <input
+            type="file"
+            className="custom-file-input"
+            accept="image/*"
+            style={{ marginBottom: "10px", fontFamily: "SF Pro Display Light" }}
+          />
+          {/* Add a button or action to submit the post */}
+          <button className="custom-button">Post</button>
+        </div>
+      </Box>
+    </div>
   );
 }
 
