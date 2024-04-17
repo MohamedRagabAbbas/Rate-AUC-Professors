@@ -12,6 +12,8 @@ import Button from "@mui/material/Button";
 import Tooltip from "@mui/material/Tooltip";
 import MenuItem from "@mui/material/MenuItem";
 import AdbIcon from "@mui/icons-material/Adb";
+import { useNavigate } from "react-router-dom";
+import App from "../App";
 import "../index.css";
 
 const pages = ["Feed", "Professors"];
@@ -35,6 +37,7 @@ function ResponsiveAppBar() {
   const handleCloseUserMenu = () => {
     setAnchorElUser(null);
   };
+  const navigate = useNavigate();
 
   return (
     <AppBar position="static" style={{ backgroundColor: "#191919" }}>
@@ -102,7 +105,7 @@ function ResponsiveAppBar() {
               }}
             >
               {pages.map((page) => (
-                <MenuItem key={page} onClick={handleCloseNavMenu}>
+                <MenuItem key={page}>
                   <Typography sx={{ fontFamily: "mulish" }} textAlign="center">
                     {page}
                   </Typography>
@@ -133,9 +136,7 @@ function ResponsiveAppBar() {
             {pages.map((page) => (
               <Button
                 key={page}
-                onClick={handleCloseNavMenu}
-                // on hover make color #ACE1AF
-
+                onClick={() => navigate(`/${page.toLowerCase()}`)}
                 sx={{
                   my: 2,
                   color: "white",

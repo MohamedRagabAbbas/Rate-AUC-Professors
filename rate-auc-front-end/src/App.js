@@ -2,6 +2,9 @@ import logo from "./logo.svg";
 import "./App.css";
 import NavBar from "./components/NavBar";
 import Feed from "./pages/feed";
+import TestingRouting from "./pages/professors";
+import NotFound from "./pages/notFound";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 // const AppContainer = styled.div`
 //   max-width: 1200px;
@@ -10,16 +13,16 @@ import Feed from "./pages/feed";
 
 function App() {
   return (
-    <div /*style={{ backgroundColor: "#191919", height: "100vh " }}*/>
-      <NavBar />
-      <div
-        style={{
-          width: "800px",
-          margin: "auto",
-        }}
-      >
-        <Feed />
-      </div>
+    <div>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Feed />} />
+          <Route path="/home" element={<Feed />} />
+          <Route path="/feed" element={<Feed />} />
+          <Route path="/professors" element={<TestingRouting />} />
+          <Route path="*" element={<NotFound />} />
+        </Routes>
+      </BrowserRouter>
     </div>
   );
 }
