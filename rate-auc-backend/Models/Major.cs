@@ -1,4 +1,4 @@
-﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations;
 
 namespace RateAucProfessors.Models
 {
@@ -8,8 +8,6 @@ namespace RateAucProfessors.Models
         [Required]
         public string Name { get; set; } = string.Empty;
         public string description { get; set; } = string.Empty;
-        public string Code { get; set; } = string.Empty;
-        public int CreditHours { get; set; }
 
         // Relationships
         public int DepartmentId { get; set; }

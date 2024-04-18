@@ -6,9 +6,8 @@ namespace RateAucProfessors.Models
     {
         public string FirstName { get; set; } = string.Empty;
         public string LastName { get; set; } = string.Empty;
-        public string Major { get; set; } = string.Empty;
-        public string Standing { get; set; } = string.Empty;
-        public string GraduationYear { get; set; } = string.Empty;
+        public string student_ID { get; set; } = string.Empty;
+        public bool gender { get; set; } = false;
 
         // Relationship
         public ICollection<Rating>? Ratings { get; set; }

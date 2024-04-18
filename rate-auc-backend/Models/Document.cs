@@ -1,10 +1,11 @@
-﻿namespace RateAucProfessors.Models
+namespace RateAucProfessors.Models
 {
-    public class Note
+    public class Document
     {
-        public int Id { get; set; }
+        public string Document_type { get; set; } = string.Empty;
         public string Content { get; set; } = string.Empty;
         public DateTime UploadDate { get; set; } = DateTime.Now;
+        public string DocumentUrl { get; set; } = string.Empty;
 
         //relationships
         public string UserId { get; set; }

@@ -4,7 +4,7 @@ namespace RateAucProfessors.Models
 {
     public class Reply
     {
-        public int Id { get; set; }
+        public int reply_no { get; set; }
 
         [Required]
         public string Content { get; set; } = string.Empty;
