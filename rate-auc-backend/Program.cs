@@ -23,7 +23,7 @@ builder.Services.AddDbContext<ApplicationDbContext>(options =>
     b => b.MigrationsAssembly(typeof(ApplicationDbContext).Assembly.FullName));
 });
 // Add Identity
-builder.Services.AddIdentity<User, IdentityRole>()
+builder.Services.AddIdentity<Student, IdentityRole>()
     .AddEntityFrameworkStores<ApplicationDbContext>()
     .AddDefaultTokenProviders();
 

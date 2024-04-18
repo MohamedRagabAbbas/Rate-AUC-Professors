@@ -1,12 +1,25 @@
-﻿namespace RateAucProfessors.Models
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace RateAucProfessors.Models
 {
     public class Rating
     {
         public int Id { get; set; }
-        //public int StudentID { get; set; }
-        //public int ProfessorID { get; set; }
-        //public int CourseID { get; set; }
-        public int RatingValue { get; set; }  // from 0 to 5
-        public DateTime DateRated { get; set; } = DateTime.Now;
+        public DateTime Timestamp { get; set; } = DateTime.Now;
+
+        [Required]
+        [Range(1, 5)]
+        public int Value { get; set; }
+        public string Comments { get; set; } = string.Empty;
+
+        //Relationships
+        public string UserId { get; set; }
+        public Student? Student { get; set; }
+
+        public int ProfessorId { get; set; }
+        public Professor? Professor { get; set; }
+
+        public int CourseId { get; set; }
+        public Course? Course { get; set; }
     }
 }

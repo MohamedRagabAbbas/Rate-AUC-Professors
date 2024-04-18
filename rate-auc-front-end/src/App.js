@@ -3,7 +3,15 @@ import React, { useState } from 'react';
 import logo from "./logo.svg";
 import "./App.css";
 import NavBar from "./components/NavBar";
-import Departments from "../src/components/departments.js";
+import Feed from "./pages/feed";
+import TestingRouting from "./pages/professors";
+import NotFound from "./pages/notFound";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Departments from "./pages/departments";
+// const AppContainer = styled.div`
+//   max-width: 1200px;
+//   margin: 0 auto;
+// `;
 
 function App() {
   const [currentPage, setCurrentPage] = useState("Home");
@@ -32,8 +40,16 @@ function App() {
 
   return (
     <div>
-      <NavBar pages={pages} onPageChange={handlePageChange} />
-      {renderPage()}
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Feed />} />
+          <Route path="/home" element={<Feed />} />
+          <Route path="/feed" element={<Feed />} />
+          <Route path="/professors" element={<TestingRouting />} />
+          <Route path="/departments" element={<Departments />} />
+          <Route path="*" element={<NotFound />} />
+        </Routes>
+      </BrowserRouter>
     </div>
   );
 }
