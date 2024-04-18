@@ -308,6 +308,7 @@ export default function Feed() {
         style={{
           width: "800px",
           margin: "auto",
+          // paddingTop: "50px",
         }}
       >
         <div>
