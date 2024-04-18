@@ -173,14 +173,12 @@ export default function Feed() {
           key={comment.id}
           sx={{
             ml: 10,
-            // width: 750,
             display: "flex",
             justifyContent: "center",
             flexDirection: "column",
             mb: 0.75,
             paddingBottom: 0.75,
             boxShadow: "0",
-            // backgroundColor: "rgba(239, 140, 203, 0.3)",
             backgroundColor: "rgba(156,128,196, 0.5)",
             borderRadius: "15px",
           }}
@@ -277,13 +275,24 @@ export default function Feed() {
             <Typography sx={{ color: "#808080", fontSize: "2" }}>
               {post.dislikes}
             </Typography>
-            <IconButton
-              aria-label="comment"
-              sx={{ ml: "auto" }}
-              onClick={() => toggleComments(post.id)}
-            >
+            <IconButton aria-label="comment" sx={{ ml: "auto" }}>
               <CommentIcon />
             </IconButton>
+            <Typography
+              sx={{
+                color: "#808080",
+                fontSize: "2",
+                textDecoration: "underline",
+                cursor: "pointer",
+              }}
+              onClick={() => toggleComments(post.id)}
+            >
+              {post.comments.length === 0
+                ? "0 comments"
+                : `${post.comments.length} comment${
+                    post.comments.length > 1 ? "s" : ""
+                  }`}
+            </Typography>
           </CardActions>
         </Card>
         {/* Render expanded comments if post is expanded */}
@@ -354,10 +363,6 @@ export default function Feed() {
                 marginBottom: "10px",
                 fontFamily: "SF Pro Display Light",
                 fontSize: "1.02rem",
-                // change the border color when text area is clicked on
-                // ":focus": {
-                //   border: "1px solid red",
-                // },
               }}
             />
             <div style={{ display: "flex", flexDirection: "row" }}>
@@ -366,13 +371,14 @@ export default function Feed() {
                 Choose file
               </label>
               <input
+                id="file-upload"
                 type="file"
                 className="custom-file-input"
                 accept="image/*"
                 style={{
-                  marginBottom: "10px",
-                  fontFamily: "SF Pro Display Light",
+                  display: "none", // Hide the input element
                 }}
+                // onChange={(e) => handleFileUpload(e.target.files)}
               />
               {/* Add a button or action to submit the post */}
               <button className="custom-button">Post</button>
