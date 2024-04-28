@@ -33,6 +33,7 @@ namespace RateAucProfessors.Controllers
         public async Task<IActionResult> Add(Syllabus syllabus)
         {
             var result = await _unitOfWork.Syllabus.Add(syllabus);
+            await _unitOfWork.SaveAsync();
             return Ok(result);
         }
         [HttpPut]
@@ -40,6 +41,7 @@ namespace RateAucProfessors.Controllers
         public IActionResult Update(Syllabus syllabus)
         {
             var result = _unitOfWork.Syllabus.Update(syllabus);
+            _unitOfWork.SaveAsync();
             return Ok(result);
         }
         [HttpDelete]
@@ -47,6 +49,7 @@ namespace RateAucProfessors.Controllers
         public async Task<IActionResult> Delete(int id)
         {
             var result = await _unitOfWork.Syllabus.Delete(id);
+            await _unitOfWork.SaveAsync();
             return Ok(result);
         }
     }

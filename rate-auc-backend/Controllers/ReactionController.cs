@@ -33,6 +33,7 @@ namespace RateAucProfessors.Controllers
         public async Task<IActionResult> Add(Reaction reaction)
         {
             var result = await _unitOfWork.Reaction.Add(reaction);
+            await _unitOfWork.SaveAsync();
             return Ok(result);
         }
         [HttpPut]
@@ -40,6 +41,7 @@ namespace RateAucProfessors.Controllers
         public IActionResult Update(Reaction reaction)
         {
             var result = _unitOfWork.Reaction.Update(reaction);
+            _unitOfWork.SaveAsync();
             return Ok(result);
         }
         [HttpDelete]
@@ -47,6 +49,7 @@ namespace RateAucProfessors.Controllers
         public async Task<IActionResult> Delete(int id)
         {
             var result = await _unitOfWork.Reaction.Delete(id);
+            await _unitOfWork.SaveAsync();
             return Ok(result);
         }
     }
