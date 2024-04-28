@@ -1,7 +1,9 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using RateAucProfessors.DTO.Requests;
 using RateAucProfessors.IRepository;
 using RateAucProfessors.Models;
+using RateAucProfessors.ObjectsMapping;
 
 namespace RateAucProfessors.Controllers
 {
@@ -10,9 +12,11 @@ namespace RateAucProfessors.Controllers
     public class FeedController : ControllerBase
     {
         private readonly IUnitOfWork _unitOfWork;
-        public FeedController(IUnitOfWork unitOfWork)
+        private readonly Mapper _mapper;
+        public FeedController(IUnitOfWork unitOfWork, Mapper mapper)
         {
             _unitOfWork = unitOfWork;
+            _mapper = mapper;
         }
         [HttpGet]
         [Route("get-all")]
@@ -30,16 +34,18 @@ namespace RateAucProfessors.Controllers
         }
         [HttpPost]
         [Route("add")]
-        public async Task<IActionResult> Add(Feed feed)
+        public async Task<IActionResult> Add(FeedInfo feedInfo, string userId)
         {
+            Feed feed = _mapper.MapToFeed(feedInfo, userId);
             var result = await _unitOfWork.Feed.Add(feed);
             await _unitOfWork.SaveAsync();
             return Ok(result);
         }
         [HttpPut]
         [Route("update")]
-        public IActionResult Update(Feed feed)
+        public IActionResult Update(FeedInfo feedInfo, string userId)
         {
+            Feed feed = _mapper.MapToFeed(feedInfo, userId);
             var result = _unitOfWork.Feed.Update(feed);
             _unitOfWork.SaveAsync();
             return Ok(result);

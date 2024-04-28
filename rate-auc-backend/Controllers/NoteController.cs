@@ -1,7 +1,9 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using RateAucProfessors.DTO.Requests;
 using RateAucProfessors.IRepository;
 using RateAucProfessors.Models;
+using RateAucProfessors.ObjectsMapping;
 
 namespace RateAucProfessors.Controllers
 {
@@ -10,9 +12,11 @@ namespace RateAucProfessors.Controllers
     public class NoteController : ControllerBase
     {
         private readonly IUnitOfWork _unitOfWork;
-        public NoteController(IUnitOfWork unitOfWork)
+        private readonly Mapper _mapper;
+        public NoteController(IUnitOfWork unitOfWork, Mapper mapper)
         {
             _unitOfWork = unitOfWork;
+            _mapper = mapper;
         }
         [HttpGet]
         [Route("get-all")]
@@ -30,16 +34,18 @@ namespace RateAucProfessors.Controllers
         }
         [HttpPost]
         [Route("add")]
-        public async Task<IActionResult> Add(Note note)
+        public async Task<IActionResult> Add(NoteInfo noteInfo, string userId)
         {
+            Note note = _mapper.MapToNote(noteInfo, userId);
             var result = await _unitOfWork.Note.Add(note);
             await _unitOfWork.SaveAsync();
             return Ok(result);
         }
         [HttpPut]
         [Route("update")]
-        public IActionResult Update(Note note)
+        public IActionResult Update(NoteInfo noteInfo, string userId)
         {
+            Note note = _mapper.MapToNote(noteInfo, userId);
             var result = _unitOfWork.Note.Update(note);
             _unitOfWork.SaveAsync();
             return Ok(result);

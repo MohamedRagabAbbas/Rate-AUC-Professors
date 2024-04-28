@@ -1,7 +1,9 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using RateAucProfessors.DTO.Requests;
 using RateAucProfessors.IRepository;
 using RateAucProfessors.Models;
+using RateAucProfessors.ObjectsMapping;
 
 namespace RateAucProfessors.Controllers
 {
@@ -10,9 +12,11 @@ namespace RateAucProfessors.Controllers
     public class RatingController : ControllerBase
     {
         private readonly IUnitOfWork _unitOfWork;
-        public RatingController(IUnitOfWork unitOfWork)
+        private readonly Mapper _mapper;
+        public RatingController(IUnitOfWork unitOfWork, Mapper mapper)
         {
             _unitOfWork = unitOfWork;
+            _mapper = mapper;
         }
         [HttpGet]
         [Route("get-all")]
@@ -30,16 +34,18 @@ namespace RateAucProfessors.Controllers
         }
         [HttpPost]
         [Route("add")]
-        public async Task<IActionResult> Add(Rating rating)
+        public async Task<IActionResult> Add(RatingInfo ratingInfo, string userId)
         {
+            Rating rating = _mapper.MapToRating(ratingInfo, userId);
             var result = await _unitOfWork.Rating.Add(rating);
             await _unitOfWork.SaveAsync();
             return Ok(result);
         }
         [HttpPut]
         [Route("update")]
-        public IActionResult Update(Rating rating)
+        public IActionResult Update(RatingInfo ratingInfo, string userId)
         {
+            Rating rating = _mapper.MapToRating(ratingInfo, userId);
             var result = _unitOfWork.Rating.Update(rating);
             _unitOfWork.SaveAsync();
             return Ok(result);
