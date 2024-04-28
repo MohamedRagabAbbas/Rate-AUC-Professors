@@ -170,6 +170,35 @@ namespace RateAucProfessors.ObjectsMapping
             return lectures;
         }
 
+        // Mapping functions for Note
+        public Note MapToNote(NoteInfo dto, string userId)
+        {
+            return new Note
+            {
+                Content = dto.Content,
+                UploadDate = dto.UploadDate,
+                UserId = userId,
+                ProfessorId = dto.ProfessorId,
+                CourseId = dto.CourseId
+            };
+        }
+        public List<Note> MapToNote(List<NoteInfo> dtos, string userId)
+        {
+            List<Note> notes = new List<Note>();
+            foreach (var dto in dtos)
+            {
+                Note note = new Note
+                {
+                    Content = dto.Content,
+                    UploadDate = dto.UploadDate,
+                    UserId = userId,
+                    ProfessorId = dto.ProfessorId,
+                    CourseId = dto.CourseId
+                };
+                notes.Add(note);
+            }
+            return notes;
+        }
 
 
 
