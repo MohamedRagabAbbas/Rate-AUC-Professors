@@ -1,7 +1,9 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using RateAucProfessors.DTO.Requests;
 using RateAucProfessors.IRepository;
 using RateAucProfessors.Models;
+using RateAucProfessors.ObjectsMapping;
 
 namespace RateAucProfessors.Controllers
 {
@@ -10,9 +12,11 @@ namespace RateAucProfessors.Controllers
     public class ReactionController : ControllerBase
     {
         private readonly IUnitOfWork _unitOfWork;
-        public ReactionController(IUnitOfWork unitOfWork)
+        private readonly Mapper _mapper;
+        public ReactionController(IUnitOfWork unitOfWork, Mapper mapper)
         {
             _unitOfWork = unitOfWork;
+            _mapper = mapper;
         }
         [HttpGet]
         [Route("get-all")]
@@ -30,16 +34,18 @@ namespace RateAucProfessors.Controllers
         }
         [HttpPost]
         [Route("add")]
-        public async Task<IActionResult> Add(Reaction reaction)
+        public async Task<IActionResult> Add(ReactionInfo reactionInfo, string userId)
         {
+            Reaction reaction = _mapper.MapToReaction(reactionInfo, userId);
             var result = await _unitOfWork.Reaction.Add(reaction);
             await _unitOfWork.SaveAsync();
             return Ok(result);
         }
         [HttpPut]
         [Route("update")]
-        public IActionResult Update(Reaction reaction)
+        public IActionResult Update(ReactionInfo reactionInfo, string userId)
         {
+            Reaction reaction = _mapper.MapToReaction(reactionInfo, userId);
             var result = _unitOfWork.Reaction.Update(reaction);
             _unitOfWork.SaveAsync();
             return Ok(result);

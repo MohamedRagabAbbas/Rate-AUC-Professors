@@ -1,7 +1,9 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using RateAucProfessors.DTO.Requests;
 using RateAucProfessors.IRepository;
 using RateAucProfessors.Models;
+using RateAucProfessors.ObjectsMapping;
 
 namespace RateAucProfessors.Controllers
 {
@@ -10,9 +12,11 @@ namespace RateAucProfessors.Controllers
     public class ReplyController : ControllerBase
     {
         private readonly IUnitOfWork _unitOfWork;
-        public ReplyController(IUnitOfWork unitOfWork)
+        private readonly Mapper _mapper;
+        public ReplyController(IUnitOfWork unitOfWork, Mapper mapper)
         {
             _unitOfWork = unitOfWork;
+            _mapper = mapper;
         }
         [HttpGet]
         [Route("get-all")]
@@ -30,16 +34,18 @@ namespace RateAucProfessors.Controllers
         }
         [HttpPost]
         [Route("add")]
-        public async Task<IActionResult> Add(Reply reply)
+        public async Task<IActionResult> Add(ReplyInfo replyInfo, string userId)
         {
+            Reply reply = _mapper.MapToReply(replyInfo, userId);
             var result = await _unitOfWork.Reply.Add(reply);
             await _unitOfWork.SaveAsync();
             return Ok(result);
         }
         [HttpPut]
         [Route("update")]
-        public IActionResult Update(Reply reply)
+        public IActionResult Update(ReplyInfo replyInfo, string userId)
         {
+            Reply reply = _mapper.MapToReply(replyInfo, userId);
             var result = _unitOfWork.Reply.Update(reply);
             _unitOfWork.SaveAsync();
             return Ok(result);
