@@ -140,6 +140,36 @@ namespace RateAucProfessors.ObjectsMapping
             return feeds;
         }
 
+        // Mapping functions for Lecture
+        public Lecture MapToLecture(LectureInfo dto, string userId)
+        {
+            return new Lecture
+            {
+                Content = dto.Content,
+                UploadDate = dto.UploadDate,
+                UserId = userId,
+                ProfessorId = dto.ProfessorId,
+                CourseId = dto.CourseId
+            };
+        }
+        public List<Lecture> MapToLecture(List<LectureInfo> dtos, string userId)
+        {
+            List<Lecture> lectures = new List<Lecture>();
+            foreach (var dto in dtos)
+            {
+                Lecture lecture = new Lecture
+                {
+                    Content = dto.Content,
+                    UploadDate = dto.UploadDate,
+                    UserId = userId,
+                    ProfessorId = dto.ProfessorId,
+                    CourseId = dto.CourseId
+                };
+                lectures.Add(lecture);
+            }
+            return lectures;
+        }
+
 
 
 
