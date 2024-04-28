@@ -65,6 +65,32 @@ namespace RateAucProfessors.ObjectsMapping
             return comments;
         }
 
+        // Mapping functions for Course
+
+        public Course MapToCourse(CourseInfo dto)
+        {
+            return new Course
+            {
+                Name = dto.Name,
+                DepartmentId = dto.DepartmentId
+            };
+        }
+        public List<Course> MapToCourse(List<CourseInfo> dtos)
+        {
+            List<Course> courses = new List<Course>();
+            foreach (var dto in dtos)
+            {
+                Course course = new Course
+                {
+                    Name = dto.Name,
+                    DepartmentId = dto.DepartmentId
+                };
+                courses.Add(course);
+            }
+            return courses;
+        }
+
+
 
     }
 }
