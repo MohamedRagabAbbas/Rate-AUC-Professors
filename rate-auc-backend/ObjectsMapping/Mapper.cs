@@ -288,5 +288,33 @@ namespace RateAucProfessors.ObjectsMapping
             return reactions;
         }
 
+        // Mapping functions for Reply
+        public Reply MapToReply(ReplyInfo dto, string userId)
+        {
+            return new Reply
+            {
+                Content = dto.Content,
+                Timestamp = dto.Timestamp,
+                CommentId = dto.CommentId,
+                UserId = userId
+            };
+        }
+        public List<Reply> MapToReply(List<ReplyInfo> dtos, string userId)
+        {
+            List<Reply> replies = new List<Reply>();
+            foreach (var dto in dtos)
+            {
+                Reply reply = new Reply
+                {
+                    Content = dto.Content,
+                    Timestamp = dto.Timestamp,
+                    CommentId = dto.CommentId,
+                    UserId = userId
+                };
+                replies.Add(reply);
+            }
+            return replies;
+        }
+
     }
 }
