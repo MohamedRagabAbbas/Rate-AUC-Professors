@@ -12,20 +12,20 @@ namespace RateAucProfessors.Repository
 
         public UnitOfWork(ApplicationDbContext dbContext)
         {
-            _dbContext = dbContext;
-            Professor = new GenericRepository<Professor>(_dbContext);
-            Student = new GenericRepository<Student>(_dbContext);
-            Department = new GenericRepository<Department>(_dbContext);
-            Course = new GenericRepository<Course>(_dbContext);
-            Assignment = new GenericRepository<Assignment>(_dbContext);
-            Lecture = new GenericRepository<Lecture>(_dbContext);
-            Note = new GenericRepository<Note>(_dbContext);
-            Syllabus = new GenericRepository<Syllabus>(_dbContext);
-            Feed = new GenericRepository<Feed>(_dbContext);
-            Comment = new GenericRepository<Comment>(_dbContext);
-            Reply = new GenericRepository<Reply>(_dbContext);
-            Reaction = new GenericRepository<Reaction>(_dbContext);
-            Rating = new GenericRepository<Rating>(_dbContext);
+            _dbContext  = dbContext;
+            Professor   = new GenericRepository<Professor>(_dbContext);
+            Student     = new GenericRepository<Student>(_dbContext);
+            Department  = new GenericRepository<Department>(_dbContext);
+            Course      = new GenericRepository<Course>(_dbContext);
+            Assignment  = new GenericRepository<Assignment>(_dbContext);
+            Lecture     = new GenericRepository<Lecture>(_dbContext);
+            Note        = new GenericRepository<Note>(_dbContext);
+            Syllabus    = new GenericRepository<Syllabus>(_dbContext);
+            Feed        = new GenericRepository<Feed>(_dbContext);
+            Comment     = new GenericRepository<Comment>(_dbContext);
+            Reply       = new GenericRepository<Reply>(_dbContext);
+            Reaction    = new GenericRepository<Reaction>(_dbContext);
+            Rating      = new GenericRepository<Rating>(_dbContext);
         }
         public IGenericRepository<Professor> Professor { get; private set; }
         public IGenericRepository<Student> Student { get; private set;}
