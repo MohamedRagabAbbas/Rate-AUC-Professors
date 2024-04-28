@@ -241,7 +241,52 @@ namespace RateAucProfessors.ObjectsMapping
                 CourseId = dto.CourseId
             };
         }
+        public List<Rating> MapToRating(List<RatingInfo> dtos, string userId)
+        {
+            List<Rating> ratings = new List<Rating>();
+            foreach (var dto in dtos)
+            {
+                Rating rating = new Rating
+                {
+                    Timestamp = dto.Timestamp,
+                    Value = dto.Value,
+                    Comments = dto.Comments,
+                    ProfessorId = dto.ProfessorId,
+                    UserId = userId,
+                    CourseId = dto.CourseId
+                };
+                ratings.Add(rating);
+            }
+            return ratings;
+        }
 
+        // Mapping functions for Reaction
+        public Reaction MapToReaction(ReactionInfo dto, string userId)
+        {
+            return new Reaction
+            {
+                IsLike = dto.IsLike,
+                Timestamp = dto.Timestamp,
+                FeedId = dto.FeedId,
+                UserId = userId
+            };
+        }
+        public List<Reaction> MapToReaction(List<ReactionInfo> dtos, string userId)
+        {
+            List<Reaction> reactions = new List<Reaction>();
+            foreach (var dto in dtos)
+            {
+                Reaction reaction = new Reaction
+                {
+                    IsLike = dto.IsLike,
+                    Timestamp = dto.Timestamp,
+                    FeedId = dto.FeedId,
+                    UserId = userId
+                };
+                reactions.Add(reaction);
+            }
+            return reactions;
+        }
 
     }
 }
