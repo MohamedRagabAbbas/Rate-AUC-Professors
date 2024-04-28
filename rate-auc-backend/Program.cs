@@ -3,8 +3,10 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 using RateAucProfessors.DB;
+using RateAucProfessors.IRepository;
 using RateAucProfessors.JWT;
 using RateAucProfessors.Models;
+using RateAucProfessors.Repository;
 using System.Text;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -32,6 +34,9 @@ builder.Services.AddIdentity<Student, IdentityRole>()
 builder.Services.Configure<Jwt>(builder.Configuration.GetSection("Jwt"));
 
 
+
+builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
+//builder.Services.AddScoped<IGenericRepository, GenericRepository>();
 
 // Authentication
 builder.Services.AddAuthentication(options =>

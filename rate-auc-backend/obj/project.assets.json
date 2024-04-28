@@ -3642,11 +3642,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\Rate-AUC-Professors\\rate-auc-backend\\RateAucProfessors.csproj",
+      "projectUniqueName": "D:\\Projects\\Rate-AUC-Professors\\rate-auc-backend\\RateAucProfessors.csproj",
       "projectName": "RateAucProfessors",
-      "projectPath": "E:\\Rate-AUC-Professors\\rate-auc-backend\\RateAucProfessors.csproj",
+      "projectPath": "D:\\Projects\\Rate-AUC-Professors\\rate-auc-backend\\RateAucProfessors.csproj",
       "packagesPath": "C:\\Users\\AUC\\.nuget\\packages\\",
-      "outputPath": "E:\\Rate-AUC-Professors\\rate-auc-backend\\obj\\",
+      "outputPath": "D:\\Projects\\Rate-AUC-Professors\\rate-auc-backend\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -3741,7 +3741,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.202\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.204\\RuntimeIdentifierGraph.json"
       }
     }
   }
