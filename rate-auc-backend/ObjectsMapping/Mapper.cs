@@ -200,6 +200,34 @@ namespace RateAucProfessors.ObjectsMapping
             return notes;
         }
 
+        // Mapping functions for Professor
+        public Professor MapToProfessor(ProfessorInfo dto)
+        {
+            return new Professor
+            {
+                Name = dto.Name,
+                Email = dto.Email,
+                Bio = dto.Bio,
+                DepartmentId = dto.DepartmentId
+            };
+        }
+        public List<Professor> MapToProfessor(List<ProfessorInfo> dtos)
+        {
+            List<Professor> professors = new List<Professor>();
+            foreach (var dto in dtos)
+            {
+                Professor professor = new Professor
+                {
+                    Name = dto.Name,
+                    Email = dto.Email,
+                    Bio = dto.Bio,
+                    DepartmentId = dto.DepartmentId
+                };
+                professors.Add(professor);
+            }
+            return professors;
+        }
+
 
 
     }
