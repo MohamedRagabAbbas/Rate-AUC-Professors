@@ -1,7 +1,9 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using RateAucProfessors.DTO.Requests;
 using RateAucProfessors.IRepository;
 using RateAucProfessors.Models;
+using RateAucProfessors.ObjectsMapping;
 
 namespace RateAucProfessors.Controllers
 {
@@ -10,9 +12,11 @@ namespace RateAucProfessors.Controllers
     public class AssignmentController : ControllerBase
     {
         private readonly IUnitOfWork _unitOfWork;
-        public AssignmentController(IUnitOfWork unitOfWork)
+        private readonly Mapper _mapper;
+        public AssignmentController(IUnitOfWork unitOfWork, Mapper mapper)
         {
             _unitOfWork = unitOfWork;
+            _mapper = mapper;
         }
         [HttpGet]
         [Route("get-all")]
@@ -30,16 +34,18 @@ namespace RateAucProfessors.Controllers
         }
         [HttpPost]
         [Route("add")]
-        public async Task<IActionResult> Add(Assignment assignment)
+        public async Task<IActionResult> Add(AssignmentInfo assignmentInfo,string userId)
         {
+            Assignment assignment = _mapper.MapToAssignment(assignmentInfo, userId); ;
             var result = await _unitOfWork.Assignment.Add(assignment);
             await _unitOfWork.SaveAsync();
             return Ok(result);
         }
         [HttpPut]
         [Route("update")]
-        public IActionResult Update(Assignment assignment)
+        public IActionResult Update(AssignmentInfo assignmentInfo, string userId)
         {
+            Assignment assignment = _mapper.MapToAssignment(assignmentInfo, userId);
             var result = _unitOfWork.Assignment.Update(assignment);
             _unitOfWork.SaveAsync();
             return Ok(result);
