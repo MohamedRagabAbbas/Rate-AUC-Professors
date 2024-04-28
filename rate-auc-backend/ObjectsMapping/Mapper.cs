@@ -23,7 +23,7 @@ namespace RateAucProfessors.ObjectsMapping
             List<Assignment> assignmnets = new List<Assignment>();
             foreach (var dto in dtos)
             {
-                Assignment assignmnet =  new Assignment
+                Assignment assignmnet = new Assignment
                 {
                     Content = dto.Content,
                     UploadDate = dto.UploadDate,
@@ -35,6 +35,36 @@ namespace RateAucProfessors.ObjectsMapping
             }
             return assignmnets;
         }
+
+        // Mapping functions for Comment
+
+        public Comment MapToComment(CommentInfo dto, string userId)
+        {
+            return new Comment
+            {
+                Content = dto.Content,
+                Timestamp = dto.Timestamp,
+                FeedId = dto.FeedId,
+                UserId = userId
+            };
+        }
+        public List<Comment> MapToComment(List<CommentInfo> dtos, string userId)
+        {
+            List<Comment> comments = new List<Comment>();
+            foreach (var dto in dtos)
+            {
+                Comment comment = new Comment
+                {
+                    Content = dto.Content,
+                    Timestamp = dto.Timestamp,
+                    FeedId = dto.FeedId,
+                    UserId = userId
+                };
+                comments.Add(comment);
+            }
+            return comments;
+        }
+
 
     }
 }
