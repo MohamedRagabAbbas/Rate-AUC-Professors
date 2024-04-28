@@ -331,6 +331,56 @@ namespace RateAucProfessors.ObjectsMapping
                 PhoneNumber = dto.PhoneNumber
             };
         }
+        public List<Student> MapToStudent(List<StudentInfo> dtos)
+        {
+            List<Student> students = new List<Student>();
+            foreach (var dto in dtos)
+            {
+                Student student = new Student
+                {
+                    FirstName = dto.FirstName,
+                    LastName = dto.LastName,
+                    Major = dto.Major,
+                    Standing = dto.Standing,
+                    GraduationYear = dto.GraduationYear,
+                    Email = dto.FirstName + ' ' + dto.LastName,
+                    UserName = dto.Email,
+                    PhoneNumber = dto.PhoneNumber
+                };
+                students.Add(student);
+            }
+            return students;
+        }
+
+        // Mapping functions for Syllabus
+        public Syllabus MapToSyllabus(SyllabusInfo dto, string userId)
+        {
+            return new Syllabus
+            {
+                Content = dto.Content,
+                UploadDate = dto.UploadDate,
+                ProfessorId = dto.ProfessorId,
+                CourseId = dto.CourseId,
+                UserId = userId
+            };
+        }
+        public List<Syllabus> MapToSyllabus(List<SyllabusInfo> dtos, string userId)
+        {
+            List<Syllabus> syllabuses = new List<Syllabus>();
+            foreach (var dto in dtos)
+            {
+                Syllabus syllabus = new Syllabus
+                {
+                    Content = dto.Content,
+                    UploadDate = dto.UploadDate,
+                    ProfessorId = dto.ProfessorId,
+                    CourseId = dto.CourseId,
+                    UserId = userId
+                };
+                syllabuses.Add(syllabus);
+            }
+            return syllabuses;
+        }
 
     }
 }
