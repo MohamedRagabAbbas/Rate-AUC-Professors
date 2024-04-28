@@ -228,6 +228,19 @@ namespace RateAucProfessors.ObjectsMapping
             return professors;
         }
 
+        // Mapping functions for Rating
+        public Rating MapToRating(RatingInfo dto, string userId)
+        {
+            return new Rating
+            {
+                Timestamp = dto.Timestamp,
+                Value = dto.Value,
+                Comments = dto.Comments,
+                ProfessorId = dto.ProfessorId,
+                UserId = userId,
+                CourseId = dto.CourseId
+            };
+        }
 
 
     }
