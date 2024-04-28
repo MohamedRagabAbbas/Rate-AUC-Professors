@@ -90,6 +90,31 @@ namespace RateAucProfessors.ObjectsMapping
             return courses;
         }
 
+        // Mapping functions for Department
+        public Department MapToDepartment(DepartmentInfo dto)
+        {
+            return new Department
+            {
+                Name = dto.Name,
+                Description = dto.Description
+            };
+        }
+        public List<Department> MapToDepartment(List<DepartmentInfo> dtos)
+        {
+            List<Department> departments = new List<Department>();
+            foreach (var dto in dtos)
+            {
+                Department department = new Department
+                {
+                    Name = dto.Name,
+                    Description = dto.Description
+                };
+                departments.Add(department);
+            }
+            return departments;
+        }
+
+
 
 
     }
