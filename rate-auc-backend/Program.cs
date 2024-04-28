@@ -6,6 +6,7 @@ using RateAucProfessors.DB;
 using RateAucProfessors.IRepository;
 using RateAucProfessors.JWT;
 using RateAucProfessors.Models;
+using RateAucProfessors.ObjectsMapping;
 using RateAucProfessors.Repository;
 using System.Text;
 
@@ -36,6 +37,7 @@ builder.Services.Configure<Jwt>(builder.Configuration.GetSection("Jwt"));
 
 
 builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
+builder.Services.AddScoped<Mapper>();
 //builder.Services.AddScoped<IGenericRepository, GenericRepository>();
 
 // Authentication
