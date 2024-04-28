@@ -114,6 +114,32 @@ namespace RateAucProfessors.ObjectsMapping
             return departments;
         }
 
+        // Mapping functions for Feed
+        public Feed MapToFeed(FeedInfo dto, string userId)
+        {
+            return new Feed
+            {
+                Content = dto.Content,
+                Timestamp = dto.Timestamp,
+                UserId = userId
+            };
+        }
+        public List<Feed> MapToFeed(List<FeedInfo> dtos, string userId)
+        {
+            List<Feed> feeds = new List<Feed>();
+            foreach (var dto in dtos)
+            {
+                Feed feed = new Feed
+                {
+                    Content = dto.Content,
+                    Timestamp = dto.Timestamp,
+                    UserId = userId
+                };
+                feeds.Add(feed);
+            }
+            return feeds;
+        }
+
 
 
 
