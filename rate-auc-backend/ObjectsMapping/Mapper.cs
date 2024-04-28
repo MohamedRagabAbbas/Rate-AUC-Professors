@@ -316,5 +316,21 @@ namespace RateAucProfessors.ObjectsMapping
             return replies;
         }
 
+        // Mapping functions for Student
+        public Student MapToStudent(StudentInfo dto)
+        {
+            return new Student
+            {
+                FirstName = dto.FirstName,
+                LastName = dto.LastName,
+                Major = dto.Major,
+                Standing = dto.Standing,
+                GraduationYear = dto.GraduationYear,
+                Email = dto.FirstName + ' ' + dto.LastName,
+                UserName = dto.Email,
+                PhoneNumber = dto.PhoneNumber
+            };
+        }
+
     }
 }
