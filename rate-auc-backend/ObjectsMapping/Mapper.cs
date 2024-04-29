@@ -7,34 +7,34 @@ namespace RateAucProfessors.ObjectsMapping
     public class Mapper
     {
         // Mapping functions for Assignment
-        public Assignment MapToAssignment(AssignmentInfo dto, string userId)
-        {
-            return new Assignment
-            {
-                Content = dto.Content,
-                UploadDate = dto.UploadDate,
-                ProfessorId = dto.ProfessorId,
-                CourseId = dto.CourseId,
-                UserId = userId
-            };
-        }
-        public List<Assignment> MapToAssignment(List<AssignmentInfo> dtos, string userId)
-        {
-            List<Assignment> assignmnets = new List<Assignment>();
-            foreach (var dto in dtos)
-            {
-                Assignment assignmnet = new Assignment
-                {
-                    Content = dto.Content,
-                    UploadDate = dto.UploadDate,
-                    ProfessorId = dto.ProfessorId,
-                    CourseId = dto.CourseId,
-                    UserId = userId
-                };
-                assignmnets.Add(assignmnet);
-            }
-            return assignmnets;
-        }
+        //public Assignment MapToAssignment(AssignmentInfo dto, string userId)
+        //{
+        //    return new Assignment
+        //    {
+        //        Content = dto.Content,
+        //        UploadDate = dto.UploadDate,
+        //        ProfessorId = dto.ProfessorId,
+        //        CourseId = dto.CourseId,
+        //        UserId = userId
+        //    };
+        //}
+        //public List<Assignment> MapToAssignment(List<AssignmentInfo> dtos, string userId)
+        //{
+        //    List<Assignment> assignmnets = new List<Assignment>();
+        //    foreach (var dto in dtos)
+        //    {
+        //        Assignment assignmnet = new Assignment
+        //        {
+        //            Content = dto.Content,
+        //            UploadDate = dto.UploadDate,
+        //            ProfessorId = dto.ProfessorId,
+        //            CourseId = dto.CourseId,
+        //            UserId = userId
+        //        };
+        //        assignmnets.Add(assignmnet);
+        //    }
+        //    return assignmnets;
+        //}
 
         // Mapping functions for Comment
 
@@ -45,7 +45,9 @@ namespace RateAucProfessors.ObjectsMapping
                 Content = dto.Content,
                 Timestamp = dto.Timestamp,
                 FeedId = dto.FeedId,
-                UserId = userId
+                UserId = userId,
+                ReviewId = dto.ReviewId
+
             };
         }
         public List<Comment> MapToComment(List<CommentInfo> dtos, string userId)
@@ -58,7 +60,8 @@ namespace RateAucProfessors.ObjectsMapping
                     Content = dto.Content,
                     Timestamp = dto.Timestamp,
                     FeedId = dto.FeedId,
-                    UserId = userId
+                    UserId = userId,
+                    ReviewId = dto.ReviewId
                 };
                 comments.Add(comment);
             }
@@ -72,7 +75,11 @@ namespace RateAucProfessors.ObjectsMapping
             return new Course
             {
                 Name = dto.Name,
-                DepartmentId = dto.DepartmentId
+                Description = dto.Description,
+                Code = dto.Code,
+                Credit_Hours = dto.Credit_Hours,
+                DepartmentId = dto.DepartmentId,
+                ProfessorId = dto.ProfessorId
             };
         }
         public List<Course> MapToCourse(List<CourseInfo> dtos)
@@ -83,7 +90,11 @@ namespace RateAucProfessors.ObjectsMapping
                 Course course = new Course
                 {
                     Name = dto.Name,
-                    DepartmentId = dto.DepartmentId
+                    Description = dto.Description,
+                    Code = dto.Code,
+                    Credit_Hours = dto.Credit_Hours,
+                    DepartmentId = dto.DepartmentId,
+                    ProfessorId = dto.ProfessorId
                 };
                 courses.Add(course);
             }
@@ -114,6 +125,40 @@ namespace RateAucProfessors.ObjectsMapping
             return departments;
         }
 
+        // Mapping functions for Document
+        public Document MapToDocument(DocumentInfo dto, string userId)
+        {
+            return new Document
+            {
+                Document_type = dto.Document_type,
+                Content = dto.Content,
+                UploadDate = dto.UploadDate,
+                DocumentUrl = dto.DocumentUrl,
+                UserId = userId,
+                ProfessorId = dto.ProfessorId,
+                CourseId = dto.CourseId
+            };
+        }
+        public List<Document> MapToDocument(List<DocumentInfo> dtos,, string userId)
+        {
+            List<Document> documents = new List<Document>();
+            foreach (var dto in dtos)
+            {
+                Document document = new Document
+                {
+                    Document_type = dto.Document_type,
+                    Content = dto.Content,
+                    UploadDate = dto.UploadDate,
+                    DocumentUrl = dto.DocumentUrl,
+                    UserId = userId,
+                    ProfessorId = dto.ProfessorId,
+                    CourseId = dto.CourseId
+                };
+                documents.Add(document);
+            }
+            return documents;
+        }
+
         // Mapping functions for Feed
         public Feed MapToFeed(FeedInfo dto, string userId)
         {
@@ -140,65 +185,91 @@ namespace RateAucProfessors.ObjectsMapping
             return feeds;
         }
 
-        // Mapping functions for Lecture
-        public Lecture MapToLecture(LectureInfo dto, string userId)
+        // Mapping functions for Major
+        public Major MapToMajor(MajorInfo dto)
         {
-            return new Lecture
+            return new Major
             {
-                Content = dto.Content,
-                UploadDate = dto.UploadDate,
-                UserId = userId,
-                ProfessorId = dto.ProfessorId,
-                CourseId = dto.CourseId
+                Name = dto.Name,
+                Description = dto.Description,
+                DepartmentId = dto.DepartmentId
             };
         }
-        public List<Lecture> MapToLecture(List<LectureInfo> dtos, string userId)
+        public List<Major> MapToMajor(List<MajorInfo> dtos)
         {
-            List<Lecture> lectures = new List<Lecture>();
+            List<Major> majors = new List<Major>();
             foreach (var dto in dtos)
             {
-                Lecture lecture = new Lecture
+                Major major = new Major
                 {
-                    Content = dto.Content,
-                    UploadDate = dto.UploadDate,
-                    UserId = userId,
-                    ProfessorId = dto.ProfessorId,
-                    CourseId = dto.CourseId
+                    Name = dto.Name,
+                    Description = dto.Description,
+                    DepartmentId = dto.DepartmentId
                 };
-                lectures.Add(lecture);
+                majors.Add(major);
             }
-            return lectures;
+            return majors;
         }
 
-        // Mapping functions for Note
-        public Note MapToNote(NoteInfo dto, string userId)
-        {
-            return new Note
-            {
-                Content = dto.Content,
-                UploadDate = dto.UploadDate,
-                UserId = userId,
-                ProfessorId = dto.ProfessorId,
-                CourseId = dto.CourseId
-            };
-        }
-        public List<Note> MapToNote(List<NoteInfo> dtos, string userId)
-        {
-            List<Note> notes = new List<Note>();
-            foreach (var dto in dtos)
-            {
-                Note note = new Note
-                {
-                    Content = dto.Content,
-                    UploadDate = dto.UploadDate,
-                    UserId = userId,
-                    ProfessorId = dto.ProfessorId,
-                    CourseId = dto.CourseId
-                };
-                notes.Add(note);
-            }
-            return notes;
-        }
+        // Mapping functions for Lecture
+        //public Lecture MapToLecture(LectureInfo dto, string userId)
+        //{
+        //    return new Lecture
+        //    {
+        //        Content = dto.Content,
+        //        UploadDate = dto.UploadDate,
+        //        UserId = userId,
+        //        ProfessorId = dto.ProfessorId,
+        //        CourseId = dto.CourseId
+        //    };
+        //}
+        //public List<Lecture> MapToLecture(List<LectureInfo> dtos, string userId)
+        //{
+        //    List<Lecture> lectures = new List<Lecture>();
+        //    foreach (var dto in dtos)
+        //    {
+        //        Lecture lecture = new Lecture
+        //        {
+        //            Content = dto.Content,
+        //            UploadDate = dto.UploadDate,
+        //            UserId = userId,
+        //            ProfessorId = dto.ProfessorId,
+        //            CourseId = dto.CourseId
+        //        };
+        //        lectures.Add(lecture);
+        //    }
+        //    return lectures;
+        //}
+
+        //// Mapping functions for Note
+        //public Note MapToNote(NoteInfo dto, string userId)
+        //{
+        //    return new Note
+        //    {
+        //        Content = dto.Content,
+        //        UploadDate = dto.UploadDate,
+        //        UserId = userId,
+        //        ProfessorId = dto.ProfessorId,
+        //        CourseId = dto.CourseId
+        //    };
+        //}
+        //public List<Note> MapToNote(List<NoteInfo> dtos, string userId)
+        //{
+        //    List<Note> notes = new List<Note>();
+        //    foreach (var dto in dtos)
+        //    {
+        //        Note note = new Note
+        //        {
+        //            Content = dto.Content,
+        //            UploadDate = dto.UploadDate,
+        //            UserId = userId,
+        //            ProfessorId = dto.ProfessorId,
+        //            CourseId = dto.CourseId
+        //        };
+        //        notes.Add(note);
+        //    }
+        //    return notes;
+        //}
 
         // Mapping functions for Professor
         public Professor MapToProfessor(ProfessorInfo dto)
@@ -229,35 +300,35 @@ namespace RateAucProfessors.ObjectsMapping
         }
 
         // Mapping functions for Rating
-        public Rating MapToRating(RatingInfo dto, string userId)
+        public Review MapToReview(ReviewInfo dto, string userId)
         {
-            return new Rating
+            return new Review
             {
+                Content = dto.Content,
                 Timestamp = dto.Timestamp,
                 Value = dto.Value,
-                Comments = dto.Comments,
                 ProfessorId = dto.ProfessorId,
                 UserId = userId,
                 CourseId = dto.CourseId
             };
         }
-        public List<Rating> MapToRating(List<RatingInfo> dtos, string userId)
+        public List<Review> MapToReview(List<ReviewInfo> dtos, string userId)
         {
-            List<Rating> ratings = new List<Rating>();
+            List<Review> reviews = new List<Review>();
             foreach (var dto in dtos)
             {
-                Rating rating = new Rating
+                Review review = new Review
                 {
+                    Content = dto.Content,
                     Timestamp = dto.Timestamp,
                     Value = dto.Value,
-                    Comments = dto.Comments,
                     ProfessorId = dto.ProfessorId,
                     UserId = userId,
                     CourseId = dto.CourseId
                 };
-                ratings.Add(rating);
+                reviews.Add(review);
             }
-            return ratings;
+            return reviews;
         }
 
         // Mapping functions for Reaction
@@ -268,7 +339,10 @@ namespace RateAucProfessors.ObjectsMapping
                 IsLike = dto.IsLike,
                 Timestamp = dto.Timestamp,
                 FeedId = dto.FeedId,
-                UserId = userId
+                UserId = userId,
+                CommentId = dto.CommentId,
+                ReviewId = dto.ReviewId,
+                ReplyId = dto.ReplyId
             };
         }
         public List<Reaction> MapToReaction(List<ReactionInfo> dtos, string userId)
@@ -281,7 +355,10 @@ namespace RateAucProfessors.ObjectsMapping
                     IsLike = dto.IsLike,
                     Timestamp = dto.Timestamp,
                     FeedId = dto.FeedId,
-                    UserId = userId
+                    UserId = userId,
+                    CommentId = dto.CommentId,
+                    ReviewId = dto.ReviewId,
+                    ReplyId = dto.ReplyId
                 };
                 reactions.Add(reaction);
             }
@@ -323,12 +400,12 @@ namespace RateAucProfessors.ObjectsMapping
             {
                 FirstName = dto.FirstName,
                 LastName = dto.LastName,
-                Major = dto.Major,
                 Standing = dto.Standing,
                 GraduationYear = dto.GraduationYear,
                 Email = dto.FirstName + ' ' + dto.LastName,
                 UserName = dto.Email,
-                PhoneNumber = dto.PhoneNumber
+                PhoneNumber = dto.PhoneNumber,
+                Student_Id = dto.Student_Id
             };
         }
         public List<Student> MapToStudent(List<StudentInfo> dtos)
@@ -340,12 +417,12 @@ namespace RateAucProfessors.ObjectsMapping
                 {
                     FirstName = dto.FirstName,
                     LastName = dto.LastName,
-                    Major = dto.Major,
                     Standing = dto.Standing,
                     GraduationYear = dto.GraduationYear,
                     Email = dto.FirstName + ' ' + dto.LastName,
                     UserName = dto.Email,
-                    PhoneNumber = dto.PhoneNumber
+                    PhoneNumber = dto.PhoneNumber,
+                    Student_Id = dto.Student_Id
                 };
                 students.Add(student);
             }
@@ -353,34 +430,34 @@ namespace RateAucProfessors.ObjectsMapping
         }
 
         // Mapping functions for Syllabus
-        public Syllabus MapToSyllabus(SyllabusInfo dto, string userId)
-        {
-            return new Syllabus
-            {
-                Content = dto.Content,
-                UploadDate = dto.UploadDate,
-                ProfessorId = dto.ProfessorId,
-                CourseId = dto.CourseId,
-                UserId = userId
-            };
-        }
-        public List<Syllabus> MapToSyllabus(List<SyllabusInfo> dtos, string userId)
-        {
-            List<Syllabus> syllabuses = new List<Syllabus>();
-            foreach (var dto in dtos)
-            {
-                Syllabus syllabus = new Syllabus
-                {
-                    Content = dto.Content,
-                    UploadDate = dto.UploadDate,
-                    ProfessorId = dto.ProfessorId,
-                    CourseId = dto.CourseId,
-                    UserId = userId
-                };
-                syllabuses.Add(syllabus);
-            }
-            return syllabuses;
-        }
+        //public Syllabus MapToSyllabus(SyllabusInfo dto, string userId)
+        //{
+        //    return new Syllabus
+        //    {
+        //        Content = dto.Content,
+        //        UploadDate = dto.UploadDate,
+        //        ProfessorId = dto.ProfessorId,
+        //        CourseId = dto.CourseId,
+        //        UserId = userId
+        //    };
+        //}
+        //public List<Syllabus> MapToSyllabus(List<SyllabusInfo> dtos, string userId)
+        //{
+        //    List<Syllabus> syllabuses = new List<Syllabus>();
+        //    foreach (var dto in dtos)
+        //    {
+        //        Syllabus syllabus = new Syllabus
+        //        {
+        //            Content = dto.Content,
+        //            UploadDate = dto.UploadDate,
+        //            ProfessorId = dto.ProfessorId,
+        //            CourseId = dto.CourseId,
+        //            UserId = userId
+        //        };
+        //        syllabuses.Add(syllabus);
+        //    }
+        //    return syllabuses;
+        //}
 
     }
 }
