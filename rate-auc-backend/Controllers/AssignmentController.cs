@@ -1,12 +1,16 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using RateAucProfessors.DTO.Requests;
 using RateAucProfessors.IRepository;
 using RateAucProfessors.Models;
 using RateAucProfessors.ObjectsMapping;
+using System.IdentityModel.Tokens.Jwt;
+using System.Security.Claims;
 
 namespace RateAucProfessors.Controllers
 {
+    [Authorize(Roles = "Student,Admin")]
     [Route("api/[controller]")]
     [ApiController]
     public class AssignmentController : ControllerBase
@@ -34,21 +38,31 @@ namespace RateAucProfessors.Controllers
         }
         [HttpPost]
         [Route("add")]
-        public async Task<IActionResult> Add(AssignmentInfo assignmentInfo,string userId)
+        public async Task<IActionResult> Add(AssignmentInfo assignmentInfo)
         {
-            Assignment assignment = _mapper.MapToAssignment(assignmentInfo, userId); ;
-            var result = await _unitOfWork.Assignment.Add(assignment);
-            await _unitOfWork.SaveAsync();
-            return Ok(result);
+            var userId = User.FindFirstValue(JwtRegisteredClaimNames.Sub);
+            if(userId is not null)
+            {
+                Assignment assignment = _mapper.MapToAssignment(assignmentInfo, userId); ;
+                var result = await _unitOfWork.Assignment.Add(assignment);
+                await _unitOfWork.SaveAsync();
+                return Ok(result);
+            }
+            return BadRequest("User not found");
         }
         [HttpPut]
         [Route("update")]
-        public IActionResult Update(AssignmentInfo assignmentInfo, string userId)
+        public IActionResult Update(AssignmentInfo assignmentInfo)
         {
-            Assignment assignment = _mapper.MapToAssignment(assignmentInfo, userId);
-            var result = _unitOfWork.Assignment.Update(assignment);
-            _unitOfWork.SaveAsync();
-            return Ok(result);
+            var userId = User.FindFirstValue(JwtRegisteredClaimNames.Sub);
+            if (userId is not null) 
+            {
+                Assignment assignment = _mapper.MapToAssignment(assignmentInfo, userId);
+                var result = _unitOfWork.Assignment.Update(assignment);
+                _unitOfWork.SaveAsync();
+                return Ok(result);
+            }
+            return BadRequest("User not found");
         }
         [HttpDelete]
         [Route("delete/{id}")]
