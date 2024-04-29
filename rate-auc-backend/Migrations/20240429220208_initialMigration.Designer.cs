@@ -12,7 +12,7 @@ using RateAucProfessors.DB;
 namespace RateAucProfessors.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20240406123733_initialMigration")]
+    [Migration("20240429220208_initialMigration")]
     partial class initialMigration
     {
         /// <inheritdoc />
@@ -38,6 +38,21 @@ namespace RateAucProfessors.Migrations
                     b.HasIndex("ProfessorsId");
 
                     b.ToTable("CourseProfessors", (string)null);
+                });
+
+            modelBuilder.Entity("MajorStudent", b =>
+                {
+                    b.Property<int>("MajorsId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("StudentsId")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.HasKey("MajorsId", "StudentsId");
+
+                    b.HasIndex("StudentsId");
+
+                    b.ToTable("StudentMajors", (string)null);
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRole", b =>
@@ -246,42 +261,6 @@ namespace RateAucProfessors.Migrations
                     b.ToTable("AspNetUserTokens", (string)null);
                 });
 
-            modelBuilder.Entity("RateAucProfessors.Models.Assignment", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
-
-                    b.Property<string>("Content")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<int>("CourseId")
-                        .HasColumnType("int");
-
-                    b.Property<int>("ProfessorId")
-                        .HasColumnType("int");
-
-                    b.Property<DateTime>("UploadDate")
-                        .HasColumnType("datetime2");
-
-                    b.Property<string>("UserId")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(450)");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("CourseId");
-
-                    b.HasIndex("ProfessorId");
-
-                    b.HasIndex("UserId");
-
-                    b.ToTable("Assignments");
-                });
-
             modelBuilder.Entity("RateAucProfessors.Models.Comment", b =>
                 {
                     b.Property<int>("Id")
@@ -297,6 +276,9 @@ namespace RateAucProfessors.Migrations
                     b.Property<int>("FeedId")
                         .HasColumnType("int");
 
+                    b.Property<int>("ReviewId")
+                        .HasColumnType("int");
+
                     b.Property<DateTime>("Timestamp")
                         .HasColumnType("datetime2");
 
@@ -307,6 +289,8 @@ namespace RateAucProfessors.Migrations
                     b.HasKey("Id");
 
                     b.HasIndex("FeedId");
+
+                    b.HasIndex("ReviewId");
 
                     b.HasIndex("UserId");
 
@@ -321,8 +305,19 @@ namespace RateAucProfessors.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
+                    b.Property<string>("Code")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("Credit_Hours")
+                        .HasColumnType("int");
+
                     b.Property<int>("DepartmentId")
                         .HasColumnType("int");
+
+                    b.Property<string>("Description")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Name")
                         .IsRequired()
@@ -356,6 +351,50 @@ namespace RateAucProfessors.Migrations
                     b.ToTable("Departments");
                 });
 
+            modelBuilder.Entity("RateAucProfessors.Models.Document", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("Content")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("CourseId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("DocumentUrl")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Document_type")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("ProfessorId")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime>("UploadDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("UserId")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(450)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("CourseId");
+
+                    b.HasIndex("ProfessorId");
+
+                    b.HasIndex("UserId");
+
+                    b.ToTable("Documents");
+                });
+
             modelBuilder.Entity("RateAucProfessors.Models.Feed", b =>
                 {
                     b.Property<int>("Id")
@@ -382,7 +421,7 @@ namespace RateAucProfessors.Migrations
                     b.ToTable("Feeds");
                 });
 
-            modelBuilder.Entity("RateAucProfessors.Models.Lecture", b =>
+            modelBuilder.Entity("RateAucProfessors.Models.Major", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -390,68 +429,22 @@ namespace RateAucProfessors.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
-                    b.Property<string>("Content")
+                    b.Property<int>("DepartmentId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Description")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("CourseId")
-                        .HasColumnType("int");
-
-                    b.Property<int>("ProfessorId")
-                        .HasColumnType("int");
-
-                    b.Property<DateTime>("UploadDate")
-                        .HasColumnType("datetime2");
-
-                    b.Property<string>("UserId")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(450)");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("CourseId");
-
-                    b.HasIndex("ProfessorId");
-
-                    b.HasIndex("UserId");
-
-                    b.ToTable("Lectures");
-                });
-
-            modelBuilder.Entity("RateAucProfessors.Models.Note", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
-
-                    b.Property<string>("Content")
+                    b.Property<string>("Name")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("CourseId")
-                        .HasColumnType("int");
-
-                    b.Property<int>("ProfessorId")
-                        .HasColumnType("int");
-
-                    b.Property<DateTime>("UploadDate")
-                        .HasColumnType("datetime2");
-
-                    b.Property<string>("UserId")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(450)");
-
                     b.HasKey("Id");
 
-                    b.HasIndex("CourseId");
+                    b.HasIndex("DepartmentId");
 
-                    b.HasIndex("ProfessorId");
-
-                    b.HasIndex("UserId");
-
-                    b.ToTable("Notes");
+                    b.ToTable("Majors");
                 });
 
             modelBuilder.Entity("RateAucProfessors.Models.Professor", b =>
@@ -484,7 +477,7 @@ namespace RateAucProfessors.Migrations
                     b.ToTable("Professors");
                 });
 
-            modelBuilder.Entity("RateAucProfessors.Models.Rating", b =>
+            modelBuilder.Entity("RateAucProfessors.Models.Reaction", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -492,7 +485,83 @@ namespace RateAucProfessors.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
-                    b.Property<string>("Comments")
+                    b.Property<int>("CommentId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("FeedId")
+                        .HasColumnType("int");
+
+                    b.Property<bool>("IsLike")
+                        .HasColumnType("bit");
+
+                    b.Property<int>("ReplyId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("ReviewId")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime>("Timestamp")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("UserId")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(450)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("CommentId");
+
+                    b.HasIndex("FeedId");
+
+                    b.HasIndex("ReplyId");
+
+                    b.HasIndex("ReviewId");
+
+                    b.HasIndex("UserId");
+
+                    b.ToTable("Reactions");
+                });
+
+            modelBuilder.Entity("RateAucProfessors.Models.Reply", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<int>("CommentId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Content")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("Timestamp")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("UserId")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(450)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("CommentId");
+
+                    b.HasIndex("UserId");
+
+                    b.ToTable("Replies");
+                });
+
+            modelBuilder.Entity("RateAucProfessors.Models.Review", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("Content")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
@@ -523,106 +592,6 @@ namespace RateAucProfessors.Migrations
                     b.ToTable("Ratings");
                 });
 
-            modelBuilder.Entity("RateAucProfessors.Models.Reaction", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
-
-                    b.Property<int>("FeedId")
-                        .HasColumnType("int");
-
-                    b.Property<bool>("IsLike")
-                        .HasColumnType("bit");
-
-                    b.Property<DateTime>("Timestamp")
-                        .HasColumnType("datetime2");
-
-                    b.Property<string>("UserId")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(450)");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("FeedId");
-
-                    b.HasIndex("UserId");
-
-                    b.ToTable("Reactions");
-                });
-
-            modelBuilder.Entity("RateAucProfessors.Models.Reply", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
-
-                    b.Property<int>("CommentId")
-                        .HasColumnType("int");
-
-                    b.Property<string>("Content")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("StudentId")
-                        .HasColumnType("nvarchar(450)");
-
-                    b.Property<DateTime>("Timestamp")
-                        .HasColumnType("datetime2");
-
-                    b.Property<string>("UserId")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("CommentId");
-
-                    b.HasIndex("StudentId");
-
-                    b.ToTable("Replies");
-                });
-
-            modelBuilder.Entity("RateAucProfessors.Models.Syllabus", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
-
-                    b.Property<string>("Content")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<int>("CourseId")
-                        .HasColumnType("int");
-
-                    b.Property<int>("ProfessorId")
-                        .HasColumnType("int");
-
-                    b.Property<DateTime>("UploadDate")
-                        .HasColumnType("datetime2");
-
-                    b.Property<string>("UserId")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(450)");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("CourseId");
-
-                    b.HasIndex("ProfessorId");
-
-                    b.HasIndex("UserId");
-
-                    b.ToTable("Syllabuses");
-                });
-
             modelBuilder.Entity("RateAucProfessors.Models.Student", b =>
                 {
                     b.HasBaseType("Microsoft.AspNetCore.Identity.IdentityUser");
@@ -630,6 +599,9 @@ namespace RateAucProfessors.Migrations
                     b.Property<string>("FirstName")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool>("Gender")
+                        .HasColumnType("bit");
 
                     b.Property<string>("GraduationYear")
                         .IsRequired()
@@ -639,11 +611,11 @@ namespace RateAucProfessors.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("Major")
+                    b.Property<string>("Standing")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("Standing")
+                    b.Property<string>("Student_Id")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
@@ -661,6 +633,21 @@ namespace RateAucProfessors.Migrations
                     b.HasOne("RateAucProfessors.Models.Professor", null)
                         .WithMany()
                         .HasForeignKey("ProfessorsId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+                });
+
+            modelBuilder.Entity("MajorStudent", b =>
+                {
+                    b.HasOne("RateAucProfessors.Models.Major", null)
+                        .WithMany()
+                        .HasForeignKey("MajorsId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("RateAucProfessors.Models.Student", null)
+                        .WithMany()
+                        .HasForeignKey("StudentsId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
                 });
@@ -716,38 +703,17 @@ namespace RateAucProfessors.Migrations
                         .IsRequired();
                 });
 
-            modelBuilder.Entity("RateAucProfessors.Models.Assignment", b =>
-                {
-                    b.HasOne("RateAucProfessors.Models.Course", "Course")
-                        .WithMany("Assignments")
-                        .HasForeignKey("CourseId")
-                        .OnDelete(DeleteBehavior.NoAction)
-                        .IsRequired();
-
-                    b.HasOne("RateAucProfessors.Models.Professor", "Professor")
-                        .WithMany("Assignments")
-                        .HasForeignKey("ProfessorId")
-                        .OnDelete(DeleteBehavior.NoAction)
-                        .IsRequired();
-
-                    b.HasOne("RateAucProfessors.Models.Student", "Student")
-                        .WithMany("Assignments")
-                        .HasForeignKey("UserId")
-                        .OnDelete(DeleteBehavior.NoAction)
-                        .IsRequired();
-
-                    b.Navigation("Course");
-
-                    b.Navigation("Professor");
-
-                    b.Navigation("Student");
-                });
-
             modelBuilder.Entity("RateAucProfessors.Models.Comment", b =>
                 {
                     b.HasOne("RateAucProfessors.Models.Feed", "Feed")
                         .WithMany("Comments")
                         .HasForeignKey("FeedId")
+                        .OnDelete(DeleteBehavior.NoAction)
+                        .IsRequired();
+
+                    b.HasOne("RateAucProfessors.Models.Review", "Review")
+                        .WithMany("Comments")
+                        .HasForeignKey("ReviewId")
                         .OnDelete(DeleteBehavior.NoAction)
                         .IsRequired();
 
@@ -758,6 +724,8 @@ namespace RateAucProfessors.Migrations
                         .IsRequired();
 
                     b.Navigation("Feed");
+
+                    b.Navigation("Review");
 
                     b.Navigation("Student");
                 });
@@ -773,6 +741,33 @@ namespace RateAucProfessors.Migrations
                     b.Navigation("Department");
                 });
 
+            modelBuilder.Entity("RateAucProfessors.Models.Document", b =>
+                {
+                    b.HasOne("RateAucProfessors.Models.Course", "Course")
+                        .WithMany("Documents")
+                        .HasForeignKey("CourseId")
+                        .OnDelete(DeleteBehavior.NoAction)
+                        .IsRequired();
+
+                    b.HasOne("RateAucProfessors.Models.Professor", "Professor")
+                        .WithMany("Documents")
+                        .HasForeignKey("ProfessorId")
+                        .OnDelete(DeleteBehavior.NoAction)
+                        .IsRequired();
+
+                    b.HasOne("RateAucProfessors.Models.Student", "Student")
+                        .WithMany("Documents")
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.NoAction)
+                        .IsRequired();
+
+                    b.Navigation("Course");
+
+                    b.Navigation("Professor");
+
+                    b.Navigation("Student");
+                });
+
             modelBuilder.Entity("RateAucProfessors.Models.Feed", b =>
                 {
                     b.HasOne("RateAucProfessors.Models.Student", "Student")
@@ -784,58 +779,15 @@ namespace RateAucProfessors.Migrations
                     b.Navigation("Student");
                 });
 
-            modelBuilder.Entity("RateAucProfessors.Models.Lecture", b =>
+            modelBuilder.Entity("RateAucProfessors.Models.Major", b =>
                 {
-                    b.HasOne("RateAucProfessors.Models.Course", "Course")
-                        .WithMany("Lectures")
-                        .HasForeignKey("CourseId")
-                        .OnDelete(DeleteBehavior.NoAction)
+                    b.HasOne("RateAucProfessors.Models.Department", "Department")
+                        .WithMany("Majors")
+                        .HasForeignKey("DepartmentId")
+                        .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("RateAucProfessors.Models.Professor", "Professor")
-                        .WithMany("Lectures")
-                        .HasForeignKey("ProfessorId")
-                        .OnDelete(DeleteBehavior.NoAction)
-                        .IsRequired();
-
-                    b.HasOne("RateAucProfessors.Models.Student", "Student")
-                        .WithMany("Lectures")
-                        .HasForeignKey("UserId")
-                        .OnDelete(DeleteBehavior.NoAction)
-                        .IsRequired();
-
-                    b.Navigation("Course");
-
-                    b.Navigation("Professor");
-
-                    b.Navigation("Student");
-                });
-
-            modelBuilder.Entity("RateAucProfessors.Models.Note", b =>
-                {
-                    b.HasOne("RateAucProfessors.Models.Course", "Course")
-                        .WithMany("Notes")
-                        .HasForeignKey("CourseId")
-                        .OnDelete(DeleteBehavior.NoAction)
-                        .IsRequired();
-
-                    b.HasOne("RateAucProfessors.Models.Professor", "Professor")
-                        .WithMany("Notes")
-                        .HasForeignKey("ProfessorId")
-                        .OnDelete(DeleteBehavior.NoAction)
-                        .IsRequired();
-
-                    b.HasOne("RateAucProfessors.Models.Student", "Student")
-                        .WithMany("Notes")
-                        .HasForeignKey("UserId")
-                        .OnDelete(DeleteBehavior.NoAction)
-                        .IsRequired();
-
-                    b.Navigation("Course");
-
-                    b.Navigation("Professor");
-
-                    b.Navigation("Student");
+                    b.Navigation("Department");
                 });
 
             modelBuilder.Entity("RateAucProfessors.Models.Professor", b =>
@@ -849,48 +801,45 @@ namespace RateAucProfessors.Migrations
                     b.Navigation("Department");
                 });
 
-            modelBuilder.Entity("RateAucProfessors.Models.Rating", b =>
-                {
-                    b.HasOne("RateAucProfessors.Models.Course", "Course")
-                        .WithMany("Ratings")
-                        .HasForeignKey("CourseId")
-                        .OnDelete(DeleteBehavior.NoAction)
-                        .IsRequired();
-
-                    b.HasOne("RateAucProfessors.Models.Professor", "Professor")
-                        .WithMany("Ratings")
-                        .HasForeignKey("ProfessorId")
-                        .OnDelete(DeleteBehavior.NoAction)
-                        .IsRequired();
-
-                    b.HasOne("RateAucProfessors.Models.Student", "Student")
-                        .WithMany("Ratings")
-                        .HasForeignKey("UserId")
-                        .OnDelete(DeleteBehavior.NoAction)
-                        .IsRequired();
-
-                    b.Navigation("Course");
-
-                    b.Navigation("Professor");
-
-                    b.Navigation("Student");
-                });
-
             modelBuilder.Entity("RateAucProfessors.Models.Reaction", b =>
                 {
+                    b.HasOne("RateAucProfessors.Models.Comment", "Comment")
+                        .WithMany("Reactions")
+                        .HasForeignKey("CommentId")
+                        .OnDelete(DeleteBehavior.NoAction)
+                        .IsRequired();
+
                     b.HasOne("RateAucProfessors.Models.Feed", "Feed")
                         .WithMany("Reactions")
                         .HasForeignKey("FeedId")
                         .OnDelete(DeleteBehavior.NoAction)
                         .IsRequired();
 
+                    b.HasOne("RateAucProfessors.Models.Reply", "Reply")
+                        .WithMany("Reactions")
+                        .HasForeignKey("ReplyId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("RateAucProfessors.Models.Review", "Review")
+                        .WithMany("Reactions")
+                        .HasForeignKey("ReviewId")
+                        .OnDelete(DeleteBehavior.NoAction)
+                        .IsRequired();
+
                     b.HasOne("RateAucProfessors.Models.Student", "Student")
                         .WithMany("Reactions")
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.NoAction)
                         .IsRequired();
 
+                    b.Navigation("Comment");
+
                     b.Navigation("Feed");
+
+                    b.Navigation("Reply");
+
+                    b.Navigation("Review");
 
                     b.Navigation("Student");
                 });
@@ -905,29 +854,31 @@ namespace RateAucProfessors.Migrations
 
                     b.HasOne("RateAucProfessors.Models.Student", "Student")
                         .WithMany("Replys")
-                        .HasForeignKey("StudentId");
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.NoAction)
+                        .IsRequired();
 
                     b.Navigation("Comment");
 
                     b.Navigation("Student");
                 });
 
-            modelBuilder.Entity("RateAucProfessors.Models.Syllabus", b =>
+            modelBuilder.Entity("RateAucProfessors.Models.Review", b =>
                 {
                     b.HasOne("RateAucProfessors.Models.Course", "Course")
-                        .WithMany("Syllabuses")
+                        .WithMany("Reviews")
                         .HasForeignKey("CourseId")
                         .OnDelete(DeleteBehavior.NoAction)
                         .IsRequired();
 
                     b.HasOne("RateAucProfessors.Models.Professor", "Professor")
-                        .WithMany("Syllabuses")
+                        .WithMany("Reviews")
                         .HasForeignKey("ProfessorId")
                         .OnDelete(DeleteBehavior.NoAction)
                         .IsRequired();
 
                     b.HasOne("RateAucProfessors.Models.Student", "Student")
-                        .WithMany("Syllabuses")
+                        .WithMany("Reviews")
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.NoAction)
                         .IsRequired();
@@ -941,25 +892,23 @@ namespace RateAucProfessors.Migrations
 
             modelBuilder.Entity("RateAucProfessors.Models.Comment", b =>
                 {
+                    b.Navigation("Reactions");
+
                     b.Navigation("Replies");
                 });
 
             modelBuilder.Entity("RateAucProfessors.Models.Course", b =>
                 {
-                    b.Navigation("Assignments");
+                    b.Navigation("Documents");
 
-                    b.Navigation("Lectures");
-
-                    b.Navigation("Notes");
-
-                    b.Navigation("Ratings");
-
-                    b.Navigation("Syllabuses");
+                    b.Navigation("Reviews");
                 });
 
             modelBuilder.Entity("RateAucProfessors.Models.Department", b =>
                 {
                     b.Navigation("Courses");
+
+                    b.Navigation("Majors");
 
                     b.Navigation("Professors");
                 });
@@ -973,36 +922,36 @@ namespace RateAucProfessors.Migrations
 
             modelBuilder.Entity("RateAucProfessors.Models.Professor", b =>
                 {
-                    b.Navigation("Assignments");
+                    b.Navigation("Documents");
 
-                    b.Navigation("Lectures");
+                    b.Navigation("Reviews");
+                });
 
-                    b.Navigation("Notes");
+            modelBuilder.Entity("RateAucProfessors.Models.Reply", b =>
+                {
+                    b.Navigation("Reactions");
+                });
 
-                    b.Navigation("Ratings");
+            modelBuilder.Entity("RateAucProfessors.Models.Review", b =>
+                {
+                    b.Navigation("Comments");
 
-                    b.Navigation("Syllabuses");
+                    b.Navigation("Reactions");
                 });
 
             modelBuilder.Entity("RateAucProfessors.Models.Student", b =>
                 {
-                    b.Navigation("Assignments");
-
                     b.Navigation("Comments");
 
+                    b.Navigation("Documents");
+
                     b.Navigation("Feeds");
-
-                    b.Navigation("Lectures");
-
-                    b.Navigation("Notes");
-
-                    b.Navigation("Ratings");
 
                     b.Navigation("Reactions");
 
                     b.Navigation("Replys");
 
-                    b.Navigation("Syllabuses");
+                    b.Navigation("Reviews");
                 });
 #pragma warning restore 612, 618
         }

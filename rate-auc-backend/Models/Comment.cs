@@ -4,7 +4,7 @@ namespace RateAucProfessors.Models
 {
     public class Comment
     {
-        public int Id { get; set; };
+        public int Id { get; set; }
 
         [Required]
         public string Content { get; set; } = string.Empty;

@@ -137,7 +137,7 @@ namespace RateAucProfessors.ObjectsMapping
                 CourseId = dto.CourseId
             };
         }
-        public List<Document> MapToDocument(List<DocumentInfo> dtos,, string userId)
+        public List<Document> MapToDocument(List<DocumentInfo> dtos, string userId)
         {
             List<Document> documents = new List<Document>();
             foreach (var dto in dtos)
