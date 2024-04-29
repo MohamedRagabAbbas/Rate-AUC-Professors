@@ -79,7 +79,6 @@ namespace RateAucProfessors.ObjectsMapping
                 Code = dto.Code,
                 Credit_Hours = dto.Credit_Hours,
                 DepartmentId = dto.DepartmentId,
-                ProfessorId = dto.ProfessorId
             };
         }
         public List<Course> MapToCourse(List<CourseInfo> dtos)
@@ -94,7 +93,6 @@ namespace RateAucProfessors.ObjectsMapping
                     Code = dto.Code,
                     Credit_Hours = dto.Credit_Hours,
                     DepartmentId = dto.DepartmentId,
-                    ProfessorId = dto.ProfessorId
                 };
                 courses.Add(course);
             }

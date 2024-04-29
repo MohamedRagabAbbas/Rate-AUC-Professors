@@ -10,6 +10,5 @@ namespace RateAucProfessors.DTO.Requests
         public string Code { get; set; } = string.Empty;
         public int Credit_Hours { get; set; }
         public int DepartmentId { get; set; }
-        public int ProfessorId { get; set; }
     }
 }

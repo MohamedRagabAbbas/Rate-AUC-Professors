@@ -16,8 +16,7 @@ namespace RateAucProfessors.Models
         public Department? Department { get; set; }
         public ICollection<Document>? Documents { get; set; }
         public ICollection<Review>? Reviews { get; set; }
-        public int ProfessorId { get; set; }
-        public Professor? Professor { get; set; }
+        public ICollection<Professor>? Professors { get; set; }
      
     }
 }

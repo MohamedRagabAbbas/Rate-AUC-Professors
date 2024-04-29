@@ -19,6 +19,5 @@ namespace RateAucProfessors.Models
         public ICollection<Course>? Courses { get; set; }
         public ICollection<Review>? Reviews { get; set; }
         public ICollection<Document>? Documents { get; set; }
-
     }
 }
