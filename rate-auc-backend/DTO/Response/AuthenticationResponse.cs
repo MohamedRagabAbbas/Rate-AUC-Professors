@@ -2,7 +2,7 @@
 {
     public class AuthenticationResponse
     {
-        public int Id { get; set; } = 0;
+        public string Id { get; set; } = 0;
         public string Role { get; set; } = string.Empty;
         public bool IsAuthenticated { get; set; } = false;
         public string Token { get; set; } = string.Empty;
