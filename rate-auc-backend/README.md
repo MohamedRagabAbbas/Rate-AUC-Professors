@@ -2,55 +2,137 @@
 
 This document provides detailed information about the endpoints available in the API.
 
-## Assignment
+# Schemas
+
+## CommentInfo
+
+- `content`: string, nullable: true
+- `timestamp`: string ($date-time)
+- `feedId`: integer ($int32)
+- `reviewId`: integer ($int32)
+
+## CourseInfo
+
+- `name`: string, nullable: true
+- `description`: string, nullable: true
+- `code`: string, nullable: true
+- `credit_Hours`: integer ($int32)
+- `departmentId`: integer ($int32)
+
+## DepartmentInfo
+
+- `name`: string, nullable: true
+- `description`: string, nullable: true
+
+## FeedInfo
+
+- `content`: string, nullable: true
+- `timestamp`: string ($date-time)
+
+## LoginRequest
+
+- `email`: string
+- `password`: string
+
+## ProfessorInfo
+
+- `name`: string, nullable: true
+- `email`: string, nullable: true
+- `bio`: string, nullable: true
+- `departmentId`: integer ($int32)
+
+## ReactionInfo
+
+- `isLike`: boolean
+- `timestamp`: string ($date-time)
+- `feedId`: integer ($int32)
+- `commentId`: integer ($int32)
+- `replyId`: integer ($int32)
+- `reviewId`: integer ($int32)
+
+## ReplyInfo
+
+- `content`: string, nullable: true
+- `timestamp`: string ($date-time)
+- `commentId`: integer ($int32)
+
+## ReviewInfo
+
+- `content`: string, nullable: true
+- `timestamp`: string ($date-time)
+- `value`: integer ($int32), minimum: 1, maximum: 5
+- `professorId`: integer ($int32)
+- `courseId`: integer ($int32)
+
+## StudentInfo
+
+- `firstName`: string, nullable: true
+- `lastName`: string, nullable: true
+- `email`: string, nullable: true
+- `password`: string, nullable: true
+- `phoneNumber`: string, nullable: true
+- `standing`: string, nullable: true
+- `graduationYear`: string, nullable: true
+- `student_Id`: string, nullable: true
+
+
+## API root
+**http://rateaucprofessor-001-site1.ftempurl.com/**
+#Example 
+<summary>Get All Document</summary>
+To retrieve all documents → **API root** + **URL:**
+**http://rateaucprofessor-001-site1.ftempurl.com/api/Document/get-all**
+
+
+## Document
 
 <details>
-<summary>Get All Assignments</summary>
+<summary>Get All Document</summary>
 
-Retrieves all assignments.
+Retrieves all documents.
 
-- **URL:** `/api/Assignment/get-all`
+- **URL:** `/api/Document/get-all`
 - **Method:** GET
 </details>
 
 <details>
-<summary>Get Assignment by ID</summary>
+<summary>Get Document by ID</summary>
 
-Retrieves a specific assignment by its ID.
+Retrieves a specific document by its ID.
 
-- **URL:** `/api/Assignment/get-by-id/{id}`
+- **URL:** `/api/Document/get-by-id/{id}`
 - **Method:** GET
 - **Parameters:**
-  - `id`: ID of the assignment
+  - `id`: ID of the document
 </details>
 
 <details>
-<summary>Add Assignment</summary>
+<summary>Add Document</summary>
 
-Adds a new assignment.
+Adds a new document.
 
-- **URL:** `/api/Assignment/add`
+- **URL:** `/api/Document/add`
 - **Method:** POST
 </details>
 
 <details>
-<summary>Update Assignment</summary>
+<summary>Update Document</summary>
 
-Updates an existing assignment.
+Updates an existing document.
 
-- **URL:** `/api/Assignment/update`
+- **URL:** `/api/Document/update`
 - **Method:** PUT
 </details>
 
 <details>
-<summary>Delete Assignment</summary>
+<summary>Delete Document</summary>
 
-Deletes an assignment by its ID.
+Deletes a document by its ID.
 
-- **URL:** `/api/Assignment/delete/{id}`
+- **URL:** `/api/Document/delete/{id}`
 - **Method:** DELETE
 - **Parameters:**
-  - `id`: ID of the assignment
+  - `id`: ID of the document
 </details>
 
 ## Authentication
@@ -277,107 +359,6 @@ Deletes a feed by its ID.
   - `id`: ID of the feed
 </details>
 
-## Lecture
-
-<details>
-<summary>Get All Lectures</summary>
-
-Retrieves all lectures.
-
-- **URL:** `/api/Lecture/get-all`
-- **Method:** GET
-</details>
-
-<details>
-<summary>Get Lecture by ID</summary>
-
-Retrieves a specific lecture by its ID.
-
-- **URL:** `/api/Lecture/get-by-id/{id}`
-- **Method:** GET
-- **Parameters:**
-  - `id`: ID of the lecture
-</details>
-
-<details>
-<summary>Add Lecture</summary>
-
-Adds a new lecture.
-
-- **URL:** `/api/Lecture/add`
-- **Method:** POST
-</details>
-
-<details>
-<summary>Update Lecture</summary>
-
-Updates an existing lecture.
-
-- **URL:** `/api/Lecture/update`
-- **Method:** PUT
-</details>
-
-<details>
-<summary>Delete Lecture</summary>
-
-Deletes a lecture by its ID.
-
-- **URL:** `/api/Lecture/delete/{id}`
-- **Method:** DELETE
-- **Parameters:**
-  - `id`: ID of the lecture
-</details>
-
-## Note
-
-<details>
-<summary>Get All Notes</summary>
-
-Retrieves all notes.
-
-- **URL:** `/api/Note/get-all`
-- **Method:** GET
-</details>
-
-<details>
-<summary>Get Note by ID</summary>
-
-Retrieves a specific note by its ID.
-
-- **URL:** `/api/Note/get-by-id/{id}`
-- **Method:** GET
-- **Parameters:**
-  - `id`: ID of the note
-</details>
-
-<details>
-<summary>Add Note</summary>
-
-Adds a new note.
-
-- **URL:** `/api/Note/add`
-- **Method:** POST
-</details>
-
-<details>
-<summary>Update Note</summary>
-
-Updates an existing note.
-
-- **URL:** `/api/Note/update`
-- **Method:** PUT
-</details>
-
-<details>
-<summary>Delete Note</summary>
-
-Deletes a note by its ID.
-
-- **URL:** `/api/Note/delete/{id}`
-- **Method:** DELETE
-- **Parameters:**
-  - `id`: ID of the note
-</details>
 
 ## Professor
 
@@ -632,55 +613,4 @@ Deletes a student by its ID.
 - **Method:** DELETE
 - **Parameters:**
   - `id`: ID of the student
-</details>
-
-## Syllabus
-
-<details>
-<summary>Get All Syllabi</summary>
-
-Retrieves all syllabi.
-
-- **URL:** `/api/Syllabus/get-all`
-- **Method:** GET
-</details>
-
-<details>
-<summary>Get Syllabus by ID</summary>
-
-Retrieves a specific syllabus by its ID.
-
-- **URL:** `/api/Syllabus/get-by-id/{id}`
-- **Method:** GET
-- **Parameters:**
-  - `id`: ID of the syllabus
-</details>
-
-<details>
-<summary>Add Syllabus</summary>
-
-Adds a new syllabus.
-
-- **URL:** `/api/Syllabus/add`
-- **Method:** POST
-</details>
-
-<details>
-<summary>Update Syllabus</summary>
-
-Updates an existing syllabus.
-
-- **URL:** `/api/Syllabus/update`
-- **Method:** PUT
-</details>
-
-<details>
-<summary>Delete Syllabus</summary>
-
-Deletes a syllabus by its ID.
-
-- **URL:** `/api/Syllabus/delete/{id}`
-- **Method:** DELETE
-- **Parameters:**
-  - `id`: ID of the syllabus
 </details>

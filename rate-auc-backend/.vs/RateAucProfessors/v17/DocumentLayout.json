@@ -3,12 +3,8 @@
   "WorkspaceRootPath": "D:\\Projects\\Rate-AUC-Professors\\rate-auc-backend\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{1ACAB246-850E-4FF0-A4B3-230A4DB218FA}|RateAucProfessors.csproj|d:\\projects\\rate-auc-professors\\rate-auc-backend\\authentication\\token.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1ACAB246-850E-4FF0-A4B3-230A4DB218FA}|RateAucProfessors.csproj|solutionrelative:authentication\\token.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1ACAB246-850E-4FF0-A4B3-230A4DB218FA}|RateAucProfessors.csproj|d:\\projects\\rate-auc-professors\\rate-auc-backend\\controllers\\assignmentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1ACAB246-850E-4FF0-A4B3-230A4DB218FA}|RateAucProfessors.csproj|solutionrelative:controllers\\assignmentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{1ACAB246-850E-4FF0-A4B3-230A4DB218FA}|RateAucProfessors.csproj|d:\\projects\\rate-auc-professors\\rate-auc-backend\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{1ACAB246-850E-4FF0-A4B3-230A4DB218FA}|RateAucProfessors.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     }
   ],
   "DocumentGroupContainers": [
@@ -23,27 +19,14 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Token.cs",
-              "DocumentMoniker": "D:\\Projects\\Rate-AUC-Professors\\rate-auc-backend\\Authentication\\Token.cs",
-              "RelativeDocumentMoniker": "Authentication\\Token.cs",
-              "ToolTip": "D:\\Projects\\Rate-AUC-Professors\\rate-auc-backend\\Authentication\\Token.cs",
-              "RelativeToolTip": "Authentication\\Token.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAACMAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-29T17:23:39.594Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "AssignmentController.cs",
-              "DocumentMoniker": "D:\\Projects\\Rate-AUC-Professors\\rate-auc-backend\\Controllers\\AssignmentController.cs",
-              "RelativeDocumentMoniker": "Controllers\\AssignmentController.cs",
-              "ToolTip": "D:\\Projects\\Rate-AUC-Professors\\rate-auc-backend\\Controllers\\AssignmentController.cs",
-              "RelativeToolTip": "Controllers\\AssignmentController.cs",
-              "ViewState": "AQIAAEAAAAAAAAAAAAAcwEgAAAAeAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-29T16:55:53.763Z",
+              "Title": "appsettings.json",
+              "DocumentMoniker": "D:\\Projects\\Rate-AUC-Professors\\rate-auc-backend\\appsettings.json",
+              "RelativeDocumentMoniker": "appsettings.json",
+              "ToolTip": "D:\\Projects\\Rate-AUC-Professors\\rate-auc-backend\\appsettings.json",
+              "RelativeToolTip": "appsettings.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAWAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-04-29T22:33:18.642Z",
               "EditorCaption": ""
             }
           ]
