@@ -52,9 +52,9 @@ namespace RateAucProfessors.Authentication
             {
                 //add Role
                 await _userManager.AddToRoleAsync(student, "Student");
-                if (student.Email is not null)
+                if (student.UserName is not null)
                 {
-                    var user = await _userManager.FindByNameAsync(student.Email);
+                    var user = await _userManager.FindByNameAsync(student.UserName);
                     if (user is not null)
                     {
                         var role = (await _userManager.GetRolesAsync(user)).FirstOrDefault();
@@ -86,9 +86,15 @@ namespace RateAucProfessors.Authentication
                 }
                 return new AuthenticationResponse() { Message = Error };
             }
+            var errors2 = result.Errors.ToList();
+            string Error2 = "";
+            foreach (var item in errors2)
+            {
+                Error2 += item.Description + " ";
+            }
             return new AuthenticationResponse()
             {
-                Message = "The user is not created"
+                Message = $"The user is not created due to the following {Error2}"
             };
 
         }
