@@ -13,7 +13,6 @@ import Tooltip from "@mui/material/Tooltip";
 import MenuItem from "@mui/material/MenuItem";
 import AdbIcon from "@mui/icons-material/Adb";
 import { useNavigate } from "react-router-dom";
-import App from "../App";
 import "../index.css";
 
 const pages = ["Feed", "Departments"]; // Add "Departments" to the pages array

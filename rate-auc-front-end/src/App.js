@@ -1,16 +1,10 @@
 import React, { useState } from "react";
-import logo from "./logo.svg";
 import "./App.css";
-import NavBar from "./components/NavBar";
 import Feed from "./pages/feed";
 import TestingRouting from "./pages/professors";
 import NotFound from "./pages/notFound";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Departments from "./pages/departments";
-// const AppContainer = styled.div`
-//   max-width: 1200px;
-//   margin: 0 auto;
-// `;
 
 function App() {
   const [currentPage, setCurrentPage] = useState("Home");
