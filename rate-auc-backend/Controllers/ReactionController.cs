@@ -26,6 +26,28 @@ namespace RateAucProfessors.Controllers
             return Ok(reactions);
         }
         [HttpGet]
+        [Route("get-all-reactions-by-feedId/{feedId}")]
+        public async Task<IActionResult> GetAllReactions(int feedId)
+        {
+            var reactions = await _unitOfWork.Reaction.GetWhereAsync(x => x.FeedId == feedId);
+            return Ok(reactions);
+        }
+        [HttpGet]
+        [Route("get-all-reactions-by-replyId/{replyId}")]
+        public async Task<IActionResult> GetAllReactionsByReplyId(int replyId)
+        {
+            var reactions = await _unitOfWork.Reaction.GetWhereAsync(x => x.ReplyId == replyId);
+            return Ok(reactions);
+        }
+        [HttpGet]
+        [Route("get-all-reactions-by-commentId/{commentId}")]
+        public async Task<IActionResult> GetAllReactionsByCommentId(int commentId)
+        {
+            var reactions = await _unitOfWork.Reaction.GetWhereAsync(x => x.CommentId == commentId);
+            return Ok(reactions);
+        }
+
+        [HttpGet]
         [Route("get-by-id/{id}")]
         public async Task<IActionResult> GetById(int id)
         {

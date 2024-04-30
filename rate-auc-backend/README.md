@@ -394,6 +394,16 @@ To retrieve all documents:
 </details>
 
 <details>
+
+## Retrieves all comments of a certain feed.
+
+- **URL:** `/api/Comment/get-all-comments-by-feedId/{feedId}`
+- **Method:** GET
+</details>
+
+<details>
+
+
 <summary>Get Comment by ID</summary>
 
 ## Retrieves a specific comment by its ID.
@@ -701,6 +711,30 @@ To retrieve all documents:
 </details>
 
 <details>
+
+## Retrieves all reactions for a certain feed.
+
+- **URL:** `/api/Reaction/get-all-reactions-by-feedId/{feedId}`
+- **Method:** GET
+</details>
+
+<details>
+
+## Retrieves all reactions for a certain relpy.
+
+- **URL:** `/api/Reaction/get-all-reactions-by-replyId/{replyId}`
+- **Method:** GET
+</details>
+
+<details>
+
+## Retrieves all reactions for a certain comment.
+
+- **URL:** `/api/Reaction/get-all-reactions-by-commentId/{commentId}`
+- **Method:** GET
+</details>
+
+<details>
 <summary>Get Reaction by ID</summary>
 
 ## Retrieves a specific reaction by its ID.
@@ -752,6 +786,15 @@ To retrieve all documents:
 </details>
 
 <details>
+
+## Retrieves all replies for a certain comment.
+
+- **URL:** `/api/Reply/get-all-replys-by-commentId/{commentId}`
+- **Method:** GET
+</details>
+
+<details>
+
 <summary>Get Reply by ID</summary>
 
 ## Retrieves a specific reply by its ID.
