@@ -294,6 +294,7 @@ This document provides detailed information about the endpoints available in the
 - `student_Id`: string, nullable: true
 
 
+
 ## Base URL
 The base URL for all API endpoints is: `http://rateaucprofessor-001-site1.ftempurl.com/`
 
@@ -309,6 +310,15 @@ To retrieve all documents:
   http ```
 	GET http://rateaucprofessor-001-site1.ftempurl.com/api/Document/get-all
 ```
+=======
+## API root
+**http://rateaucprofessor-001-site1.ftempurl.com/**
+<br>
+#Example 
+<summary>Get All Document</summary>
+To retrieve all documents → **API root** + **URL:**
+**http://rateaucprofessor-001-site1.ftempurl.com/api/Document/get-all**
+
 
 
 ### Document
