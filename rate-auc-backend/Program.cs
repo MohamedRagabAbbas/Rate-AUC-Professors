@@ -1,7 +1,9 @@
+using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
+using RateAucProfessors.Authentication;
 using RateAucProfessors.DB;
 using RateAucProfessors.IRepository;
 using RateAucProfessors.JWT;
@@ -44,6 +46,8 @@ builder.Services.Configure<IdentityOptions>(options =>
 builder.Services.Configure<Jwt>(builder.Configuration.GetSection("Jwt"));
 
 builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
+builder.Services.AddScoped<Token>();
+builder.Services.AddScoped<Authentication>();
 builder.Services.AddScoped<Mapper>();
 //builder.Services.AddScoped<IGenericRepository, GenericRepository>();
 
@@ -70,15 +74,43 @@ builder.Services.AddAuthentication(options =>
     });
 
 
+
+
 var app = builder.Build();
-app.UseAuthentication();
+app.UseCors(builder =>
+{
+    builder
+        .AllowAnyOrigin() 
+        .AllowAnyMethod()
+        .AllowAnyHeader();
+});
+
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
     app.UseSwaggerUI();
 }
+
+
 app.UseHttpsRedirection();
+app.UseAuthentication();
 app.UseAuthorization();
 app.MapControllers();
+
 app.Run();
+
+/*
+ * 
+ * {
+  "firstName": "user 1",
+  "lastName": "user",
+  "email": "Mohamed@aucegypt.edu",
+  "password": "User1@123.",
+  "phoneNumber": "123456789",
+  "standing": "string",
+  "graduationYear": "string",
+  "student_Id": "900165456"
+}
+
+ */
