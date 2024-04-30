@@ -4,14 +4,14 @@ This document provides detailed information about the endpoints available in the
 
 # Schemas
 
-## CommentInfo
+## Comment
 
 - `content`: string, nullable: true
 - `timestamp`: string ($date-time)
 - `feedId`: integer ($int32)
 - `reviewId`: integer ($int32)
 
-## CourseInfo
+## Course
 
 - `name`: string, nullable: true
 - `description`: string, nullable: true
@@ -19,12 +19,12 @@ This document provides detailed information about the endpoints available in the
 - `credit_Hours`: integer ($int32)
 - `departmentId`: integer ($int32)
 
-## DepartmentInfo
+## Department
 
 - `name`: string, nullable: true
 - `description`: string, nullable: true
 
-## FeedInfo
+## Feed
 
 - `content`: string, nullable: true
 - `timestamp`: string ($date-time)
@@ -34,14 +34,14 @@ This document provides detailed information about the endpoints available in the
 - `email`: string
 - `password`: string
 
-## ProfessorInfo
+## Professor
 
 - `name`: string, nullable: true
 - `email`: string, nullable: true
 - `bio`: string, nullable: true
 - `departmentId`: integer ($int32)
 
-## ReactionInfo
+## Reaction
 
 - `isLike`: boolean
 - `timestamp`: string ($date-time)
@@ -50,13 +50,13 @@ This document provides detailed information about the endpoints available in the
 - `replyId`: integer ($int32)
 - `reviewId`: integer ($int32)
 
-## ReplyInfo
+## Reply
 
 - `content`: string, nullable: true
 - `timestamp`: string ($date-time)
 - `commentId`: integer ($int32)
 
-## ReviewInfo
+## Review
 
 - `content`: string, nullable: true
 - `timestamp`: string ($date-time)
@@ -64,7 +64,7 @@ This document provides detailed information about the endpoints available in the
 - `professorId`: integer ($int32)
 - `courseId`: integer ($int32)
 
-## StudentInfo
+## Student
 
 - `firstName`: string, nullable: true
 - `lastName`: string, nullable: true
