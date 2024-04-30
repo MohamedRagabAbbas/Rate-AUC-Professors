@@ -306,17 +306,17 @@ To retrieve all documents:
 - **Method:** GET
 - **Description:** Retrieves all documents available.
 - **Example Request:**
-  ```http
+  http ```
 	GET http://rateaucprofessor-001-site1.ftempurl.com/api/Document/get-all
 ```
 
 
-## Document
+### Document
 
 <details>
 <summary>Get All Document</summary>
 
-Retrieves all documents.
+## Retrieves all documents.
 
 - **URL:** `/api/Document/get-all`
 - **Method:** GET
@@ -325,7 +325,7 @@ Retrieves all documents.
 <details>
 <summary>Get Document by ID</summary>
 
-Retrieves a specific document by its ID.
+## Retrieves a specific document by its ID.
 
 - **URL:** `/api/Document/get-by-id/{id}`
 - **Method:** GET
@@ -336,7 +336,7 @@ Retrieves a specific document by its ID.
 <details>
 <summary>Add Document</summary>
 
-Adds a new document.
+## Adds a new document.
 
 - **URL:** `/api/Document/add`
 - **Method:** POST
@@ -345,7 +345,7 @@ Adds a new document.
 <details>
 <summary>Update Document</summary>
 
-Updates an existing document.
+## Updates an existing document.
 
 - **URL:** `/api/Document/update`
 - **Method:** PUT
@@ -354,7 +354,7 @@ Updates an existing document.
 <details>
 <summary>Delete Document</summary>
 
-Deletes a document by its ID.
+## Deletes a document by its ID.
 
 - **URL:** `/api/Document/delete/{id}`
 - **Method:** DELETE
@@ -362,12 +362,12 @@ Deletes a document by its ID.
   - `id`: ID of the document
 </details>
 
-## Authentication
+### Authentication
 
 <details>
 <summary>Authenticate User</summary>
 
-Authenticates a user.
+## Authenticates a user.
 
 - **URL:** `/api/Authentication/authenticate`
 - **Method:** POST
@@ -376,18 +376,18 @@ Authenticates a user.
 <details>
 <summary>Sign Up User</summary>
 
-Registers a new user.
+## Registers a new user.
 
 - **URL:** `/api/Authentication/signup`
 - **Method:** POST
 </details>
 
-## Comment
+### Comment
 
 <details>
 <summary>Get All Comments</summary>
 
-Retrieves all comments.
+## Retrieves all comments.
 
 - **URL:** `/api/Comment/get-all`
 - **Method:** GET
@@ -396,7 +396,7 @@ Retrieves all comments.
 <details>
 <summary>Get Comment by ID</summary>
 
-Retrieves a specific comment by its ID.
+## Retrieves a specific comment by its ID.
 
 - **URL:** `/api/Comment/get-by-id/{id}`
 - **Method:** GET
@@ -407,7 +407,7 @@ Retrieves a specific comment by its ID.
 <details>
 <summary>Add Comment</summary>
 
-Adds a new comment.
+## Adds a new comment.
 
 - **URL:** `/api/Comment/add`
 - **Method:** POST
@@ -416,7 +416,7 @@ Adds a new comment.
 <details>
 <summary>Update Comment</summary>
 
-Updates an existing comment.
+## Updates an existing comment.
 
 - **URL:** `/api/Comment/update`
 - **Method:** PUT
@@ -425,7 +425,7 @@ Updates an existing comment.
 <details>
 <summary>Delete Comment</summary>
 
-Deletes a comment by its ID.
+## Deletes a comment by its ID.
 
 - **URL:** `/api/Comment/delete/{id}`
 - **Method:** DELETE
@@ -433,12 +433,12 @@ Deletes a comment by its ID.
   - `id`: ID of the comment
 </details>
 
-## Course
+### Course
 
 <details>
 <summary>Get All Courses</summary>
 
-Retrieves all courses.
+## Retrieves all courses.
 
 - **URL:** `/api/Course/get-all`
 - **Method:** GET
@@ -447,7 +447,7 @@ Retrieves all courses.
 <details>
 <summary>Get Course by ID</summary>
 
-Retrieves a specific course by its ID.
+## Retrieves a specific course by its ID.
 
 - **URL:** `/api/Course/get-by-id/{id}`
 - **Method:** GET
@@ -458,7 +458,7 @@ Retrieves a specific course by its ID.
 <details>
 <summary>Add Course</summary>
 
-Adds a new course.
+## Adds a new course.
 
 - **URL:** `/api/Course/add`
 - **Method:** POST
@@ -467,7 +467,7 @@ Adds a new course.
 <details>
 <summary>Update Course</summary>
 
-Updates an existing course.
+## Updates an existing course.
 
 - **URL:** `/api/Course/update`
 - **Method:** PUT
@@ -476,7 +476,7 @@ Updates an existing course.
 <details>
 <summary>Delete Course</summary>
 
-Deletes a course by its ID.
+## Deletes a course by its ID.
 
 - **URL:** `/api/Course/delete/{id}`
 - **Method:** DELETE
@@ -484,12 +484,12 @@ Deletes a course by its ID.
   - `id`: ID of the course
 </details>
 
-## Department
+### Department
 
 <details>
 <summary>Get All Departments</summary>
 
-Retrieves all departments.
+## Retrieves all departments.
 
 - **URL:** `/api/Department/get-all`
 - **Method:** GET
@@ -498,7 +498,7 @@ Retrieves all departments.
 <details>
 <summary>Get Department by ID</summary>
 
-Retrieves a specific department by its ID.
+## Retrieves a specific department by its ID.
 
 - **URL:** `/api/Department/get-by-id/{id}`
 - **Method:** GET
@@ -509,7 +509,7 @@ Retrieves a specific department by its ID.
 <details>
 <summary>Add Department</summary>
 
-Adds a new department.
+## Adds a new department.
 
 - **URL:** `/api/Department/add`
 - **Method:** POST
@@ -518,7 +518,7 @@ Adds a new department.
 <details>
 <summary>Update Department</summary>
 
-Updates an existing department.
+## Updates an existing department.
 
 - **URL:** `/api/Department/update`
 - **Method:** PUT
@@ -527,7 +527,7 @@ Updates an existing department.
 <details>
 <summary>Delete Department</summary>
 
-Deletes a department by its ID.
+## Deletes a department by its ID.
 
 - **URL:** `/api/Department/delete/{id}`
 - **Method:** DELETE
@@ -535,12 +535,12 @@ Deletes a department by its ID.
   - `id`: ID of the department
 </details>
 
-## Feed
+### Feed
 
 <details>
 <summary>Get All Feeds</summary>
 
-Retrieves all feeds.
+## Retrieves all feeds.
 
 - **URL:** `/api/Feed/get-all`
 - **Method:** GET
@@ -549,7 +549,7 @@ Retrieves all feeds.
 <details>
 <summary>Get Feed by ID</summary>
 
-Retrieves a specific feed by its ID.
+## Retrieves a specific feed by its ID.
 
 - **URL:** `/api/Feed/get-by-id/{id}`
 - **Method:** GET
@@ -560,7 +560,7 @@ Retrieves a specific feed by its ID.
 <details>
 <summary>Add Feed</summary>
 
-Adds a new feed.
+## Adds a new feed.
 
 - **URL:** `/api/Feed/add`
 - **Method:** POST
@@ -569,7 +569,7 @@ Adds a new feed.
 <details>
 <summary>Update Feed</summary>
 
-Updates an existing feed.
+## Updates an existing feed.
 
 - **URL:** `/api/Feed/update`
 - **Method:** PUT
@@ -578,7 +578,7 @@ Updates an existing feed.
 <details>
 <summary>Delete Feed</summary>
 
-Deletes a feed by its ID.
+## Deletes a feed by its ID.
 
 - **URL:** `/api/Feed/delete/{id}`
 - **Method:** DELETE
@@ -587,12 +587,12 @@ Deletes a feed by its ID.
 </details>
 
 
-## Professor
+### Professor
 
 <details>
 <summary>Get All Professors</summary>
 
-Retrieves all professors.
+## Retrieves all professors.
 
 - **URL:** `/api/Professor/get-all`
 - **Method:** GET
@@ -601,7 +601,7 @@ Retrieves all professors.
 <details>
 <summary>Get Professor by ID</summary>
 
-Retrieves a specific professor by its ID.
+## Retrieves a specific professor by its ID.
 
 - **URL:** `/api/Professor/get-by-id/{id}`
 - **Method:** GET
@@ -612,7 +612,7 @@ Retrieves a specific professor by its ID.
 <details>
 <summary>Add Professor</summary>
 
-Adds a new professor.
+## Adds a new professor.
 
 - **URL:** `/api/Professor/add`
 - **Method:** POST
@@ -621,7 +621,7 @@ Adds a new professor.
 <details>
 <summary>Update Professor</summary>
 
-Updates an existing professor.
+## Updates an existing professor.
 
 - **URL:** `/api/Professor/update`
 - **Method:** PUT
@@ -630,7 +630,7 @@ Updates an existing professor.
 <details>
 <summary>Delete Professor</summary>
 
-Deletes a professor by its ID.
+## Deletes a professor by its ID.
 
 - **URL:** `/api/Professor/delete/{id}`
 - **Method:** DELETE
@@ -638,12 +638,12 @@ Deletes a professor by its ID.
   - `id`: ID of the professor
 </details>
 
-## Rating
+### Rating
 
 <details>
 <summary>Get All Ratings</summary>
 
-Retrieves all ratings.
+## Retrieves all ratings.
 
 - **URL:** `/api/Rating/get-all`
 - **Method:** GET
@@ -652,7 +652,7 @@ Retrieves all ratings.
 <details>
 <summary>Get Rating by ID</summary>
 
-Retrieves a specific rating by its ID.
+## Retrieves a specific rating by its ID.
 
 - **URL:** `/api/Rating/get-by-id/{id}`
 - **Method:** GET
@@ -663,7 +663,7 @@ Retrieves a specific rating by its ID.
 <details>
 <summary>Add Rating</summary>
 
-Adds a new rating.
+## Adds a new rating.
 
 - **URL:** `/api/Rating/add`
 - **Method:** POST
@@ -672,7 +672,7 @@ Adds a new rating.
 <details>
 <summary>Update Rating</summary>
 
-Updates an existing rating.
+##  Updates an existing rating.
 
 - **URL:** `/api/Rating/update`
 - **Method:** PUT
@@ -681,7 +681,7 @@ Updates an existing rating.
 <details>
 <summary>Delete Rating</summary>
 
-Deletes a rating by its ID.
+## Deletes a rating by its ID.
 
 - **URL:** `/api/Rating/delete/{id}`
 - **Method:** DELETE
@@ -689,12 +689,12 @@ Deletes a rating by its ID.
   - `id`: ID of the rating
 </details>
 
-## Reaction
+### Reaction
 
 <details>
 <summary>Get All Reactions</summary>
 
-Retrieves all reactions.
+## Retrieves all reactions.
 
 - **URL:** `/api/Reaction/get-all`
 - **Method:** GET
@@ -703,7 +703,7 @@ Retrieves all reactions.
 <details>
 <summary>Get Reaction by ID</summary>
 
-Retrieves a specific reaction by its ID.
+## Retrieves a specific reaction by its ID.
 
 - **URL:** `/api/Reaction/get-by-id/{id}`
 - **Method:** GET
@@ -714,7 +714,7 @@ Retrieves a specific reaction by its ID.
 <details>
 <summary>Add Reaction</summary>
 
-Adds a new reaction.
+## Adds a new reaction.
 
 - **URL:** `/api/Reaction/add`
 - **Method:** POST
@@ -723,7 +723,7 @@ Adds a new reaction.
 <details>
 <summary>Update Reaction</summary>
 
-Updates an existing reaction.
+## Updates an existing reaction.
 
 - **URL:** `/api/Reaction/update`
 - **Method:** PUT
@@ -732,7 +732,7 @@ Updates an existing reaction.
 <details>
 <summary>Delete Reaction</summary>
 
-Deletes a reaction by its ID.
+## Deletes a reaction by its ID.
 
 - **URL:** `/api/Reaction/delete/{id}`
 - **Method:** DELETE
@@ -740,12 +740,12 @@ Deletes a reaction by its ID.
   - `id`: ID of the reaction
 </details>
 
-## Reply
+### Reply
 
 <details>
 <summary>Get All Replies</summary>
 
-Retrieves all replies.
+## Retrieves all replies.
 
 - **URL:** `/api/Reply/get-all`
 - **Method:** GET
@@ -754,7 +754,7 @@ Retrieves all replies.
 <details>
 <summary>Get Reply by ID</summary>
 
-Retrieves a specific reply by its ID.
+## Retrieves a specific reply by its ID.
 
 - **URL:** `/api/Reply/get-by-id/{id}`
 - **Method:** GET
@@ -765,7 +765,7 @@ Retrieves a specific reply by its ID.
 <details>
 <summary>Add Reply</summary>
 
-Adds a new reply.
+## Adds a new reply.
 
 - **URL:** `/api/Reply/add`
 - **Method:** POST
@@ -783,7 +783,7 @@ Updates an existing reply.
 <details>
 <summary>Delete Reply</summary>
 
-Deletes a reply by its ID.
+## Deletes a reply by its ID.
 
 - **URL:** `/api/Reply/delete/{id}`
 - **Method:** DELETE
@@ -791,12 +791,12 @@ Deletes a reply by its ID.
   - `id`: ID of the reply
 </details>
 
-## Student
+### Student
 
 <details>
 <summary>Get All Students</summary>
 
-Retrieves all students.
+## Retrieves all students.
 
 - **URL:** `/api/Student/get-all`
 - **Method:** GET
@@ -805,7 +805,7 @@ Retrieves all students.
 <details>
 <summary>Get Student by ID</summary>
 
-Retrieves a specific student by its ID.
+## Retrieves a specific student by its ID.
 
 - **URL:** `/api/Student/get-by-id/{id}`
 - **Method:** GET
@@ -816,7 +816,7 @@ Retrieves a specific student by its ID.
 <details>
 <summary>Add Student</summary>
 
-Adds a new student.
+## Adds a new student.
 
 - **URL:** `/api/Student/add`
 - **Method:** POST
@@ -825,7 +825,7 @@ Adds a new student.
 <details>
 <summary>Update Student</summary>
 
-Updates an existing student.
+## Updates an existing student.
 
 - **URL:** `/api/Student/update`
 - **Method:** PUT
@@ -834,7 +834,7 @@ Updates an existing student.
 <details>
 <summary>Delete Student</summary>
 
-Deletes a student by its ID.
+## Deletes a student by its ID.
 
 - **URL:** `/api/Student/delete/{id}`
 - **Method:** DELETE
@@ -843,7 +843,7 @@ Deletes a student by its ID.
 </details>
 
 
-# Example: Retrieving All Feeds Using React
+### Example: Retrieving All Feeds Using React
 
 This example demonstrates how to retrieve all feeds from the API using React.
 ```jsx
