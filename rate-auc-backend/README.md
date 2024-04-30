@@ -78,6 +78,7 @@ This document provides detailed information about the endpoints available in the
 
 ## API root
 **http://rateaucprofessor-001-site1.ftempurl.com/**
+<br>
 #Example 
 <summary>Get All Document</summary>
 To retrieve all documents → **API root** + **URL:**
