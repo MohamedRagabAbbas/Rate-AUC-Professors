@@ -306,9 +306,9 @@ To retrieve all documents:
 - **Method:** GET
 - **Description:** Retrieves all documents available.
 - **Example Request:**
-  http ```
-	GET http://rateaucprofessor-001-site1.ftempurl.com/api/Document/get-all
-```
+  `
+	GET http://rateaucprofessor-001-site1.ftempurl.com/api/Document/get-all `
+
 
 
 ### Document
