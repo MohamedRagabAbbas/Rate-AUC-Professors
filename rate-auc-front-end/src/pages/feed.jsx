@@ -67,6 +67,38 @@ export default function Feed() {
     },
   ];
 
+  const fetchData = async () => {
+    const username = "11174612";
+    const password = "60-dayfreetrial";
+
+    // Encode the username and password in base64 format
+    const base64Credentials = btoa(`${username}:${password}`);
+
+    try {
+      const response = await fetch(
+        "http://rateaucprofessor-001-site1.ftempurl.com/api/Feed/get-all",
+        {
+          method: "GET",
+          headers: {
+            Authorization: `Basic ${base64Credentials}`,
+            // "Access-Control-Allow-Origin": "*",
+          },
+        }
+      );
+
+      if (!response.ok) {
+        throw new Error("Failed to fetch data");
+      }
+
+      const data = await response.json();
+      console.log("Data:", data);
+      // Do something with the data
+    } catch (error) {
+      console.error("Error:", error.message);
+      // Handle error
+    }
+  };
+
   useEffect(() => {
     let userColors = {};
     posts.forEach((post) => {
@@ -85,10 +117,12 @@ export default function Feed() {
       });
     });
     setUserColors(userColors);
+
+    fetchData();
   }, []);
 
   const renderPosts = () => {
-    console.log("posts", posts);
+    // console.log("posts", posts);
     return posts.map((post) => (
       <Post key={post.id} post={post} userColors={userColors} />
     ));
