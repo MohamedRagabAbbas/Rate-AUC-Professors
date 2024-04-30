@@ -26,6 +26,15 @@ namespace RateAucProfessors.Controllers
             return Ok(comments);
         }
         [HttpGet]
+        [Route("get-all-comments-by-feedId/{feedId}")]
+        public async Task<IActionResult> GetAllComments(int feedId)
+        {
+            var comments = await _unitOfWork.Comment.GetWhereAsync(x =>x.FeedId == feedId);
+            return Ok(comments);
+        }
+
+
+        [HttpGet]
         [Route("get-by-id/{id}")]
         public async Task<IActionResult> GetById(int id)
         {
