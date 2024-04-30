@@ -23,6 +23,7 @@ This document provides detailed information about the endpoints available in the
    "Reactions": "array of objects"
  }
 }
+```
 ### Response for Course call
 ``` json
 {
