@@ -1,0 +1,86 @@
+
+.login-container {
+  font-family: 'SF Pro Display', Arial, sans-serif;
+  background-color: #ffffff; /* White background for the overall container */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  text-align: center;
+}
+
+.login-form {
+  background-color: #E6E6FA; /* Light purple background */
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  max-width: 320px;
+}
+
+h2 {
+  color: #000000; /* Adjust if a different color is needed */
+  margin-bottom: 2rem;
+}
+
+.input-group {
+  margin-bottom: 1rem;
+  border: 1px solid #000; /* black border for the input fields */
+  border-radius: 4px;
+}
+
+.input-group input {
+  width: calc(100% - 20px);
+  padding: 10px;
+  border: none;
+  outline: none;
+}
+
+.input-remember {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.input-remember input[type='checkbox'] {
+  margin-right: 10px; /* Adjust right margin for the checkbox */
+}
+
+.input-remember label {
+  margin-left: -10px; /* Move label to the left */
+}
+
+.login-button {
+  background-color: #EF8CCB; /* Pink color for the login button */
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 4px;
+  margin-bottom: 0.5rem;
+  width: 100%;
+  cursor: pointer;
+}
+
+.login-google-button {
+  background-color: #6171BA; /* Purple color for the Google login button */
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* Styling for the 'Sign up' button, assuming it has a class 'sign-up-button' */
+.sign-up-button {
+  background-color: transparent;
+  color: #6171BA; /* Matching the purple theme */
+  padding: 10px 15px;
+  border: 1px solid #6171BA;
+  border-radius: 4px;
+  cursor: pointer;
+  width: 100%;
+}
+
+/* Add any additional pseudo-elements or media queries as necessary */
+

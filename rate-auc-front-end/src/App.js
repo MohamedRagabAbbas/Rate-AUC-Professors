@@ -1,13 +1,15 @@
 // App.js
 import React, { useState } from 'react';
-import logo from "./logo.svg";
+//import logo from "./logo.svg";
 import "./App.css";
-import NavBar from "./components/NavBar";
+//import NavBar from "./components/NavBar";
 import Feed from "./pages/feed";
 import TestingRouting from "./pages/professors";
 import NotFound from "./pages/notFound";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Departments from "./pages/departments";
+import Login from './pages/login_page';
+
 // const AppContainer = styled.div`
 //   max-width: 1200px;
 //   margin: 0 auto;
@@ -42,7 +44,7 @@ function App() {
     <div>
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<Feed />} />
+         <Route path="/" element={<Login/>} /> 
           <Route path="/home" element={<Feed />} />
           <Route path="/feed" element={<Feed />} />
           <Route path="/professors" element={<TestingRouting />} />
