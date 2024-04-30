@@ -2,6 +2,213 @@
 
 This document provides detailed information about the endpoints available in the API.
 
+## Response Messages
+
+### Response for Comment call
+
+```json
+{
+ "Message": "Response message from the server",
+ "Status": true,
+ "Data": {
+   "Id": "number",
+   "Content": "string",
+   "Timestamp": "datetime",
+   "UserId": "string",
+   "Student": "object or null",
+   "FeedId": "number",
+   "Feed": "object or null",
+   "ReviewId": "number",
+   "Review": "object or null",
+   "Reactions": "array of objects"
+ }
+}
+### Response for Course call
+``` json
+{
+ "Message": "Response message from the server.",
+ "Status": true,
+ "Data": {
+   "Id": "number",
+   "Name": "string",
+   "Description": "string",
+   "Code": "string",
+   "Credit_Hours": "number",
+   "DepartmentId": "number",
+   "Department": "object or null",
+   "Documents": "array of objects",
+   "Reviews": "array of objects",
+   "Professors": "array of objects"
+ }
+}
+
+### Response for Department call
+``` json
+{
+ "Message": "Response message from the server.",
+ "Status": true,
+ "Data": {
+   "Id": "number",
+   "Name": "string",
+   "Description": "string",
+   "Majors": "array of objects",
+   "Professors": "array of objects",
+   "Courses": "array of objects"
+ }
+}
+
+### Response for Document call
+``` json
+{
+ "Message": "Response message from the server.",
+ "Status": true,
+ "Data": {
+   "Id": "number",
+   "Document_type": "string",
+   "Content": "string",
+   "UploadDate": "datetime",
+   "DocumentUrl": "string",
+   "UserId": "string",
+   "Student": "object or null",
+   "ProfessorId": "number",
+   "Professor": "object or null",
+   "CourseId": "number",
+   "Course": "object or null"
+ }
+}
+
+### Response for Feed call
+``` json
+{
+ "Message": "Response message from the server.",
+ "Status": true,
+ "Data": {
+   "Id": "number",
+   "Content": "string",
+   "Timestamp": "datetime",
+   "UserId": "string",
+   "Student": "object or null",
+   "Comments": "array of objects",
+   "Reactions": "array of objects"
+ }
+}
+
+### Response for Major call
+``` json
+{
+ "Message": "Response message from the server.",
+ "Status": true,
+ "Data": {
+   "Id": "number",
+   "Name": "string",
+   "Description": "string",
+   "DepartmentId": "number",
+   "Department": "object or null",
+   "Students": "array of objects"
+ }
+}
+
+### Response for Professor call
+``` json
+{
+ "Message": "Response message from the server.",
+ "Status": true,
+ "Data": {
+   "Id": "number",
+   "Name": "string",
+   "Email": "string",
+   "Bio": "string",
+   "DepartmentId": "number",
+   "Department": "object or null",
+   "Courses": "array of objects",
+   "Reviews": "array of objects",
+   "Documents": "array of objects"
+ }
+}
+
+### Response for Reaction call
+``` json
+{
+ "Message": "Response message from the server.",
+ "Status": true,
+ "Data": {
+   "Id": "number",
+   "IsLike": "boolean",
+   "Timestamp": "datetime",
+   "UserId": "string",
+   "Student": "object or null",
+   "CommentId": "number",
+   "Comment": "object or null",
+   "ReviewId": "number",
+   "Review": "object or null",
+   "FeedId": "number",
+   "Feed": "object or null",
+   "ReplyId": "number",
+   "Reply": "object or null"
+ }
+}
+
+### Response for Reply call
+``` json
+{
+ "Message": "Response message from the server.",
+ "Status": true,
+ "Data": {
+   "Id": "number",
+   "Content": "string",
+   "Timestamp": "datetime",
+   "CommentId": "number",
+   "Comment": "object or null",
+   "Reactions": "array of objects",
+   "UserId": "string",
+   "Student": "object or null"
+ }
+}
+
+### Response for Review call
+``` json
+{
+ "Message": "Response message from the server.",
+ "Status": true,
+ "Data": {
+   "Id": "number",
+   "Content": "string",
+   "Timestamp": "datetime",
+   "Value": "number",
+   "Comments": "array of objects",
+   "Reactions": "array of objects",
+   "UserId": "string",
+   "Student": "object or null",
+   "ProfessorId": "number",
+   "Professor": "object or null",
+   "CourseId": "number",
+   "Course": "object or null"
+ }
+}
+
+### Response for Student call
+``` json
+{
+ "Message": "Response message from the server.",
+ "Status": true,
+ "Data": {
+   "Id": "string",
+   "FirstName": "string",
+   "LastName": "string",
+   "Student_Id": "string",
+   "Gender": "boolean",
+   "Standing": "string",
+   "GraduationYear": "string",
+   "Feeds": "array of objects",
+   "Majors": "array of objects",
+   "Documents": "array of objects",
+   "Reactions": "array of objects",
+   "Reviews": "array of objects",
+   "Replys": "array of objects",
+   "Comments": "array of objects"
+ }
+}
+
 # Schemas
 
 ## Comment
