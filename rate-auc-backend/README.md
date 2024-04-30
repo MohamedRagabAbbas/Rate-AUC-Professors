@@ -42,6 +42,7 @@ This document provides detailed information about the endpoints available in the
    "Professors": "array of objects"
  }
 }
+```
 
 ### Response for Department call
 ``` json
@@ -57,6 +58,7 @@ This document provides detailed information about the endpoints available in the
    "Courses": "array of objects"
  }
 }
+```
 
 ### Response for Document call
 ``` json
@@ -77,6 +79,7 @@ This document provides detailed information about the endpoints available in the
    "Course": "object or null"
  }
 }
+```
 
 ### Response for Feed call
 ``` json
@@ -93,6 +96,7 @@ This document provides detailed information about the endpoints available in the
    "Reactions": "array of objects"
  }
 }
+```
 
 ### Response for Major call
 ``` json
@@ -108,6 +112,7 @@ This document provides detailed information about the endpoints available in the
    "Students": "array of objects"
  }
 }
+```
 
 ### Response for Professor call
 ``` json
@@ -126,6 +131,7 @@ This document provides detailed information about the endpoints available in the
    "Documents": "array of objects"
  }
 }
+```
 
 ### Response for Reaction call
 ``` json
@@ -148,6 +154,7 @@ This document provides detailed information about the endpoints available in the
    "Reply": "object or null"
  }
 }
+```
 
 ### Response for Reply call
 ``` json
@@ -165,6 +172,7 @@ This document provides detailed information about the endpoints available in the
    "Student": "object or null"
  }
 }
+```
 
 ### Response for Review call
 ``` json
@@ -186,6 +194,7 @@ This document provides detailed information about the endpoints available in the
    "Course": "object or null"
  }
 }
+```
 
 ### Response for Student call
 ``` json
@@ -209,17 +218,18 @@ This document provides detailed information about the endpoints available in the
    "Comments": "array of objects"
  }
 }
+```
 
-# Schemas
+# Schemas (data to be sent to the server)
 
-## CommentInfo
+## Comment
 
 - `content`: string, nullable: true
 - `timestamp`: string ($date-time)
 - `feedId`: integer ($int32)
 - `reviewId`: integer ($int32)
 
-## CourseInfo
+## Course
 
 - `name`: string, nullable: true
 - `description`: string, nullable: true
@@ -227,12 +237,12 @@ This document provides detailed information about the endpoints available in the
 - `credit_Hours`: integer ($int32)
 - `departmentId`: integer ($int32)
 
-## DepartmentInfo
+## Department
 
 - `name`: string, nullable: true
 - `description`: string, nullable: true
 
-## FeedInfo
+## Feed
 
 - `content`: string, nullable: true
 - `timestamp`: string ($date-time)
@@ -242,14 +252,14 @@ This document provides detailed information about the endpoints available in the
 - `email`: string
 - `password`: string
 
-## ProfessorInfo
+## Professor
 
 - `name`: string, nullable: true
 - `email`: string, nullable: true
 - `bio`: string, nullable: true
 - `departmentId`: integer ($int32)
 
-## ReactionInfo
+## Reaction
 
 - `isLike`: boolean
 - `timestamp`: string ($date-time)
@@ -258,13 +268,13 @@ This document provides detailed information about the endpoints available in the
 - `replyId`: integer ($int32)
 - `reviewId`: integer ($int32)
 
-## ReplyInfo
+## Reply
 
 - `content`: string, nullable: true
 - `timestamp`: string ($date-time)
 - `commentId`: integer ($int32)
 
-## ReviewInfo
+## Review
 
 - `content`: string, nullable: true
 - `timestamp`: string ($date-time)
@@ -272,7 +282,7 @@ This document provides detailed information about the endpoints available in the
 - `professorId`: integer ($int32)
 - `courseId`: integer ($int32)
 
-## StudentInfo
+## Student
 
 - `firstName`: string, nullable: true
 - `lastName`: string, nullable: true
@@ -284,12 +294,21 @@ This document provides detailed information about the endpoints available in the
 - `student_Id`: string, nullable: true
 
 
-## API root
-**http://rateaucprofessor-001-site1.ftempurl.com/**
-#Example 
-<summary>Get All Document</summary>
-To retrieve all documents → **API root** + **URL:**
-**http://rateaucprofessor-001-site1.ftempurl.com/api/Document/get-all**
+## Base URL
+The base URL for all API endpoints is: `http://rateaucprofessor-001-site1.ftempurl.com/`
+
+## Example
+
+### Get All Documents
+To retrieve all documents:
+
+- **URL:** `/api/Document/get-all`
+- **Method:** GET
+- **Description:** Retrieves all documents available.
+- **Example Request:**
+  ```http
+	GET http://rateaucprofessor-001-site1.ftempurl.com/api/Document/get-all
+```
 
 
 ## Document
@@ -822,3 +841,48 @@ Deletes a student by its ID.
 - **Parameters:**
   - `id`: ID of the student
 </details>
+
+
+# Example: Retrieving All Feeds Using React
+
+This example demonstrates how to retrieve all feeds from the API using React.
+```jsx
+import React, { useState, useEffect } from 'react';
+
+const AllFeeds = () => {
+  const [feeds, setFeeds] = useState([]);
+
+  const fetchFeeds = async () => {
+    try {
+      const response = await fetch('http://rateaucprofessor-001-site1.ftempurl.com/api/Feed/get-all');
+      if (!response.ok) {
+        throw new Error('Failed to fetch feeds');
+      }
+      const data = await response.json();
+      setFeeds(data.Data);
+    } catch (error) {
+      console.error('Error fetching feeds:', error.message);
+    }
+  };
+
+  useEffect(() => {
+    fetchFeeds();
+  }, []);
+
+  return (
+    <div>
+      <h1>All Feeds</h1>
+      <ul>
+        {feeds.map(feed => (
+          <li key={feed.Id}>
+            <p>{feed.Content}</p>
+            <p>Timestamp: {feed.Timestamp}</p>
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
+};
+
+export default AllFeeds;
+```
