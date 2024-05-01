@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using RateAucProfessors.DB;
 
@@ -11,9 +12,11 @@ using RateAucProfessors.DB;
 namespace RateAucProfessors.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20240501131427_makeRviewId-nullable")]
+    partial class makeRviewIdnullable
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -270,7 +273,7 @@ namespace RateAucProfessors.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int?>("FeedId")
+                    b.Property<int>("FeedId")
                         .HasColumnType("int");
 
                     b.Property<int?>("ReviewId")
@@ -705,7 +708,8 @@ namespace RateAucProfessors.Migrations
                     b.HasOne("RateAucProfessors.Models.Feed", "Feed")
                         .WithMany("Comments")
                         .HasForeignKey("FeedId")
-                        .OnDelete(DeleteBehavior.NoAction);
+                        .OnDelete(DeleteBehavior.NoAction)
+                        .IsRequired();
 
                     b.HasOne("RateAucProfessors.Models.Review", "Review")
                         .WithMany("Comments")

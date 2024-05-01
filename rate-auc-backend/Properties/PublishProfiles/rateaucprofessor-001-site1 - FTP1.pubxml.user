@@ -7,8 +7,5 @@ by editing this MSBuild file. In order to learn more about this please visit htt
   <PropertyGroup>
     <TimeStampOfAssociatedLegacyPublishXmlFile />
     <EncryptedPassword />
-    <_PublishTargetUrl>ftp://win5065.site4now.net:21/site1</_PublishTargetUrl>
-    <History>False|2024-04-30T18:43:56.5696291Z;False|2024-04-30T21:42:12.3642031+03:00;</History>
-    <LastFailureDetails />
   </PropertyGroup>
 </Project>

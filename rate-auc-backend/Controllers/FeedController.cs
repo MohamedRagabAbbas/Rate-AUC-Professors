@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using Microsoft.AspNetCore.Cors;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using RateAucProfessors.DTO.Requests;
 using RateAucProfessors.IRepository;
@@ -8,6 +9,7 @@ using RateAucProfessors.ObjectsMapping;
 namespace RateAucProfessors.Controllers
 {
     [Route("api/[controller]")]
+    [EnableCors("AllowLocalhost")]
     [ApiController]
     public class FeedController : ControllerBase
     {
@@ -20,6 +22,7 @@ namespace RateAucProfessors.Controllers
         }
         [HttpGet]
         [Route("get-all")]
+        [HttpOptions]
         public async Task<IActionResult> GetAll()
         {
             var feeds = await _unitOfWork.Feed.GetAllAsync();

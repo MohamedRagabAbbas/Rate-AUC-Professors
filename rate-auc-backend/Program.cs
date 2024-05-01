@@ -75,16 +75,22 @@ builder.Services.AddAuthentication(options =>
 
 
 
-
-var app = builder.Build();
-app.UseCors(builder =>
+// allow cors with any orgin even if with credentials and with differnt origin than the server
+builder.Services.AddCors(options =>
 {
-    builder
-        .AllowAnyOrigin() 
-        .AllowAnyMethod()
-        .AllowAnyHeader();
+    options.AddPolicy("AllowLocalhost",
+               builder =>
+               {
+                   builder.WithOrigins("http://localhost:3000")
+                   .AllowAnyHeader()
+                   .AllowAnyMethod()
+                   .AllowCredentials();
+               });
 });
 
+var app = builder.Build();
+
+app.UseCors("AllowLocalhost");
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {

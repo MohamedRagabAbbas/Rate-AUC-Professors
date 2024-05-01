@@ -12,7 +12,7 @@ namespace RateAucProfessors.DB
         public DbSet<Course> Courses { get; set; }
         public DbSet<Department> Departments { get; set; }
         //public DbSet<Syllabus> Syllabuses { get; set; }
-        public DbSet<Review> Ratings { get; set; }
+        public DbSet<Review> Reviews { get; set; }
         //public DbSet<Note> Notes { get; set; }
         //public DbSet<Lecture> Lectures { get; set; }
         //public DbSet<Assignment> Assignments { get; set; }
