@@ -52,9 +52,9 @@ namespace RateAucProfessors.Controllers
         }
         [HttpPut]
         [Route("update")]
-        public IActionResult Update(CommentInfo commentInfo, string userName)
+        public IActionResult Update(CommentInfo commentInfo, string userId)
         {
-            Comment comment = _mapper.MapToComment(commentInfo, userName);
+            Comment comment = _mapper.MapToComment(commentInfo, userId);
             var result = _unitOfWork.Comment.Update(comment);
             _unitOfWork.SaveAsync();
             return Ok(result);
