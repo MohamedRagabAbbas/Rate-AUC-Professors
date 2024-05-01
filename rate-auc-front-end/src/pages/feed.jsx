@@ -11,7 +11,7 @@ export default function Feed() {
   function getRandomColor() {
     return colors[Math.floor(Math.random() * colors.length)];
   }
-
+  const [posts2, setPosts2] = useState([]);
   let posts = [
     {
       id: 1,
@@ -66,6 +66,58 @@ export default function Feed() {
       comments: [],
     },
   ];
+  let justPosts = []; // This is the array of posts without comments and replies
+
+  const fetchData = async () => {
+    try {
+      const response = await fetch("http://localhost:5243/api/Feed/get-all", {
+        method: "GET",
+        headers: {},
+      });
+
+      if (!response.ok) {
+        throw new Error("Failed to fetch data");
+      }
+      const data = await response.json();
+      const posts2 = data.data;
+      console.log("Posts:", posts2);
+
+      // Fetch comments and replies for each post
+      const updatedPosts = await Promise.all(
+        posts2.map(async (post) => {
+          const commentsResponse = await fetch(
+            `http://localhost:5243/api/Comment/get-all-comments-by-feedId/${post.id}`
+          );
+          const data2 = await commentsResponse.json();
+          const comments = data2.data;
+          console.log("Comments for post", post.id, ":", comments);
+
+          // Fetch replies for each comment
+          const updatedComments = await Promise.all(
+            comments.map(async (comment) => {
+              const repliesResponse = await fetch(
+                `http://localhost:5243/api/Reply/get-all-replys-by-commentId/${comment.id}`
+              );
+              const data3 = await repliesResponse.json();
+              const replies = data3.data;
+              console.log("Replies for comment", comment.id, ":", replies);
+
+              return { ...comment, replies };
+            })
+          );
+
+          return { ...post, comments: updatedComments };
+        })
+      );
+
+      console.log("Updated Posts:", updatedPosts);
+
+      // Do something with the updatedPosts
+    } catch (error) {
+      console.error("Error:", error.message);
+      // Handle error
+    }
+  };
 
   useEffect(() => {
     let userColors = {};
@@ -85,10 +137,12 @@ export default function Feed() {
       });
     });
     setUserColors(userColors);
+
+    fetchData();
   }, []);
 
   const renderPosts = () => {
-    console.log("posts", posts);
+    // console.log("posts", posts);
     return posts.map((post) => (
       <Post key={post.id} post={post} userColors={userColors} />
     ));
