@@ -12,6 +12,6 @@ namespace RateAucProfessors.DTO.Requests
         public string Standing { get; set; } = string.Empty;
         public string GraduationYear { get; set; } = string.Empty;
         public string Student_Id { get; set; } = string.Empty;
-
+        public string? Color { get; set; } = "#6171BA";
     }
 }
