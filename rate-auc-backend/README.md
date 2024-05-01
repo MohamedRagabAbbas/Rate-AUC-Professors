@@ -382,6 +382,17 @@ To retrieve all documents:
 - **Method:** POST
 </details>
 
+
+<details>
+<summary>Get user by Id</summary>
+
+## Get user(Student) by Id.
+
+- **URL:** `/api/Authentication/get-by-id/{userId}`
+- **Method:** Get
+</details>
+
+
 ### Comment
 
 <details>

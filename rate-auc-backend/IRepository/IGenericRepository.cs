@@ -9,6 +9,7 @@ namespace RateAucProfessors.IRepository
         // get methods
         Task<ResponseMessage<IEnumerable<T>>> GetAllAsync();
         Task<ResponseMessage<T>> GetByIdAsync(int id);
+        Task<ResponseMessage<T>> GetByIdAsync(string id);
         Task<ResponseMessage<IEnumerable<T>>> GetWhereAsync(Expression<Func<T, bool>> predicate);
         Task<ResponseMessage<T>> GetFirstAsync(Expression<Func<T, bool>> predicate);
 

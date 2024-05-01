@@ -12,6 +12,7 @@ namespace RateAucProfessors.Controllers
     public class StudentController : ControllerBase
     {
         private readonly IUnitOfWork _unitOfWork;
+
         private readonly Mapper _mapper;
         public StudentController(IUnitOfWork unitOfWork, Mapper mapper)
         {
