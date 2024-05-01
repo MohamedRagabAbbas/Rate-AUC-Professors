@@ -46,7 +46,19 @@ namespace RateAucProfessors.Repository
             return new ResponseMessage<T>() { Message = "The object is not found..." };
 
         }
+        public async Task<ResponseMessage<T>> GetByIdAsync(string id)
+        {
+            var obj = await _dbSet.FindAsync(id);
+            if (obj is not null)
+                return new ResponseMessage<T>()
+                {
+                    Message = "The object is successfully found...",
+                    Status = true,
+                    Data = obj
+                };
+            return new ResponseMessage<T>() { Message = "The object is not found..." };
 
+        }
         public async Task<ResponseMessage<T>> GetFirstAsync(Expression<Func<T, bool>> predicate)
         {
             var obj = await _dbSet.Where<T>(predicate).FirstAsync();
