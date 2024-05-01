@@ -32,10 +32,10 @@ export default function Reply({ reply }) {
       <CardHeader
         avatar={
           // background color corresponding to state
-          <Avatar sx={{ bgcolor: reply.userColor }}>{reply.user[0]}</Avatar>
+          <Avatar sx={{ bgcolor: reply.userColor }}>{reply.userName[0]}</Avatar>
         }
-        title={reply.user}
-        subheader={reply.datePosted}
+        title={reply.userName}
+        subheader={reply.timestamp.split("T")[0]}
       />
       <CardContent sx={{ py: 0.4 }}>
         <Typography

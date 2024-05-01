@@ -42,11 +42,11 @@ export default function Comment({ comment, userColors }) {
         <CardHeader
           avatar={
             <Avatar sx={{ bgcolor: userColors[comment.userId] }}>
-              {comment.user[0]}
+              {comment.userName[0]}
             </Avatar>
           }
-          title={comment.user}
-          subheader={comment.datePosted}
+          title={comment.userName}
+          subheader={comment.timestamp.split("T")[0]}
         />
         <CardContent sx={{ py: 0.4 }}>
           <Typography
