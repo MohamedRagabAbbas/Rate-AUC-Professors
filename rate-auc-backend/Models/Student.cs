@@ -11,6 +11,10 @@ namespace RateAucProfessors.Models
         public bool Gender { get; set; } = true;      
         public string Standing { get; set; } = string.Empty;
         public string GraduationYear { get; set; } = string.Empty;
+        // make a color picker for the user and make it one of the following randomly and user will not have the same color ["#6171BA", "#218B8B", "#EF8CCB", "#31B0CD", "#A083C9"]
+        public string? Color { get; set; } = "#6171BA";
+
+
 
         // Relationship
         public ICollection<Feed>? Feeds { get; set; }
@@ -21,5 +25,10 @@ namespace RateAucProfessors.Models
         public ICollection<Reply>? Replys { get; set; }
         public ICollection<Comment>? Comments { get; set; }
 
+
+
     }
+
+
+
 }

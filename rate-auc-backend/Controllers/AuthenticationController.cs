@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Mvc;
 using RateAucProfessors.DTO.Requests;
 using RateAucProfessors.IRepository;
+using RateAucProfessors.Models;
 using RateAucProfessors.ObjectsMapping;
 using RateAucProfessors.Repository;
 
@@ -42,6 +43,14 @@ namespace RateAucProfessors.Controllers
         public async Task<IActionResult> SignUp(StudentInfo studentInfo)
         {
             var result = await _authentication.SignUP(studentInfo);
+            return Ok(result);
+        }
+        [HttpPut]
+        [Route("update/{userId}")]
+        public async Task<IActionResult> Update(StudentInfo studentInfo,string userId)
+        {
+            Student stduent = _mapper.MapToStudent(studentInfo, userId);
+            var result = _unitOfWork.Student.Update(stduent);
             return Ok(result);
         }
     }
