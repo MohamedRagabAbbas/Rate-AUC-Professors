@@ -14,20 +14,17 @@ import ThumbUpIcon from "@mui/icons-material/ThumbUp";
 import ThumbDownIcon from "@mui/icons-material/ThumbDown";
 import CommentIcon from "@mui/icons-material/Comment";
 import Comment from "./comment";
-// import feed.css
 import "./feed.css";
 
 export default function Post({ post, userColors }) {
   const [expandedPostId, setExpandedPostId] = useState(null);
   const [commentText, setCommentText] = useState("");
-  console.log(post.comments);
+  // console.log(post.comments);
   const tempComments = post.comments.map((comment) => (
     <Comment key={comment.id} comment={comment} userColors={userColors} />
   ));
   const [existingComments, setExistingComments] = useState(tempComments);
-  // const [renderAgain, setRenderAgain] = useState(false);
-  console.log("existing", existingComments);
-  //TOMORROW: TRY CHANGING THE EXISTING COMMENTS WHEN POSTING A COMMENT AND ADD A TIMPSSTAMP TO THE COMMENT OBJECT
+  // console.log("existing", existingComments);
   const toggleComments = (postId) => {
     setExpandedPostId(postId === expandedPostId ? null : postId);
   };
@@ -53,10 +50,11 @@ export default function Post({ post, userColors }) {
       );
 
       if (response.ok) {
-        console.log("response::::", response);
+        // console.log("response::::", response);
         let newComment = await response.json();
         console.log("newComment", newComment.data);
         newComment = newComment.data;
+        // newComment.userName = post.userName;
         newComment.userName = post.userName;
         newComment.likes = 0;
         newComment.dislikes = 0;
@@ -99,19 +97,9 @@ export default function Post({ post, userColors }) {
     );
   };
   const renderComments = (comments) => {
-    console.log("comments", comments);
-    // return comments.map((comment) => (
-    //   <Comment key={comment.id} comment={comment} userColors={userColors} />
-    // ));
+    // console.log("comments", comments);
     return existingComments;
   };
-
-  // useEffect(() => {
-  //   const tempComments = post.comments.map((comment) => (
-  //     <Comment key={comment.id} comment={comment} userColors={userColors} />
-  //   ));
-  //   setExistingComments(tempComments);
-  // }, [renderAgain]);
 
   return (
     <div key={post.id} style={{ borderBottom: "1px solid #909090" }}>

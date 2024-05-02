@@ -209,20 +209,20 @@ export default function Feed() {
         })
       );
 
-      console.log("Updated Posts:", updatedPostsData);
+      // console.log("Updated Posts:", updatedPostsData);
       const updatedPostComponents = updatedPostsData.map((post) => (
         <Post key={post.id} post={post} userColors={userColors} />
       ));
       setUpdatedPosts(updatedPostComponents);
-      console.log("updated posts:", updatedPosts);
+      // console.log("updated posts:", updatedPosts);
     } catch (error) {
       console.error("Error:", error.message);
     }
   };
 
-  useEffect(() => {
-    console.log("updated posts:", updatedPosts);
-  }, [updatedPosts]);
+  // useEffect(() => {
+  //   // console.log("updated posts:", updatedPosts);
+  // }, [updatedPosts]);
 
   useEffect(() => {
     let userColors = {};
@@ -245,13 +245,6 @@ export default function Feed() {
 
     fetchData();
   }, []);
-
-  // const renderPosts = () => {
-  //   // console.log("posts", posts);
-  //   return posts.map((post) => (
-  //     <Post key={post.id} post={post} userColors={userColors} />
-  //   ));
-  // };
 
   return (
     <>
@@ -278,14 +271,13 @@ export default function Feed() {
             <div
               style={{
                 position: "relative",
-                height: "400px",
                 marginBottom: "500px",
               }}
             >
               {updatedPosts}
             </div>
           </Box>
-          {/* <AddPost /> */}
+          <AddPost posts={updatedPosts} updatePosts={setUpdatedPosts} />
         </div>
       </div>
     </>

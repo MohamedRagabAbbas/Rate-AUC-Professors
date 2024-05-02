@@ -28,13 +28,6 @@ export default function Comment({ comment, userColors }) {
   }, [comment.replies]);
 
   const renderReplies = (replies) => {
-    // console.log("replies", replies);
-    // replies.map((reply) => {
-    //   reply.userColor = userColors[reply.userId];
-    // });
-    // return replies.map((reply) => {
-    //   return <Reply key={reply.id} reply={reply} />;
-    // });
     return existingReplies;
   };
 
@@ -102,8 +95,10 @@ export default function Comment({ comment, userColors }) {
         <CardHeader
           avatar={
             <Avatar sx={{ bgcolor: userColors[comment.userId] }}>
-              {comment.userName[0] &&
-                console.log("comment from inside comment:", comment)}
+              {
+                comment.userName[0]
+                // && console.log("comment from inside comment:", comment)
+              }
             </Avatar>
           }
           title={comment.userName}
