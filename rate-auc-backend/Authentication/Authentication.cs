@@ -113,7 +113,6 @@ namespace RateAucProfessors.Authentication
             // udpate the student
             student.FirstName = model.FirstName;
             student.LastName = model.LastName;
-            student.UserName = model.Email;
             student.PhoneNumber = model.PhoneNumber;
             student.Standing = model.Standing;
             student.GraduationYear = model.GraduationYear;
