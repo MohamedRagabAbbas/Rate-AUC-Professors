@@ -16,12 +16,13 @@ import CommentIcon from "@mui/icons-material/Comment";
 import Comment from "./comment";
 import "./feed.css";
 
-export default function Post({ post, userColors }) {
+export default function Post({ post }) {
+  let colors = ["#6171BA", "#218B8B", "#EF8CCB", "#31B0CD", "#A083C9"];
   const [expandedPostId, setExpandedPostId] = useState(null);
   const [commentText, setCommentText] = useState("");
   // console.log(post.comments);
   const tempComments = post.comments.map((comment) => (
-    <Comment key={comment.id} comment={comment} userColors={userColors} />
+    <Comment key={comment.id} comment={comment} />
   ));
   const [existingComments, setExistingComments] = useState(tempComments);
   // console.log("existing", existingComments);
@@ -54,18 +55,21 @@ export default function Post({ post, userColors }) {
         let newComment = await response.json();
         console.log("newComment", newComment.data);
         newComment = newComment.data;
-        // newComment.userName = post.userName;
-        newComment.userName = post.userName;
+
+        const userId = newComment.userId;
+        const userResponse = await fetch(
+          `http://localhost:5243/api/Authentication/get-by-id/${userId}`
+        );
+        const userData = await userResponse.json();
+        console.log("userData", userData.data);
+        newComment.userName = userData.data.email;
+
         newComment.likes = 0;
         newComment.dislikes = 0;
         newComment.replies = [];
         setExistingComments([
           ...existingComments,
-          <Comment
-            key={newComment.id}
-            comment={newComment}
-            userColors={userColors}
-          />,
+          <Comment key={newComment.id} comment={newComment} />,
         ]);
         setCommentText("");
       } else {
@@ -115,7 +119,13 @@ export default function Post({ post, userColors }) {
       >
         <CardHeader
           avatar={
-            <Avatar sx={{ bgcolor: userColors[post.userId] }}>
+            <Avatar
+              sx={
+                {
+                  // bgcolor: colors[Math.floor(Math.random() * colors.length)],
+                }
+              }
+            >
               {post.userName[0]}
             </Avatar>
           }

@@ -7,7 +7,6 @@ import AddPost from "../components/feed/addPost";
 
 export default function Feed() {
   let colors = ["#6171BA", "#218B8B", "#EF8CCB", "#31B0CD", "#A083C9"];
-  const [userColors, setUserColors] = useState({});
   function getRandomColor() {
     return colors[Math.floor(Math.random() * colors.length)];
   }
@@ -211,7 +210,7 @@ export default function Feed() {
 
       // console.log("Updated Posts:", updatedPostsData);
       const updatedPostComponents = updatedPostsData.map((post) => (
-        <Post key={post.id} post={post} userColors={userColors} />
+        <Post key={post.id} post={post} />
       ));
       setUpdatedPosts(updatedPostComponents);
       // console.log("updated posts:", updatedPosts);
@@ -225,23 +224,23 @@ export default function Feed() {
   // }, [updatedPosts]);
 
   useEffect(() => {
-    let userColors = {};
-    posts.forEach((post) => {
-      if (!userColors[post.userId]) {
-        userColors[post.userId] = getRandomColor();
-      }
-      post.comments.forEach((comment) => {
-        if (!userColors[comment.userId]) {
-          userColors[comment.userId] = getRandomColor();
-        }
-        comment.replies.forEach((reply) => {
-          if (!userColors[reply.userId]) {
-            userColors[reply.userId] = getRandomColor();
-          }
-        });
-      });
-    });
-    setUserColors(userColors);
+    // let userColors = {};
+    // posts.forEach((post) => {
+    //   if (!userColors[post.userId]) {
+    //     userColors[post.userId] = getRandomColor();
+    //   }
+    //   post.comments.forEach((comment) => {
+    //     if (!userColors[comment.userId]) {
+    //       userColors[comment.userId] = getRandomColor();
+    //     }
+    //     comment.replies.forEach((reply) => {
+    //       if (!userColors[reply.userId]) {
+    //         userColors[reply.userId] = getRandomColor();
+    //       }
+    //     });
+    //   });
+    // });
+    // setUserColors(userColors);
 
     fetchData();
   }, []);

@@ -14,7 +14,9 @@ import ThumbUpIcon from "@mui/icons-material/ThumbUp";
 import ThumbDownIcon from "@mui/icons-material/ThumbDown";
 import Reply from "./reply";
 
-export default function Comment({ comment, userColors }) {
+export default function Comment({ comment }) {
+  let colors = ["#6171BA", "#218B8B", "#EF8CCB", "#31B0CD", "#A083C9"];
+
   const [replyText, setReplyText] = useState("");
   const [isReplying, setIsReplying] = useState(false);
   const [existingReplies, setExistingReplies] = useState(
@@ -40,7 +42,7 @@ export default function Comment({ comment, userColors }) {
   const handleReplySubmit = async () => {
     try {
       const response = await fetch(
-        `http://localhost:5243/api/Reply/add?userId=9a0c1326-fdb9-4744-869b-190f8bc60d07`,
+        `http://localhost:5243/api/Reply/add?userId=1dba6f65-3475-41e4-ac8c-9a015dcf9e0c`,
         {
           method: "POST",
           headers: {
@@ -57,7 +59,15 @@ export default function Comment({ comment, userColors }) {
         console.log("Reply posted successfully");
         let newReply = await response.json();
         newReply = newReply.data;
-        newReply.userName = comment.userName;
+
+        const userId = newReply.userId;
+        const userResponse = await fetch(
+          `http://localhost:5243/api/Authentication/get-by-id/${userId}`
+        );
+        const userData = await userResponse.json();
+        console.log("userData", userData.data);
+        newReply.userName = userData.data.email;
+
         newReply.likes = 0;
         newReply.dislikes = 0;
         const updatedReplies = [
@@ -94,7 +104,11 @@ export default function Comment({ comment, userColors }) {
         {/* Render comment content */}
         <CardHeader
           avatar={
-            <Avatar sx={{ bgcolor: userColors[comment.userId] }}>
+            <Avatar
+              sx={{
+                // bgcolor: colors[Math.floor(Math.random() * colors.length)],
+              }}
+            >
               {
                 comment.userName[0]
                 // && console.log("comment from inside comment:", comment)

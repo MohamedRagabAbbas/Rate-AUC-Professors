@@ -9,7 +9,7 @@ export default function AddPost({ posts, updatePosts }) {
   const handleNewPost = async () => {
     try {
       const response = await fetch(
-        `http://localhost:5243/api/Feed/add?userId=1dba6f65-3475-41e4-ac8c-9a015dcf9e0c`,
+        `http://localhost:5243/api/Feed/add?userId=2b6136fe-6763-4e16-b9f9-589334ab248c`,
         {
           method: "POST",
           headers: {
@@ -22,18 +22,21 @@ export default function AddPost({ posts, updatePosts }) {
       );
 
       if (response.ok) {
-        console.log("Reply posted successfully");
+        console.log("Post added successfully");
         let newPost = await response.json();
         newPost = newPost.data;
         // console.log("newPost", newPost);
-        newPost.userName = "Jane Doe";
+
+        const userId = newPost.userId;
+        const userResponse = await fetch(
+          `http://localhost:5243/api/Authentication/get-by-id/${userId}`
+        );
+        const userData = await userResponse.json();
+        newPost.userName = userData.data.email;
         newPost.likes = 0;
         newPost.dislikes = 0;
         newPost.comments = [];
-        updatePosts([
-          ...posts,
-          <Post key={newPost.id} post={newPost} userColors={{}} />,
-        ]);
+        updatePosts([...posts, <Post key={newPost.id} post={newPost} />]);
         setPostText("");
       } else {
         console.error("Failed to post reply:", response.statusText);
