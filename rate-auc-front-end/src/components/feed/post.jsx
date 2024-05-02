@@ -54,7 +54,26 @@ export default function Post({ post, userColors }) {
 
       if (response.ok) {
         console.log("response::::", response);
-        // setRenderAgain(!renderAgain);
+        let newComment = await response.json();
+        console.log("newComment", newComment.data);
+        newComment = newComment.data;
+        let comment = {
+          content: "hi",
+          feedId: "5",
+          timestamp: new Date().toISOString(),
+        };
+        newComment.userName = post.userName;
+        newComment.likes = 0;
+        newComment.dislikes = 0;
+        newComment.replies = [];
+        setExistingComments([
+          ...existingComments,
+          <Comment
+            key={newComment.id}
+            comment={newComment}
+            userColors={userColors}
+          />,
+        ]);
         setCommentText("");
       } else {
         console.error("Failed to post comment:", response.statusText);

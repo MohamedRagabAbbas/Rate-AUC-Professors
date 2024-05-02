@@ -42,7 +42,8 @@ export default function Comment({ comment, userColors }) {
         <CardHeader
           avatar={
             <Avatar sx={{ bgcolor: userColors[comment.userId] }}>
-              {comment.userName[0]}
+              {comment.userName[0] &&
+                console.log("comment from inside comment:", comment)}
             </Avatar>
           }
           title={comment.userName}
