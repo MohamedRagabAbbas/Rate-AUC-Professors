@@ -209,6 +209,7 @@ This document provides detailed information about the endpoints available in the
    "Gender": "boolean",
    "Standing": "string",
    "GraduationYear": "string",
+   "Color" : "string",
    "Feeds": "array of objects",
    "Majors": "array of objects",
    "Documents": "array of objects",
@@ -292,6 +293,7 @@ This document provides detailed information about the endpoints available in the
 - `standing`: string, nullable: true
 - `graduationYear`: string, nullable: true
 - `student_Id`: string, nullable: true
+- `color`: string, nullable: true
 
 
 ## Base URL
@@ -392,6 +394,14 @@ To retrieve all documents:
 - **Method:** Get
 </details>
 
+<details>
+<summary>Update user by Id</summary>
+
+## Update user(Student) by Id.
+
+- **URL:** `/api/Authentication/update/{userId}`
+- **Method:** Put 
+</details>
 
 ### Comment
 

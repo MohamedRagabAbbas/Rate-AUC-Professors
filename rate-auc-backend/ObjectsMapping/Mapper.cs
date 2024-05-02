@@ -1,4 +1,5 @@
-﻿using RateAucProfessors.DTO.Requests;
+﻿
+using RateAucProfessors.DTO.Requests;
 using RateAucProfessors.Models;
 using System.Collections.Generic;
 
@@ -403,9 +404,35 @@ namespace RateAucProfessors.ObjectsMapping
                 Email = dto.FirstName + ' ' + dto.LastName,
                 UserName = dto.Email,
                 PhoneNumber = dto.PhoneNumber,
-                Student_Id = dto.Student_Id
+                Student_Id = dto.Student_Id,
+                Color = RandomColor()
             };
         }
+        public Student MapToStudent(StudentInfo dto, string userId)
+        {
+            return new Student
+            {
+                Id = userId,
+                FirstName = dto.FirstName,
+                LastName = dto.LastName,
+                Standing = dto.Standing,
+                GraduationYear = dto.GraduationYear,
+                Email = dto.FirstName + ' ' + dto.LastName,
+                UserName = dto.Email,
+                PhoneNumber = dto.PhoneNumber,
+                Student_Id = dto.Student_Id,
+                Color = RandomColor()
+            };
+        }
+        public string RandomColor()
+            {
+                string[] colors = new string[] { "#6171BA", "#218B8B", "#EF8CCB", "#31B0CD", "#A083C9" };
+                Random random = new Random();
+                int index = random.Next(colors.Length);
+                return colors[index];
+            }
+
+        
         public List<Student> MapToStudent(List<StudentInfo> dtos)
         {
             List<Student> students = new List<Student>();
