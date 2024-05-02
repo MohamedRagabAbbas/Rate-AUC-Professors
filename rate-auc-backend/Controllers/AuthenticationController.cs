@@ -49,8 +49,7 @@ namespace RateAucProfessors.Controllers
         [Route("update/{userId}")]
         public async Task<IActionResult> Update(StudentInfo studentInfo,string userId)
         {
-            Student stduent = _mapper.MapToStudent(studentInfo, userId);
-            var result = _unitOfWork.Student.Update(stduent);
+            var result = await _authentication.Update(studentInfo, userId);
             return Ok(result);
         }
     }

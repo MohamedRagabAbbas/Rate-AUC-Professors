@@ -99,5 +99,49 @@ namespace RateAucProfessors.Authentication
 
         }
 
+        public async Task<ResponseMessage<Student>> Update(StudentInfo model, string userId)
+        {
+            // get the student by userId
+            var student = await _userManager.FindByIdAsync(userId);
+            if (student == null)
+            {
+                return new ResponseMessage<Student>()
+                {
+                    Message = "The user is not found"
+                };
+            }
+            // udpate the student
+            student.FirstName = model.FirstName;
+            student.LastName = model.LastName;
+            student.UserName = model.Email;
+            student.PhoneNumber = model.PhoneNumber;
+            student.Standing = model.Standing;
+            student.GraduationYear = model.GraduationYear;
+            student.Student_Id = model.Student_Id;
+            student.Color = model.Color;
+            student.Gender = model.Gender;
+
+            var result = await _userManager.UpdateAsync(student);
+            if (result.Succeeded)
+            {
+                return new ResponseMessage<Student>()
+                {
+                    Status = true,
+                    Message = "The user is updated successfully",
+                    Data = student
+                };
+            }
+            var errors = result.Errors.ToList();
+            string Error = "";
+            foreach (var item in errors)
+            {
+                Error += item.Description + " ";
+            }
+            return new ResponseMessage<Student>()
+            {
+                Message = $"The user is not updated due to the following {Error}"
+            };
+        }
+
     }
 }

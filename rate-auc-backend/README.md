@@ -3,8 +3,25 @@
 This document provides detailed information about the endpoints available in the API.
 
 ## Response Messages
+ public string Id { get; set; } = string.Empty;
+ public string Role { get; set; } = string.Empty;
+ public bool IsAuthenticated { get; set; } = false;
+ public string Token { get; set; } = string.Empty;
+ public string Message { get; set; } = string.Empty;
 
-### Response for Comment call
+### Response for Authentication Request  (LogIn & SignUp)
+
+```json
+{
+ "id": "user Id 'String'",
+ "role": "role",
+ "isAuthenticated": false,
+ "token": "string token",
+ "message": "string"
+}
+```
+
+### Response for Comment Request
 
 ```json
 {
@@ -24,7 +41,7 @@ This document provides detailed information about the endpoints available in the
  }
 }
 ```
-### Response for Course call
+### Response for Course Request
 ``` json
 {
  "Message": "Response message from the server.",
@@ -44,7 +61,7 @@ This document provides detailed information about the endpoints available in the
 }
 ```
 
-### Response for Department call
+### Response for Department Request
 ``` json
 {
  "Message": "Response message from the server.",
@@ -60,7 +77,7 @@ This document provides detailed information about the endpoints available in the
 }
 ```
 
-### Response for Document call
+### Response for Document Request
 ``` json
 {
  "Message": "Response message from the server.",
@@ -81,7 +98,7 @@ This document provides detailed information about the endpoints available in the
 }
 ```
 
-### Response for Feed call
+### Response for Feed Request
 ``` json
 {
  "Message": "Response message from the server.",
@@ -98,7 +115,7 @@ This document provides detailed information about the endpoints available in the
 }
 ```
 
-### Response for Major call
+### Response for Major Request
 ``` json
 {
  "Message": "Response message from the server.",
@@ -114,7 +131,7 @@ This document provides detailed information about the endpoints available in the
 }
 ```
 
-### Response for Professor call
+### Response for Professor Request
 ``` json
 {
  "Message": "Response message from the server.",
@@ -133,7 +150,7 @@ This document provides detailed information about the endpoints available in the
 }
 ```
 
-### Response for Reaction call
+### Response for Reaction Request
 ``` json
 {
  "Message": "Response message from the server.",
@@ -156,7 +173,7 @@ This document provides detailed information about the endpoints available in the
 }
 ```
 
-### Response for Reply call
+### Response for Reply Request
 ``` json
 {
  "Message": "Response message from the server.",
@@ -174,7 +191,7 @@ This document provides detailed information about the endpoints available in the
 }
 ```
 
-### Response for Review call
+### Response for Review Request
 ``` json
 {
  "Message": "Response message from the server.",
@@ -196,7 +213,7 @@ This document provides detailed information about the endpoints available in the
 }
 ```
 
-### Response for Student call
+### Response for Student Request
 ``` json
 {
  "Message": "Response message from the server.",
