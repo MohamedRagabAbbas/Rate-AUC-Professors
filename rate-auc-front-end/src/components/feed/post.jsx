@@ -57,11 +57,6 @@ export default function Post({ post, userColors }) {
         let newComment = await response.json();
         console.log("newComment", newComment.data);
         newComment = newComment.data;
-        let comment = {
-          content: "hi",
-          feedId: "5",
-          timestamp: new Date().toISOString(),
-        };
         newComment.userName = post.userName;
         newComment.likes = 0;
         newComment.dislikes = 0;
@@ -88,7 +83,7 @@ export default function Post({ post, userColors }) {
       <div style={{ margin: "10px 0" }}>
         <TextField
           id="comment-text"
-          label="Add a comment"
+          label="Comment..."
           multiline
           rows={3}
           variant="outlined"
