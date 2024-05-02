@@ -36,6 +36,7 @@ export default function AddPost({ posts, updatePosts }) {
         newPost.likes = 0;
         newPost.dislikes = 0;
         newPost.comments = [];
+        newPost.color = userData.data.color;
         updatePosts([...posts, <Post key={newPost.id} post={newPost} />]);
         setPostText("");
       } else {

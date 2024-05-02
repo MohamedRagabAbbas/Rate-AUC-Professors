@@ -67,6 +67,7 @@ export default function Post({ post }) {
         newComment.likes = 0;
         newComment.dislikes = 0;
         newComment.replies = [];
+        newComment.color = userData.data.color;
         setExistingComments([
           ...existingComments,
           <Comment key={newComment.id} comment={newComment} />,
@@ -120,11 +121,9 @@ export default function Post({ post }) {
         <CardHeader
           avatar={
             <Avatar
-              sx={
-                {
-                  // bgcolor: colors[Math.floor(Math.random() * colors.length)],
-                }
-              }
+              sx={{
+                bgcolor: post.color,
+              }}
             >
               {post.userName[0]}
             </Avatar>

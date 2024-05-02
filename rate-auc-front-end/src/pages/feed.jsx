@@ -87,6 +87,8 @@ export default function Feed() {
           );
           const authorData = await authorResponse.json();
           const userName = authorData.data.email;
+          const postUserColor = authorData.data.color;
+          // console.log("postUserColor", postUserColor);
 
           // Fetch reactions for the post
           const reactionsResponse = await fetch(
@@ -121,7 +123,8 @@ export default function Feed() {
               );
               const commentAuthorData = await commentAuthorResponse.json();
               const commentuserName = commentAuthorData.data.email;
-
+              const commentUserColor = commentAuthorData.data.color;
+              // console.log("commentUserColor", commentUserColor);
               // Fetch reactions for the comment
               const commentReactionsResponse = await fetch(
                 `http://localhost:5243/api/Reaction/get-all-reactions-by-commentId/${comment.id}`
@@ -158,6 +161,7 @@ export default function Feed() {
                   );
                   const replyAuthorData = await replyAuthorResponse.json();
                   const replyuserName = replyAuthorData.data.email;
+                  const replyUserColor = replyAuthorData.data.color;
 
                   // Fetch reactions for the reply
                   const replyReactionsResponse = await fetch(
@@ -184,6 +188,7 @@ export default function Feed() {
                     userName: replyuserName,
                     likes: replyLikes,
                     dislikes: replyDislikes,
+                    color: replyUserColor,
                   };
                 })
               );
@@ -194,6 +199,7 @@ export default function Feed() {
                 likes: commentLikes,
                 dislikes: commentDislikes,
                 replies: updatedReplies,
+                color: commentUserColor,
               };
             })
           );
@@ -204,6 +210,7 @@ export default function Feed() {
             likes: postLikes,
             dislikes: postDislikes,
             comments: updatedComments,
+            color: postUserColor,
           };
         })
       );
