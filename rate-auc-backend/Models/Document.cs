@@ -2,6 +2,7 @@ namespace RateAucProfessors.Models
 {
     public class Document
     {
+        public int Id { get; set; }
         public string Document_type { get; set; } = string.Empty;
         public string Content { get; set; } = string.Empty;
         public DateTime UploadDate { get; set; } = DateTime.Now;

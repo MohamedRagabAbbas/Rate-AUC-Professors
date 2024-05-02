@@ -1,7 +1,9 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using RateAucProfessors.DTO.Requests;
 using RateAucProfessors.IRepository;
 using RateAucProfessors.Models;
+using RateAucProfessors.ObjectsMapping;
 
 namespace RateAucProfessors.Controllers
 {
@@ -10,9 +12,11 @@ namespace RateAucProfessors.Controllers
     public class ProfessorController : ControllerBase
     {
         private readonly IUnitOfWork _unitOfWork;
-        public ProfessorController(IUnitOfWork unitOfWork)
+        private readonly Mapper _mapper;
+        public ProfessorController(IUnitOfWork unitOfWork, Mapper mapper)
         {
             _unitOfWork = unitOfWork;
+            _mapper = mapper;
         }
         [HttpGet]
         [Route("get-all")]
@@ -30,16 +34,20 @@ namespace RateAucProfessors.Controllers
         }
         [HttpPost]
         [Route("add")]
-        public async Task<IActionResult> Add(Professor professor)
+        public async Task<IActionResult> Add(ProfessorInfo professorInfo)
         {
+            Professor professor = _mapper.MapToProfessor(professorInfo);
             var result = await _unitOfWork.Professor.Add(professor);
+            await _unitOfWork.SaveAsync();
             return Ok(result);
         }
         [HttpPut]
         [Route("update")]
-        public IActionResult Update(Professor professor)
+        public IActionResult Update(ProfessorInfo professorInfo)
         {
+            Professor professor = _mapper.MapToProfessor(professorInfo);
             var result = _unitOfWork.Professor.Update(professor);
+            _unitOfWork.SaveAsync();
             return Ok(result);
         }
         [HttpDelete]
@@ -47,6 +55,7 @@ namespace RateAucProfessors.Controllers
         public async Task<IActionResult> Delete(int id)
         {
             var result = await _unitOfWork.Professor.Delete(id);
+            await _unitOfWork.SaveAsync();
             return Ok(result);
         }
     }

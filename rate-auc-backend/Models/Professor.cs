@@ -9,14 +9,13 @@ namespace RateAucProfessors.Models
         [Required]
         public string Email { get; set; } = string.Empty;
         public string Bio { get; set; } = string.Empty;
-        public bool gender { get; set; } = false;
-        
+        //public bool gender { get; set; } = false;
+
         // Relationships
         public int DepartmentId { get; set; }
         public Department? Department { get; set; }
         public ICollection<Course>? Courses { get; set; }
         public ICollection<Review>? Reviews { get; set; }
         public ICollection<Document>? Documents { get; set; }
-
     }
 }
