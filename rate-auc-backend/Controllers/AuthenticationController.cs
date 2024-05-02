@@ -51,6 +51,7 @@ namespace RateAucProfessors.Controllers
         {
             Student stduent = _mapper.MapToStudent(studentInfo, userId);
             var result = _unitOfWork.Student.Update(stduent);
+            await _unitOfWork.SaveAsync();
             return Ok(result);
         }
     }
