@@ -2,7 +2,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace RateAucProfessors.Models
 {
-    public class Review
+    public class Review   
     {
         public int Id { get; set; }
 
