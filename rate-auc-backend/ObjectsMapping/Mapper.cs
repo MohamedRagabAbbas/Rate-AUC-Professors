@@ -405,7 +405,8 @@ namespace RateAucProfessors.ObjectsMapping
                 UserName = dto.Email,
                 PhoneNumber = dto.PhoneNumber,
                 Student_Id = dto.Student_Id,
-                Color = RandomColor()
+                Color = RandomColor(),
+                Gender = dto.Gender
             };
         }
         public Student MapToStudent(StudentInfo dto, string userId)
@@ -421,7 +422,8 @@ namespace RateAucProfessors.ObjectsMapping
                 UserName = dto.Email,
                 PhoneNumber = dto.PhoneNumber,
                 Student_Id = dto.Student_Id,
-                Color = RandomColor()
+                Color = RandomColor(),
+                Gender = dto.Gender
             };
         }
         public string RandomColor()
