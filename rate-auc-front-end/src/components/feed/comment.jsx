@@ -70,6 +70,7 @@ export default function Comment({ comment }) {
 
         newReply.likes = 0;
         newReply.dislikes = 0;
+        newReply.color = userData.data.color;
         const updatedReplies = [
           ...existingReplies,
           <Reply key={newReply.id} reply={newReply} />,
@@ -106,7 +107,7 @@ export default function Comment({ comment }) {
           avatar={
             <Avatar
               sx={{
-                // bgcolor: colors[Math.floor(Math.random() * colors.length)],
+                bgcolor: comment.color,
               }}
             >
               {

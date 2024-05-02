@@ -34,11 +34,7 @@ export default function Reply({ reply }) {
       <CardHeader
         avatar={
           // background color corresponding to state
-          <Avatar
-          // sx={{ bgcolor: reply.userColor }}
-          >
-            {reply.userName[0]}
-          </Avatar>
+          <Avatar sx={{ bgcolor: reply.color }}>{reply.userName[0]}</Avatar>
         }
         title={reply.userName}
         subheader={reply.timestamp.split("T")[0]}
