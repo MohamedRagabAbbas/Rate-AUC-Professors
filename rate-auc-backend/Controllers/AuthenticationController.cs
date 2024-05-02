@@ -24,13 +24,14 @@ namespace RateAucProfessors.Controllers
             _mapper = mapper;
         }
         // get user(stduent) by userId
-        [HttpGet]
-        [Route("get-by-id/{id}")]
+        [HttpGet] 
+        [Route("get-by-id/{id}")]  
         public async Task<IActionResult> GetById(string id)
         {
             var student = await _unitOfWork.Student.GetByIdAsync(id);
             return Ok(student);
         }
+
         [HttpPost]
         [Route("authenticate")]
         public async Task<IActionResult> Authenticate(LoginRequest request)

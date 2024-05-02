@@ -686,55 +686,67 @@ To retrieve all documents:
   - `id`: ID of the professor
 </details>
 
-### Rating
+### Review
 
 <details>
-<summary>Get All Ratings</summary>
+<summary>Get All Reviews</summary>
 
-## Retrieves all ratings.
+## Retrieves all reviews.
 
-- **URL:** `/api/Rating/get-all`
+- **URL:** `/api/Review/get-all`
 - **Method:** GET
 </details>
 
 <details>
-<summary>Get Rating by ID</summary>
+<summary>Get Review by ID</summary>
 
-## Retrieves a specific rating by its ID.
+## Retrieves a specific Review by its ID.
 
-- **URL:** `/api/Rating/get-by-id/{id}`
+- **URL:** `/api/Review/get-by-id/{id}`
 - **Method:** GET
 - **Parameters:**
-  - `id`: ID of the rating
+  - `id`: ID of the Review
 </details>
 
 <details>
-<summary>Add Rating</summary>
+<summary>Get Reviews by professorId</summary>
+## Retrieves a specific Reviews by professorId.
 
-## Adds a new rating.
+- **URL:** `/api/Review/get-all-reviews-by-professorId/{professorId}`
+- **Method:** GET
+- **Parameters:**
+  - `id`: ID of the Professor
+</details>
 
-- **URL:** `/api/Rating/add`
+
+api/Review/get-all-reviews-by-professorId
+<details>
+<summary>Add Review</summary>
+
+## Adds a new Review.
+
+- **URL:** `/api/Review/add`
 - **Method:** POST
 </details>
 
 <details>
-<summary>Update Rating</summary>
+<summary>Update Review</summary>
 
-##  Updates an existing rating.
+##  Updates an existing Review.
 
-- **URL:** `/api/Rating/update`
+- **URL:** `/api/Review/update`
 - **Method:** PUT
 </details>
 
 <details>
-<summary>Delete Rating</summary>
+<summary>Delete Review</summary>
 
-## Deletes a rating by its ID.
+## Deletes a Review by its ID.
 
-- **URL:** `/api/Rating/delete/{id}`
+- **URL:** `/api/Review/delete/{id}`
 - **Method:** DELETE
 - **Parameters:**
-  - `id`: ID of the rating
+  - `id`: ID of the Review
 </details>
 
 ### Reaction

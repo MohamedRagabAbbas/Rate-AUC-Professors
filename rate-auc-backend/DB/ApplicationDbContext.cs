@@ -51,7 +51,7 @@ namespace RateAucProfessors.DB
                 .HasForeignKey(c => c.UserId)
                 .OnDelete(DeleteBehavior.NoAction);            
             
-            modelBuilder.Entity<Student>()
+            modelBuilder.Entity<Student>()   
                 .HasMany(s => s.Replys)
                 .WithOne(c => c.Student)
                 .HasForeignKey(c => c.UserId)
