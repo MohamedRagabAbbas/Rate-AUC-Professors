@@ -12,6 +12,8 @@ import ThumbUpIcon from "@mui/icons-material/ThumbUp";
 import ThumbDownIcon from "@mui/icons-material/ThumbDown";
 
 export default function Reply({ reply }) {
+  let colors = ["#6171BA", "#218B8B", "#EF8CCB", "#31B0CD", "#A083C9"];
+
   return (
     <Card
       key={reply.id}
@@ -32,10 +34,14 @@ export default function Reply({ reply }) {
       <CardHeader
         avatar={
           // background color corresponding to state
-          <Avatar sx={{ bgcolor: reply.userColor }}>{reply.user[0]}</Avatar>
+          <Avatar
+          // sx={{ bgcolor: reply.userColor }}
+          >
+            {reply.userName[0]}
+          </Avatar>
         }
-        title={reply.user}
-        subheader={reply.datePosted}
+        title={reply.userName}
+        subheader={reply.timestamp.split("T")[0]}
       />
       <CardContent sx={{ py: 0.4 }}>
         <Typography
