@@ -16,6 +16,7 @@ import StarBorder from '@mui/icons-material/StarBorder';
 import Star from '@mui/icons-material/Star';
 import professors from './professorDetail.json'; // Ensure this path is correct
 import './ProfessorFeed.css';
+import NavBar from "../components/NavBar";
 
 function RateProfessor() {
   const { professorId } = useParams();
@@ -58,6 +59,8 @@ function RateProfessor() {
   }
 
   return (
+  <>
+  <NavBar/>
     <Box className="container">
       <Box component={Paper} elevation={3} sx={{ p: 3, width: '95%', maxWidth: 'none', mx: 'auto', mt: 5, border: '1px solid black' }}>
         <Typography variant="h4" sx={{ mb: 2 }}>Rate: {professor.Name}</Typography>
@@ -111,6 +114,7 @@ function RateProfessor() {
         </FormControl>
       </Box>
     </Box>
+	</>
   );
 }
 
