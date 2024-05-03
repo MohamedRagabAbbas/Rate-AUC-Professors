@@ -4,6 +4,7 @@ import { Link as RouterLink } from 'react-router-dom';
 import './ProfessorFeed.css'; // Ensure this file is named correctly and available in your project directory
 import professors from './updated_professors.json'; // Importing the updated JSON data
 import Rating from '@mui/material/Rating';
+import NavBar from "../components/NavBar";
 
 function ProfessorsFeed() {
   const [searchTerm, setSearchTerm] = useState('');
@@ -20,6 +21,8 @@ function ProfessorsFeed() {
     .filter(professor => professor.Name.toLowerCase().includes(searchTerm.toLowerCase()));
 
   return (
+  <>
+	<NavBar />
     <Box className="container">
       <Typography variant="h5" className="header" style={{ color: '#000000', margin: '20px', fontWeight: 'bold' }}>
         Search by Professors
@@ -57,6 +60,7 @@ function ProfessorsFeed() {
         ))}
       </Box>
     </Box>
+	</>
   );
 }
 
