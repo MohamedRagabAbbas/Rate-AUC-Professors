@@ -15,7 +15,7 @@ import AdbIcon from "@mui/icons-material/Adb";
 import { useNavigate } from "react-router-dom";
 import "../index.css";
 
-const pages = ["Feed", "Departments"]; // Add "Departments" to the pages array
+const pages = ["Feed", "Professors", "Departments", "Courses", "About Us"]; // Add "Departments" to the pages array
 const settings = ["Profile", "Logout"];
 
 function ResponsiveAppBar({ onPageChange }) {
