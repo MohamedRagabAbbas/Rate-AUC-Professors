@@ -3,6 +3,7 @@ import { useParams, useNavigate } from 'react-router-dom';
 import { Typography, Button, Grid, Paper, Container } from '@mui/material';
 import professors from './professorDetail.json';
 import './CourseDetail.css'; // Ensure CSS is tailored to handle grid and paper styling
+import NavBar from "../components/NavBar";
 
 function CourseDetail() {
     const { courseName } = useParams(); // This gets the course name from the URL
@@ -15,6 +16,8 @@ function CourseDetail() {
     };
 
     return (
+	<>
+	<NavBar/>
         <div className="departments-list-container">
             <Container maxWidth="lg">
                 <Paper elevation={3} style={{ padding: '20px', marginBottom: '20px' }}>
@@ -52,6 +55,7 @@ function CourseDetail() {
                 </Grid>
             </Container>
         </div>
+		</>
     );
 }
 
