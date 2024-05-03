@@ -3,6 +3,7 @@ import { useParams, useNavigate } from 'react-router-dom';
 import { Card, CardContent, Typography, Avatar, Box, Button, Rating } from '@mui/material';
 import professors from './professorDetail.json';
 import './ProfessorFeed.css';
+import NavBar from "../components/NavBar";
 
 function ProfessorDetail() {
   const { professorId } = useParams();
@@ -19,6 +20,8 @@ function ProfessorDetail() {
   const handleBackClick = () => navigate(-1);
 
   return (
+  <>
+  <NavBar/>
     <div className="container">
       <Card sx={{ width: '100%', mx: 'auto', boxShadow: 3, border: '2px solid black', backgroundColor: '#fff', color: 'black'}}>
         <CardContent sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
@@ -55,6 +58,7 @@ function ProfessorDetail() {
         </CardContent>
       </Card>
     </div>
+	</>
   );
 }
 
