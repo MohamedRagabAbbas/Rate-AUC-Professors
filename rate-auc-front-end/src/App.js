@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { Tooltip, IconButton, Avatar, Menu, MenuItem, Typography } from '@mui/material';
 import "./App.css";
 import NavBar from "./components/NavBar";
 import Feed from "./pages/feed";
@@ -10,6 +11,8 @@ import RateProfessor from './pages/RateProfessor';
 import NotFound from "./pages/notFound";
 import Courses from './pages/Courses'; // Import the Courses component
 import CourseDetail from './pages/CourseDetail';
+import PersonalProfile  from './pages/personalProfile';
+import Profile from './components/userProfile/profile';
 
 function App() {
   const [currentPage, setCurrentPage] = useState("Home");
@@ -49,8 +52,10 @@ function App() {
           <Route path="/courses" element={<Courses />} />
           <Route path="/courses/detail/:courseName" element={<CourseDetail />} />
           <Route path="*" element={<NotFound />} />
+          {/* <Route path="/" element={<PersonalProfile />} />  */}
         </Routes>
       </BrowserRouter>
+      
     </div>
   );
 }

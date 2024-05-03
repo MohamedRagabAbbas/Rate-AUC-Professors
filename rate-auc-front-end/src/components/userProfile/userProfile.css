@@ -26,10 +26,19 @@
     font-weight: bold;
     margin-bottom: 20px;
     align-items: center;
-    padding-left: 150px;
     padding-top: 20px;
+    color: purple; 
   }
   
+  h1{
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    align-items: center;
+    padding-top: 20px;
+    color: purple; 
+
+  }
   .info-box {
     background-color: rgba(0, 0, 0, 0.1);
     border: 1px solid #000;
@@ -37,6 +46,17 @@
     margin-bottom: 10px;
     width: 90%; /* Adjusted width */
     width: 500px; /* Added max-width */
+    border-radius: 10px;
+  }
+
+  .info-box-editing {
+    background-color: rgba(0, 0, 0, 0.1);
+    border: 1px solid #000;
+    padding: 10px;
+    margin-bottom: 10px;
+    width: 90%; /* Adjusted width */
+    width: 500px; /* Added max-width */
+    height: 100px; 
     border-radius: 10px;
   }
   
@@ -62,9 +82,27 @@
     font-family: SF-Pro-Display-Regular, sans-serif;
     font-size: 1.002rem;
     margin-bottom: 20px;
-    margin-left: 165px;
+  }
+
+  .edit-button-profile{
+    background-color: #9c80c4;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-family: SF-Pro-Display-Regular, sans-serif;
+    font-size: 1.002rem;
+    margin-bottom: 20px;
+    margin-left: 165px; 
   }
   
   .edit-button:hover {
     background-color: #7389ea;
+}
+
+.edit-button-profile:hover {
+  background-color: #7389ea;
 }

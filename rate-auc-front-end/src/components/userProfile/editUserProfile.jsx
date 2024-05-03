@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-export default function EditUserProfile  ({ user, onSave, onCancel }) {
+export default function EditUserProfile({ user, onSave, onCancel }) {
   const [editedUser, setEditedUser] = useState({ ...user });
 
   const handleChange = (e) => {
@@ -13,10 +13,12 @@ export default function EditUserProfile  ({ user, onSave, onCancel }) {
   };
 
   return (
-    <div>
+    <div className="profile-container">
       <h1>Edit Information</h1>
-      <div>
-        <label>Full Name:</label>
+      <div className="info-box-editing">
+        <div className="info-title">
+          <label><strong>Full Name:</strong></label>
+        </div>
         <input
           type="text"
           name="fullName"
@@ -24,8 +26,10 @@ export default function EditUserProfile  ({ user, onSave, onCancel }) {
           onChange={handleChange}
         />
       </div>
-      <div>
-        <label>Birthdate:</label>
+      <div className="info-box-editing">
+        <div className="info-title">
+          <label><strong>Birthdate:</strong></label>
+        </div>
         <input
           type="text"
           name="birthdate"
@@ -33,8 +37,10 @@ export default function EditUserProfile  ({ user, onSave, onCancel }) {
           onChange={handleChange}
         />
       </div>
-      <div>
-        <label>Class Standing:</label>
+      <div className="info-box-editing">
+        <div className="info-title">
+          <label><strong>Class Standing:</strong></label>
+        </div>
         <input
           type="text"
           name="classStanding"
@@ -42,8 +48,10 @@ export default function EditUserProfile  ({ user, onSave, onCancel }) {
           onChange={handleChange}
         />
       </div>
-      <div>
-        <label>Major:</label>
+      <div className="info-box-editing">
+        <div className="info-title">
+          <label><strong>Major:</strong></label>
+        </div>
         <input
           type="text"
           name="major"
@@ -51,8 +59,10 @@ export default function EditUserProfile  ({ user, onSave, onCancel }) {
           onChange={handleChange}
         />
       </div>
-      <div>
-        <label>Minor:</label>
+      <div className="info-box-editing">
+        <div className="info-title">
+          <label><strong>Minor:</strong></label>
+        </div>
         <input
           type="text"
           name="minor"
@@ -60,9 +70,8 @@ export default function EditUserProfile  ({ user, onSave, onCancel }) {
           onChange={handleChange}
         />
       </div>
-      <button onClick={handleSubmit}>Submit Changes</button>
-      <button onClick={onCancel}>Cancel</button>
+      <button className="edit-button" onClick={handleSubmit}>Submit Changes</button>
+      <button className="edit-button" onClick={onCancel}>Cancel</button>
     </div>
   );
 };
-
