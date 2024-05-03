@@ -1,0 +1,59 @@
+/* Main container for the Professors Feed section */
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 20px auto;
+  padding: 20px;
+  border: 1px solid #ccc; /* Light gray border as in the Departments page */
+  border-radius: 10px; /* Rounded corners to match the style */
+  width: 95%; /* Responsive width, adjusted for better fit on the page */
+  background-color: #fff; /* White background color */
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+/* Header styling for "Search by Professors" */
+.header {
+  font-weight: 700; /* Increase font weight to make it bolder */
+  margin: 20px 0; /* Add space around the header for better visual separation */
+  text-align: left; /* Left align the header text */
+  width: 100%; /* Full width to ensure proper alignment */
+  margin-bottom: 20px; /* Additional space at the bottom of the header */
+  font-size: 24px; /* Font size for better visibility */
+}
+
+/* Grid container for professor cards */
+.cardsContainer {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Responsive grid layout */
+  gap: 20px; /* Space between each card */
+  width: 100%; /* Full width to utilize available space */
+}
+
+/* Link styling to remove default web link appearance */
+.link {
+  text-decoration: none; /* Removes underline from links */
+  color: inherit; /* Ensures link color matches the text color */
+}
+
+/* Styling for individual professor cards */
+.professorCard {
+  flex: 1 1 300px; /* Each card can grow and shrink but base at 300px */
+  display: flex;
+  flex-direction: column; /* Stack the card content vertically */
+  justify-content: space-between; /* Distribute space above and below the content */
+  height: 100%; /* Full height */
+}
+
+/* Hover effect for professor cards */
+.professorCard:hover {
+  transform: translateY(-5px); /* Raise the card slightly on hover for a dynamic effect */
+  box-shadow: 0 8px 16px #31b0cd; /* Change the shadow color on hover for a highlighted effect */
+}
+
+/* Styling for the search bar 
+.searchBar {
+  padding: 10px;  Padding for the search bar 
+  border: 1px solid #ccc;  Light gray border for the search bar 
+  border-radius: 5px;  Rounded corners for the search bar 
+  margin-bottom: 20px;  Spacing below the search bar */

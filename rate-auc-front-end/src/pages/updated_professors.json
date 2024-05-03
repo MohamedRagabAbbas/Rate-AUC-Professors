@@ -1,0 +1,3628 @@
+[
+  {
+    "id": "1",
+    "Name": "A. Sakr-Ashour, Fayrouz ",
+    "Position": "Assistant Professor",
+    "Department": "Institute of Global Health and Human Ecology ",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "2",
+    "Name": "A. Swillam, Mohamed ",
+    "Position": "Chair and Professor",
+    "Department": "Department of Physics ",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "3",
+    "Name": "Abd ElNaser, Anwar ",
+    "Position": "Assistant Professor",
+    "Department": "Department of Chemistry ",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "4",
+    "Name": "Abdalla, Nadine ",
+    "Position": "Assistant Professor",
+    "Department": "Department of Sociology, Egyptology and Anthropology ",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "5",
+    "Name": "Abdallah, Wael ",
+    "Position": "Assistant professor",
+    "Department": "Department of Management ",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "6",
+    "Name": "Abdel Azeem, Sherif ",
+    "Position": "Professor and ECNG Graduate Program Director",
+    "Department": "Department of Electronics and Communications Engineering ",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "7",
+    "Name": "Abdel Fattah, Dina ",
+    "Position": "Assistant Professor and  Chair",
+    "Department": "Department of Economics ",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "8",
+    "Name": "Abdel Kader Basuony, Mohamed ",
+    "Position": "Professor and Chair",
+    "Department": "Department of Accounting ",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "9",
+    "Name": "Abdel Kawi, Amr ",
+    "Position": "Professor of Practice",
+    "Department": "Department of Architecture ",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "10",
+    "Name": "Abdel Meguid, Ahmed ",
+    "Position": "Professor and Associate Provost for Enrollment Management",
+    "Department": "Department of Accounting ",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "11",
+    "Name": "Abdel Nasser, Tahia ",
+    "Position": "Associate Professor and Chair",
+    "Department": "Department of English and Comparative Literature ",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "12",
+    "Name": "Abdel Zaher, Angie ",
+    "Position": "Associate Professor",
+    "Department": "Department of Accounting ",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "13",
+    "Name": "Abdel-Rahman, Ehab ",
+    "Position": "Professor and Provost",
+    "Department": "Department of Physics ",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "14",
+    "Name": "Abdelaziz Ahmed Abdelaziz, Omar ",
+    "Position": "Assistant professor",
+    "Department": "Department of Mechanical Engineering ",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "15",
+    "Name": "Abdellatif , Ahmed ",
+    "Position": "Associate Professor of Biomedical and Neurosciences",
+    "Department": "Department of Biology ",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "16",
+    "Name": "Abdelmohsen, Sherif",
+    "Position": "Professor and Chair",
+    "Department": "Department of Architecture",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "17",
+    "Name": "Abdulla, Rasha",
+    "Position": "Professor",
+    "Department": "Department of Journalism and Mass Communication",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "18",
+    "Name": "Abo El Seoud, Dalal",
+    "Position": "Senior Instructor II",
+    "Department": "Department of Arabic Language Instruction",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "19",
+    "Name": "Abotaleb , Ibrahim",
+    "Position": "Associate Professor and Associate Chair",
+    "Department": "Department of Construction",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "20",
+    "Name": "Abou Oaf, Mervat",
+    "Position": "Professor of Practice",
+    "Department": "Department of Journalism and Mass Communication",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "21",
+    "Name": "Abou-Auf, Ahmed",
+    "Position": "Professor",
+    "Department": "Department of Electronics and Communications Engineering",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "22",
+    "Name": "Abou-Zeid, Mohamed",
+    "Position": "Professor and former Chair/Dean",
+    "Department": "Department of Construction",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "23",
+    "Name": "Aboul-Fetouh, Nagla",
+    "Position": "Senior Instructor",
+    "Department": "Department of English Language Instruction",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "24",
+    "Name": "Addas, Karim",
+    "Position": "Associate Professor",
+    "Department": "Department of Physics",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "25",
+    "Name": "Adly, Amr",
+    "Position": "Assistant Professor",
+    "Department": "Department of Political Science",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "26",
+    "Name": "Ahmad Lodhi, Iftikhar",
+    "Position": "Assistant Professor",
+    "Department": "Department of Public Policy and Administration",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "27",
+    "Name": "Ahmed, Amira",
+    "Position": "Assistant Professor and Associate Researcher",
+    "Department": "Department of Sociology, Egyptology and Anthropology",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "28",
+    "Name": "Ahmed, Yasmine",
+    "Position": "Assistant Professor",
+    "Department": "Core Curriculum",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "29",
+    "Name": "Al Attar, Amira",
+    "Position": "Assistant Professor",
+    "Department": "Department of English Language Instruction",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "30",
+    "Name": "Al-Atraqchi, Firas",
+    "Position": "Professor of Practice and Managing Director at Caravan",
+    "Department": "Department of Journalism and Mass Communication",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "31",
+    "Name": "Al-Ississ, Mohammad M.",
+    "Position": "Associate Professor",
+    "Department": "Department of Economics",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "32",
+    "Name": "Al-Ississ, Mohammad M.",
+    "Position": "Associate Professor",
+    "Department": "Department of Economics",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "33",
+    "Name": "Al-Qaffash, Montasser",
+    "Position": "Senior Instructor",
+    "Department": "Department of Arabic Language Instruction",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "34",
+    "Name": "Al-Sawi, Laila",
+    "Position": "Senior Instructor II",
+    "Department": "Department of Arabic Language Instruction",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "35",
+    "Name": "Ali, Hamid",
+    "Position": "Associate Professor",
+    "Department": "Department of Public Policy and Administration",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "36",
+    "Name": "Allam, Rasha",
+    "Position": "Associate Professor and Chair",
+    "Department": "Department of Journalism and Mass Communication",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "37",
+    "Name": "Allam, Mahmoud",
+    "Position": "Dean of the School of Continuing Education",
+    "Department": "School of Continuing Education",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "38",
+    "Name": "Allam , Nageh",
+    "Position": "Professor",
+    "Department": "Department of Physics",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "39",
+    "Name": "Altorki , Soraya",
+    "Position": "Professor",
+    "Department": "Department of Sociology, Egyptology and Anthropology",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "40",
+    "Name": "Aly, Ramy",
+    "Position": "Assistant Professor of Anthropology, Anthropology Unit Head",
+    "Department": "Department of Sociology, Egyptology and Anthropology",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "41",
+    "Name": "Aly , Sherif",
+    "Position": "Professor and Chair",
+    "Department": "Department of Computer Science and Engineering",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "42",
+    "Name": "Aly Fahmy, Latifa",
+    "Position": "Instructor",
+    "Department": "School of Continuing Education",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "43",
+    "Name": "Amer, Mona",
+    "Position": "Professor",
+    "Department": "Department of Psychology",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "44",
+    "Name": "Amer , Hassanein",
+    "Position": "Professor",
+    "Department": "Department of Electronics and Communications Engineering",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "45",
+    "Name": "Amin, Dina",
+    "Position": "Associate Professor of Theatre and Director of the Theatre Program",
+    "Department": "Department of the Arts",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "46",
+    "Name": "Amin , Hussein",
+    "Position": "Professor of Journalism and Mass Communication and Director of the Kamal Adham Center for Television and Digital Journalism",
+    "Department": "Department of Journalism and Mass Communication",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "47",
+    "Name": "Amin , Zeinab",
+    "Position": "Professor and\u00a0Associate Provost for Assessment and Accreditation",
+    "Department": "Department of Mathematics and Actuarial Science",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "48",
+    "Name": "Amin Youssef, Moustafa",
+    "Position": "Professor",
+    "Department": "Department of Computer Science and Engineering",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "49",
+    "Name": "Amleh , Asma",
+    "Position": "Professor",
+    "Department": "Department of Biology",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "50",
+    "Name": "Amr Serag El Din, Mohamed",
+    "Position": "Professor",
+    "Department": "Department of Mechanical Engineering",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "51",
+    "Name": "Anis , Mohab",
+    "Position": "Professor",
+    "Department": "Department of Electronics and Communications Engineering",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "52",
+    "Name": "Apaydin, Marina",
+    "Position": "Associate Professor",
+    "Department": "Department of Management",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "53",
+    "Name": "Apaydin, Marina",
+    "Position": "Associate Professor",
+    "Department": "Department of Management",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "54",
+    "Name": "Arafa, Mustafa",
+    "Position": "Professor",
+    "Department": "Department of Mechanical Engineering",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "55",
+    "Name": "Arafa , Salah",
+    "Position": "Professor",
+    "Department": "Department of Physics",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "56",
+    "Name": "Arnold , Jeanne",
+    "Position": "Associate Professor",
+    "Department": "Department of the Arts",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "57",
+    "Name": "Arrigoni , Elizabeth",
+    "Position": "Senior Instructor",
+    "Department": "Department of English Language Instruction",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "58",
+    "Name": "Askalani , Pakinam",
+    "Position": "Professor Emerita",
+    "Department": "Department of Chemistry",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "59",
+    "Name": "Atallah, Samer",
+    "Position": "Associate Professor and Associate Dean",
+    "Department": "Department of Economics",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "60",
+    "Name": "Ateek, Mona",
+    "Position": "Instructor",
+    "Department": "Department of English Language Instruction",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "61",
+    "Name": "Attia, Hossam El Din",
+    "Position": "Senior Instructor",
+    "Department": "Department of Rhetoric and Composition",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "62",
+    "Name": "Awad, Ibrahim",
+    "Position": "Professor of Practice and Director of Center for Migration and Refugee Studies",
+    "Department": "Department of Public Policy and Administration",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "63",
+    "Name": "Awni , Ali",
+    "Position": "Professor of Practice and Director, The John D. Gerhart Center for Philanthropy, Civic Engagement and Responsible Business",
+    "Department": "Department of Management",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "64",
+    "Name": "Ayad, Mina",
+    "Position": "Associate Professor",
+    "Department": "Department of Economics",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "65",
+    "Name": "Ayad , Mariam",
+    "Position": "Associate Professor",
+    "Department": "Department of Sociology, Egyptology and Anthropology",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "66",
+    "Name": "Azzam , Islam",
+    "Position": "Associate Professor",
+    "Department": "Department of Management",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "67",
+    "Name": "Azzam , Islam",
+    "Position": "Associate Professor",
+    "Department": "Department of Management",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "68",
+    "Name": "Azzazy, Hassan",
+    "Position": "Distinguished University Professor and Chair",
+    "Department": "Department of Chemistry",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "69",
+    "Name": "Baboukis , John",
+    "Position": "Professor",
+    "Department": "Department of the Arts",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "70",
+    "Name": "Badawi , Nesrine",
+    "Position": "Associate Professor",
+    "Department": "Department of Political Science",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "71",
+    "Name": "Badr, Eslam",
+    "Position": "Visiting Assistant Professor",
+    "Department": "Department of Mathematics and Actuarial Science",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "72",
+    "Name": "Badran, Mohamed",
+    "Position": "Associate Professor",
+    "Department": "Department of Mechanical Engineering",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "73",
+    "Name": "Badran , Mohga",
+    "Position": "Professor",
+    "Department": "Department of Management",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "74",
+    "Name": "Badran , Mohga",
+    "Position": "Professor",
+    "Department": "Department of Management",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "75",
+    "Name": "Bairakdar, Roba",
+    "Position": "Assistant Professor",
+    "Department": "Department of Mathematics and Actuarial Science",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "76",
+    "Name": "Bakr, Yousra",
+    "Position": "Assistant Professor",
+    "Department": "Department of Journalism and Mass Communication",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "77",
+    "Name": "Bakr, May",
+    "Position": "Assistant Professor",
+    "Department": "Institute of Global Health and Human Ecology",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "78",
+    "Name": "Bali, Maha",
+    "Position": "Professor of Practice",
+    "Department": "Center for Learning and Teaching",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "79",
+    "Name": "Balshe, Rima",
+    "Position": "Visiting Instructor of Cognitive Psychology",
+    "Department": "Department of Psychology",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "80",
+    "Name": "Barker, Chris",
+    "Position": "Assistant Professor",
+    "Department": "Department of Political Science",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "81",
+    "Name": "Barsoum, Ghada",
+    "Position": "Associate Professor and Chair",
+    "Department": "Department of Public Policy and Administration",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "82",
+    "Name": "Barsoum, Peter",
+    "Position": "Instructor",
+    "Department": "Department of Rhetoric and Composition",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "83",
+    "Name": "Bassiouney, Reem",
+    "Position": "Professor and Chair, Applied Linguistics",
+    "Department": "Department of Applied Linguistics",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "84",
+    "Name": "Bassiouni, Dina",
+    "Position": "Associate Professor",
+    "Department": "Department of Management",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "85",
+    "Name": "Bassiouni, Dina",
+    "Position": "Associate Professor",
+    "Department": "Department of Management",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "86",
+    "Name": "Baza, Marwa",
+    "Position": "Senior Instructor",
+    "Department": "Department of English Language Instruction",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "87",
+    "Name": "Baza, Iman",
+    "Position": "Senior Instructor",
+    "Department": "Department of English Language Instruction",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "88",
+    "Name": "Becheikh, Nizar",
+    "Position": "Associate Professor",
+    "Department": "Department of Management",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "89",
+    "Name": "Becheikh, Nizar",
+    "Position": "Associate Professor",
+    "Department": "Department of Management",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "90",
+    "Name": "Beckett , Jason",
+    "Position": "Associate Professor",
+    "Department": "Department of Law",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "91",
+    "Name": "Bekele, Teklu",
+    "Position": "Associate Professor",
+    "Department": "Department of Educational Studies",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "92",
+    "Name": "Belo , Catarina",
+    "Position": "Associate Professor",
+    "Department": "Department of Philosophy",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "93",
+    "Name": "Bhuiyan , Shahjahan",
+    "Position": "Professor and Associate Dean for Administration and Undergraduate Studies",
+    "Department": "Department of Public Policy and Administration",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "94",
+    "Name": "Borrego, Natalia",
+    "Position": "Post Doctoral Assistant Professor",
+    "Department": "Core Curriculum",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "95",
+    "Name": "Bos , Arthur",
+    "Position": "Professor",
+    "Department": "Department of Biology",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "96",
+    "Name": "Bouaddi, Mohammed",
+    "Position": "Associate Professor",
+    "Department": "Department of Economics",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "97",
+    "Name": "Boutros, Fikry",
+    "Position": "Senior Instructor",
+    "Department": "Department of Rhetoric and Composition",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "98",
+    "Name": "Brand, Meredith",
+    "Position": "Visiting Instructor",
+    "Department": "Department of Rhetoric and Composition",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "99",
+    "Name": "Braun, Jochen",
+    "Position": "Associate Professor of Practice",
+    "Department": "Department of the Arts",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "100",
+    "Name": "Byford , Richard",
+    "Position": "Senior Instructor II",
+    "Department": "Department of Rhetoric and Composition",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "101",
+    "Name": "Campana, Jillian",
+    "Position": "Professor and Associate Dean for Undergraduate Studies, School of Humanities and Social Sciences",
+    "Department": "Department of the Arts",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "102",
+    "Name": "Cardinale, Roberto",
+    "Position": "Assistant professor",
+    "Department": "Department of Economics",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "103",
+    "Name": "Carter, Benjamin",
+    "Position": "Instructor",
+    "Department": "Main Library",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "104",
+    "Name": "Carter , Melanie",
+    "Position": "Senior Instructor",
+    "Department": "Department of Rhetoric and Composition",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "105",
+    "Name": "Ch\u00e9rif, Rim",
+    "Position": "Assistant Professor of Finance",
+    "Department": "Department of Management",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "107",
+    "Name": "Christopher Marple, Adam",
+    "Position": "Assistant Professor of Directing",
+    "Department": "Department of the Arts",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "108",
+    "Name": "Chun, Sungsoo",
+    "Position": "Professor",
+    "Department": "Institute of Global Health and Human Ecology",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "109",
+    "Name": "Close, Ronnie",
+    "Position": "Associate Professor",
+    "Department": "Department of Journalism and Mass Communication",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "110",
+    "Name": "Cole , Donald",
+    "Position": "Professor Emeritus",
+    "Department": "Department of Sociology, Egyptology and Anthropology",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "111",
+    "Name": "Comer , Brooke",
+    "Position": "Instructor",
+    "Department": "Department of Rhetoric and Composition",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "112",
+    "Name": "Cosentino, Gabriele",
+    "Position": "Assistant Professor",
+    "Department": "Department of Journalism and Mass Communication",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "113",
+    "Name": "Dahawy , Khaled",
+    "Position": "Professor",
+    "Department": "Department of Accounting",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "114",
+    "Name": "Dahawy , Khaled",
+    "Position": "Professor",
+    "Department": "Department of Accounting",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "115",
+    "Name": "Dakhlallah, Duaa",
+    "Position": "Assistant Professor",
+    "Department": "School of Sciences and Engineering",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "116",
+    "Name": "Daniel Tschirgi, Robert",
+    "Position": "Professor Emeritus",
+    "Department": "Department of Political Science",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "117",
+    "Name": "Darwish , Sherin",
+    "Position": "Senior Instructor",
+    "Department": "Department of Rhetoric and Composition",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "118",
+    "Name": "De Meyer, Marleen",
+    "Position": "William Kelly Simpson Visiting Professor in Egyptology",
+    "Department": "Department of Sociology, Egyptology and Anthropology",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "119",
+    "Name": "De Young, Gregg",
+    "Position": "Associate Professor",
+    "Department": "Department of Mathematics and Actuarial Science",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "120",
+    "Name": "Deets, Mark",
+    "Position": "Assistant Professor and Director of Prince AlWaleed Bin Talal Bin AbdulAziz AlSaud Center for American Studies",
+    "Department": "Department of History",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "121",
+    "Name": "Demian , Amani",
+    "Position": "Senior Instructor",
+    "Department": "Department of English Language Instruction",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "122",
+    "Name": "Dempsey , Andrew",
+    "Position": "Instructor",
+    "Department": "Department of Rhetoric and Composition",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "123",
+    "Name": "Dinana, Hesham",
+    "Position": "Assistant Professor",
+    "Department": "Department of Journalism and Mass Communication",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "124",
+    "Name": "Edwards, Jill",
+    "Position": "Professor Emerita",
+    "Department": "Department of History",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "125",
+    "Name": "Eickhof, Ilka",
+    "Position": "Assistant professor",
+    "Department": "Department of Sociology, Egyptology and Anthropology",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "126",
+    "Name": "Eid, Lamia",
+    "Position": "Senior Instructor, Associate Dean",
+    "Department": "Libraries and Learning Technologies",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "127",
+    "Name": "Eid, Nourhan",
+    "Position": "Visiting Assistant Professor of Finance",
+    "Department": "Department of Management",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "128",
+    "Name": "El Araby, Salah",
+    "Position": "Professor Emeritus",
+    "Department": "Unknown",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "129",
+    "Name": "El Baradei, Laila",
+    "Position": "Professor and MPA Director",
+    "Department": "Department of Public Policy and Administration",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "130",
+    "Name": "El Batt, Tamer",
+    "Position": "Professor",
+    "Department": "Department of Computer Science and Engineering",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "131",
+    "Name": "El Bedawy, Randa",
+    "Position": "Associate Professor",
+    "Department": "Department of Management",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "132",
+    "Name": "El Bolock, Alia",
+    "Position": "Assistant Professor",
+    "Department": "Department of Computer Science and Engineering",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "133",
+    "Name": "El Deghaidy, Heba",
+    "Position": "Chair of the Department of Educational Studies",
+    "Department": "Department of Educational Studies",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "134",
+    "Name": "El Dorry, Mennat-Allah",
+    "Position": "Assistant Professor, Chair of Coptic Studies",
+    "Department": "Department of Sociology, Egyptology and Anthropology",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "135",
+    "Name": "El Enany, Nellie",
+    "Position": "Assistant Professor",
+    "Department": "Department of Management",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "136",
+    "Name": "El Essawi, Raghda",
+    "Position": "Associate Professor and TAFL program Director",
+    "Department": "Department of Applied Linguistics",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "137",
+    "Name": "El Ezabi, Shereen",
+    "Position": "Senior Instructor II",
+    "Department": "Department of Arabic Language Instruction",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "138",
+    "Name": "El Ezabi, Yehia",
+    "Position": "Professor Emeritus",
+    "Department": "Department of English Language Instruction",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "139",
+    "Name": "El Fiqi, Ashraf",
+    "Position": "Associate Professor",
+    "Department": "Department of Physics",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "140",
+    "Name": "El Haggar, Salah",
+    "Position": "Professor",
+    "Department": "Department of Mechanical Engineering",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "141",
+    "Name": "El Hitami, Farouk",
+    "Position": "Professor Emeritus",
+    "Department": "Department of Management",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "142",
+    "Name": "El Kolaly, Hoda",
+    "Position": "Visiting Assistant Professor",
+    "Department": "Department of Management",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "143",
+    "Name": "El Kolaly, Hoda",
+    "Position": "Visiting Assistant Professor",
+    "Department": "Department of Management",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "144",
+    "Name": "El Komi, Mohamed",
+    "Position": "Associate Professor",
+    "Department": "Department of Economics",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "145",
+    "Name": "El Komi, Mohamed",
+    "Position": "Associate Professor",
+    "Department": "Department of Economics",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "146",
+    "Name": "El Mahallawy, Wael",
+    "Position": "Associate Professor and Chair",
+    "Department": "Department of the Arts",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "147",
+    "Name": "El Mahdi, Rabab",
+    "Position": "Associate Professor",
+    "Department": "Department of Political Science",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "148",
+    "Name": "El Masry, Yara",
+    "Position": "Instructor",
+    "Department": "Department of Rhetoric and Composition",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "149",
+    "Name": "El Mougy, Amr",
+    "Position": "Associate Professor",
+    "Department": "Department of Computer Science and Engineering",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "150",
+    "Name": "El Saady, Mona",
+    "Position": "Senior Instructor II",
+    "Department": "Department of English Language Instruction",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "151",
+    "Name": "El Said, Tamer",
+    "Position": "Associate Professor of Practice in Filmmaking",
+    "Department": "Department of the Arts",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "152",
+    "Name": "El Sakkout, Hamdi",
+    "Position": "Professor Emeritus",
+    "Department": "Department of Arab and Islamic Civilizations",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "153",
+    "Name": "El Sawy, Shahira",
+    "Position": "Dean Emerita, the American University in Cairo",
+    "Department": "Libraries and Learning Technologies",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "154",
+    "Name": "El Sawy, Ehab",
+    "Position": "Associate Professor",
+    "Department": "Department of Chemistry",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "155",
+    "Name": "El Sayed, Nadine",
+    "Position": "Associate Professor of Practice, Associate Chair and Caravan Advisor",
+    "Department": "Department of Journalism and Mass Communication",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "156",
+    "Name": "El Shebeenie, Azza",
+    "Position": "Senior Instructor",
+    "Department": "Department of English Language Instruction",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "157",
+    "Name": "El Sherif, Shaimaa",
+    "Position": "Instructor",
+    "Department": "Department of Rhetoric and Composition",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "158",
+    "Name": "El-Adawy, Adel",
+    "Position": "Assistant professor",
+    "Department": "Prince AlWaleed Bin Talal Bin AbdulAziz AlSaud Center For American Studies",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "159",
+    "Name": "El-Bassiouny, Dina",
+    "Position": "Assistant Professor",
+    "Department": "Department of Accounting",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "160",
+    "Name": "El-Bassiouny, Dina",
+    "Position": "Assistant Professor",
+    "Department": "Department of Accounting",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "161",
+    "Name": "El-Esnawy, Susan",
+    "Position": "Senior Instructor II",
+    "Department": "Department of English Language Instruction",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "162",
+    "Name": "El-Fawal, Hassan",
+    "Position": "Professor of Biomedical Sciences",
+    "Department": "School of Sciences and Engineering",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "163",
+    "Name": "El-Gendy, Ahmed",
+    "Position": "Professor",
+    "Department": "Department of Construction",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "164",
+    "Name": "El-Helaly, Moataz",
+    "Position": "Assistant Professor",
+    "Department": "Department of Accounting",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "165",
+    "Name": "El-Helaly, Moataz",
+    "Position": "Assistant Professor",
+    "Department": "Department of Accounting",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "166",
+    "Name": "El-Husseiny, Momen",
+    "Position": "Assistant Professor",
+    "Department": "Department of Architecture",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "167",
+    "Name": "El-Idreesy, Tamer",
+    "Position": "Associate Professor",
+    "Department": "Department of Chemistry",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "168",
+    "Name": "El-Kadi, Amr",
+    "Position": "Professor",
+    "Department": "Department of Computer Science and Engineering",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "169",
+    "Name": "El-Kassas, Sherif",
+    "Position": "Professor",
+    "Department": "Department of Computer Science and Engineering",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "170",
+    "Name": "El-Khodary, Iman",
+    "Position": "Visiting Associate Professor",
+    "Department": "Department of Economics",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "171",
+    "Name": "El-Khodary, Iman",
+    "Position": "Visiting Associate Professor",
+    "Department": "Department of Economics",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "172",
+    "Name": "El-Khouly, Tamir",
+    "Position": "Associate Professor",
+    "Department": "Department of Architecture",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "173",
+    "Name": "El-Mikawy, Noha",
+    "Position": "Professor of Practice in the Public Policy and Administration Department and Dean of the School of Global Affairs and Public Policy",
+    "Department": "School of Global Affairs and Public Policy",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "174",
+    "Name": "El-Minyawi, Hadya",
+    "Position": "Instructor",
+    "Department": "Department of Rhetoric and Composition",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "175",
+    "Name": "El-Morally, Reham",
+    "Position": "Assistant Professor",
+    "Department": "Department of Political Science",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "176",
+    "Name": "El-Morsi, Mohamed",
+    "Position": "Professor",
+    "Department": "Department of Mechanical Engineering",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "177",
+    "Name": "EL-Naggar, Nehal",
+    "Position": "Professor",
+    "Department": "Department of Arab and Islamic Civilizations",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "178",
+    "Name": "El-Ramly, Hala",
+    "Position": "Associate Professor",
+    "Department": "Department of Economics",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "179",
+    "Name": "El-Ramly, Hala",
+    "Position": "Associate Professor",
+    "Department": "Department of Economics",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "180",
+    "Name": "El-Richani, Sarah",
+    "Position": "Assistant Professor",
+    "Department": "Department of Journalism and Mass Communication",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "181",
+    "Name": "El-Sayed, Mayyada",
+    "Position": "Associate Professor",
+    "Department": "Department of Chemistry",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "182",
+    "Name": "El-Sayed Abdel Meguid , Ahmed",
+    "Position": "Assistant Professor",
+    "Department": "Department of Philosophy",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "183",
+    "Name": "El-Shawarby, Hala",
+    "Position": "Senior Instructor",
+    "Department": "Department of English Language Instruction",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "184",
+    "Name": "ElAfifi, Amina",
+    "Position": "Senior Instructor I",
+    "Department": "Department of Rhetoric and Composition",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "185",
+    "Name": "ElBanbi, Ahmed",
+    "Position": "Professor and Chair",
+    "Department": "Department of Petroleum and Energy Engineering",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "186",
+    "Name": "Elbayoumi, Ahmed",
+    "Position": "Associate Professor",
+    "Department": "Department of Accounting",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "187",
+    "Name": "Elbayoumi, Ahmed",
+    "Position": "Associate Professor",
+    "Department": "Department of Accounting",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "188",
+    "Name": "Elbendary , Amina",
+    "Position": "Associate Professor and Director of Graduate Studies",
+    "Department": "Department of Arab and Islamic Civilizations",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "189",
+    "Name": "Eldawlatly, Seif",
+    "Position": "Associate Professor",
+    "Department": "Department of Computer Science and Engineering",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "190",
+    "Name": "Eldesouky , Lameese",
+    "Position": "Assistant Professor",
+    "Department": "Department of Psychology",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "191",
+    "Name": "Elezabi , Ayman",
+    "Position": "Associate Professor",
+    "Department": "Department of Electronics and Communications Engineering",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "192",
+    "Name": "Elias, Christopher",
+    "Position": "Assistant Professor",
+    "Department": "Department of History",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "193",
+    "Name": "Elkhodary, Khalil",
+    "Position": "Professor",
+    "Department": "Department of Mechanical Engineering",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "194",
+    "Name": "Ellis, Kate",
+    "Position": "Associate Professor",
+    "Department": "Department of Psychology",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "195",
+    "Name": "Ellis, Addison",
+    "Position": "Assistant Professor",
+    "Department": "Department of Philosophy",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "196",
+    "Name": "Ellozy , Aziza",
+    "Position": "Advisor to the Provost for Transformative Learning and Teaching",
+    "Department": "Center for Learning and Teaching",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "197",
+    "Name": "Elmrayed , Seham",
+    "Position": "Assistant Professor",
+    "Department": "Institute of Global Health and Human Ecology",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "198",
+    "Name": "Elnur , Ibrahim",
+    "Position": "Associate Professor",
+    "Department": "Department of Political Science",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "199",
+    "Name": "Elsayed, Ahmed",
+    "Position": "Associate Professor and Executive Director of J-PAL MENA",
+    "Department": "JPAL-MENA",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "200",
+    "Name": "ElSerty, Laila",
+    "Position": "Instructor",
+    "Department": "Department of Rhetoric and Composition",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "201",
+    "Name": "Elshayeb, Yasser",
+    "Position": "Professor",
+    "Department": "Department of Petroleum and Energy Engineering",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "202",
+    "Name": "Elshennawy , Abeer",
+    "Position": "Professor",
+    "Department": "Department of Economics",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "203",
+    "Name": "Elshimi, Ehab",
+    "Position": "Instructor and Director of the Undergraduate Research Program",
+    "Department": "Department of Rhetoric and Composition",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "204",
+    "Name": "Elshimi, Ghada",
+    "Position": "Dean of Undergraduate Studies and Academy of Liberal Arts, Core Curriculum Director",
+    "Department": "Department of Rhetoric and Composition",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "205",
+    "Name": "Elshimi , Amani",
+    "Position": "Senior Instructor II",
+    "Department": "Department of Rhetoric and Composition",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "206",
+    "Name": "ElShinnawy , Maha",
+    "Position": "Professor",
+    "Department": "Department of Management",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "207",
+    "Name": "ElShinnawy , Maha",
+    "Position": "Professor",
+    "Department": "Department of Management",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "208",
+    "Name": "Elsrakbi, Ghalia",
+    "Position": "Associate Professor of Practice",
+    "Department": "Department of the Arts",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "209",
+    "Name": "Elwan, Sherwat",
+    "Position": "Associate Professor",
+    "Department": "Department of Management",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "210",
+    "Name": "Erfan, Aly",
+    "Position": "Professor of Practice",
+    "Department": "Department of Public Policy and Administration",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "211",
+    "Name": "Esawi , Amal",
+    "Position": "Professor",
+    "Department": "Department of Mechanical Engineering",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "212",
+    "Name": "Ezeldin, Ahmed",
+    "Position": "Professor and former Chair",
+    "Department": "Department of Construction",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "213",
+    "Name": "Ezzelarab, Khaled",
+    "Position": "Associate Professor of Practice",
+    "Department": "Department of Journalism and Mass Communication",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "214",
+    "Name": "EzzelArab, AbdelAziz",
+    "Position": "Professor",
+    "Department": "Department of History",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "215",
+    "Name": "Fahmy, Ezzat",
+    "Position": "Professor Emeritus",
+    "Department": "Department of Construction",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "216",
+    "Name": "Fahmy , Nabil",
+    "Position": "Dean Emeritus",
+    "Department": "School of Global Affairs and Public Policy",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "217",
+    "Name": "Fahmy , Sherif",
+    "Position": "Associate Professor",
+    "Department": "Department of Mechanical Engineering",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "218",
+    "Name": "Fairley, Mariah",
+    "Position": "Senior Instructor II",
+    "Department": "Department of English Language Instruction",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "219",
+    "Name": "Farag , Shawki",
+    "Position": "Professor Emeritus",
+    "Department": "Department of Accounting",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "220",
+    "Name": "Farag , Sophie",
+    "Position": "Senior Instructor II",
+    "Department": "Department of English Language Instruction",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "221",
+    "Name": "Farag , Mahmoud",
+    "Position": "Professor",
+    "Department": "Department of Mechanical Engineering",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "222",
+    "Name": "Farag , Shawki",
+    "Position": "Professor Emeritus",
+    "Department": "Department of Accounting",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "223",
+    "Name": "Farhadi, Noah",
+    "Position": "Professor of Practice and CIB Endowed Chair",
+    "Department": "Department of Management",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "224",
+    "Name": "Farrag, Osman",
+    "Position": "Professor Emeritus",
+    "Department": "Department of Sociology, Egyptology and Anthropology",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "225",
+    "Name": "Fawzy Aly, Mohamed",
+    "Position": "Associate Professor",
+    "Department": "Department of Mechanical Engineering",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "226",
+    "Name": "Fernandes , Eleonora",
+    "Position": "Associate Professor",
+    "Department": "Department of Arab and Islamic Civilizations",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "227",
+    "Name": "Fincham , Richard",
+    "Position": "Associate Professor",
+    "Department": "Department of Philosophy",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "228",
+    "Name": "Forden, Carie",
+    "Position": "Professor and Chair",
+    "Department": "Department of Psychology",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "229",
+    "Name": "Fouad, Jasmin",
+    "Position": "Professor of Finance",
+    "Department": "Department of Management",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "230",
+    "Name": "Fouad , Walid",
+    "Position": "Associate Professor",
+    "Department": "Department of Biology",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "231",
+    "Name": "Fox, Kim",
+    "Position": "Professor of Practice",
+    "Department": "Department of Journalism and Mass Communication",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "232",
+    "Name": "Friedlander , Shems",
+    "Position": "Professor Emeritus",
+    "Department": "Department of Journalism and Mass Communication",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "233",
+    "Name": "Gaafar , Lotfi",
+    "Position": "Professor, Dean of the School of Science and Engineering",
+    "Department": "Department of Mechanical Engineering",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "234",
+    "Name": "Gadallah , Yasser",
+    "Position": "Professor",
+    "Department": "Department of Electronics and Communications Engineering",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "235",
+    "Name": "Galal Edeen, Galal",
+    "Position": "professor",
+    "Department": "Department of Management",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "236",
+    "Name": "Gazeaud, Jules",
+    "Position": "Posdoctoral Fellow",
+    "Department": "JPAL-MENA",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "237",
+    "Name": "Gebril, Atta",
+    "Position": "Professor of Applied Linguistics and Associate Dean for Graduate Studies and Research",
+    "Department": "Department of Applied Linguistics",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "238",
+    "Name": "Ghazaleh , Pascale",
+    "Position": "Associate Professor and Chair",
+    "Department": "Department of History",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "239",
+    "Name": "Ghazoul , Ferial",
+    "Position": "Professor",
+    "Department": "Department of English and Comparative Literature",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "240",
+    "Name": "Gibson , Michael",
+    "Position": "Senior Instructor",
+    "Department": "Department of Rhetoric and Composition",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "241",
+    "Name": "Gomaa, Dina",
+    "Position": "Instructor",
+    "Department": "Department of Rhetoric and Composition",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "242",
+    "Name": "Goneid , Amr",
+    "Position": "Professor",
+    "Department": "Department of Computer Science and Engineering",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "243",
+    "Name": "Goubran, Sherif",
+    "Position": "Assistant Professor and Director of Graduate Program",
+    "Department": "Department of Architecture",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "244",
+    "Name": "Grant, Hoda",
+    "Position": "Senior Instructor",
+    "Department": "Department of Rhetoric and Composition",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "245",
+    "Name": "Gratac\u00f3s Brum, Rodrigo",
+    "Position": "Associate Professor of Practice",
+    "Department": "Department of the Arts",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "246",
+    "Name": "Green , Chelsea",
+    "Position": "Associate Professor and the Music Program Director",
+    "Department": "Department of the Arts",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "247",
+    "Name": "H. Berry, Jacquelyn",
+    "Position": "Assistant Professor",
+    "Department": "Department of Psychology",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "248",
+    "Name": "Habib , Maki",
+    "Position": "Professor",
+    "Department": "Department of Mechanical Engineering",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "249",
+    "Name": "Hadi, Ali",
+    "Position": "Distinguished University Professor",
+    "Department": "Department of Mathematics and Actuarial Science",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "250",
+    "Name": "Haggag, May",
+    "Position": "Assistant Professor",
+    "Department": "Department of Construction",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "251",
+    "Name": "Haggag, Karim",
+    "Position": "Professor of Practice",
+    "Department": "Department of Public Policy and Administration",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "252",
+    "Name": "Haikal, Fayza",
+    "Position": "Professor of Emerita",
+    "Department": "Department of Sociology, Egyptology and Anthropology",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "253",
+    "Name": "Hamad, Aliaa",
+    "Position": "Senior Instructor",
+    "Department": "Department of Rhetoric and Composition",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "254",
+    "Name": "Hamdy, Naila",
+    "Position": "Associate Professor and Associate Dean for Graduate Students and Research",
+    "Department": "Department of Journalism and Mass Communication",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "255",
+    "Name": "Hamdy , Amal",
+    "Position": "Assistant Professor of Sustainable Design",
+    "Department": "Department of Architecture",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "256",
+    "Name": "Hamed, Ahmed",
+    "Position": "Associate Professor",
+    "Department": "Department of Physics",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "257",
+    "Name": "Hanna , Nelly",
+    "Position": "Distinguished University Professor",
+    "Department": "Department of Arab and Islamic Civilizations",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "258",
+    "Name": "Harb, Nadia",
+    "Position": "Senior Instructor II",
+    "Department": "Department of Arabic Language Instruction",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "259",
+    "Name": "Harvey, Jonathan",
+    "Position": "Instructor",
+    "Department": "Department of Rhetoric and Composition",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "260",
+    "Name": "Hassan, Mona",
+    "Position": "Senior Instructor II",
+    "Department": "Department of Arabic Language Instruction",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "261",
+    "Name": "Hassanein, Medhat",
+    "Position": "Distinguished University Professor",
+    "Department": "Department of Management",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "262",
+    "Name": "Hassanein, Medhat",
+    "Position": "Distinguished University Professor",
+    "Department": "Department of Management",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "263",
+    "Name": "Hassanein, Azza",
+    "Position": "Senior Instructor II",
+    "Department": "Department of Arabic Language Instruction",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "264",
+    "Name": "Hassanein , Amr",
+    "Position": "Professor",
+    "Department": "Department of Construction",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "265",
+    "Name": "Hatem , Tarek",
+    "Position": "professor of Strategic Management and Entrepreneurship and Director",
+    "Department": "Department of Management",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "266",
+    "Name": "Hebert , Michel",
+    "Position": "Professor Emeritus",
+    "Department": "Department of Mathematics and Actuarial Science",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "267",
+    "Name": "Heck, Gerda",
+    "Position": "Assistant Professor",
+    "Department": "Department of Sociology, Egyptology and Anthropology",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "268",
+    "Name": "Hefny, Mostafa",
+    "Position": "Assistant Professor",
+    "Department": "Department of Political Science",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "269",
+    "Name": "Hegazy , Ibrahim",
+    "Position": "Professor",
+    "Department": "Department of Management",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "270",
+    "Name": "Hegazy , Ibrahim",
+    "Position": "Professor",
+    "Department": "Department of Management",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "271",
+    "Name": "Hegazy , Mohamed",
+    "Position": "Professor",
+    "Department": "Department of Accounting",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "272",
+    "Name": "Held, Pascal",
+    "Position": "Assistant Professor",
+    "Department": "Department of Arab and Islamic Civilizations",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "273",
+    "Name": "Helmy, Malak",
+    "Position": "Associate Professor of Practice",
+    "Department": "Department of the Arts",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "274",
+    "Name": "Helmy, Kamila",
+    "Position": "Senior Instructor",
+    "Department": "Department of English Language Instruction",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "275",
+    "Name": "Hendershot, Mathew",
+    "Position": "Associate Dean of Undergraduate Studies and the Academy of Liberal Arts and Instructor",
+    "Department": "Department of Rhetoric and Composition",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "276",
+    "Name": "Hendy, Rana",
+    "Position": "Assistant Professor and MPP Director",
+    "Department": "Department of Public Policy and Administration",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "277",
+    "Name": "Henry , Michelle",
+    "Position": "Senior Instructor",
+    "Department": "Department of Rhetoric and Composition",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "278",
+    "Name": "Henry , Hani",
+    "Position": "Professor and Associate Dean for Graduate Studies and Research, School of Humanities and Social Sciences",
+    "Department": "Department of Psychology",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "279",
+    "Name": "Heshmat , Dina",
+    "Position": "Associate Professor",
+    "Department": "Department of Arab and Islamic Civilizations",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "280",
+    "Name": "Hill , Enid",
+    "Position": "Professor Emerita",
+    "Department": "Department of Political Science",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "281",
+    "Name": "Hines, Maurice",
+    "Position": "Instructor",
+    "Department": "Libraries and Learning Technologies",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "282",
+    "Name": "Hoath , Richard",
+    "Position": "Senior Instructor II",
+    "Department": "Department of Rhetoric and Composition",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "283",
+    "Name": "Hoballah, Nahla",
+    "Position": "Instructor",
+    "Department": "Department of Rhetoric and Composition",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "284",
+    "Name": "Hoey, John",
+    "Position": "Associate Professor of Practice",
+    "Department": "Department of the Arts",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "285",
+    "Name": "Hojairi, Mouannes",
+    "Position": "Assistant Professor",
+    "Department": "Department of History",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "286",
+    "Name": "Hopkins , Nicholas",
+    "Position": "Professor Emeritus",
+    "Department": "Department of Sociology, Egyptology and Anthropology",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "287",
+    "Name": "Hosny , Ossama",
+    "Position": "Professor and Graduate Program Director",
+    "Department": "Department of Construction",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "288",
+    "Name": "Hubert, Mario",
+    "Position": "Assistant Professor",
+    "Department": "Department of Philosophy",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "289",
+    "Name": "Ibrahim Eldomiaty, Tarek",
+    "Position": "Professor of Finance",
+    "Department": "Department of Management",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "290",
+    "Name": "Ibrahim Mohareb, Nabil",
+    "Position": "Associate Professor",
+    "Department": "Department of Architecture",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "291",
+    "Name": "Ikram, Salima",
+    "Position": "Distinguished University Professor",
+    "Department": "Department of Sociology, Egyptology and Anthropology",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "292",
+    "Name": "Ismail, Ayman",
+    "Position": "Associate Professor Abdul Latif Jameel Endowed Chair of Entrepreneurship and Founding Director, AUC Venture Lab",
+    "Department": "Department of Management",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "293",
+    "Name": "Ismail , Yehea",
+    "Position": "Professor and Chair",
+    "Department": "Department of Electronics and Communications Engineering",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "294",
+    "Name": "Jabr , Rania",
+    "Position": "Senior Instructor II",
+    "Department": "Department of English Language Instruction",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "295",
+    "Name": "Jones, Doris",
+    "Position": "Senior Instructor II",
+    "Department": "Department of Rhetoric and Composition",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "296",
+    "Name": "Kakarougkas, Andreas",
+    "Position": "Assistant Professor",
+    "Department": "Department of Biology",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "297",
+    "Name": "Kamal, Laila",
+    "Position": "Senior Instructor II",
+    "Department": "Department of English Language Instruction",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "298",
+    "Name": "Kamal-Eldin, Tania",
+    "Position": "Associate Professor of Practice",
+    "Department": "Department of the Arts",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "299",
+    "Name": "Kamaly , Ahmed",
+    "Position": "Associate Professor",
+    "Department": "Department of Economics",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "300",
+    "Name": "Kamaly , Ahmed",
+    "Position": "Associate Professor",
+    "Department": "Department of Economics",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "301",
+    "Name": "Kamel , Sherif H.",
+    "Position": "Professor and Dean",
+    "Department": "Department of Management",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "302",
+    "Name": "Kamel , Sherif H.",
+    "Position": "Professor and Dean",
+    "Department": "Department of Management",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "303",
+    "Name": "Kamel , Basil",
+    "Position": "Professor",
+    "Department": "Department of Architecture",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "304",
+    "Name": "Kandil, Nariman",
+    "Position": "Assistant Professor",
+    "Department": "Department of Accounting",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "305",
+    "Name": "Karkouti, Ibrahim",
+    "Position": "Assistant Professor",
+    "Department": "Department of Educational Studies",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "306",
+    "Name": "Kassabgy, Fotna Nagwa",
+    "Position": "Senior Instructor II",
+    "Department": "Department of English Language Instruction",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "307",
+    "Name": "Kassem , Maye",
+    "Position": "Associate Professor",
+    "Department": "Department of Political Science",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "308",
+    "Name": "Kaye-Essien, Charles",
+    "Position": "Assistant Professor",
+    "Department": "Department of Public Policy and Administration",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "309",
+    "Name": "Kazziha , Walid",
+    "Position": "Professor",
+    "Department": "Department of Political Science",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "310",
+    "Name": "Kennedy, Elisabeth",
+    "Position": "Assistant Professor",
+    "Department": "Department of History",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "311",
+    "Name": "Kenney , Ellen",
+    "Position": "Associate Professor and Chair",
+    "Department": "Department of Arab and Islamic Civilizations",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "312",
+    "Name": "Khafagi, Noha",
+    "Position": "Senior Instructor II",
+    "Department": "Department of English Language Instruction",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "313",
+    "Name": "Khan, Ahmad",
+    "Position": "Assistant Professor",
+    "Department": "Department of Arab and Islamic Civilizations",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "314",
+    "Name": "Khedr , Safwan",
+    "Position": "Professor and former Chair",
+    "Department": "Department of Construction",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "315",
+    "Name": "Khlaifat , Abdelaziz",
+    "Position": "Professor and Associate Dean for Undergraduate Studies",
+    "Department": "Department of Petroleum and Energy Engineering",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "316",
+    "Name": "Kholoussy , Hanan",
+    "Position": "Associate Professor",
+    "Department": "Department of History",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "317",
+    "Name": "Khouri, Malek",
+    "Position": "Professor and the Film Program Director",
+    "Department": "Department of the Arts",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "318",
+    "Name": "Korany , Bahgat",
+    "Position": "Professor",
+    "Department": "Department of Political Science",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "319",
+    "Name": "Kotb, Heba",
+    "Position": "Associate Professor of Practice",
+    "Department": "Department of Psychology",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "320",
+    "Name": "Kwagne Marcel, Yorgun",
+    "Position": "Senior Instructor Level 2 and Dean of Students",
+    "Department": "Academy of Liberal Arts",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "321",
+    "Name": "Lammi , Walter",
+    "Position": "Professor Emeritus",
+    "Department": "Department of Philosophy",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "322",
+    "Name": "Lee, Sanghyeok",
+    "Position": "Assistant Professor",
+    "Department": "Department of Economics",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "323",
+    "Name": "Lee, Sean",
+    "Position": "Assistant Professor",
+    "Department": "Department of Political Science",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "324",
+    "Name": "Lesch , Ann",
+    "Position": "Professor Emerita",
+    "Department": "Department of Political Science",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "325",
+    "Name": "Lewko, Alexander",
+    "Position": "Senior Instructor I and Chair",
+    "Department": "Department of English Language Instruction",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "326",
+    "Name": "Lotfallah, Wafik",
+    "Position": "Professor and Chair",
+    "Department": "Department of Mathematics and Actuarial Science",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "327",
+    "Name": "Lutfi, Hoda",
+    "Position": "Professor Emerita",
+    "Department": "Department of History",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "328",
+    "Name": "M. Moussa, Hanan",
+    "Position": "Assistant Professor",
+    "Department": "Department of Management",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "329",
+    "Name": "M. Segone, Brenda",
+    "Position": "Assistant Professor of Design History and Theory",
+    "Department": "Department of the Arts",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "330",
+    "Name": "Madkour , Tarek",
+    "Position": "Professor",
+    "Department": "Department of Chemistry",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "331",
+    "Name": "Magdy El-Kholay, Amena",
+    "Position": "Instructor",
+    "Department": "Department of English Language Instruction",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "332",
+    "Name": "Mahmoud, Adham",
+    "Position": "Instructor",
+    "Department": "Department of Rhetoric and Composition",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "333",
+    "Name": "Makhlouf, Sanaa",
+    "Position": "Senior Instructor II",
+    "Department": "Department of English Language Instruction",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "334",
+    "Name": "Maklad, Jasmine",
+    "Position": "Instructor",
+    "Department": "Department of Rhetoric and Composition",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "335",
+    "Name": "Makram-Ebeid, Dina",
+    "Position": "Assistant Professor",
+    "Department": "Department of Sociology, Egyptology and Anthropology",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "336",
+    "Name": "Mamdouh , Wael",
+    "Position": "Professor",
+    "Department": "Department of Chemistry",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "337",
+    "Name": "Maswood , Syed",
+    "Position": "Professor and Chair",
+    "Department": "Department of Political Science",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "338",
+    "Name": "McCullough , Gretchen",
+    "Position": "Senior Instructor II",
+    "Department": "Department of Rhetoric and Composition",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "339",
+    "Name": "McIntyre, Robert",
+    "Position": "Assistant Professor",
+    "Department": "Core Curriculum",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "340",
+    "Name": "Mehrez , Samia",
+    "Position": "Professor and Director of Center for Translation Studies",
+    "Department": "Department of Arab and Islamic Civilizations",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "341",
+    "Name": "Melaney , William",
+    "Position": "Professor",
+    "Department": "Department of English and Comparative Literature",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "342",
+    "Name": "Meloy , John",
+    "Position": "Professor and Dean of the School of Humanities and Social Sciences",
+    "Department": "Department of Arab and Islamic Civilizations",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "343",
+    "Name": "Meshreki, Hakim",
+    "Position": "Associate Professor and CEMS-MIM Academic Director",
+    "Department": "Department of Management",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "344",
+    "Name": "Metz, Euan",
+    "Position": "Assistant Professor",
+    "Department": "Department of Philosophy",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "345",
+    "Name": "Mikhail , Mikhail",
+    "Position": "Professor",
+    "Department": "Department of Computer Science and Engineering",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "346",
+    "Name": "Mishriki , Afaf",
+    "Position": "Senior Instructor",
+    "Department": "Department of English Language Instruction",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "347",
+    "Name": "Mizza, Daria",
+    "Position": "Assistant Professor",
+    "Department": "Department of Educational Studies",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "348",
+    "Name": "Moftah, Laurence",
+    "Position": "Librarian Emerita",
+    "Department": "Rare Books and Special Collections Library",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "349",
+    "Name": "Mohamed, Essam",
+    "Position": "Assistant Professor",
+    "Department": "Institute of Global Health and Human Ecology",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "350",
+    "Name": "Mohamed Hisham Abdelaziz Fakher, Sherif",
+    "Position": "Assistant Professor",
+    "Department": "Department of Petroleum and Energy Engineering",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "351",
+    "Name": "Mohamed Nabil Mohib, Ahmed",
+    "Position": "Assistant Professor",
+    "Department": "Department of Mechanical Engineering",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "352",
+    "Name": "Mohamed Salah Eldin Darwish, Mohamed",
+    "Position": "Assistant Professor",
+    "Department": "Department of Construction",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "353",
+    "Name": "Mohamed Zaki Darwish, Moataz",
+    "Position": "Associate Professor of Practice",
+    "Department": "Department of Management",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "354",
+    "Name": "Moraw, Martin",
+    "Position": "Assistant Professor",
+    "Department": "Department of English and Comparative Literature",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "355",
+    "Name": "Morcos, Fady",
+    "Position": "Associate Professor of Practice and Assistant Provost for Innovative Learning Experiences",
+    "Department": "School of Sciences and Engineering",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "356",
+    "Name": "Morrison , Ian",
+    "Position": "Chair, Department of Sociology, Egyptology, and Anthropology. Principal Investigator, Extimacies: Critical Theory from the Global South The Andrew W. Mellon Foundation",
+    "Department": "Department of Sociology, Egyptology and Anthropology",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "357",
+    "Name": "Mortagy, Amr",
+    "Position": "Professor Emeritus",
+    "Department": "Department of Management",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "358",
+    "Name": "Mostafa, Hoda",
+    "Position": "Director Center for Learning and Teaching & Professor of Practice at the Center for Learning and Teaching",
+    "Department": "Center for Learning and Teaching",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "359",
+    "Name": "Mostafa , Magda",
+    "Position": "Professor and Associate Chair",
+    "Department": "Department of Architecture",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "360",
+    "Name": "Motawy , Yasmine",
+    "Position": "Senior Instructor II",
+    "Department": "Department of Rhetoric and Composition",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "361",
+    "Name": "Mourad , Maha",
+    "Position": "Professor and Associate Dean for Undergraduate Studies and Administration, School of Business",
+    "Department": "Department of Management",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "362",
+    "Name": "Moustafa , Mohamed",
+    "Position": "Associate Professor",
+    "Department": "Department of Computer Science and Engineering",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "363",
+    "Name": "Moustafa , Ahmed",
+    "Position": "Professor and Chair",
+    "Department": "Department of Biology",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "364",
+    "Name": "Muehlhaeusler, Mark P.",
+    "Position": "Senior Instructor",
+    "Department": "Main Library",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "365",
+    "Name": "M\u00fcller, Isabel",
+    "Position": "Assistant Professor",
+    "Department": "Department of Mathematics and Actuarial Science",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "366",
+    "Name": "Naga, Noor",
+    "Position": "Instructor",
+    "Department": "Department of Rhetoric and Composition",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "367",
+    "Name": "Nagi Sarhan, Nihal",
+    "Position": "Associate Professor and TESOL program Director",
+    "Department": "Department of Applied Linguistics",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "368",
+    "Name": "Nahla, Iman",
+    "Position": "Senior Instructor",
+    "Department": "Department of Arabic Language Instruction",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "369",
+    "Name": "Nassar , Khaled",
+    "Position": "Professor",
+    "Department": "Department of Construction",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "370",
+    "Name": "Nassef , Ashraf",
+    "Position": "Professor",
+    "Department": "Department of Mechanical Engineering",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "371",
+    "Name": "Nasser, Nesreen",
+    "Position": "Assistant Professor",
+    "Department": "Department of Public Policy and Administration",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "372",
+    "Name": "Nawar , Haytham",
+    "Position": "Associate Professor",
+    "Department": "Department of the Arts",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "373",
+    "Name": "Nicolas, Maya",
+    "Position": "Post Doctoral Assistant Professor",
+    "Department": "Core Curriculum",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "374",
+    "Name": "Nosseir, Aida",
+    "Position": "Librarian Emerita",
+    "Department": "Main Library",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "375",
+    "Name": "O'Kane, Bernard",
+    "Position": "Professor of Islamic Art and Architecture",
+    "Department": "Department of Arab and Islamic Civilizations",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "376",
+    "Name": "Omar , Hosny",
+    "Position": "Professor",
+    "Department": "Department of Physics",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "377",
+    "Name": "Orabi, Mohamed",
+    "Position": "Associate Professor",
+    "Department": "Department of Physics",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "378",
+    "Name": "Oraby, Moustafa",
+    "Position": "Professor of Practice",
+    "Department": "Department of Petroleum and Energy Engineering",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "379",
+    "Name": "Ortiz-Zapata, Daniel",
+    "Position": "Professor and Dean of Libraries and Learning Technologies",
+    "Department": "Libraries and Learning Technologies",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "380",
+    "Name": "Osman, Gihan",
+    "Position": "Assistant Professor",
+    "Department": "Department of Educational Studies",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "381",
+    "Name": "Osman, Mariam",
+    "Position": "Senior Instructor",
+    "Department": "Department of English Language Instruction",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "382",
+    "Name": "Papanikoloau, Maria",
+    "Position": "Instructor",
+    "Department": "Libraries and Learning Technologies",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "383",
+    "Name": "Perry , Fred",
+    "Position": "Professor Emeritus",
+    "Department": "Department of English Language Instruction",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "384",
+    "Name": "Perry Keevy, Juleen",
+    "Position": "Instructor",
+    "Department": "Department of Rhetoric and Composition",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "385",
+    "Name": "Peterson, Samiha",
+    "Position": "Professor Emerita",
+    "Department": "Department of Educational Studies",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "386",
+    "Name": "Philps, Peter",
+    "Position": "Instructor",
+    "Department": "Main Library",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "387",
+    "Name": "Raafat Abdelazim, Mariam",
+    "Position": "Assistant Professor",
+    "Department": "Department of Architecture",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "388",
+    "Name": "Rafea , Ahmed",
+    "Position": "Professor and Graduate Program Director",
+    "Department": "Department of Computer Science and Engineering",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "389",
+    "Name": "Rafferty, David",
+    "Position": "Associate Professor of Practice",
+    "Department": "Department of the Arts",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "390",
+    "Name": "Ragai, Jehane",
+    "Position": "Professor Emerita",
+    "Department": "Department of Chemistry",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "391",
+    "Name": "Rahman, Zinia",
+    "Position": "Instructor",
+    "Department": "Libraries and Learning Technologies",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "392",
+    "Name": "Ramadan, Adham",
+    "Position": "Professor, Dean of Graduate Studies and Associate Provost for Research",
+    "Department": "Department of Chemistry",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "393",
+    "Name": "Rashad , Hoda",
+    "Position": "Professor and Director",
+    "Department": "Social Research Center",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "394",
+    "Name": "Rateb, Dina F.",
+    "Position": "Associate Professor",
+    "Department": "Department of Management",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "395",
+    "Name": "Rateb, Dina F.",
+    "Position": "Associate Professor",
+    "Department": "Department of Management",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "396",
+    "Name": "Rauh, Elizabeth",
+    "Position": "Assistant Professor - Visual Cultures and Arts",
+    "Department": "Department of the Arts",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "397",
+    "Name": "Reimer , Michael",
+    "Position": "Professor",
+    "Department": "Department of History",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "398",
+    "Name": "Rieker , Martina",
+    "Position": "Assistant Professor and Director",
+    "Department": "Cynthia Nelson Institute for Gender and Women\u2019s Studies",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "399",
+    "Name": "Rizk, Nagla",
+    "Position": "Professor of Economics and Founding Director of Access to Knowledge for Development Center (A2K4D)",
+    "Department": "Department of Economics",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "400",
+    "Name": "Rizk, Nagla",
+    "Position": "Professor of Economics and Founding Director of Access to Knowledge for Development Center (A2K4D)",
+    "Department": "Department of Economics",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "401",
+    "Name": "Rizzo, Susanne",
+    "Position": "Senior Instructor II",
+    "Department": "Department of English Language Instruction",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "402",
+    "Name": "Rizzo, Helen",
+    "Position": "Associate Professor and Sociology Unit Head",
+    "Department": "Department of Sociology, Egyptology and Anthropology",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "403",
+    "Name": "S. Fahmy , Shahira",
+    "Position": "Professor",
+    "Department": "Department of Journalism and Mass Communication",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "404",
+    "Name": "S. Khalsa, Gurusewak",
+    "Position": "Associate Professor of Practice",
+    "Department": "Department of Psychology",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "405",
+    "Name": "Saad, Gehad",
+    "Position": "Assistant Professor",
+    "Department": "Department of Petroleum and Energy Engineering",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "406",
+    "Name": "Saba, Meredith",
+    "Position": "Instructor",
+    "Department": "Libraries and Learning Technologies",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "407",
+    "Name": "Sabbahy , Lisa",
+    "Position": "Associate Professor",
+    "Department": "Department of Sociology, Egyptology and Anthropology",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "408",
+    "Name": "Sabea, Hanan",
+    "Position": "Associate Professor and Sociology-Anthropology Graduate Program Advisor Editor-in-Chief of Cairo Papers in Social Science",
+    "Department": "Department of Sociology, Egyptology and Anthropology",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "409",
+    "Name": "Sabry Abou-Zaid, Ahmed",
+    "Position": "Visiting Professor",
+    "Department": "Department of Economics",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "410",
+    "Name": "Sabry Abou-Zaid, Ahmed",
+    "Position": "Professor",
+    "Department": "Department of Economics",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "411",
+    "Name": "Said , Mona",
+    "Position": "Professor",
+    "Department": "Department of Economics",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "412",
+    "Name": "Said , Mona",
+    "Position": "Professor",
+    "Department": "Department of Economics",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "413",
+    "Name": "Sakr, Nouri",
+    "Position": "Assistant Professor of Data Science and Operations Research",
+    "Department": "Department of Computer Science and Engineering",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "414",
+    "Name": "Salah El Din, Mariam",
+    "Position": "Instructor",
+    "Department": "Department of English Language Instruction",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "415",
+    "Name": "Salah El din, Yasmin",
+    "Position": "Senior Instructor II",
+    "Department": "Department of English Language Instruction",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "416",
+    "Name": "Salaita , Steven",
+    "Position": "Professor",
+    "Department": "Department of English and Comparative Literature",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "417",
+    "Name": "Salama, Mohamed",
+    "Position": "Professor",
+    "Department": "Institute of Global Health and Human Ecology",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "418",
+    "Name": "Salama, Cherif",
+    "Position": "Associate Professor and Associate Chair",
+    "Department": "Department of Computer Science and Engineering",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "419",
+    "Name": "Saleh, Yasmine",
+    "Position": "Associate Professor of Practice",
+    "Department": "Department of Psychology",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "420",
+    "Name": "Salem , Hanadi",
+    "Position": "Professor and MENG Chairperson",
+    "Department": "Department of Mechanical Engineering",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "421",
+    "Name": "Salem , Hebatalla",
+    "Position": "Senior Instructor II",
+    "Department": "Department of Arabic Language Instruction",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "422",
+    "Name": "Sallam, Hesham",
+    "Position": "Professor",
+    "Department": "Institute of Global Health and Human Ecology",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "423",
+    "Name": "Salmas, Anne-Claire",
+    "Position": "Assistant Professor of Egyptology",
+    "Department": "Department of Sociology, Egyptology and Anthropology",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "424",
+    "Name": "Samaha , Khaled",
+    "Position": "Professor",
+    "Department": "Department of Accounting",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "425",
+    "Name": "Sami Omar, Noha",
+    "Position": "Assistant Professor",
+    "Department": "Department of Economics",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "426",
+    "Name": "Samir, Nagla",
+    "Position": "Director of the Graphic Design Program and Associate Professor of Practice",
+    "Department": "Department of the Arts",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "427",
+    "Name": "Samir, Rania",
+    "Position": "Associate Professor",
+    "Department": "Department of Management",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "428",
+    "Name": "Samir, Rania",
+    "Position": "Associate Professor",
+    "Department": "Department of Management",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "429",
+    "Name": "Saqfalhait , Ahmad",
+    "Position": "Associate Professor of Practice and Associate Chair",
+    "Department": "Department of the Arts",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "430",
+    "Name": "Sarofim, Marian",
+    "Position": "Senior Instructor",
+    "Department": "Department of English Language Instruction",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "431",
+    "Name": "Sartain, Elizabeth",
+    "Position": "Associate Professor Emerita",
+    "Department": "Department of Arab and Islamic Civilizations",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "432",
+    "Name": "Saudy , Maram Mahmoud",
+    "Position": "Assistant Professor",
+    "Department": "Department of Construction",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "433",
+    "Name": "Saville , Kathleen",
+    "Position": "Senior Instructor and Chair",
+    "Department": "Department of Rhetoric and Composition",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "434",
+    "Name": "Sayed, Hani",
+    "Position": "Associate Professor",
+    "Department": "Department of Law",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "435",
+    "Name": "Schleifer, S. Abdallah",
+    "Position": "Professor Emeritus",
+    "Department": "Department of Journalism and Mass Communication",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "436",
+    "Name": "Schmid, Irina",
+    "Position": "Instructor and Digital Collection Archivist",
+    "Department": "Libraries and Learning Technologies",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "437",
+    "Name": "Schouteden, Olivier",
+    "Position": "Assistant Professor",
+    "Department": "Department of History",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "438",
+    "Name": "Schwab, Manuel",
+    "Position": "Assistant Professor",
+    "Department": "Department of Sociology, Egyptology and Anthropology",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "439",
+    "Name": "Seddik, Karim",
+    "Position": "Professor, Associate Dean for Graduate Studies and Research School of Sciences and Engineering",
+    "Department": "Department of Electronics and Communications Engineering",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "440",
+    "Name": "Sedky, Sherif",
+    "Position": "Professor",
+    "Department": "Department of Physics",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "441",
+    "Name": "Sedky, Mohamed",
+    "Position": "Professor",
+    "Department": "Department of Computer Science and Engineering",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "442",
+    "Name": "Serag, Mohamed",
+    "Position": "Professor",
+    "Department": "Department of Arab and Islamic Civilizations",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "443",
+    "Name": "Serry, Mohamed",
+    "Position": "Professor",
+    "Department": "Department of Mechanical Engineering",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "444",
+    "Name": "Sewilam , Hani",
+    "Position": "Professor",
+    "Department": "Institute of Global Health and Human Ecology",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "445",
+    "Name": "Shaarawi , Amr",
+    "Position": "Professor",
+    "Department": "Department of Physics",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "446",
+    "Name": "Shahin, Hanan",
+    "Position": "Senior Instructor",
+    "Department": "Department of Rhetoric and Composition",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "447",
+    "Name": "Shalakany , Amr",
+    "Position": "Associate Professor",
+    "Department": "Department of Law",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "448",
+    "Name": "Shalan, Mohamed",
+    "Position": "Professor",
+    "Department": "Department of Computer Science and Engineering",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "449",
+    "Name": "Shaltout, Mahmoud",
+    "Position": "Assistant Professor",
+    "Department": "Institute of Global Health and Human Ecology",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "450",
+    "Name": "Shamma , Hamed",
+    "Position": "Professor",
+    "Department": "Department of Management",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "451",
+    "Name": "Sharara, Hossam",
+    "Position": "Assistant Professor",
+    "Department": "Department of Computer Science and Engineering",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "452",
+    "Name": "Shawki , Tarek",
+    "Position": "University Counselor",
+    "Department": "School of Sciences and Engineering",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "453",
+    "Name": "Shehab, Bahia",
+    "Position": "Professor of Practice",
+    "Department": "Department of the Arts",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "454",
+    "Name": "Shehata, Nermeen",
+    "Position": "Associate Professor",
+    "Department": "Department of Accounting",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "455",
+    "Name": "Sherif , Ahmed",
+    "Position": "Professor",
+    "Department": "Department of Architecture",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "456",
+    "Name": "Shoeib, Tamer",
+    "Position": "Professor and Chair",
+    "Department": "Department of Chemistry",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "457",
+    "Name": "Sholkamy, Hania",
+    "Position": "Associate Professor",
+    "Department": "Social Research Center",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "458",
+    "Name": "Siam , Rania",
+    "Position": "Professor",
+    "Department": "Department of Biology",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "459",
+    "Name": "Sika, Nadine",
+    "Position": "Associate Professor",
+    "Department": "Department of Political Science",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "460",
+    "Name": "Siniora, Daoud",
+    "Position": "Assistant Professor",
+    "Department": "Department of Mathematics and Actuarial Science",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "461",
+    "Name": "Skouteris , Thomas",
+    "Position": "Associate Professor and Chair",
+    "Department": "Department of Law",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "462",
+    "Name": "Smierciak , Sarah",
+    "Position": "Assistant Professor",
+    "Department": "Department of Political Science",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "463",
+    "Name": "Soheim, Yasmine",
+    "Position": "Senior Instructor",
+    "Department": "Department of Rhetoric and Composition",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "464",
+    "Name": "Soliman, Ezzeldin",
+    "Position": "Professor",
+    "Department": "Department of Physics",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "465",
+    "Name": "Soliman , Iman",
+    "Position": "Senior Instructor II and Chair",
+    "Department": "Department of Arabic Language Instruction",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "466",
+    "Name": "Spencer , Jayme",
+    "Position": "Librarian Emerita",
+    "Department": "Main Library",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "467",
+    "Name": "Stancil Campbell, Daniel",
+    "Position": "Professor Emeritus",
+    "Department": "Department of the Arts",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "468",
+    "Name": "Stelzer , Steffen W.",
+    "Position": "Emeritus Professor",
+    "Department": "Department of Philosophy",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "469",
+    "Name": "Stevens, Anna",
+    "Position": "William Kelly Simpson Visiting Professor in Egyptology",
+    "Department": "Department of Sociology, Egyptology and Anthropology",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "470",
+    "Name": "Stevens, Paul B.",
+    "Position": "Professor Emeritus",
+    "Department": "Department of Applied Linguistics",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "471",
+    "Name": "Stock, Emiko",
+    "Position": "Assistant Professor of Anthropology",
+    "Department": "Department of Sociology, Egyptology and Anthropology",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "472",
+    "Name": "Strasser , Irene",
+    "Position": "Assistant Professor",
+    "Department": "Department of Psychology",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "473",
+    "Name": "Sullivan , Earl (Tim)",
+    "Position": "Professor Emeritus",
+    "Department": "Department of Political Science",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "474",
+    "Name": "Swanson, John",
+    "Position": "Special Advisor to the Provost",
+    "Department": "Department of History",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "475",
+    "Name": "Switzer , Robert",
+    "Position": "Associate Professor",
+    "Department": "Department of Philosophy",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "476",
+    "Name": "Syed Ali Shah, Sarfraz",
+    "Position": "Assistant Professor",
+    "Department": "Department of Economics",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "477",
+    "Name": "Tadros, Hala",
+    "Position": "Instructor",
+    "Department": "Department of English Language Instruction",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "478",
+    "Name": "Taha, Zeinab",
+    "Position": "Professor of Applied Linguistics",
+    "Department": "Department of Applied Linguistics",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "479",
+    "Name": "Taher, Ahmed",
+    "Position": "Assistant Professor",
+    "Department": "Department of Journalism and Mass Communication",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "480",
+    "Name": "Talib, Adam",
+    "Position": "Associate Professor",
+    "Department": "Department of Arab and Islamic Civilizations",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "481",
+    "Name": "Talley, Gwyneth",
+    "Position": "Assistant Professor of Anthropology",
+    "Department": "Department of Sociology, Egyptology and Anthropology",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "482",
+    "Name": "Tallima, Hatem",
+    "Position": "Assistant Professor",
+    "Department": "Department of Chemistry",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "483",
+    "Name": "Tarabieh , Khaled",
+    "Position": "University Architect and Associate Professor",
+    "Department": "Department of Architecture",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "484",
+    "Name": "Terence Barber , Shirley",
+    "Position": "Instructor",
+    "Department": "Department of Rhetoric and Composition",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "485",
+    "Name": "Tharwat, Ismaeel",
+    "Position": "Visiting Assistant Professor",
+    "Department": "Department of Economics",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "486",
+    "Name": "Tharwat, Ismaeel",
+    "Position": "Visiting Assistant Professor",
+    "Department": "Department of Economics",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "487",
+    "Name": "Tolba, Ahmed",
+    "Position": "Professor of Marketing and Chair of Management Department",
+    "Department": "Department of Management",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "488",
+    "Name": "Tooma , Eskandar",
+    "Position": "Professor of Finance",
+    "Department": "Department of Management",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "489",
+    "Name": "Tooma , Eskandar",
+    "Position": "Professor of Finance",
+    "Department": "Department of Management",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "490",
+    "Name": "Topa, Alessandro",
+    "Position": "Associate Professor and Chair",
+    "Department": "Department of Philosophy",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "491",
+    "Name": "Toufic, Jalal",
+    "Position": "Professor",
+    "Department": "Department of the Arts",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "492",
+    "Name": "Upadhyay, Smriti",
+    "Position": "Assistant Professor",
+    "Department": "Department of Sociology, Egyptology and Anthropology",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "493",
+    "Name": "Urgola , Stephen",
+    "Position": "Senior Instructor and Associate Dean",
+    "Department": "Rare Books and Special Collections Library",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "494",
+    "Name": "Van Bogaert , Diana",
+    "Position": "Senior Instructor",
+    "Department": "Department of Law",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "495",
+    "Name": "Vincente Lee Grees, Ryan",
+    "Position": "Associate Professor of Practice",
+    "Department": "Department of the Arts",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "496",
+    "Name": "Wahby, Hisham",
+    "Position": "Assistant professor",
+    "Department": "Department of Public Policy and Administration",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "497",
+    "Name": "Wahby, Noura",
+    "Position": "Assistant Professor and Middle East Studies Program Director",
+    "Department": "Department of Public Policy and Administration",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "498",
+    "Name": "Waked, Azza",
+    "Position": "Senior Instructor",
+    "Department": "Department of Arabic Language Instruction",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "499",
+    "Name": "Wali , Wafaa",
+    "Position": "Senior Instructor",
+    "Department": "Department of Rhetoric and Composition",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "500",
+    "Name": "Weeks, Kent",
+    "Position": "Professor Emeritus",
+    "Department": "Department of Sociology, Egyptology and Anthropology",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "501",
+    "Name": "William Rule, Thomas",
+    "Position": "Assistant Professor",
+    "Department": "Department of Philosophy",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "502",
+    "Name": "Yacout, Shahira",
+    "Position": "Senior Instructor II",
+    "Department": "Department of Arabic Language Instruction",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "503",
+    "Name": "Yaghmour , Huguette",
+    "Position": "Senior Instructor",
+    "Department": "Main Library",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "504",
+    "Name": "Yassine, Adam",
+    "Position": "Assistant Professor",
+    "Department": "Department of Mathematics and Actuarial Science",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "505",
+    "Name": "Yazeed Sayed-Ahmed, Ezzeldin",
+    "Position": "Professor and Chair",
+    "Department": "Department of Construction",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "506",
+    "Name": "Yoder , Elisabeth",
+    "Position": "Senior Instructor II",
+    "Department": "Department of English Language Instruction",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "507",
+    "Name": "Younan , Maher",
+    "Position": "Professor",
+    "Department": "Department of Mechanical Engineering",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "508",
+    "Name": "Young, Andrew",
+    "Position": "Instructor",
+    "Department": "Department of Rhetoric and Composition",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "509",
+    "Name": "Youssef, Mostafa",
+    "Position": "Associate Professor",
+    "Department": "Department of Mechanical Engineering",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "510",
+    "Name": "Youssef, Noha",
+    "Position": "Assistant Professor and Director of Actuarial Science Program",
+    "Department": "Department of Mathematics and Actuarial Science",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "511",
+    "Name": "Youssef , Samir",
+    "Position": "Professor",
+    "Department": "Department of Management",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "512",
+    "Name": "Youssef , Samir",
+    "Position": "Professor",
+    "Department": "Department of Management",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "513",
+    "Name": "Youssri, Bassem",
+    "Position": "Associate Professor of Practice",
+    "Department": "Department of the Arts",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "514",
+    "Name": "Z. Soliman, Elsayed",
+    "Position": "Professor Institute of Global Health and Human Ecology",
+    "Department": "School of Sciences and Engineering",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "515",
+    "Name": "Zaalouk, Malak",
+    "Position": "Professor of Practice and Director",
+    "Department": "Department of Educational Studies",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "516",
+    "Name": "Zada , Suher",
+    "Position": "Professor",
+    "Department": "Department of Biology",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "517",
+    "Name": "Zaki, Nour",
+    "Position": "Visiting Assistant Professor",
+    "Department": "Department of Psychology",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "518",
+    "Name": "Zaky, Hassan",
+    "Position": "Professor",
+    "Department": "Department of Psychology",
+    "imageUrl": "/path/to/default.jpg"
+  },
+  {
+    "id": "519",
+    "Name": "Zidan , Yara",
+    "Position": "Instructor",
+    "Department": "Department of English Language Instruction",
+    "imageUrl": "/path/to/default.jpg"
+  }
+]

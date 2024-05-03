@@ -1,30 +1,44 @@
-name: CI
+name: CI/CD
 
 on:
   push:
-    branches:
-      - '*'
+    branches: [ main ]
   pull_request:
-    branches:
-      - '*'
+    branches: [ main ]
+
 jobs:
   build:
+
     runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [18.x]
 
     steps:
     - name: Checkout repository
       uses: actions/checkout@v2
-      with:
-        path: repo # Optional: Specify a custom path to checkout the repository
-        working-directory: ../../rate-auc-front-end
 
-    - name: Setup Node.js
-      uses: actions/setup-node@v2
+    - name: Set up Node.js ${{ matrix.node-version }}
+      uses: actions/setup-node@v1
       with:
-        node-version: '14'
+        node-version: ${{ matrix.node-version }}
+
+    - name: Change working directory
+      run: cd rate-auc-front-end
 
     - name: Install dependencies
       run: npm install react-scripts @mui/material
 
-    - name: Run tests
+    - name: Install all 
+      run: npm install
+    
+    - name: Install tests
+      run: npm install jest test react-router-dom redux react-redux axios @emotion/react @emotion/styled bootstrap styled-components
+
+      
+    - name: Run the tests
       run: npm test
+
+    - name: Build
+      run: npm run build

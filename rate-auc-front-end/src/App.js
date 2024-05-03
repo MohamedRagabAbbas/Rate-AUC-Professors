@@ -1,17 +1,56 @@
-import logo from "./logo.svg";
+import React, { useState } from 'react';
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import "./App.css";
 import NavBar from "./components/NavBar";
-
-// const AppContainer = styled.div`
-//   max-width: 1200px;
-//   margin: 0 auto;
-// `;
+import Feed from "./pages/feed";
+import ProfessorsFeed from "./pages/ProfessorFeed";
+import ProfessorDetail from "./pages/ProfessorDetail";
+import Departments from "./pages/departments";
+import RateProfessor from './pages/RateProfessor';
+import NotFound from "./pages/notFound";
+import Courses from './pages/Courses'; // Import the Courses component
+import CourseDetail from './pages/CourseDetail';
 
 function App() {
+  const [currentPage, setCurrentPage] = useState("Home");
+
+  const handlePageChange = (page) => {
+    setCurrentPage(page);
+  };
+
+  const pages = [
+    { name: "Home" },
+    { name: "Departments" },
+    // Add more pages as needed
+  ];
+
+  // Render the corresponding component based on the currentPage state
+  const renderPage = () => {
+    switch (currentPage) {
+      case "Departments":
+        return <Departments />;
+      // Add cases for other pages as needed
+      default:
+        return <>test</>;
+    }
+  };
+
   return (
     <div>
-      <NavBar />
-      {/* Your app content goes here */}
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Feed />} />
+          <Route path="/home" element={<Feed />} />
+          <Route path="/feed" element={<Feed />} />
+          <Route path="/professors" element={<ProfessorsFeed />} />
+          <Route path="/professors/:professorId" element={<ProfessorDetail />} />
+          <Route path="/rate-professor/:professorId" element={<RateProfessor />} />
+          <Route path="/departments" element={<Departments />} />
+          <Route path="/courses" element={<Courses />} />
+          <Route path="/courses/detail/:courseName" element={<CourseDetail />} />
+          <Route path="*" element={<NotFound />} />
+        </Routes>
+      </BrowserRouter>
     </div>
   );
 }
