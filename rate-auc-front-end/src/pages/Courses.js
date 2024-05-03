@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import { Typography, Grid, TextField } from '@mui/material';
 import professors from './professorDetail.json';
 import './Courses.css'; // Make sure this CSS file includes the necessary styles
+import NavBar from "../components/NavBar";
 
 function Courses() {
     const navigate = useNavigate();
@@ -28,6 +29,8 @@ function Courses() {
     };
 
     return (
+	<>
+	<NavBar/>
         <div className="departments-list-container">
             <h1>Search For Courses</h1>
             <TextField
@@ -52,6 +55,7 @@ function Courses() {
                 ))}
             </Grid>
         </div>
+		</>
     );
 }
 
