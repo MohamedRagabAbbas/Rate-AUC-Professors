@@ -15,7 +15,7 @@ export default function EditUserProfile({ user, onSave, onCancel }) {
   return (
     <div className="profile-container">
       <h1>Edit Information</h1>
-      <div className="info-box-editing">
+      {/* <div className="info-box-editing">
         <div className="info-title">
           <label><strong>Full Name:</strong></label>
         </div>
@@ -36,7 +36,7 @@ export default function EditUserProfile({ user, onSave, onCancel }) {
           value={editedUser.birthdate}
           onChange={handleChange}
         />
-      </div>
+      </div> */}
       <div className="info-box-editing">
         <div className="info-title">
           <label><strong>Class Standing:</strong></label>

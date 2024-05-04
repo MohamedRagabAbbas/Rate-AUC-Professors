@@ -42,7 +42,7 @@ function App() {
     <div>
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<Feed />} />
+          {/* <Route path="/" element={<Feed />} /> */}
           <Route path="/home" element={<Feed />} />
           <Route path="/feed" element={<Feed />} />
           <Route path="/professors" element={<ProfessorsFeed />} />
@@ -52,7 +52,7 @@ function App() {
           <Route path="/courses" element={<Courses />} />
           <Route path="/courses/detail/:courseName" element={<CourseDetail />} />
           <Route path="*" element={<NotFound />} />
-          {/* <Route path="/" element={<PersonalProfile />} />  */}
+          <Route path="/profile" element={<PersonalProfile />} /> 
         </Routes>
       </BrowserRouter>
       
