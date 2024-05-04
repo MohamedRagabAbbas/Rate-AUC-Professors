@@ -12,10 +12,11 @@ namespace RateAucProfessors.IRepository
         Task<ResponseMessage<T>> GetByIdAsync(string id);
         Task<ResponseMessage<IEnumerable<T>>> GetWhereAsync(Expression<Func<T, bool>> predicate);
         Task<ResponseMessage<T>> GetFirstAsync(Expression<Func<T, bool>> predicate);
-
+        Task<ResponseMessage<T2>> GetAttributeAsync<T2>(Expression<Func<T, bool>> predicate1, Expression<Func<T, T2>> predicate2);
         // add methods
         Task<ResponseMessage<T>> Add(T model);
-        Task AppRanage(List<T> models);
+        Task AddRange(List<T> models);
+
 
         // update methods
         ResponseMessage<T> Update(T model);

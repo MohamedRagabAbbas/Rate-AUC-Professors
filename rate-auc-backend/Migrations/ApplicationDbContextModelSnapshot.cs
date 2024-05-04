@@ -306,8 +306,9 @@ namespace RateAucProfessors.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("Credit_Hours")
-                        .HasColumnType("int");
+                    b.Property<string>("Credit_Hours")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<int>("DepartmentId")
                         .HasColumnType("int");
@@ -861,7 +862,7 @@ namespace RateAucProfessors.Migrations
                     b.HasOne("RateAucProfessors.Models.Course", "Course")
                         .WithMany("Reviews")
                         .HasForeignKey("CourseId")
-                        .OnDelete(DeleteBehavior.NoAction)
+                        .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.HasOne("RateAucProfessors.Models.Professor", "Professor")
