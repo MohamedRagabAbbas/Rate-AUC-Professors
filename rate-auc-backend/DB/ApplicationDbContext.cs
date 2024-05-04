@@ -167,7 +167,7 @@ namespace RateAucProfessors.DB
                 .HasMany(c => c.Reviews)
                 .WithOne(r => r.Course)
                 .HasForeignKey(r => r.CourseId)
-                .OnDelete(DeleteBehavior.NoAction);
+                .OnDelete(DeleteBehavior.Cascade);
 
             //modelBuilder.Entity<Course>()
             //    .HasMany(c => c.Professors)
