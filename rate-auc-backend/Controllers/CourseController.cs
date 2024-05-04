@@ -41,6 +41,24 @@ namespace RateAucProfessors.Controllers
             await _unitOfWork.SaveAsync();
             return Ok(result);
         }
+        [HttpPost]
+        [Route("add-multiple-with-departmentName")]
+        public async Task<IActionResult> AddMultipleWithdepartmentName(List<CourseSeeding> courseSeedings)
+        {
+            List<Course> courses = new List<Course>();
+            foreach (var courseSeeding in courseSeedings)
+            {
+                var department = await _unitOfWork.Department.GetFirstAsync(d => d.Name == courseSeeding.departmentName);
+                if(department is not null && department.Data is not null)
+                {
+                    Course course = _mapper.MapToCourseDataSeeding(courseSeeding, department.Data.Id);
+                    courses.Add(course);
+                }
+            }
+            await _unitOfWork.Course.AddRange(courses);
+            var result = await _unitOfWork.SaveAsync();
+            return Ok(result != 0 ? "Courses are added successfuly.." : "Error while adding courses...");
+        }
         [HttpPut]
         [Route("update")]
         public IActionResult Update(CourseInfo courseInfo)

@@ -100,6 +100,18 @@ namespace RateAucProfessors.ObjectsMapping
             return courses;
         }
 
+        public Course MapToCourseDataSeeding(CourseSeeding dto,int departmentId)
+        {
+            return new Course
+            {
+                Name = dto.Name,
+                Description = dto.Description,
+                Code = dto.Code,
+                Credit_Hours = dto.Credit_Hours,
+                DepartmentId = departmentId
+            };
+        }
+
         // Mapping functions for Department
         public Department MapToDepartment(DepartmentInfo dto)
         {

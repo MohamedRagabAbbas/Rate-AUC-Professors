@@ -41,6 +41,16 @@ namespace RateAucProfessors.Controllers
             await _unitOfWork.SaveAsync();
             return Ok(result);
         }
+        [HttpPost]
+        [Route("add-multiple")]
+        public async Task<IActionResult> AddMultiple(List<DepartmentInfo> departmentInfos)
+        {
+            List<Department> departments = new List<Department>();
+            departments = _mapper.MapToDepartment(departmentInfos);
+            await _unitOfWork.Department.AddRange(departments);
+            var result = await _unitOfWork.SaveAsync();
+            return Ok(result !=0 ? "Departments are added successfuly.." : "Error while adding departments...");
+        }
         [HttpPut]
         [Route("update")]
         public IActionResult Update(DepartmentInfo departmentInfo)

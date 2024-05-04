@@ -86,8 +86,20 @@ namespace RateAucProfessors.Repository
             return new ResponseMessage<IEnumerable<T>>() { Message = "The object is not found..." };
         }
 
-
-
+        public async Task<ResponseMessage<T2>> GetAttributeAsync<T2>(Expression<Func<T, bool>> predicate1, Expression<Func<T, T2>> predicate2)
+        {
+            var obj = await _dbSet.Where(predicate1).Select(predicate2).FirstOrDefaultAsync();
+            if (obj != null)
+            {
+                return new ResponseMessage<T2>()
+                {
+                    Message = "The object is successfully found...",
+                    Status = true,
+                    Data = obj
+                };
+            }
+            return new ResponseMessage<T2>() { Message = "The object is not found..." };
+        }
         public async Task<ResponseMessage<T>> Add(T model)
         {
             var obj = await _dbSet.AddAsync(model);
@@ -101,7 +113,7 @@ namespace RateAucProfessors.Repository
             return new ResponseMessage<T>() { Message = "This object is not added..." };
         }
 
-        public async Task AppRanage(List<T> models)
+        public async Task AddRange(List<T> models)
         {
             await _dbSet.AddRangeAsync(models);
         }
