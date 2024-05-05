@@ -1,6 +1,9 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using RateAucProfessors.DTO.Requests;
+using RateAucProfessors.IRepository;
+using RateAucProfessors.ObjectsMapping;
+using RateAucProfessors.Repository;
 
 namespace RateAucProfessors.Controllers
 {
@@ -9,9 +12,23 @@ namespace RateAucProfessors.Controllers
     public class AuthenticationController : ControllerBase
     {
         private readonly Authentication.Authentication _authentication;
-        public AuthenticationController(Authentication.Authentication authentication)
+        private readonly IUnitOfWork _unitOfWork;
+        private readonly Mapper _mapper;
+
+
+        public AuthenticationController(Authentication.Authentication authentication, IUnitOfWork unitOfWork, Mapper mapper)
         {
             _authentication = authentication;
+            _unitOfWork = unitOfWork;
+            _mapper = mapper;
+        }
+        // get user(stduent) by userId
+        [HttpGet]
+        [Route("get-by-id/{id}")]
+        public async Task<IActionResult> GetById(string id)
+        {
+            var student = await _unitOfWork.Student.GetByIdAsync(id);
+            return Ok(student);
         }
         [HttpPost]
         [Route("authenticate")]

@@ -5,7 +5,8 @@ import TestingRouting from "./pages/professors";
 import NotFound from "./pages/notFound";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Departments from "./pages/departments";
-
+import Login from "./pages/login";
+import SignUp from "./pages/sign_up";
 function App() {
   const [currentPage, setCurrentPage] = useState("Home");
 
@@ -34,7 +35,9 @@ function App() {
     <div>
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<Feed />} />
+        <Route path="/" element={<Login />} />
+        <Route path="/sign_up" element={<SignUp />} />
+        <Route path="/login" element={<Login />} />
           <Route path="/home" element={<Feed />} />
           <Route path="/feed" element={<Feed />} />
           <Route path="/professors" element={<TestingRouting />} />

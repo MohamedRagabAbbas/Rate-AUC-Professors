@@ -306,9 +306,9 @@ To retrieve all documents:
 - **Method:** GET
 - **Description:** Retrieves all documents available.
 - **Example Request:**
-  http ```
-	GET http://rateaucprofessor-001-site1.ftempurl.com/api/Document/get-all
-```
+  `
+	GET http://rateaucprofessor-001-site1.ftempurl.com/api/Document/get-all `
+
 
 
 ### Document
@@ -382,6 +382,17 @@ To retrieve all documents:
 - **Method:** POST
 </details>
 
+
+<details>
+<summary>Get user by Id</summary>
+
+## Get user(Student) by Id.
+
+- **URL:** `/api/Authentication/get-by-id/{userId}`
+- **Method:** Get
+</details>
+
+
 ### Comment
 
 <details>
@@ -395,6 +406,7 @@ To retrieve all documents:
 
 <details>
 
+<summary>Get All Comments of a certain feed.</summary>
 ## Retrieves all comments of a certain feed.
 
 - **URL:** `/api/Comment/get-all-comments-by-feedId/{feedId}`
@@ -711,7 +723,7 @@ To retrieve all documents:
 </details>
 
 <details>
-
+<summary>Get All Reactions for a certain feed.</summary>
 ## Retrieves all reactions for a certain feed.
 
 - **URL:** `/api/Reaction/get-all-reactions-by-feedId/{feedId}`
@@ -720,6 +732,7 @@ To retrieve all documents:
 
 <details>
 
+<summary>Get All Reactions for a certain relpy.</summary>
 ## Retrieves all reactions for a certain relpy.
 
 - **URL:** `/api/Reaction/get-all-reactions-by-replyId/{replyId}`
@@ -728,6 +741,7 @@ To retrieve all documents:
 
 <details>
 
+<summary>Get All Reactions for a certain comment.</summary>
 ## Retrieves all reactions for a certain comment.
 
 - **URL:** `/api/Reaction/get-all-reactions-by-commentId/{commentId}`
@@ -787,6 +801,7 @@ To retrieve all documents:
 
 <details>
 
+<summary>Get All Replies for a certain comment.</summary>
 ## Retrieves all replies for a certain comment.
 
 - **URL:** `/api/Reply/get-all-replys-by-commentId/{commentId}`
