@@ -3,16 +3,56 @@
   "WorkspaceRootPath": "C:\\Users\\noure\\Desktop\\rate_auc\\Rate-AUC-Professors\\rate-auc-backend\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{1ACAB246-850E-4FF0-A4B3-230A4DB218FA}|RateAucProfessors.csproj|c:\\users\\noure\\desktop\\rate_auc\\rate-auc-professors\\rate-auc-backend\\objectsmapping\\mapper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1ACAB246-850E-4FF0-A4B3-230A4DB218FA}|RateAucProfessors.csproj|solutionrelative:objectsmapping\\mapper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{1ACAB246-850E-4FF0-A4B3-230A4DB218FA}|RateAucProfessors.csproj|c:\\users\\noure\\desktop\\rate_auc\\rate-auc-professors\\rate-auc-backend\\db\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{1ACAB246-850E-4FF0-A4B3-230A4DB218FA}|RateAucProfessors.csproj|solutionrelative:db\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1ACAB246-850E-4FF0-A4B3-230A4DB218FA}|RateAucProfessors.csproj|c:\\users\\noure\\desktop\\rate_auc\\rate-auc-professors\\rate-auc-backend\\models\\professor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1ACAB246-850E-4FF0-A4B3-230A4DB218FA}|RateAucProfessors.csproj|solutionrelative:models\\professor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{1ACAB246-850E-4FF0-A4B3-230A4DB218FA}|RateAucProfessors.csproj|c:\\users\\noure\\desktop\\rate_auc\\rate-auc-professors\\rate-auc-backend\\jwt\\jwt.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1ACAB246-850E-4FF0-A4B3-230A4DB218FA}|RateAucProfessors.csproj|solutionrelative:jwt\\jwt.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1ACAB246-850E-4FF0-A4B3-230A4DB218FA}|RateAucProfessors.csproj|c:\\users\\noure\\desktop\\rate_auc\\rate-auc-professors\\rate-auc-backend\\repository\\genericrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1ACAB246-850E-4FF0-A4B3-230A4DB218FA}|RateAucProfessors.csproj|solutionrelative:repository\\genericrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1ACAB246-850E-4FF0-A4B3-230A4DB218FA}|RateAucProfessors.csproj|c:\\users\\noure\\desktop\\rate_auc\\rate-auc-professors\\rate-auc-backend\\dto\\requests\\courseinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1ACAB246-850E-4FF0-A4B3-230A4DB218FA}|RateAucProfessors.csproj|solutionrelative:dto\\requests\\courseinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1ACAB246-850E-4FF0-A4B3-230A4DB218FA}|RateAucProfessors.csproj|c:\\users\\noure\\desktop\\rate_auc\\rate-auc-professors\\rate-auc-backend\\dto\\response\\authenticationresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1ACAB246-850E-4FF0-A4B3-230A4DB218FA}|RateAucProfessors.csproj|solutionrelative:dto\\response\\authenticationresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1ACAB246-850E-4FF0-A4B3-230A4DB218FA}|RateAucProfessors.csproj|c:\\users\\noure\\desktop\\rate_auc\\rate-auc-professors\\rate-auc-backend\\dto\\response\\responsemessage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1ACAB246-850E-4FF0-A4B3-230A4DB218FA}|RateAucProfessors.csproj|solutionrelative:dto\\response\\responsemessage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{1ACAB246-850E-4FF0-A4B3-230A4DB218FA}|RateAucProfessors.csproj|c:\\users\\noure\\desktop\\rate_auc\\rate-auc-professors\\rate-auc-backend\\models\\course.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{1ACAB246-850E-4FF0-A4B3-230A4DB218FA}|RateAucProfessors.csproj|solutionrelative:models\\course.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1ACAB246-850E-4FF0-A4B3-230A4DB218FA}|RateAucProfessors.csproj|c:\\users\\noure\\desktop\\rate_auc\\rate-auc-professors\\rate-auc-backend\\controllers\\coursecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1ACAB246-850E-4FF0-A4B3-230A4DB218FA}|RateAucProfessors.csproj|solutionrelative:controllers\\coursecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1ACAB246-850E-4FF0-A4B3-230A4DB218FA}|RateAucProfessors.csproj|c:\\users\\noure\\desktop\\rate_auc\\rate-auc-professors\\rate-auc-backend\\controllers\\weatherforecastcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1ACAB246-850E-4FF0-A4B3-230A4DB218FA}|RateAucProfessors.csproj|solutionrelative:controllers\\weatherforecastcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1ACAB246-850E-4FF0-A4B3-230A4DB218FA}|RateAucProfessors.csproj|c:\\users\\noure\\desktop\\rate_auc\\rate-auc-professors\\rate-auc-backend\\migrations\\20240501132210_jj.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1ACAB246-850E-4FF0-A4B3-230A4DB218FA}|RateAucProfessors.csproj|solutionrelative:migrations\\20240501132210_jj.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1ACAB246-850E-4FF0-A4B3-230A4DB218FA}|RateAucProfessors.csproj|c:\\users\\noure\\desktop\\rate_auc\\rate-auc-professors\\rate-auc-backend\\migrations\\20240504005706_minorchangedelete.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1ACAB246-850E-4FF0-A4B3-230A4DB218FA}|RateAucProfessors.csproj|solutionrelative:migrations\\20240504005706_minorchangedelete.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1ACAB246-850E-4FF0-A4B3-230A4DB218FA}|RateAucProfessors.csproj|c:\\users\\noure\\desktop\\rate_auc\\rate-auc-professors\\rate-auc-backend\\models\\professor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1ACAB246-850E-4FF0-A4B3-230A4DB218FA}|RateAucProfessors.csproj|solutionrelative:models\\professor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{1ACAB246-850E-4FF0-A4B3-230A4DB218FA}|RateAucProfessors.csproj|c:\\users\\noure\\desktop\\rate_auc\\rate-auc-professors\\rate-auc-backend\\dto\\requests\\professorinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -47,32 +87,12 @@
       "RelativeMoniker": "D:0:0:{1ACAB246-850E-4FF0-A4B3-230A4DB218FA}|RateAucProfessors.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1ACAB246-850E-4FF0-A4B3-230A4DB218FA}|RateAucProfessors.csproj|c:\\users\\noure\\desktop\\rate_auc\\rate-auc-professors\\rate-auc-backend\\controllers\\coursecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1ACAB246-850E-4FF0-A4B3-230A4DB218FA}|RateAucProfessors.csproj|solutionrelative:controllers\\coursecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1ACAB246-850E-4FF0-A4B3-230A4DB218FA}|RateAucProfessors.csproj|c:\\users\\noure\\desktop\\rate_auc\\rate-auc-professors\\rate-auc-backend\\objectsmapping\\mapper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1ACAB246-850E-4FF0-A4B3-230A4DB218FA}|RateAucProfessors.csproj|solutionrelative:objectsmapping\\mapper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{1ACAB246-850E-4FF0-A4B3-230A4DB218FA}|RateAucProfessors.csproj|c:\\users\\noure\\desktop\\rate_auc\\rate-auc-professors\\rate-auc-backend\\dto\\requests\\courseseeding.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{1ACAB246-850E-4FF0-A4B3-230A4DB218FA}|RateAucProfessors.csproj|solutionrelative:dto\\requests\\courseseeding.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1ACAB246-850E-4FF0-A4B3-230A4DB218FA}|RateAucProfessors.csproj|c:\\users\\noure\\desktop\\rate_auc\\rate-auc-professors\\rate-auc-backend\\repository\\genericrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1ACAB246-850E-4FF0-A4B3-230A4DB218FA}|RateAucProfessors.csproj|solutionrelative:repository\\genericrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{1ACAB246-850E-4FF0-A4B3-230A4DB218FA}|RateAucProfessors.csproj|c:\\users\\noure\\desktop\\rate_auc\\rate-auc-professors\\rate-auc-backend\\irepository\\igenericrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{1ACAB246-850E-4FF0-A4B3-230A4DB218FA}|RateAucProfessors.csproj|solutionrelative:irepository\\igenericrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1ACAB246-850E-4FF0-A4B3-230A4DB218FA}|RateAucProfessors.csproj|c:\\users\\noure\\desktop\\rate_auc\\rate-auc-professors\\rate-auc-backend\\dto\\requests\\courseinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1ACAB246-850E-4FF0-A4B3-230A4DB218FA}|RateAucProfessors.csproj|solutionrelative:dto\\requests\\courseinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1ACAB246-850E-4FF0-A4B3-230A4DB218FA}|RateAucProfessors.csproj|c:\\users\\noure\\desktop\\rate_auc\\rate-auc-professors\\rate-auc-backend\\migrations\\20240504005706_minorchangedelete.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1ACAB246-850E-4FF0-A4B3-230A4DB218FA}|RateAucProfessors.csproj|solutionrelative:migrations\\20240504005706_minorchangedelete.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -82,7 +102,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 7,
           "Children": [
             {
               "$type": "Bookmark",
@@ -90,116 +110,137 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "ProfessorInfo.cs",
-              "DocumentMoniker": "C:\\Users\\noure\\Desktop\\rate_auc\\Rate-AUC-Professors\\rate-auc-backend\\DTO\\Requests\\ProfessorInfo.cs",
-              "RelativeDocumentMoniker": "DTO\\Requests\\ProfessorInfo.cs",
-              "ToolTip": "C:\\Users\\noure\\Desktop\\rate_auc\\Rate-AUC-Professors\\rate-auc-backend\\DTO\\Requests\\ProfessorInfo.cs",
-              "RelativeToolTip": "DTO\\Requests\\ProfessorInfo.cs",
+              "DocumentIndex": 2,
+              "Title": "Jwt.cs",
+              "DocumentMoniker": "C:\\Users\\noure\\Desktop\\rate_auc\\Rate-AUC-Professors\\rate-auc-backend\\JWT\\Jwt.cs",
+              "RelativeDocumentMoniker": "JWT\\Jwt.cs",
+              "ToolTip": "C:\\Users\\noure\\Desktop\\rate_auc\\Rate-AUC-Professors\\rate-auc-backend\\JWT\\Jwt.cs",
+              "RelativeToolTip": "JWT\\Jwt.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-04T22:15:43.558Z"
+              "WhenOpened": "2024-05-05T03:25:20.413Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Professor.cs",
-              "DocumentMoniker": "C:\\Users\\noure\\Desktop\\rate_auc\\Rate-AUC-Professors\\rate-auc-backend\\Models\\Professor.cs",
-              "RelativeDocumentMoniker": "Models\\Professor.cs",
-              "ToolTip": "C:\\Users\\noure\\Desktop\\rate_auc\\Rate-AUC-Professors\\rate-auc-backend\\Models\\Professor.cs",
-              "RelativeToolTip": "Models\\Professor.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABYAAAAAAAAA",
+              "DocumentIndex": 5,
+              "Title": "AuthenticationResponse.cs",
+              "DocumentMoniker": "C:\\Users\\noure\\Desktop\\rate_auc\\Rate-AUC-Professors\\rate-auc-backend\\DTO\\Response\\AuthenticationResponse.cs",
+              "RelativeDocumentMoniker": "DTO\\Response\\AuthenticationResponse.cs",
+              "ToolTip": "C:\\Users\\noure\\Desktop\\rate_auc\\Rate-AUC-Professors\\rate-auc-backend\\DTO\\Response\\AuthenticationResponse.cs",
+              "RelativeToolTip": "DTO\\Response\\AuthenticationResponse.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-04T16:12:18.392Z"
+              "WhenOpened": "2024-05-05T03:24:53.683Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "ResponseMessage.cs",
+              "DocumentMoniker": "C:\\Users\\noure\\Desktop\\rate_auc\\Rate-AUC-Professors\\rate-auc-backend\\DTO\\Response\\ResponseMessage.cs",
+              "RelativeDocumentMoniker": "DTO\\Response\\ResponseMessage.cs",
+              "ToolTip": "C:\\Users\\noure\\Desktop\\rate_auc\\Rate-AUC-Professors\\rate-auc-backend\\DTO\\Response\\ResponseMessage.cs",
+              "RelativeToolTip": "DTO\\Response\\ResponseMessage.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-05T03:24:51.553Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "WeatherForecastController.cs",
+              "DocumentMoniker": "C:\\Users\\noure\\Desktop\\rate_auc\\Rate-AUC-Professors\\rate-auc-backend\\Controllers\\WeatherForecastController.cs",
+              "RelativeDocumentMoniker": "Controllers\\WeatherForecastController.cs",
+              "ToolTip": "C:\\Users\\noure\\Desktop\\rate_auc\\Rate-AUC-Professors\\rate-auc-backend\\Controllers\\WeatherForecastController.cs",
+              "RelativeToolTip": "Controllers\\WeatherForecastController.cs",
+              "ViewState": "AQIAAAEAAAAAAAAAAAAmwCEAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-05T03:16:07.445Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Course.cs",
+              "DocumentMoniker": "C:\\Users\\noure\\Desktop\\rate_auc\\Rate-AUC-Professors\\rate-auc-backend\\Models\\Course.cs",
+              "RelativeDocumentMoniker": "Models\\Course.cs",
+              "ToolTip": "C:\\Users\\noure\\Desktop\\rate_auc\\Rate-AUC-Professors\\rate-auc-backend\\Models\\Course.cs",
+              "RelativeToolTip": "Models\\Course.cs",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAAA4AAAAtAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-04T00:18:16.002Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "CourseInfo.cs",
+              "DocumentMoniker": "C:\\Users\\noure\\Desktop\\rate_auc\\Rate-AUC-Professors\\rate-auc-backend\\DTO\\Requests\\CourseInfo.cs",
+              "RelativeDocumentMoniker": "DTO\\Requests\\CourseInfo.cs",
+              "ToolTip": "C:\\Users\\noure\\Desktop\\rate_auc\\Rate-AUC-Professors\\rate-auc-backend\\DTO\\Requests\\CourseInfo.cs",
+              "RelativeToolTip": "DTO\\Requests\\CourseInfo.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAA6AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-04T00:17:45.324Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "Mapper.cs",
+              "DocumentMoniker": "C:\\Users\\noure\\Desktop\\rate_auc\\Rate-AUC-Professors\\rate-auc-backend\\ObjectsMapping\\Mapper.cs",
+              "RelativeDocumentMoniker": "ObjectsMapping\\Mapper.cs",
+              "ToolTip": "C:\\Users\\noure\\Desktop\\rate_auc\\Rate-AUC-Professors\\rate-auc-backend\\ObjectsMapping\\Mapper.cs",
+              "RelativeToolTip": "ObjectsMapping\\Mapper.cs",
+              "ViewState": "AQIAAEMAAAAAAAAAAAAAwFwAAAAkAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-03T23:56:52.722Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "GenericRepository.cs",
+              "DocumentMoniker": "C:\\Users\\noure\\Desktop\\rate_auc\\Rate-AUC-Professors\\rate-auc-backend\\Repository\\GenericRepository.cs",
+              "RelativeDocumentMoniker": "Repository\\GenericRepository.cs",
+              "ToolTip": "C:\\Users\\noure\\Desktop\\rate_auc\\Rate-AUC-Professors\\rate-auc-backend\\Repository\\GenericRepository.cs",
+              "RelativeToolTip": "Repository\\GenericRepository.cs",
+              "ViewState": "AQIAAKIAAAAAAAAAAAAAAMQAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-03T23:41:02.286Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "ApplicationDbContext.cs",
               "DocumentMoniker": "C:\\Users\\noure\\Desktop\\rate_auc\\Rate-AUC-Professors\\rate-auc-backend\\DB\\ApplicationDbContext.cs",
               "RelativeDocumentMoniker": "DB\\ApplicationDbContext.cs",
               "ToolTip": "C:\\Users\\noure\\Desktop\\rate_auc\\Rate-AUC-Professors\\rate-auc-backend\\DB\\ApplicationDbContext.cs",
               "RelativeToolTip": "DB\\ApplicationDbContext.cs",
-              "ViewState": "AQIAAOAAAAAAAAAAAAAkwPIAAAAAAAAA",
+              "ViewState": "AQIAANQAAAAAAAAAAAAkwO8AAAAJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-05-04T00:54:36.644Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "Major.cs",
-              "DocumentMoniker": "C:\\Users\\noure\\Desktop\\rate_auc\\Rate-AUC-Professors\\rate-auc-backend\\Models\\Major.cs",
-              "RelativeDocumentMoniker": "Models\\Major.cs",
-              "ToolTip": "C:\\Users\\noure\\Desktop\\rate_auc\\Rate-AUC-Professors\\rate-auc-backend\\Models\\Major.cs",
-              "RelativeToolTip": "Models\\Major.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "DocumentIndex": 11,
+              "Title": "20240504005706_minorChangeDelete.cs",
+              "DocumentMoniker": "C:\\Users\\noure\\Desktop\\rate_auc\\Rate-AUC-Professors\\rate-auc-backend\\Migrations\\20240504005706_minorChangeDelete.cs",
+              "RelativeDocumentMoniker": "Migrations\\20240504005706_minorChangeDelete.cs",
+              "ToolTip": "C:\\Users\\noure\\Desktop\\rate_auc\\Rate-AUC-Professors\\rate-auc-backend\\Migrations\\20240504005706_minorChangeDelete.cs",
+              "RelativeToolTip": "Migrations\\20240504005706_minorChangeDelete.cs",
+              "ViewState": "AQIAAAsAAAAAAAAAAAAQwBoAAABAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-04T16:12:12.947Z"
+              "WhenOpened": "2024-05-04T00:57:06.696Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "Feed.cs",
-              "DocumentMoniker": "C:\\Users\\noure\\Desktop\\rate_auc\\Rate-AUC-Professors\\rate-auc-backend\\Models\\Feed.cs",
-              "RelativeDocumentMoniker": "Models\\Feed.cs",
-              "ToolTip": "C:\\Users\\noure\\Desktop\\rate_auc\\Rate-AUC-Professors\\rate-auc-backend\\Models\\Feed.cs",
-              "RelativeToolTip": "Models\\Feed.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-04T16:12:21.431Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "StudentController.cs",
-              "DocumentMoniker": "C:\\Users\\noure\\Desktop\\rate_auc\\Rate-AUC-Professors\\rate-auc-backend\\Controllers\\StudentController.cs",
-              "RelativeDocumentMoniker": "Controllers\\StudentController.cs",
-              "ToolTip": "C:\\Users\\noure\\Desktop\\rate_auc\\Rate-AUC-Professors\\rate-auc-backend\\Controllers\\StudentController.cs",
-              "RelativeToolTip": "Controllers\\StudentController.cs",
-              "ViewState": "AQIAAA4AAAAAAAAAAAAQwCQAAAAWAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-04T16:04:49.575Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Course.cs",
-              "DocumentMoniker": "C:\\Users\\noure\\Desktop\\rate_auc\\Rate-AUC-Professors\\rate-auc-backend\\Models\\Course.cs",
-              "RelativeDocumentMoniker": "Models\\Course.cs",
-              "ToolTip": "C:\\Users\\noure\\Desktop\\rate_auc\\Rate-AUC-Professors\\rate-auc-backend\\Models\\Course.cs",
-              "RelativeToolTip": "Models\\Course.cs",
-              "ViewState": "AQIAAAMAAAAAAAAAAAAAAA8AAAAzAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-04T00:18:16.002Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Student.cs",
-              "DocumentMoniker": "C:\\Users\\noure\\Desktop\\rate_auc\\Rate-AUC-Professors\\rate-auc-backend\\Models\\Student.cs",
-              "RelativeDocumentMoniker": "Models\\Student.cs",
-              "ToolTip": "C:\\Users\\noure\\Desktop\\rate_auc\\Rate-AUC-Professors\\rate-auc-backend\\Models\\Student.cs",
-              "RelativeToolTip": "Models\\Student.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-04T16:04:40.189Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "DepartmentInfo.cs",
-              "DocumentMoniker": "C:\\Users\\noure\\Desktop\\rate_auc\\Rate-AUC-Professors\\rate-auc-backend\\DTO\\Requests\\DepartmentInfo.cs",
-              "RelativeDocumentMoniker": "DTO\\Requests\\DepartmentInfo.cs",
-              "ToolTip": "C:\\Users\\noure\\Desktop\\rate_auc\\Rate-AUC-Professors\\rate-auc-backend\\DTO\\Requests\\DepartmentInfo.cs",
-              "RelativeToolTip": "DTO\\Requests\\DepartmentInfo.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-04T16:17:51.508Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 20,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\noure\\Desktop\\rate_auc\\Rate-AUC-Professors\\rate-auc-backend\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
@@ -211,19 +252,117 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
-              "Title": "20240504005706_minorChangeDelete.cs",
-              "DocumentMoniker": "C:\\Users\\noure\\Desktop\\rate_auc\\Rate-AUC-Professors\\rate-auc-backend\\Migrations\\20240504005706_minorChangeDelete.cs",
-              "RelativeDocumentMoniker": "Migrations\\20240504005706_minorChangeDelete.cs",
-              "ToolTip": "C:\\Users\\noure\\Desktop\\rate_auc\\Rate-AUC-Professors\\rate-auc-backend\\Migrations\\20240504005706_minorChangeDelete.cs",
-              "RelativeToolTip": "Migrations\\20240504005706_minorChangeDelete.cs",
-              "ViewState": "AQIAAAoAAAAAAAAAAAA1wBoAAABAAAAA",
+              "DocumentIndex": 15,
+              "Title": "DepartmentInfo.cs",
+              "DocumentMoniker": "C:\\Users\\noure\\Desktop\\rate_auc\\Rate-AUC-Professors\\rate-auc-backend\\DTO\\Requests\\DepartmentInfo.cs",
+              "RelativeDocumentMoniker": "DTO\\Requests\\DepartmentInfo.cs",
+              "ToolTip": "C:\\Users\\noure\\Desktop\\rate_auc\\Rate-AUC-Professors\\rate-auc-backend\\DTO\\Requests\\DepartmentInfo.cs",
+              "RelativeToolTip": "DTO\\Requests\\DepartmentInfo.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-04T00:57:06.696Z"
+              "WhenOpened": "2024-05-04T16:17:51.508Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 14,
+              "Title": "Student.cs",
+              "DocumentMoniker": "C:\\Users\\noure\\Desktop\\rate_auc\\Rate-AUC-Professors\\rate-auc-backend\\Models\\Student.cs",
+              "RelativeDocumentMoniker": "Models\\Student.cs",
+              "ToolTip": "C:\\Users\\noure\\Desktop\\rate_auc\\Rate-AUC-Professors\\rate-auc-backend\\Models\\Student.cs",
+              "RelativeToolTip": "Models\\Student.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-04T16:04:40.189Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "StudentController.cs",
+              "DocumentMoniker": "C:\\Users\\noure\\Desktop\\rate_auc\\Rate-AUC-Professors\\rate-auc-backend\\Controllers\\StudentController.cs",
+              "RelativeDocumentMoniker": "Controllers\\StudentController.cs",
+              "ToolTip": "C:\\Users\\noure\\Desktop\\rate_auc\\Rate-AUC-Professors\\rate-auc-backend\\Controllers\\StudentController.cs",
+              "RelativeToolTip": "Controllers\\StudentController.cs",
+              "ViewState": "AQIAAA4AAAAAAAAAAAAQwCQAAAAWAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-04T16:04:49.575Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "CourseController.cs",
+              "DocumentMoniker": "C:\\Users\\noure\\Desktop\\rate_auc\\Rate-AUC-Professors\\rate-auc-backend\\Controllers\\CourseController.cs",
+              "RelativeDocumentMoniker": "Controllers\\CourseController.cs",
+              "ToolTip": "C:\\Users\\noure\\Desktop\\rate_auc\\Rate-AUC-Professors\\rate-auc-backend\\Controllers\\CourseController.cs",
+              "RelativeToolTip": "Controllers\\CourseController.cs",
+              "ViewState": "AQIAADEAAAAAAAAAAAAmwFAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-03T23:39:19.323Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "20240501132210_jj.cs",
+              "DocumentMoniker": "C:\\Users\\noure\\Desktop\\rate_auc\\Rate-AUC-Professors\\rate-auc-backend\\Migrations\\20240501132210_jj.cs",
+              "RelativeDocumentMoniker": "Migrations\\20240501132210_jj.cs",
+              "ToolTip": "C:\\Users\\noure\\Desktop\\rate_auc\\Rate-AUC-Professors\\rate-auc-backend\\Migrations\\20240501132210_jj.cs",
+              "RelativeToolTip": "Migrations\\20240501132210_jj.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAZAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-05T02:37:11.682Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "Feed.cs",
+              "DocumentMoniker": "C:\\Users\\noure\\Desktop\\rate_auc\\Rate-AUC-Professors\\rate-auc-backend\\Models\\Feed.cs",
+              "RelativeDocumentMoniker": "Models\\Feed.cs",
+              "ToolTip": "C:\\Users\\noure\\Desktop\\rate_auc\\Rate-AUC-Professors\\rate-auc-backend\\Models\\Feed.cs",
+              "RelativeToolTip": "Models\\Feed.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-04T16:12:21.431Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "Major.cs",
+              "DocumentMoniker": "C:\\Users\\noure\\Desktop\\rate_auc\\Rate-AUC-Professors\\rate-auc-backend\\Models\\Major.cs",
+              "RelativeDocumentMoniker": "Models\\Major.cs",
+              "ToolTip": "C:\\Users\\noure\\Desktop\\rate_auc\\Rate-AUC-Professors\\rate-auc-backend\\Models\\Major.cs",
+              "RelativeToolTip": "Models\\Major.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-04T16:12:12.947Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "Professor.cs",
+              "DocumentMoniker": "C:\\Users\\noure\\Desktop\\rate_auc\\Rate-AUC-Professors\\rate-auc-backend\\Models\\Professor.cs",
+              "RelativeDocumentMoniker": "Models\\Professor.cs",
+              "ToolTip": "C:\\Users\\noure\\Desktop\\rate_auc\\Rate-AUC-Professors\\rate-auc-backend\\Models\\Professor.cs",
+              "RelativeToolTip": "Models\\Professor.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABYAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-04T16:12:18.392Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "ProfessorInfo.cs",
+              "DocumentMoniker": "C:\\Users\\noure\\Desktop\\rate_auc\\Rate-AUC-Professors\\rate-auc-backend\\DTO\\Requests\\ProfessorInfo.cs",
+              "RelativeDocumentMoniker": "DTO\\Requests\\ProfessorInfo.cs",
+              "ToolTip": "C:\\Users\\noure\\Desktop\\rate_auc\\Rate-AUC-Professors\\rate-auc-backend\\DTO\\Requests\\ProfessorInfo.cs",
+              "RelativeToolTip": "DTO\\Requests\\ProfessorInfo.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-04T22:15:43.558Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
               "Title": "DepartmentController.cs",
               "DocumentMoniker": "C:\\Users\\noure\\Desktop\\rate_auc\\Rate-AUC-Professors\\rate-auc-backend\\Controllers\\DepartmentController.cs",
               "RelativeDocumentMoniker": "Controllers\\DepartmentController.cs",
@@ -235,31 +374,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "CourseController.cs",
-              "DocumentMoniker": "C:\\Users\\noure\\Desktop\\rate_auc\\Rate-AUC-Professors\\rate-auc-backend\\Controllers\\CourseController.cs",
-              "RelativeDocumentMoniker": "Controllers\\CourseController.cs",
-              "ToolTip": "C:\\Users\\noure\\Desktop\\rate_auc\\Rate-AUC-Professors\\rate-auc-backend\\Controllers\\CourseController.cs",
-              "RelativeToolTip": "Controllers\\CourseController.cs",
-              "ViewState": "AQIAADoAAAAAAAAAAAAmwDYAAAAjAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-03T23:39:19.323Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "Mapper.cs",
-              "DocumentMoniker": "C:\\Users\\noure\\Desktop\\rate_auc\\Rate-AUC-Professors\\rate-auc-backend\\ObjectsMapping\\Mapper.cs",
-              "RelativeDocumentMoniker": "ObjectsMapping\\Mapper.cs",
-              "ToolTip": "C:\\Users\\noure\\Desktop\\rate_auc\\Rate-AUC-Professors\\rate-auc-backend\\ObjectsMapping\\Mapper.cs",
-              "RelativeToolTip": "ObjectsMapping\\Mapper.cs",
-              "ViewState": "AQIAAFQAAAAAAAAAAIAwwGYAAABPAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-03T23:56:52.722Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 22,
               "Title": "IGenericRepository.cs",
               "DocumentMoniker": "C:\\Users\\noure\\Desktop\\rate_auc\\Rate-AUC-Professors\\rate-auc-backend\\IRepository\\IGenericRepository.cs",
               "RelativeDocumentMoniker": "IRepository\\IGenericRepository.cs",
@@ -271,19 +386,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "GenericRepository.cs",
-              "DocumentMoniker": "C:\\Users\\noure\\Desktop\\rate_auc\\Rate-AUC-Professors\\rate-auc-backend\\Repository\\GenericRepository.cs",
-              "RelativeDocumentMoniker": "Repository\\GenericRepository.cs",
-              "ToolTip": "C:\\Users\\noure\\Desktop\\rate_auc\\Rate-AUC-Professors\\rate-auc-backend\\Repository\\GenericRepository.cs",
-              "RelativeToolTip": "Repository\\GenericRepository.cs",
-              "ViewState": "AQIAAGUAAAAAAAAAAAAowHUAAAAMAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-03T23:41:02.286Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 21,
               "Title": "CourseSeeding.cs",
               "DocumentMoniker": "C:\\Users\\noure\\Desktop\\rate_auc\\Rate-AUC-Professors\\rate-auc-backend\\DTO\\Requests\\CourseSeeding.cs",
               "RelativeDocumentMoniker": "DTO\\Requests\\CourseSeeding.cs",
@@ -292,18 +395,6 @@
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAkAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-05-04T00:13:58.652Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "CourseInfo.cs",
-              "DocumentMoniker": "C:\\Users\\noure\\Desktop\\rate_auc\\Rate-AUC-Professors\\rate-auc-backend\\DTO\\Requests\\CourseInfo.cs",
-              "RelativeDocumentMoniker": "DTO\\Requests\\CourseInfo.cs",
-              "ToolTip": "C:\\Users\\noure\\Desktop\\rate_auc\\Rate-AUC-Professors\\rate-auc-backend\\DTO\\Requests\\CourseInfo.cs",
-              "RelativeToolTip": "DTO\\Requests\\CourseInfo.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAABAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-04T00:17:45.324Z"
             }
           ]
         }

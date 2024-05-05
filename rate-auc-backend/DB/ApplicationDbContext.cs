@@ -111,7 +111,7 @@ namespace RateAucProfessors.DB
                 .HasMany(p => p.Courses)
                 .WithMany(c => c.Professors)
                 .UsingEntity(j => j.ToTable("CourseProfessors"));
-
+        
             modelBuilder.Entity<Professor>()
                 .HasMany(p => p.Reviews)
                 .WithOne(r => r.Professor)
