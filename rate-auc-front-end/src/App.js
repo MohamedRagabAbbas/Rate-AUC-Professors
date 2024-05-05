@@ -42,7 +42,7 @@ function App() {
     <div>
       <BrowserRouter>
         <Routes>
-          {/* <Route path="/" element={<Feed />} /> */}
+          <Route path="/" element={<Feed />} />
           <Route path="/home" element={<Feed />} />
           <Route path="/feed" element={<Feed />} />
           <Route path="/professors" element={<ProfessorsFeed />} />
