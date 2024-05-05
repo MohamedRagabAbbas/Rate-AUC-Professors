@@ -79,6 +79,7 @@ namespace RateAucProfessors.ObjectsMapping
                 Description = dto.Description,
                 Code = dto.Code,
                 Credit_Hours = dto.Credit_Hours,
+                Prefix = dto.Prefix,
                 DepartmentId = dto.DepartmentId,
             };
         }
@@ -93,6 +94,7 @@ namespace RateAucProfessors.ObjectsMapping
                     Description = dto.Description,
                     Code = dto.Code,
                     Credit_Hours = dto.Credit_Hours,
+                    Prefix = dto.Prefix,
                     DepartmentId = dto.DepartmentId,
                 };
                 courses.Add(course);
@@ -108,6 +110,7 @@ namespace RateAucProfessors.ObjectsMapping
                 Description = dto.Description,
                 Code = dto.Code,
                 Credit_Hours = dto.Credit_Hours,
+                Prefix = dto.Prefix,
                 DepartmentId = departmentId
             };
         }

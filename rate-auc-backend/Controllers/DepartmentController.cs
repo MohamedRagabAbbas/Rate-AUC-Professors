@@ -61,6 +61,14 @@ namespace RateAucProfessors.Controllers
             return Ok(result);
         }
         [HttpDelete]
+        [Route("delete-all")]
+        public async Task<IActionResult> DeleteAll()
+        {
+            var result = await _unitOfWork.Department.DeleteAllAsync();
+            await _unitOfWork.SaveAsync();
+            return Ok(result);
+        }
+        [HttpDelete]
         [Route("delete/{id}")]
         public async Task<IActionResult> Delete(int id)
         {
