@@ -1,25 +1,32 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\zeinn\\Desktop\\Uni\\Spring 2024\\Software Engineering\\Project\\Rate-AUC-Professors\\rate-auc-backend\\RateAucProfessors.csproj": {}
+    "C:\\Users\\noure\\Desktop\\rate_auc\\Rate-AUC-Professors\\rate-auc-backend\\RateAucProfessors.csproj": {}
   },
   "projects": {
-    "C:\\Users\\zeinn\\Desktop\\Uni\\Spring 2024\\Software Engineering\\Project\\Rate-AUC-Professors\\rate-auc-backend\\RateAucProfessors.csproj": {
+    "C:\\Users\\noure\\Desktop\\rate_auc\\Rate-AUC-Professors\\rate-auc-backend\\RateAucProfessors.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\zeinn\\Desktop\\Uni\\Spring 2024\\Software Engineering\\Project\\Rate-AUC-Professors\\rate-auc-backend\\RateAucProfessors.csproj",
+        "projectUniqueName": "C:\\Users\\noure\\Desktop\\rate_auc\\Rate-AUC-Professors\\rate-auc-backend\\RateAucProfessors.csproj",
         "projectName": "RateAucProfessors",
-        "projectPath": "C:\\Users\\zeinn\\Desktop\\Uni\\Spring 2024\\Software Engineering\\Project\\Rate-AUC-Professors\\rate-auc-backend\\RateAucProfessors.csproj",
-        "packagesPath": "C:\\Users\\zeinn\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\zeinn\\Desktop\\Uni\\Spring 2024\\Software Engineering\\Project\\Rate-AUC-Professors\\rate-auc-backend\\obj\\",
+        "projectPath": "C:\\Users\\noure\\Desktop\\rate_auc\\Rate-AUC-Professors\\rate-auc-backend\\RateAucProfessors.csproj",
+        "packagesPath": "C:\\Users\\noure\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\noure\\Desktop\\rate_auc\\Rate-AUC-Professors\\rate-auc-backend\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\zeinn\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\noure\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net7.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
