@@ -868,13 +868,13 @@ namespace RateAucProfessors.Migrations
                     b.HasOne("RateAucProfessors.Models.Professor", "Professor")
                         .WithMany("Reviews")
                         .HasForeignKey("ProfessorId")
-                        .OnDelete(DeleteBehavior.NoAction)
+                        .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.HasOne("RateAucProfessors.Models.Student", "Student")
                         .WithMany("Reviews")
                         .HasForeignKey("UserId")
-                        .OnDelete(DeleteBehavior.NoAction)
+                        .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.Navigation("Course");
