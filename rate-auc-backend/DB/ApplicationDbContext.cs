@@ -37,31 +37,31 @@ namespace RateAucProfessors.DB
                 .HasMany(s => s.Reviews)
                 .WithOne(r => r.Student)
                 .HasForeignKey(r => r.UserId)
-                .OnDelete(DeleteBehavior.Cascade);
+                .OnDelete(DeleteBehavior.NoAction);
 
             modelBuilder.Entity<Student>()
                 .HasMany(s => s.Feeds)
                 .WithOne(f => f.Student)
                 .HasForeignKey(f => f.UserId)
-                .OnDelete(DeleteBehavior.Cascade);
+                .OnDelete(DeleteBehavior.NoAction);
 
             modelBuilder.Entity<Student>()
                 .HasMany(s => s.Comments)
                 .WithOne(c => c.Student)
                 .HasForeignKey(c => c.UserId)
-                .OnDelete(DeleteBehavior.Cascade);            
+                .OnDelete(DeleteBehavior.NoAction);            
             
             modelBuilder.Entity<Student>()   
                 .HasMany(s => s.Replys)
                 .WithOne(c => c.Student)
                 .HasForeignKey(c => c.UserId)
-                .OnDelete(DeleteBehavior.Cascade);
+                .OnDelete(DeleteBehavior.NoAction);
 
             modelBuilder.Entity<Student>()
                 .HasMany(s => s.Reactions)
                 .WithOne(r => r.Student)
                 .HasForeignKey(r => r.UserId)
-                .OnDelete(DeleteBehavior.Cascade);
+                .OnDelete(DeleteBehavior.NoAction);
 
             modelBuilder.Entity<Student>()
                 .HasMany(s => s.Majors)
@@ -72,7 +72,7 @@ namespace RateAucProfessors.DB
                 .HasMany(s => s.Documents)
                 .WithOne(s => s.Student)
                 .HasForeignKey(s => s.UserId)
-                .OnDelete(DeleteBehavior.Cascade); 
+                .OnDelete(DeleteBehavior.NoAction); 
             
             //modelBuilder.Entity<Student>()
             //    .HasMany(s => s.Syllabuses)
@@ -116,14 +116,14 @@ namespace RateAucProfessors.DB
                 .HasMany(p => p.Reviews)
                 .WithOne(r => r.Professor)
                 .HasForeignKey(r => r.ProfessorId)
-                .OnDelete(DeleteBehavior.Cascade);
+                .OnDelete(DeleteBehavior.NoAction);
             
             modelBuilder.Entity<Professor>()
                 .HasMany(p => p.Documents)
                 .WithOne(s => s.Professor)
                 .HasForeignKey(s => s.ProfessorId)
-                .OnDelete(DeleteBehavior.Cascade);
-            //Cascade, because why leave reviews and documents for professors not in the university
+                .OnDelete(DeleteBehavior.NoAction);
+            //NoAction, because why leave reviews and documents for professors not in the university
             //modelBuilder.Entity<Professor>()
             //    .HasMany(p => p.Syllabuses)
             //    .WithOne(s => s.Professor)
@@ -161,13 +161,13 @@ namespace RateAucProfessors.DB
                 .HasMany(c => c.Documents)
                 .WithOne(s => s.Course)
                 .HasForeignKey(s => s.CourseId)
-                .OnDelete(DeleteBehavior.Cascade);
+                .OnDelete(DeleteBehavior.NoAction);
 
             modelBuilder.Entity<Course>()
                 .HasMany(c => c.Reviews)
                 .WithOne(r => r.Course)
                 .HasForeignKey(r => r.CourseId)
-                .OnDelete(DeleteBehavior.Cascade);
+                .OnDelete(DeleteBehavior.NoAction);
 
             //modelBuilder.Entity<Course>()
             //    .HasMany(c => c.Professors)
@@ -203,13 +203,13 @@ namespace RateAucProfessors.DB
                 .HasMany(r => r.Comments)
                 .WithOne(c => c.Review)
                 .HasForeignKey(c => c.ReviewId)
-                .OnDelete(DeleteBehavior.Cascade);
+                .OnDelete(DeleteBehavior.NoAction);
 
             modelBuilder.Entity<Review>()
                 .HasMany(r => r.Reactions)
                 .WithOne(r => r.Review)
                 .HasForeignKey(r => r.ReviewId)
-                .OnDelete(DeleteBehavior.Cascade);
+                .OnDelete(DeleteBehavior.NoAction);
 
 
             // Feed relationships
@@ -217,26 +217,26 @@ namespace RateAucProfessors.DB
                 .HasMany(f => f.Comments)
                 .WithOne(c => c.Feed)
                 .HasForeignKey(c => c.FeedId)
-                .OnDelete(DeleteBehavior.Cascade);
+                .OnDelete(DeleteBehavior.NoAction);
 
             modelBuilder.Entity<Feed>()
                 .HasMany(f => f.Reactions)
                 .WithOne(r => r.Feed)
                 .HasForeignKey(r => r.FeedId)
-                .OnDelete(DeleteBehavior.Cascade);
+                .OnDelete(DeleteBehavior.NoAction);
 
             // Comment relationships
             modelBuilder.Entity<Comment>()
                 .HasMany(c => c.Replies)
                 .WithOne(f => f.Comment)
                 .HasForeignKey(c => c.CommentId)
-                .OnDelete(DeleteBehavior.Cascade);
+                .OnDelete(DeleteBehavior.NoAction);
 
             modelBuilder.Entity<Comment>()
                 .HasMany(c => c.Reactions)
                 .WithOne(r => r.Comment)
                 .HasForeignKey(r => r.CommentId)
-                .OnDelete(DeleteBehavior.Cascade);
+                .OnDelete(DeleteBehavior.NoAction);
         }
     }
 }
