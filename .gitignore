@@ -5,6 +5,12 @@
 /node_modules
 /.pnp
 .pnp.js
+rate-auc-backend/bin/
+rate-auc-backend/obj/
+rate-auc-backend/.vs/
+rate-auc-backend/.confg/
+rate-auc-front-end/src/App.jsa
+
 
 # testing
 /coverage
