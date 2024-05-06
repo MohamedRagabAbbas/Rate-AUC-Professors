@@ -723,8 +723,16 @@ To retrieve all documents:
   - `id`: ID of the Professor
 </details>
 
+<details>
+<summary>Get Reviews by courseId</summary>
+## Retrieves a specific Reviews by courseId.
 
-api/Review/get-all-reviews-by-professorId
+- **URL:** `/api/Review/get-all-reviews-by-courseId/{courseId}`
+- **Method:** GET
+- **Parameters:**
+  - `id`: ID of the course
+</details>
+
 <details>
 <summary>Add Review</summary>
 
