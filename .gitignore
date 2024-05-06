@@ -11,7 +11,11 @@
 
 # production
 /build
-
+#ignore
+rate-auc-backend/.vs/
+rate-auc-backend/bin/
+rate-auc-backend/obj/
+rate-auc-front-end/src/App.jsa
 # misc
 .DS_Store
 .env.local
