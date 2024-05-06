@@ -200,7 +200,9 @@ This document provides detailed information about the endpoints available in the
    "Id": "number",
    "Content": "string",
    "Timestamp": "datetime",
-   "Value": "number",
+   "Leniency": "number",
+   "Workload": "number",
+   "Explanation": "number",
    "Comments": "array of objects",
    "Reactions": "array of objects",
    "UserId": "string",
@@ -296,7 +298,9 @@ This document provides detailed information about the endpoints available in the
 
 - `content`: string, nullable: true
 - `timestamp`: string ($date-time)
-- `value`: integer ($int32), minimum: 1, maximum: 5
+- `leniency`: integer ($int32), minimum: 1, maximum: 5
+- `workload`: integer ($int32), minimum: 1, maximum: 5
+- `explanation`: integer ($int32), minimum: 1, maximum: 5
 - `professorId`: integer ($int32)
 - `courseId`: integer ($int32)
 
