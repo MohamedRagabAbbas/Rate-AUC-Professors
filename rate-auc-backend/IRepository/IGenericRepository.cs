@@ -17,7 +17,7 @@ namespace RateAucProfessors.IRepository
         Task<ResponseMessage<T>> Add(T model);
         Task AddRange(List<T> models);
 
-
+        Task<ResponseMessage<IEnumerable<T>>> DeleteAllAsync();
         // update methods
         ResponseMessage<T> Update(T model);
         void UpdateRanage(List<T> models);

@@ -106,24 +106,24 @@ namespace RateAucProfessors.DB
                 .WithMany(d => d.Professors)
                 .HasForeignKey(p => p.DepartmentId)
                 .OnDelete(DeleteBehavior.NoAction);
-
+            //you will delete department but what about professors? deal with them first
             modelBuilder.Entity<Professor>()
                 .HasMany(p => p.Courses)
                 .WithMany(c => c.Professors)
                 .UsingEntity(j => j.ToTable("CourseProfessors"));
-
+        
             modelBuilder.Entity<Professor>()
                 .HasMany(p => p.Reviews)
                 .WithOne(r => r.Professor)
                 .HasForeignKey(r => r.ProfessorId)
                 .OnDelete(DeleteBehavior.NoAction);
-
+            
             modelBuilder.Entity<Professor>()
                 .HasMany(p => p.Documents)
                 .WithOne(s => s.Professor)
                 .HasForeignKey(s => s.ProfessorId)
-                .OnDelete(DeleteBehavior.NoAction); 
-            
+                .OnDelete(DeleteBehavior.NoAction);
+            //NoAction, because why leave reviews and documents for professors not in the university
             //modelBuilder.Entity<Professor>()
             //    .HasMany(p => p.Syllabuses)
             //    .WithOne(s => s.Professor)
@@ -167,7 +167,7 @@ namespace RateAucProfessors.DB
                 .HasMany(c => c.Reviews)
                 .WithOne(r => r.Course)
                 .HasForeignKey(r => r.CourseId)
-                .OnDelete(DeleteBehavior.Cascade);
+                .OnDelete(DeleteBehavior.NoAction);
 
             //modelBuilder.Entity<Course>()
             //    .HasMany(c => c.Professors)

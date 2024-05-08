@@ -172,7 +172,25 @@ namespace RateAucProfessors.Repository
                 responseMessage.Status = true;
             return responseMessage;
         }
-
+        public async Task<ResponseMessage<IEnumerable<T>>> DeleteAllAsync()
+    {
+        var all = await _dbSet.ToListAsync();
+        if (all.Any())
+        {
+            _dbSet.RemoveRange(all);
+            return new ResponseMessage<IEnumerable<T>>()
+            {
+                Message = "All objects are deleted successfully...",
+                Status = true,
+                Data = all
+            };
+        }
+        return new ResponseMessage<IEnumerable<T>>()
+        {
+            Message = "No objects found to delete..."
+        };
+    }
 
     }
+    
 }

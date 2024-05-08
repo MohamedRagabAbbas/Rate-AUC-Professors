@@ -2,6 +2,7 @@
 using RateAucProfessors.DTO.Requests;
 using RateAucProfessors.Models;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 
 namespace RateAucProfessors.ObjectsMapping
 {
@@ -79,6 +80,7 @@ namespace RateAucProfessors.ObjectsMapping
                 Description = dto.Description,
                 Code = dto.Code,
                 Credit_Hours = dto.Credit_Hours,
+                Prefix = dto.Prefix,
                 DepartmentId = dto.DepartmentId,
             };
         }
@@ -93,6 +95,7 @@ namespace RateAucProfessors.ObjectsMapping
                     Description = dto.Description,
                     Code = dto.Code,
                     Credit_Hours = dto.Credit_Hours,
+                    Prefix = dto.Prefix,
                     DepartmentId = dto.DepartmentId,
                 };
                 courses.Add(course);
@@ -108,6 +111,7 @@ namespace RateAucProfessors.ObjectsMapping
                 Description = dto.Description,
                 Code = dto.Code,
                 Credit_Hours = dto.Credit_Hours,
+                Prefix = dto.Prefix,
                 DepartmentId = departmentId
             };
         }
@@ -317,7 +321,9 @@ namespace RateAucProfessors.ObjectsMapping
             {
                 Content = dto.Content,
                 Timestamp = dto.Timestamp,
-                Value = dto.Value,
+                Leniency = dto.Leniency,
+                Workload = dto.Workload,
+                Explanation = dto.Explanation,
                 ProfessorId = dto.ProfessorId,
                 UserId = userId,
                 CourseId = dto.CourseId
@@ -332,7 +338,9 @@ namespace RateAucProfessors.ObjectsMapping
                 {
                     Content = dto.Content,
                     Timestamp = dto.Timestamp,
-                    Value = dto.Value,
+                    Leniency = dto.Leniency,
+                    Workload = dto.Workload,
+                    Explanation = dto.Explanation,
                     ProfessorId = dto.ProfessorId,
                     UserId = userId,
                     CourseId = dto.CourseId
