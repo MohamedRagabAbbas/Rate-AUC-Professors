@@ -46,6 +46,17 @@ namespace RateAucProfessors.Controllers
             var result = await _authentication.SignUP(studentInfo);
             return Ok(result);
         }
+        [HttpPost]
+        [Route("assign-major-to-student")]
+        public async Task<IActionResult> AssignMajorToStudent(string studentId, string majorId)
+        {
+            var student = await _unitOfWork.Student.GetByIdAsync(studentId);
+            var major = await _unitOfWork.Major.GetByIdAsync(majorId);
+            if (student.Data is null || major.Data is null)
+                return BadRequest("The student or major is not found...");
+            var result = await _unitOfWork.AssignEntityToEntity(student.Data, major.Data);
+            return Ok(result);
+        }
         [HttpPut]
         [Route("update/{userId}")]
         public async Task<IActionResult> Update(StudentInfo studentInfo,string userId)

@@ -190,6 +190,7 @@ namespace RateAucProfessors.Repository
             Message = "No objects found to delete..."
         };
     }
+       
 
     }
     

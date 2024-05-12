@@ -26,5 +26,7 @@ namespace RateAucProfessors.IRepository
         Task<ResponseMessage<T>> Delete(int id);
         Task<ResponseMessage<IEnumerable<T>>> DeleteRange(List<int> ids);
 
+
+
     }
 }
