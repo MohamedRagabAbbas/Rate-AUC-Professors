@@ -38,12 +38,12 @@ namespace RateAucProfessors.DB
 
             modelBuilder.Entity<StudentMajor>()
                 .HasOne(uc => uc.Student)
-                .WithMany(c=>c.StudentMajor)
+                .WithMany(c=>c.StudentMajors)
                 .HasForeignKey(uc => uc.StudentId);
 
             modelBuilder.Entity<StudentMajor>()
                 .HasOne(uc => uc.Major)
-                .WithMany(c => c.StudentMajor)
+                .WithMany(c => c.StudentMajors)
                 .HasForeignKey(uc => uc.MajorId);
 
             // Student relationships
@@ -77,10 +77,10 @@ namespace RateAucProfessors.DB
                 .HasForeignKey(r => r.UserId)
                 .OnDelete(DeleteBehavior.NoAction);
 
-            modelBuilder.Entity<Student>()
-                .HasMany(s => s.Majors)
-                .WithMany(r => r.Students)
-                .UsingEntity(j => j.ToTable("StudentMajors"));
+            //modelBuilder.Entity<Student>()
+            //    .HasMany(s => s.Majors)
+            //    .WithMany(r => r.Students)
+            //    .UsingEntity(j => j.ToTable("StudentMajors"));
 
             modelBuilder.Entity<Student>()
                 .HasMany(s => s.Documents)
