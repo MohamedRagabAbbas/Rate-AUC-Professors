@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Projects\\Rate-AUC-Professors\\rate-auc-backend\\RateAucProfessors.csproj": {}
+    "C:\\Users\\noure\\Desktop\\AUC\\Spring 2024\\SWE\\Project\\rate_auc\\Rate-AUC-Professors\\rate-auc-backend\\RateAucProfessors.csproj": {}
   },
   "projects": {
-    "D:\\Projects\\Rate-AUC-Professors\\rate-auc-backend\\RateAucProfessors.csproj": {
+    "C:\\Users\\noure\\Desktop\\AUC\\Spring 2024\\SWE\\Project\\rate_auc\\Rate-AUC-Professors\\rate-auc-backend\\RateAucProfessors.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Projects\\Rate-AUC-Professors\\rate-auc-backend\\RateAucProfessors.csproj",
+        "projectUniqueName": "C:\\Users\\noure\\Desktop\\AUC\\Spring 2024\\SWE\\Project\\rate_auc\\Rate-AUC-Professors\\rate-auc-backend\\RateAucProfessors.csproj",
         "projectName": "RateAucProfessors",
-        "projectPath": "D:\\Projects\\Rate-AUC-Professors\\rate-auc-backend\\RateAucProfessors.csproj",
-        "packagesPath": "C:\\Users\\AUC\\.nuget\\packages\\",
-        "outputPath": "D:\\Projects\\Rate-AUC-Professors\\rate-auc-backend\\obj\\",
+        "projectPath": "C:\\Users\\noure\\Desktop\\AUC\\Spring 2024\\SWE\\Project\\rate_auc\\Rate-AUC-Professors\\rate-auc-backend\\RateAucProfessors.csproj",
+        "packagesPath": "C:\\Users\\noure\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\noure\\Desktop\\AUC\\Spring 2024\\SWE\\Project\\rate_auc\\Rate-AUC-Professors\\rate-auc-backend\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\AUC\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\noure\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
