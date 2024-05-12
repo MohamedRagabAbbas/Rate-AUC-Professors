@@ -3,11 +3,7 @@
 This document provides detailed information about the endpoints available in the API.
 
 ## Response Messages
- public string Id { get; set; } = string.Empty;
- public string Role { get; set; } = string.Empty;
- public bool IsAuthenticated { get; set; } = false;
- public string Token { get; set; } = string.Empty;
- public string Message { get; set; } = string.Empty;
+
 
 ### Response for Authentication Request  (LogIn & SignUp)
 
