@@ -42,6 +42,7 @@ namespace RateAucProfessors.Controllers
         {
             Major major = _mapper.MapToMajor(majorinfo);
             var result = await _unitOfWork.Major.Add(major);
+            await _unitOfWork.SaveAsync();
             return Ok(result);
         }
 
@@ -51,6 +52,7 @@ namespace RateAucProfessors.Controllers
         {
             Major major = _mapper.MapToMajor(majorinfo);
             var result =  _unitOfWork.Major.Update(major);
+            await _unitOfWork.SaveAsync();
             return Ok(result);
         }
 
@@ -59,6 +61,7 @@ namespace RateAucProfessors.Controllers
         public async Task<IActionResult> Delete(int id)
         {
             var result = await _unitOfWork.Major.Delete(id);
+            await _unitOfWork.SaveAsync();
             return Ok(result);
         }
     }
