@@ -33,17 +33,10 @@ namespace RateAucProfessors.Controllers
             return Ok(student);
         }
         [HttpGet]
-        [Route("get-majors-by-studentId/{studentId}")]
-        public async Task<IActionResult> GetMajorByStudentId(string studentId)
+        [Route("get-majors-Id-by-studentId/{studentId}")]
+        public async Task<IActionResult> GetMajorIdByStudentId(string studentId)
         {
             var response = await _authentication.GetMajorsByStudentId(studentId);
-            //var student = await _unitOfWork.Student.GetFirstAsyncWithInclude(x=>x.Id == studentId, "Majors");
-            //if (student.Data is null)
-            //    return BadRequest("The student is not found...");
-            //if(student.Data.Majors is null)
-            //    return BadRequest("The student has no majors...");
-            //List<Major> majors = new List<Major>(student.Data.Majors);
-            //ResponseMessage<List<Major>> response = new ResponseMessage<List<Major>>() { Data = majors };
             return Ok(response);
         }
 

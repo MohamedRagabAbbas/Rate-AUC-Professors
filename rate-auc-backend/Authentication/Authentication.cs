@@ -169,14 +169,30 @@ namespace RateAucProfessors.Authentication
             };
         }
 
-        // return student's majors by _userManager
-        public async Task<ResponseMessage<List<Major>>> GetMajorsByStudentId(string studentId)
+        
+        public async Task<ResponseMessage<List<int>>> GetMajorsByStudentId(string studentId)
         {
-            var student = await _userManager.FindByIdAsync(studentId);
-            if (student is null)
-                return new ResponseMessage<List<Major>>() { Message = "The student is not found..." };
-           
-            return new ResponseMessage<List<Major>>() {};
+            var Studentmajors = await _unitOfWork.StudentMajor.GetWhereAsync(x => x.StudentId == studentId);
+            if (Studentmajors.Data is null)
+            {
+                return new ResponseMessage<List<int>>()
+                {
+                    Message = "The student is not found..."
+                };
+            }
+            List<StudentMajor> StudentMajors = Studentmajors.Data.ToList();
+            List<int> majorsIdList = new List<int>();
+            foreach (var item in StudentMajors)
+            {
+                majorsIdList.Add(item.MajorId);
+            }
+            
+            return new ResponseMessage<List<int>>()
+            {
+                Data = majorsIdList
+            };
+
+
         }
 
 
