@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Identity;
+using Microsoft.EntityFrameworkCore;
 using RateAucProfessors.DTO.Requests;
 using RateAucProfessors.DTO.Response;
 using RateAucProfessors.IRepository;
@@ -141,6 +142,60 @@ namespace RateAucProfessors.Authentication
                 Message = $"The user is not updated due to the following {Error}"
             };
         }
+
+        public async Task<ResponseMessage<StudentMajor>> AssignMajorToStudent(string studentId, int majorId)
+        {
+            // using StudentMajor tabel to assign major to student
+            var studentMajor = new StudentMajor()
+            {
+                StudentId = studentId,
+                MajorId = majorId
+            };
+            var result = await _unitOfWork.StudentMajor.Add(studentMajor);
+            if (result is not null)
+            {
+                await _unitOfWork.SaveAsync();
+                return new ResponseMessage<StudentMajor>()
+                {
+                    Status = true,
+                    Message = "The major is assigned to the student successfully",
+                    Data = studentMajor
+
+                };
+            }
+            return new ResponseMessage<StudentMajor>()
+            {
+                Message = "The major is not assigned to the student"
+            };
+        }
+
+        
+        public async Task<ResponseMessage<List<int>>> GetMajorsByStudentId(string studentId)
+        {
+            var Studentmajors = await _unitOfWork.StudentMajor.GetWhereAsync(x => x.StudentId == studentId);
+            if (Studentmajors.Data is null)
+            {
+                return new ResponseMessage<List<int>>()
+                {
+                    Message = "The student is not found..."
+                };
+            }
+            List<StudentMajor> StudentMajors = Studentmajors.Data.ToList();
+            List<int> majorsIdList = new List<int>();
+            foreach (var item in StudentMajors)
+            {
+                majorsIdList.Add(item.MajorId);
+            }
+            
+            return new ResponseMessage<List<int>>()
+            {
+                Data = majorsIdList
+            };
+
+
+        }
+
+
 
     }
 }

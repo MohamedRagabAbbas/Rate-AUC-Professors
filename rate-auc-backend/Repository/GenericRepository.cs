@@ -72,10 +72,36 @@ namespace RateAucProfessors.Repository
                 };
             return new ResponseMessage<T>() { Message = "The object is not found..." };
         }
+        //GetFirstAsyncWithInclude
+        public async Task<ResponseMessage<T>> GetFirstAsyncWithInclude(Expression<Func<T, bool>> predicate, string include)
+        {
+            var obj = await _dbSet.Include(include).Where<T>(predicate).FirstAsync();
+            if (obj is not null)
+                return new ResponseMessage<T>()
+                {
+                    Message = "The object is successfully found...",
+                    Status = true,
+                    Data = obj
+                };
+            return new ResponseMessage<T>() { Message = "The object is not found..." };
+        }
 
         public async Task<ResponseMessage<IEnumerable<T>>> GetWhereAsync(Expression<Func<T, bool>> predicate)
         {
             var objs = await _dbSet.Where<T>(predicate).ToListAsync();
+            if (objs is not null)
+                return new ResponseMessage<IEnumerable<T>>()
+                {
+                    Message = "The object is successfully found...",
+                    Status = true,
+                    Data = objs
+                };
+            return new ResponseMessage<IEnumerable<T>>() { Message = "The object is not found..." };
+        }
+        //GetWhereAsyncWithInclude
+        public async Task<ResponseMessage<IEnumerable<T>>> GetWhereAsyncWithInclude(Expression<Func<T, bool>> predicate, string include)
+        {
+            var objs = await _dbSet.Include(include).Where<T>(predicate).ToListAsync();
             if (objs is not null)
                 return new ResponseMessage<IEnumerable<T>>()
                 {
@@ -190,6 +216,7 @@ namespace RateAucProfessors.Repository
             Message = "No objects found to delete..."
         };
     }
+       
 
     }
     

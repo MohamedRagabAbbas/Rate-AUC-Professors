@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using RateAucProfessors.DTO.Requests;
+using RateAucProfessors.DTO.Response;
 using RateAucProfessors.IRepository;
 using RateAucProfessors.Models;
 using RateAucProfessors.ObjectsMapping;
@@ -31,6 +32,32 @@ namespace RateAucProfessors.Controllers
             var student = await _unitOfWork.Student.GetByIdAsync(id);
             return Ok(student);
         }
+        [HttpGet]
+        [Route("get-majors-name-by-studentId/{studentId}")]
+        public async Task<IActionResult> GetMajorsIdByStudentId(string studentId)
+        {
+            var response = await _authentication.GetMajorsByStudentId(studentId);
+            if(response.Data is null)
+            {
+                return BadRequest(response);
+            }
+            List<int> Ids = response.Data;
+            List<string> Names = new List<string>();
+            foreach (var id in Ids)
+            {
+                var major = await _unitOfWork.Major.GetByIdAsync(id);
+                if(major.Data is null)
+                {
+                    return BadRequest(response);
+                }
+                Names.Add(major.Data.Name);
+            }
+            ResponseMessage<List<string>> response1 = new ResponseMessage<List<string>>()
+            {
+                Data = Names
+            };
+            return Ok(response1);
+        }
 
         [HttpPost]
         [Route("authenticate")]
@@ -45,6 +72,13 @@ namespace RateAucProfessors.Controllers
         {
             var result = await _authentication.SignUP(studentInfo);
             return Ok(result);
+        }
+        [HttpPost]
+        [Route("assign-major-to-student/{studentId}/{majorId}")]
+        public async Task<IActionResult> AssignMajorToStudent(string studentId, int majorId)
+        {
+            var response = await _authentication.AssignMajorToStudent(studentId,majorId);
+            return Ok(response);
         }
         [HttpPut]
         [Route("update/{userId}")]

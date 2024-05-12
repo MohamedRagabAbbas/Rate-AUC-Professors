@@ -13,6 +13,8 @@ namespace RateAucProfessors.IRepository
         Task<ResponseMessage<IEnumerable<T>>> GetWhereAsync(Expression<Func<T, bool>> predicate);
         Task<ResponseMessage<T>> GetFirstAsync(Expression<Func<T, bool>> predicate);
         Task<ResponseMessage<T2>> GetAttributeAsync<T2>(Expression<Func<T, bool>> predicate1, Expression<Func<T, T2>> predicate2);
+        Task<ResponseMessage<T>> GetFirstAsyncWithInclude(Expression<Func<T, bool>> predicate, string include);
+        Task<ResponseMessage<IEnumerable<T>>> GetWhereAsyncWithInclude(Expression<Func<T, bool>> predicate, string include);
         // add methods
         Task<ResponseMessage<T>> Add(T model);
         Task AddRange(List<T> models);

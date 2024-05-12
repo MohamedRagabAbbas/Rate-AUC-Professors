@@ -18,7 +18,7 @@ namespace RateAucProfessors.Models
 
         // Relationship
         public ICollection<Feed>? Feeds { get; set; }
-        public ICollection<Major>? Majors { get; set; }
+        public ICollection<StudentMajor>? StudentMajors { get; set; }
         public ICollection<Document>? Documents { get; set; }
         public ICollection<Reaction>? Reactions { get; set; }
         public ICollection<Review>? Reviews { get; set; }

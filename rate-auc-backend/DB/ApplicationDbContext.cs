@@ -22,6 +22,7 @@ namespace RateAucProfessors.DB
         public DbSet<Reaction> Reactions { get; set; }
         public DbSet<Major> Majors { get; set; }
         public DbSet<Document> Documents { get; set; }
+        public DbSet<StudentMajor> StudentMajor { get; set; }
 
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options)
         {
@@ -31,6 +32,19 @@ namespace RateAucProfessors.DB
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
+
+            modelBuilder.Entity<StudentMajor>()
+           .HasKey(uc => new { uc.StudentId, uc.MajorId });
+
+            modelBuilder.Entity<StudentMajor>()
+                .HasOne(uc => uc.Student)
+                .WithMany(c=>c.StudentMajors)
+                .HasForeignKey(uc => uc.StudentId);
+
+            modelBuilder.Entity<StudentMajor>()
+                .HasOne(uc => uc.Major)
+                .WithMany(c => c.StudentMajors)
+                .HasForeignKey(uc => uc.MajorId);
 
             // Student relationships
             modelBuilder.Entity<Student>()
@@ -63,10 +77,10 @@ namespace RateAucProfessors.DB
                 .HasForeignKey(r => r.UserId)
                 .OnDelete(DeleteBehavior.NoAction);
 
-            modelBuilder.Entity<Student>()
-                .HasMany(s => s.Majors)
-                .WithMany(r => r.Students)
-                .UsingEntity(j => j.ToTable("StudentMajors"));
+            //modelBuilder.Entity<Student>()
+            //    .HasMany(s => s.Majors)
+            //    .WithMany(r => r.Students)
+            //    .UsingEntity(j => j.ToTable("StudentMajors"));
 
             modelBuilder.Entity<Student>()
                 .HasMany(s => s.Documents)
