@@ -34,9 +34,16 @@ namespace RateAucProfessors.Controllers
         }
         [HttpGet]
         [Route("get-all-reviews-by-professorId/{professorId}")]
-        public async Task<IActionResult> GetAllReviews(int professorId)
+        public async Task<IActionResult> GetAllReviewsByprofessorId(int professorId)
         {
             var reviews = await _unitOfWork.Review.GetWhereAsync(x=>x.ProfessorId == professorId);
+            return Ok(reviews);
+        }
+        [HttpGet]
+        [Route("get-all-reviews-by-courseId/{courseId}")]
+        public async Task<IActionResult> GetAllReviewsBycourseId(int courseId)
+        {
+            var reviews = await _unitOfWork.Review.GetWhereAsync(x => x.CourseId== courseId);
             return Ok(reviews);
         }
         [HttpPost]

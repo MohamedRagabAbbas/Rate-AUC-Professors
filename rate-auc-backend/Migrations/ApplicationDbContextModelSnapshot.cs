@@ -321,6 +321,9 @@ namespace RateAucProfessors.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<string>("Prefix")
+                        .HasColumnType("nvarchar(max)");
+
                     b.HasKey("Id");
 
                     b.HasIndex("DepartmentId");
@@ -563,10 +566,16 @@ namespace RateAucProfessors.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("CourseId")
+                    b.Property<int?>("CourseId")
                         .HasColumnType("int");
 
-                    b.Property<int>("ProfessorId")
+                    b.Property<int>("Explanation")
+                        .HasColumnType("int");
+
+                    b.Property<int>("Leniency")
+                        .HasColumnType("int");
+
+                    b.Property<int?>("ProfessorId")
                         .HasColumnType("int");
 
                     b.Property<DateTime>("Timestamp")
@@ -576,7 +585,7 @@ namespace RateAucProfessors.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(450)");
 
-                    b.Property<int>("Value")
+                    b.Property<int>("Workload")
                         .HasColumnType("int");
 
                     b.HasKey("Id");
@@ -862,19 +871,17 @@ namespace RateAucProfessors.Migrations
                     b.HasOne("RateAucProfessors.Models.Course", "Course")
                         .WithMany("Reviews")
                         .HasForeignKey("CourseId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .OnDelete(DeleteBehavior.NoAction);
 
                     b.HasOne("RateAucProfessors.Models.Professor", "Professor")
                         .WithMany("Reviews")
                         .HasForeignKey("ProfessorId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .OnDelete(DeleteBehavior.NoAction);
 
                     b.HasOne("RateAucProfessors.Models.Student", "Student")
                         .WithMany("Reviews")
                         .HasForeignKey("UserId")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.NoAction)
                         .IsRequired();
 
                     b.Navigation("Course");

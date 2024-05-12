@@ -11,6 +11,8 @@ import RateProfessor from './pages/RateProfessor';
 import NotFound from "./pages/notFound";
 import Courses from './pages/Courses'; // Import the Courses component
 import CourseDetail from './pages/CourseDetail';
+import Login from './pages/login';
+import SignUp from './pages/sign_up';
 import PersonalProfile  from './pages/personalProfile';
 import Profile from './components/userProfile/profile';
 
@@ -42,6 +44,9 @@ function App() {
     <div>
       <BrowserRouter>
         <Routes>
+          <Route path="/" element={<Login />} />
+          <Route path="/sign_up" element={<SignUp />} />
+          <Route path="/login" element={<Login />} />
           <Route path="/" element={<Feed />} />
           <Route path="/home" element={<Feed />} />
           <Route path="/feed" element={<Feed />} />

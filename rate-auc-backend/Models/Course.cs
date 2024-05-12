@@ -10,7 +10,7 @@ namespace RateAucProfessors.Models
         public string Description { get; set; } = string.Empty;
         public string Code { get; set; } = string.Empty;
         public string Credit_Hours { get; set; } = string.Empty;
-
+        public string? Prefix { get; set; } = string.Empty;
         // Relationships
         public int DepartmentId { get; set; }
         public Department? Department { get; set; }

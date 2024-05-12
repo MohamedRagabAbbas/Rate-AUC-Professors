@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\noure\\Desktop\\rate_auc\\Rate-AUC-Professors\\rate-auc-backend\\RateAucProfessors.csproj": {}
+    "C:\\Users\\noure\\Desktop\\AUC\\Spring 2024\\SWE\\Project\\rate_auc\\Rate-AUC-Professors\\rate-auc-backend\\RateAucProfessors.csproj": {}
   },
   "projects": {
-    "C:\\Users\\noure\\Desktop\\rate_auc\\Rate-AUC-Professors\\rate-auc-backend\\RateAucProfessors.csproj": {
+    "C:\\Users\\noure\\Desktop\\AUC\\Spring 2024\\SWE\\Project\\rate_auc\\Rate-AUC-Professors\\rate-auc-backend\\RateAucProfessors.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\noure\\Desktop\\rate_auc\\Rate-AUC-Professors\\rate-auc-backend\\RateAucProfessors.csproj",
+        "projectUniqueName": "C:\\Users\\noure\\Desktop\\AUC\\Spring 2024\\SWE\\Project\\rate_auc\\Rate-AUC-Professors\\rate-auc-backend\\RateAucProfessors.csproj",
         "projectName": "RateAucProfessors",
-        "projectPath": "C:\\Users\\noure\\Desktop\\rate_auc\\Rate-AUC-Professors\\rate-auc-backend\\RateAucProfessors.csproj",
+        "projectPath": "C:\\Users\\noure\\Desktop\\AUC\\Spring 2024\\SWE\\Project\\rate_auc\\Rate-AUC-Professors\\rate-auc-backend\\RateAucProfessors.csproj",
         "packagesPath": "C:\\Users\\noure\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\noure\\Desktop\\rate_auc\\Rate-AUC-Professors\\rate-auc-backend\\obj\\",
+        "outputPath": "C:\\Users\\noure\\Desktop\\AUC\\Spring 2024\\SWE\\Project\\rate_auc\\Rate-AUC-Professors\\rate-auc-backend\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

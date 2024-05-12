@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "JCdizQi42g+eKkg/kYD4XxUPCtIi8vqfaVkPuT524eyFzn28Tmgkk705sREgnOz3oUGuVl3MZFsfQEk19xVRHw==",
+  "dgSpecHash": "dtVXZEqWJEeZLczSV0Fdww6Oux2DlurxcwEmmgTURqMW3xAXbbbKS/z2gvWBJJZucSuByJgnZeGHvgfnMe5HyA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\noure\\Desktop\\rate_auc\\Rate-AUC-Professors\\rate-auc-backend\\RateAucProfessors.csproj",
+  "projectFilePath": "C:\\Users\\noure\\Desktop\\AUC\\Spring 2024\\SWE\\Project\\rate_auc\\Rate-AUC-Professors\\rate-auc-backend\\RateAucProfessors.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\noure\\.nuget\\packages\\azure.core\\1.35.0\\azure.core.1.35.0.nupkg.sha512",
     "C:\\Users\\noure\\.nuget\\packages\\azure.identity\\1.10.3\\azure.identity.1.10.3.nupkg.sha512",
