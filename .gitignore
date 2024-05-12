@@ -5,11 +5,7 @@
 /node_modules
 /.pnp
 .pnp.js
-rate-auc-backend/bin/
-rate-auc-backend/.vs/
-rate-auc-backend/.config/
-rate-auc-backend/obj/
-rate-auc-front-end/src/App.jsa
+
 
 # testing
 /coverage
