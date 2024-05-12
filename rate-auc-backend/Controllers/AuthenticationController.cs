@@ -33,11 +33,30 @@ namespace RateAucProfessors.Controllers
             return Ok(student);
         }
         [HttpGet]
-        [Route("get-majors-Id-by-studentId/{studentId}")]
-        public async Task<IActionResult> GetMajorIdByStudentId(string studentId)
+        [Route("get-majors-name-by-studentId/{studentId}")]
+        public async Task<IActionResult> GetMajorsIdByStudentId(string studentId)
         {
             var response = await _authentication.GetMajorsByStudentId(studentId);
-            return Ok(response);
+            if(response.Data is null)
+            {
+                return BadRequest(response);
+            }
+            List<int> Ids = response.Data;
+            List<string> Names = new List<string>();
+            foreach (var id in Ids)
+            {
+                var major = await _unitOfWork.Major.GetByIdAsync(id);
+                if(major.Data is null)
+                {
+                    return BadRequest(response);
+                }
+                Names.Add(major.Data.Name);
+            }
+            ResponseMessage<List<string>> response1 = new ResponseMessage<List<string>>()
+            {
+                Data = Names
+            };
+            return Ok(response1);
         }
 
         [HttpPost]

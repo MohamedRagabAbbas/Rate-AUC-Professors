@@ -338,6 +338,11 @@ This document provides detailed information about the endpoints available in the
 - `description`: string, nullable: true
 - `departmentId`: number, nullable: false 
 
+## StudentMajor
+
+- `StduentId`: string, nullable: true
+- `MajorId`: string, nullable: true
+
 
 ## Base URL
 The base URL for all API endpoints is: `http://rateaucprofessor-001-site1.ftempurl.com/`
@@ -443,6 +448,15 @@ To retrieve all documents:
 ## Get user(Student) by Id.
 
 - **URL:** `/api/Authentication/get-by-id/{userId}`
+- **Method:** Get
+</details>
+
+<details>
+<summary>Get Majors' names by StudentId</summary>
+
+## Get Majors'names(string) by StudentId.
+
+- **URL:** `/api/Authentication/get-majors-name-by-studentId/{userId}`
 - **Method:** Get
 </details>
 
