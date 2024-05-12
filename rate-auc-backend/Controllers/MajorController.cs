@@ -35,6 +35,8 @@ namespace RateAucProfessors.Controllers
             var major = await _unitOfWork.Major.GetByIdAsync(id);
             return Ok(major);
         }
+        
+
 
         [HttpPost]
         [Route("add")]
