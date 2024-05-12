@@ -65,11 +65,8 @@ namespace RateAucProfessors.Controllers
         [Route("assign-major-to-student/{studentId}/{majorId}")]
         public async Task<IActionResult> AssignMajorToStudent(string studentId, int majorId)
         {
-            var major = await _unitOfWork.Major.GetByIdAsync(majorId);
-            if (major.Data is null)
-                return BadRequest("The major is not found...");
-            Major major1 = major.Data;
-            return Ok(await _authentication.AssignMajorToStudent(studentId, major1));
+            var response = await _authentication.AssignMajorToStudent(studentId,majorId);
+            return Ok(response);
         }
         [HttpPut]
         [Route("update/{userId}")]

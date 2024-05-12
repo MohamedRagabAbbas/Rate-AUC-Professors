@@ -143,10 +143,30 @@ namespace RateAucProfessors.Authentication
             };
         }
 
-        public async Task<ResponseMessage<string>> AssignMajorToStudent(string studentId, int majorId)
+        public async Task<ResponseMessage<StudentMajor>> AssignMajorToStudent(string studentId, int majorId)
         {
+            // using StudentMajor tabel to assign major to student
+            var studentMajor = new StudentMajor()
+            {
+                StudentId = studentId,
+                MajorId = majorId
+            };
+            var result = await _unitOfWork.StudentMajor.Add(studentMajor);
+            if (result is not null)
+            {
+                await _unitOfWork.SaveAsync();
+                return new ResponseMessage<StudentMajor>()
+                {
+                    Status = true,
+                    Message = "The major is assigned to the student successfully",
+                    Data = studentMajor
 
-
+                };
+            }
+            return new ResponseMessage<StudentMajor>()
+            {
+                Message = "The major is not assigned to the student"
+            };
         }
 
         // return student's majors by _userManager
