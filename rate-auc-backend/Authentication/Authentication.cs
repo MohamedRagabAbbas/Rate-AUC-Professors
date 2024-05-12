@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Identity;
+using Microsoft.EntityFrameworkCore;
 using RateAucProfessors.DTO.Requests;
 using RateAucProfessors.DTO.Response;
 using RateAucProfessors.IRepository;
@@ -141,6 +142,51 @@ namespace RateAucProfessors.Authentication
                 Message = $"The user is not updated due to the following {Error}"
             };
         }
+
+        public async Task<ResponseMessage<string>> AssignMajorToStudent(string studentId, Major major)
+        {
+            var student = await _unitOfWork.Student.GetByIdAsync(studentId);
+            if (student.Data is null)
+                return new ResponseMessage<string>() { Message = "The student is not found..." };
+            Student student1 = student.Data;
+            student1.Majors?.Add(major);
+            await _userManager.UpdateAsync(student1);
+            var result = await _userManager.UpdateAsync(student1);
+            if (result.Succeeded)
+            {
+                return new ResponseMessage<string>()
+                {
+                    Message = "The student is successfully assigned to the major...",
+                    Status = true,
+                    Data = "The student is successfully assigned to the major..."
+                };
+            }
+            var errors = result.Errors.ToList();
+            string Error = "";
+            foreach (var item in errors)
+            {
+                Error += item.Description + " ";
+            }
+            return new ResponseMessage<string>()
+            {
+                Message = $"The student is not assigned to the major due to the following {Error}"
+            };
+        }
+
+        // return student's majors by _userManager
+        public async Task<ResponseMessage<List<Major>>> GetMajorsByStudentId(string studentId)
+        {
+            var student = await _userManager.FindByIdAsync(studentId);
+            if (student is null)
+                return new ResponseMessage<List<Major>>() { Message = "The student is not found..." };
+            var majors = student.Majors;
+            if (majors is null)
+                return new ResponseMessage<List<Major>>() { Message = "The student has no majors..." };
+            List<Major> majors1 = new List<Major>(majors);
+            return new ResponseMessage<List<Major>>() { Data = majors1 };
+        }
+
+
 
     }
 }

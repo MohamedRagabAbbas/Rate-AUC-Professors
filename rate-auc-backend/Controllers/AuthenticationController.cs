@@ -36,13 +36,14 @@ namespace RateAucProfessors.Controllers
         [Route("get-majors-by-studentId/{studentId}")]
         public async Task<IActionResult> GetMajorByStudentId(string studentId)
         {
-            var student = await _unitOfWork.Student.GetFirstAsyncWithInclude(x=>x.Id == studentId, "Majors");
-            if (student.Data is null)
-                return BadRequest("The student is not found...");
-            if(student.Data.Majors is null)
-                return BadRequest("The student has no majors...");
-            List<Major> majors = new List<Major>(student.Data.Majors);
-            ResponseMessage<List<Major>> response = new ResponseMessage<List<Major>>() { Data = majors };
+            var response = await _authentication.GetMajorsByStudentId(studentId);
+            //var student = await _unitOfWork.Student.GetFirstAsyncWithInclude(x=>x.Id == studentId, "Majors");
+            //if (student.Data is null)
+            //    return BadRequest("The student is not found...");
+            //if(student.Data.Majors is null)
+            //    return BadRequest("The student has no majors...");
+            //List<Major> majors = new List<Major>(student.Data.Majors);
+            //ResponseMessage<List<Major>> response = new ResponseMessage<List<Major>>() { Data = majors };
             return Ok(response);
         }
 
@@ -64,13 +65,11 @@ namespace RateAucProfessors.Controllers
         [Route("assign-major-to-student/{studentId}/{majorId}")]
         public async Task<IActionResult> AssignMajorToStudent(string studentId, int majorId)
         {
-            var student = await _unitOfWork.Student.GetByIdAsync(studentId);
             var major = await _unitOfWork.Major.GetByIdAsync(majorId);
-            if (student.Data is null || major.Data is null)
-                return BadRequest("The student or major is not found...");
-            var result = await _unitOfWork.AssignEntityToEntity(student.Data, major.Data);
-            await _unitOfWork.SaveAsync();
-            return Ok(result);
+            if (major.Data is null)
+                return BadRequest("The major is not found...");
+            Major major1 = major.Data;
+            return Ok(await _authentication.AssignMajorToStudent(studentId, major1));
         }
         [HttpPut]
         [Route("update/{userId}")]
