@@ -55,7 +55,6 @@ namespace RateAucProfessors.Repository
 
         public async Task<ResponseMessage<string>> AssignEntityToEntity(Student student, Major major)
         {
-            student.Majors?.Add(major);
             _dbContext.Students.Update(student);
             await _dbContext.SaveChangesAsync();
             return new ResponseMessage<string>()

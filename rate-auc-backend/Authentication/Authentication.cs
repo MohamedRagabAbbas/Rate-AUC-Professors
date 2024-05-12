@@ -149,7 +149,7 @@ namespace RateAucProfessors.Authentication
             if (student.Data is null)
                 return new ResponseMessage<string>() { Message = "The student is not found..." };
             Student student1 = student.Data;
-            student1.Majors?.Add(major);
+           // student1.Majors?.Add(major);
             await _userManager.UpdateAsync(student1);
             var result = await _userManager.UpdateAsync(student1);
             if (result.Succeeded)
@@ -179,11 +179,8 @@ namespace RateAucProfessors.Authentication
             var student = await _userManager.FindByIdAsync(studentId);
             if (student is null)
                 return new ResponseMessage<List<Major>>() { Message = "The student is not found..." };
-            var majors = student.Majors;
-            if (majors is null)
-                return new ResponseMessage<List<Major>>() { Message = "The student has no majors..." };
-            List<Major> majors1 = new List<Major>(majors);
-            return new ResponseMessage<List<Major>>() { Data = majors1 };
+           
+            return new ResponseMessage<List<Major>>() {};
         }
 
 
