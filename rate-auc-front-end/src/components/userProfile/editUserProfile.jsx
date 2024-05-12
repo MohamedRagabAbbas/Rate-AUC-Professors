@@ -50,23 +50,23 @@ export default function EditUserProfile({ user, onSave, onCancel }) {
       </div>
       <div className="info-box-editing">
         <div className="info-title">
-          <label><strong>Major:</strong></label>
+          <label><strong>Graduation Year:</strong></label>
         </div>
         <input
           type="text"
-          name="major"
+          name="graduationYear"
           value={editedUser.major}
           onChange={handleChange}
         />
       </div>
       <div className="info-box-editing">
         <div className="info-title">
-          <label><strong>Minor:</strong></label>
+          <label><strong>Phone Number:</strong></label>
         </div>
         <input
           type="text"
-          name="minor"
-          value={editedUser.minor}
+          name="phoneNumber"
+          value={editedUser.phoneNumber}
           onChange={handleChange}
         />
       </div>

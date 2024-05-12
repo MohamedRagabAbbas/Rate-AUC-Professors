@@ -5,10 +5,11 @@
     align-items: center;
     border: 2px solid  #A083C9; /* Add border with 2px thickness and black color */
     padding: 20px; /* Add padding to give some space between content and border */
-    width: 600px; /* Set the width of the rectangle */
-    height: 650px; 
+    width: 1400px; /* Set the width of the rectangle */
+    height: 800px; 
     margin: 0 auto; /* Center the rectangle horizontally */
     margin-top: 100px; 
+    border-radius: 10px;
   }
   
   .user-image {
@@ -28,6 +29,8 @@
     align-items: center;
     padding-top: 20px;
     color: purple; 
+    font-family: "SF-Pro-Display-Regular", sans-serif; /* Change to desired font */
+
   }
   
   h1{
@@ -37,28 +40,33 @@
     align-items: center;
     padding-top: 20px;
     color: purple; 
+    font-family: "SF-Pro-Display-Regular", sans-serif; /* Change to desired font */
+
 
   }
   .info-box {
     background-color: rgba(0, 0, 0, 0.1);
-    border: 1px solid #000;
+
     padding: 10px;
     margin-bottom: 10px;
     width: 90%; /* Adjusted width */
     width: 500px; /* Added max-width */
     border-radius: 10px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   }
 
   .info-box-editing {
     background-color: rgba(0, 0, 0, 0.1);
-    border: 1px solid #000;
     padding: 10px;
     margin-bottom: 10px;
     width: 90%; /* Adjusted width */
     width: 500px; /* Added max-width */
     height: 100px; 
+    border: 1px solid #ddd;
     border-radius: 10px;
-  }
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);  }
   
   .info-box h2 {
     font-size: 18px;
