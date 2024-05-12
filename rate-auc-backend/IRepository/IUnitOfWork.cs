@@ -10,6 +10,7 @@ namespace RateAucProfessors.IRepository
         IGenericRepository<Department> Department { get; }
         IGenericRepository<Course> Course { get; }
         IGenericRepository<Major> Major { get; }
+        IGenericRepository<StudentMajor> StudentMajor { get; }
 
         //IGenericRepository<Assignment> Assignment { get; }
         //IGenericRepository<Lecture> Lecture { get; }

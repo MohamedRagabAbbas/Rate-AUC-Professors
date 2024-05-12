@@ -19,6 +19,7 @@ namespace RateAucProfessors.Repository
             Department  = new GenericRepository<Department>(_dbContext);
             Course      = new GenericRepository<Course>(_dbContext);
             Major      = new GenericRepository<Major>(_dbContext);
+            StudentMajor = new GenericRepository<StudentMajor>(_dbContext);
             //Assignment  = new GenericRepository<Assignment>(_dbContext);
             //Lecture     = new GenericRepository<Lecture>(_dbContext);
             //Note        = new GenericRepository<Note>(_dbContext);
@@ -34,6 +35,7 @@ namespace RateAucProfessors.Repository
         public IGenericRepository<Department> Department { get; private set;}
         public IGenericRepository<Course> Course { get; private set;}
         public IGenericRepository<Major> Major { get; private set; }
+        public IGenericRepository<StudentMajor> StudentMajor { get; private set; }
         //public IGenericRepository<Assignment> Assignment { get; private set;}
         //public IGenericRepository<Lecture> Lecture { get; private set;}
         //public IGenericRepository<Note> Note { get; private set;}
