@@ -47,8 +47,8 @@ namespace RateAucProfessors.Controllers
             return Ok(result);
         }
         [HttpPost]
-        [Route("assign-major-to-student")]
-        public async Task<IActionResult> AssignMajorToStudent(string studentId, string majorId)
+        [Route("assign-major-to-student/{studentId}/{majorId}")]
+        public async Task<IActionResult> AssignMajorToStudent(string studentId, int majorId)
         {
             var student = await _unitOfWork.Student.GetByIdAsync(studentId);
             var major = await _unitOfWork.Major.GetByIdAsync(majorId);

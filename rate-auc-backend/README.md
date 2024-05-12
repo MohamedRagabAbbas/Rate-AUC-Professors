@@ -240,6 +240,22 @@ This document provides detailed information about the endpoints available in the
 }
 ```
 
+### Response for Major Request
+``` json
+{
+ "Message": "Response message from the server.",
+ "Status": true,
+ "Data": {
+   "Id": "int",
+   "name": "string",
+   "description": "string",
+   "departmentId": "int",
+   "department": "department",
+   "students": "array of students",
+ }
+}
+```
+
 # Schemas (data to be sent to the server)
 
 ## Comment
@@ -315,6 +331,12 @@ This document provides detailed information about the endpoints available in the
 - `graduationYear`: string, nullable: true
 - `student_Id`: string, nullable: true
 - `color`: string, nullable: true
+
+## Major
+
+- `name`: string, nullable: true
+- `description`: string, nullable: true
+- `departmentId`: number, nullable: false 
 
 
 ## Base URL
@@ -402,6 +424,15 @@ To retrieve all documents:
 ## Registers a new user.
 
 - **URL:** `/api/Authentication/signup`
+- **Method:** POST
+</details>
+
+<details>
+<summary>Assign Major To Student</summary>
+
+## Registers a new user.
+
+- **URL:** `/api/Authentication/assign-major-to-student/studentId/majorId`
 - **Method:** POST
 </details>
 
@@ -900,56 +931,57 @@ Updates an existing reply.
   - `id`: ID of the reply
 </details>
 
-### Student
+### Major
 
 <details>
-<summary>Get All Students</summary>
+<summary>Get All Major</summary>
 
-## Retrieves all students.
+## Retrieves all Major.
 
-- **URL:** `/api/Student/get-all`
+- **URL:** `/api/Major/get-all`
 - **Method:** GET
 </details>
 
 <details>
-<summary>Get Student by ID</summary>
+<summary>Get Major by ID</summary>
 
-## Retrieves a specific student by its ID.
+## Retrieves a specific major by its ID.
 
-- **URL:** `/api/Student/get-by-id/{id}`
+- **URL:** `/api/Major/get-by-id/{id}`
 - **Method:** GET
 - **Parameters:**
-  - `id`: ID of the student
+  - `id`: ID of the major
 </details>
 
 <details>
-<summary>Add Student</summary>
+<summary>Add Major</summary>
 
-## Adds a new student.
+## Adds a new major.
 
-- **URL:** `/api/Student/add`
+- **URL:** `/api/Major/add`
 - **Method:** POST
 </details>
 
 <details>
-<summary>Update Student</summary>
+<summary>Update Major</summary>
 
-## Updates an existing student.
+## Updates an existing major.
 
-- **URL:** `/api/Student/update`
+- **URL:** `/api/major/update`
 - **Method:** PUT
 </details>
 
 <details>
-<summary>Delete Student</summary>
+<summary>Delete Major</summary>
 
-## Deletes a student by its ID.
+## Deletes a major by its ID.
 
-- **URL:** `/api/Student/delete/{id}`
+- **URL:** `/api/Major/delete/{id}`
 - **Method:** DELETE
 - **Parameters:**
-  - `id`: ID of the student
+  - `id`: ID of the major
 </details>
+
 
 
 ### Example: Retrieving All Feeds Using React
