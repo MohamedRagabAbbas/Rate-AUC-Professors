@@ -19,8 +19,8 @@ export default function PersonalProfile() {
       // Scott Something
       const id = '1dba6f65-3475-41e4-ac8c-9a015dcf9e0c';
       // Testing
-      const response = await fetch(`http://localhost:5243/api/Authentication/get-by-id/${id}`);
-      //const response = await fetch(`http://localhost:5243/api/Authentication/get-by-id`);
+      const response = await fetch(`http://localhost:5243/api/Authentication/get-by-id/${user.id}`);
+      //const response = await fetch(`http://localhost:5243/api/Authentication/get-by-id/${id}`);
 
       if (!response.ok) {
         throw new Error('Failed to fetch user data');
@@ -81,7 +81,8 @@ export default function PersonalProfile() {
       // Fetch the existing user data for Scott Something 
       const id = '1dba6f65-3475-41e4-ac8c-9a015dcf9e0c';
 
-      const response = await fetch(`http://localhost:5243/api/Authentication/get-by-id/${id}`);
+      //const response = await fetch(`http://localhost:5243/api/Authentication/get-by-id/${id}`);
+      const response = await fetch(`http://localhost:5243/api/Authentication/get-by-id/${user.id}`);
       if (!response.ok) {
         throw new Error('Failed to fetch user data for update');
       }
@@ -89,8 +90,7 @@ export default function PersonalProfile() {
       const responseData = await response.json();
       const existingUserData = responseData.data;
   
-      // Create a new user object with the updated standing and major fields,
-      // while preserving the rest of the existing user data
+
       const updatedUserData = {
         ...existingUserData,
         standing: editedUser.classStanding, // Update standing
@@ -100,7 +100,7 @@ export default function PersonalProfile() {
       };
   
       // Send the updated user data to the backend for update
-      const updateResponse = await fetch(`http://localhost:5243/api/Authentication/update/${id}`, {
+      const updateResponse = await fetch(`http://localhost:5243/api/Authentication/update/${user.id}`, {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json',
@@ -113,7 +113,7 @@ export default function PersonalProfile() {
       }
       
       setIsEditing(false);
-      fetchData(); // Fetch updated user data
+      fetchData();
     } catch (error) {
       console.error('Error updating user information:', error);
     }
