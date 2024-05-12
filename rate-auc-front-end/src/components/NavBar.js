@@ -13,6 +13,9 @@ import Tooltip from "@mui/material/Tooltip";
 import MenuItem from "@mui/material/MenuItem";
 import AdbIcon from "@mui/icons-material/Adb";
 import { useNavigate } from "react-router-dom";
+
+import { Link } from "react-router-dom"; // Import Link
+
 import "../index.css";
 
 const pages = ["Feed", "Professors", "Departments", "Courses", "About Us"]; // Add "Departments" to the pages array
@@ -37,6 +40,8 @@ function ResponsiveAppBar({ onPageChange }) {
     setAnchorElUser(null);
   };
   const navigate = useNavigate();
+
+
 
   return (
     <>
@@ -194,10 +199,20 @@ function ResponsiveAppBar({ onPageChange }) {
                 open={Boolean(anchorElUser)}
                 onClose={handleCloseUserMenu}
               >
-                {settings.map((setting) => (
+                {/* {settings.map((setting) => (
                   <MenuItem key={setting} onClick={handleCloseUserMenu}>
-                    <Typography textAlign="center">{setting}</Typography>
+                    <Typography textAlign="center">{setting}</Typography> */}
+
+                {settings.map((setting) => (
+                  <MenuItem key={setting} onClick={() => {
+                    handleCloseUserMenu();
+                    if (setting === "Profile") {
+                      navigate("/profile");
+                    }
+                  }}>
+                <Typography textAlign="center">{setting}</Typography>
                   </MenuItem>
+                  
                 ))}
               </Menu>
             </Box>
