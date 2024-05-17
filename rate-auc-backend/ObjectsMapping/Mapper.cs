@@ -294,6 +294,8 @@ namespace RateAucProfessors.ObjectsMapping
                 Name = dto.Name,
                 Email = dto.Email,
                 Bio = dto.Bio,
+                Position = dto.Position,
+                Image = dto.Image,
                 DepartmentId = dto.DepartmentId
             };
         }

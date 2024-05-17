@@ -9,5 +9,7 @@ namespace RateAucProfessors.DTO.Requests
         public string Email { get; set; } = string.Empty;
         public string Bio { get; set; } = string.Empty;
         public int DepartmentId { get; set; }
+        public string? Image { get; set; } = string.Empty;
+        public string? Position { get; set; } = string.Empty;
     }
 }
