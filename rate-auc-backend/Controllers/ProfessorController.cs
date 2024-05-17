@@ -41,6 +41,24 @@ namespace RateAucProfessors.Controllers
             await _unitOfWork.SaveAsync();
             return Ok(result);
         }
+        [HttpPost]
+        [Route("add-multiple-with-departmentName")]
+        public async Task<IActionResult> AddMultipleWithdepartmentName(List<ProfessorSeeding> professorSeedings)
+        {
+            List<Professor> professors = new List<Professor>();
+            foreach (var professorSeeding in professorSeedings)
+            {
+                var department = await _unitOfWork.Department.GetFirstAsync(d => d.Name == professorSeeding.departmentName);
+                if(department is not null && department.Data is not null)
+                {
+                    Professor professor = _mapper.MapToProfessorDataSeeding(professorSeeding, department.Data.Id);
+                    professors.Add(professor);
+                }
+            }
+            await _unitOfWork.Professor.AddRange(professors);
+            var result = await _unitOfWork.SaveAsync();
+            return Ok(result != 0 ? "Professors are added successfuly.." : "Error while adding professors...");
+        }
         [HttpPut]
         [Route("update")]
         public IActionResult Update(ProfessorInfo professorInfo)
@@ -55,6 +73,14 @@ namespace RateAucProfessors.Controllers
         public async Task<IActionResult> Delete(int id)
         {
             var result = await _unitOfWork.Professor.Delete(id);
+            await _unitOfWork.SaveAsync();
+            return Ok(result);
+        }
+        [HttpDelete]
+        [Route("delete-all")]
+        public async Task<IActionResult> DeleteAll()
+        {
+            var result = await _unitOfWork.Professor.DeleteAllAsync();
             await _unitOfWork.SaveAsync();
             return Ok(result);
         }

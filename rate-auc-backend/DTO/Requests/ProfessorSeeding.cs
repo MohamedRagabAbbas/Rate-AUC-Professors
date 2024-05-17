@@ -1,15 +1,12 @@
-﻿using RateAucProfessors.Models;
-using System.ComponentModel.DataAnnotations;
-
 namespace RateAucProfessors.DTO.Requests
 {
-    public class ProfessorInfo
+    public class ProfessorSeeding
     {
         public string Name { get; set; } = string.Empty;
         public string? Email { get; set; } = string.Empty;
         public string? Bio { get; set; } = string.Empty;
-        public int DepartmentId { get; set; }
         public string? Image { get; set; } = string.Empty;
         public string? Position { get; set; } = string.Empty;
+        public string departmentName { get; set; } = string.Empty;
     }
 }

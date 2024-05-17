@@ -250,3 +250,5 @@ C:\Users\noure\Desktop\AUC\Spring 2024\SWE\Project\rate_auc\Rate-AUC-Professors\
 C:\Users\noure\Desktop\AUC\Spring 2024\SWE\Project\rate_auc\Rate-AUC-Professors\rate-auc-backend\obj\Release\net7.0\RateAucProfessors.pdb
 C:\Users\noure\Desktop\AUC\Spring 2024\SWE\Project\rate_auc\Rate-AUC-Professors\rate-auc-backend\obj\Release\net7.0\RateAucProfessors.genruntimeconfig.cache
 C:\Users\noure\Desktop\AUC\Spring 2024\SWE\Project\rate_auc\Rate-AUC-Professors\rate-auc-backend\obj\Release\net7.0\ref\RateAucProfessors.dll
+C:\Users\noure\Desktop\AUC\Spring 2024\SWE\Project\rate_auc\Rate-AUC-Professors\rate-auc-backend\bin\Release\net7.0\scraping\faculty_profiles.json
+C:\Users\noure\Desktop\AUC\Spring 2024\SWE\Project\rate_auc\Rate-AUC-Professors\rate-auc-backend\bin\Release\net7.0\scraping\updated_faculty_profiles.json

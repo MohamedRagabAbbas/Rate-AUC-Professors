@@ -115,7 +115,18 @@ namespace RateAucProfessors.ObjectsMapping
                 DepartmentId = departmentId
             };
         }
-
+        public Professor MapToProfessorDataSeeding(ProfessorSeeding dto,int departmentId)
+        {
+            return new Professor
+            {
+                Name = dto.Name,
+                Email = dto.Email,
+                Bio = dto.Bio,
+                Image = dto.Image,
+                Position = dto.Position,
+                DepartmentId = departmentId
+            };
+        }
         // Mapping functions for Department
         public Department MapToDepartment(DepartmentInfo dto)
         {
