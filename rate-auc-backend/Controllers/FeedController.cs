@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Cors;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using RateAucProfessors.DTO.Requests;
@@ -9,7 +10,9 @@ using RateAucProfessors.ObjectsMapping;
 namespace RateAucProfessors.Controllers
 {
     [Route("api/[controller]")]
-    [EnableCors("AllowLocalhost")]
+    // allow only authorized users to access the feed controller
+    [Authorize]
+    
     [ApiController]
     public class FeedController : ControllerBase
     {
