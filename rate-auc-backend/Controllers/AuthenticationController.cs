@@ -33,13 +33,8 @@ namespace RateAucProfessors.Controllers
         [Route("get-by-id/{id}")]  
         public async Task<IActionResult> GetById(string id)
         {
-            var userId = User.FindFirstValue(JwtRegisteredClaimNames.Sub);
-            if (userId is not null)
-            {
-                var student = await _unitOfWork.Student.GetByIdAsync(id);
-                return Ok(student);
-            }
-            return BadRequest("User not found");
+            var student = await _unitOfWork.Student.GetByIdAsync(id);
+            return Ok(student);
         }
         [HttpGet]
         [Authorize]
