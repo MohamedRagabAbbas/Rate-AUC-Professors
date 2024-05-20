@@ -44,7 +44,8 @@ namespace RateAucProfessors.Controllers
         [Route("add")]
         public async Task<IActionResult> Add(FeedInfo feedInfo)
         {
-            var userId = User.FindFirstValue(JwtRegisteredClaimNames.Sub);
+            var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+           // var userId = User.FindFirstValue(JwtRegisteredClaimNames.Sub);
             if (userId is not null)
             {
                 Feed feed = _mapper.MapToFeed(feedInfo, userId);
@@ -58,7 +59,7 @@ namespace RateAucProfessors.Controllers
         [Route("update")]
         public IActionResult Update(FeedInfo feedInfo)
         {
-            var userId = User.FindFirstValue(JwtRegisteredClaimNames.Sub);
+            var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
             if (userId is not null)
             {
                 Feed feed = _mapper.MapToFeed(feedInfo, userId);

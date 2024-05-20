@@ -54,7 +54,7 @@ namespace RateAucProfessors.Controllers
         [Route("add")]
         public async Task<IActionResult> Add(ReviewInfo reviewInfo)
         {
-            var userId = User.FindFirstValue(JwtRegisteredClaimNames.Sub);
+            var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
             if (userId is not null)
             {
                 Review review = _mapper.MapToReview(reviewInfo, userId);
@@ -68,7 +68,7 @@ namespace RateAucProfessors.Controllers
         [Route("update")]
         public IActionResult Update(ReviewInfo reviewInfo)
         {
-            var userId = User.FindFirstValue(JwtRegisteredClaimNames.Sub);
+            var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
             if (userId is not null)
             {
                 Review review = _mapper.MapToReview(reviewInfo, userId);
