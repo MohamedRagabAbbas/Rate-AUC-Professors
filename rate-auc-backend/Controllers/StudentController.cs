@@ -59,7 +59,7 @@ namespace RateAucProfessors.Controllers
         [Route("delete")]
         public async Task<IActionResult> Delete()
         {
-            var userId = User.FindFirstValue(JwtRegisteredClaimNames.Sub);
+            var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
             if (userId is not null)
             {
                 var result = await _unitOfWork.Student.Delete(userId);

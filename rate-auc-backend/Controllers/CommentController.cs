@@ -49,8 +49,8 @@ namespace RateAucProfessors.Controllers
         [Route("add")]
         public async Task<IActionResult> Add(CommentInfo commentInfo)
         {
-            var userId = User.FindFirstValue(JwtRegisteredClaimNames.Sub);
-            if(userId is not null)
+            var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+            if (userId is not null)
             {
                 Comment comment = _mapper.MapToComment(commentInfo, userId);
                 var result = await _unitOfWork.Comment.Add(comment);
@@ -64,7 +64,7 @@ namespace RateAucProfessors.Controllers
         [Route("update")]
         public IActionResult Update(CommentInfo commentInfo)
         {
-            var userId = User.FindFirstValue(JwtRegisteredClaimNames.Sub);
+            var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
             if (userId is not null)
             {
                 Comment comment = _mapper.MapToComment(commentInfo, userId);

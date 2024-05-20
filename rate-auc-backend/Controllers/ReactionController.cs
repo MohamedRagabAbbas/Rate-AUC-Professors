@@ -62,7 +62,7 @@ namespace RateAucProfessors.Controllers
         [Route("add")]
         public async Task<IActionResult> Add(ReactionInfo reactionInfo)
         {
-            var userId = User.FindFirstValue(JwtRegisteredClaimNames.Sub);
+            var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
             if (userId is not null)
             {
                 Reaction reaction = _mapper.MapToReaction(reactionInfo, userId);
@@ -76,7 +76,7 @@ namespace RateAucProfessors.Controllers
         [Route("update")]
         public IActionResult Update(ReactionInfo reactionInfo)
         {
-            var userId = User.FindFirstValue(JwtRegisteredClaimNames.Sub);
+            var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
             if (userId is not null)
             {
                 Reaction reaction = _mapper.MapToReaction(reactionInfo, userId);
