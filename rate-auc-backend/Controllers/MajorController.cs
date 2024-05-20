@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using RateAucProfessors.DTO.Requests;
 using RateAucProfessors.IRepository;
@@ -8,6 +9,7 @@ using RateAucProfessors.ObjectsMapping;
 namespace RateAucProfessors.Controllers
 {
     [Route("api/[controller]")]
+    [Authorize]
     [ApiController]
     public class MajorController : ControllerBase
     {
@@ -35,7 +37,6 @@ namespace RateAucProfessors.Controllers
             var major = await _unitOfWork.Major.GetByIdAsync(id);
             return Ok(major);
         }
-        
 
 
         [HttpPost]

@@ -76,16 +76,11 @@ namespace RateAucProfessors.Controllers
         }
         [HttpDelete]
         [Route("delete/{id}")]
-        public async Task<IActionResult> Delete()
+        public async Task<IActionResult> Delete(int id)
         {
-            var userId = User.FindFirstValue(JwtRegisteredClaimNames.Sub);
-            if (userId is not null)
-            {
-                var result = await _unitOfWork.Comment.Delete(userId);
-                await _unitOfWork.SaveAsync();
-                return Ok(result);
-            }
-            return BadRequest("User not found");
+            var result = await _unitOfWork.Comment.Delete(id);
+            await _unitOfWork.SaveAsync();
+            return Ok(result);
         }
     }
 }
