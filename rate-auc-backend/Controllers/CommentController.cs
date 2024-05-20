@@ -1,13 +1,17 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using RateAucProfessors.DTO.Requests;
 using RateAucProfessors.IRepository;
 using RateAucProfessors.Models;
 using RateAucProfessors.ObjectsMapping;
+using System.IdentityModel.Tokens.Jwt;
+using System.Security.Claims;
 
 namespace RateAucProfessors.Controllers
 {
     [Route("api/[controller]")]
+    [Authorize]
     [ApiController]
     public class CommentController : ControllerBase
     {
@@ -43,21 +47,32 @@ namespace RateAucProfessors.Controllers
         }
         [HttpPost]
         [Route("add")]
-        public async Task<IActionResult> Add(CommentInfo commentInfo, string userName)
+        public async Task<IActionResult> Add(CommentInfo commentInfo)
         {
-            Comment comment = _mapper.MapToComment(commentInfo, userName);
-            var result = await _unitOfWork.Comment.Add(comment);
-            await _unitOfWork.SaveAsync();
-            return Ok(result);
+            var userId = User.FindFirstValue(JwtRegisteredClaimNames.Sub);
+            if(userId is not null)
+            {
+                Comment comment = _mapper.MapToComment(commentInfo, userId);
+                var result = await _unitOfWork.Comment.Add(comment);
+                await _unitOfWork.SaveAsync();
+                return Ok(result);
+            }
+            return BadRequest("User not found");
+            
         }
         [HttpPut]
         [Route("update")]
-        public IActionResult Update(CommentInfo commentInfo, string userId)
+        public IActionResult Update(CommentInfo commentInfo)
         {
-            Comment comment = _mapper.MapToComment(commentInfo, userId);
-            var result = _unitOfWork.Comment.Update(comment);
-            _unitOfWork.SaveAsync();
-            return Ok(result);
+            var userId = User.FindFirstValue(JwtRegisteredClaimNames.Sub);
+            if (userId is not null)
+            {
+                Comment comment = _mapper.MapToComment(commentInfo, userId);
+                var result = _unitOfWork.Comment.Update(comment);
+                _unitOfWork.SaveAsync();
+                return Ok(result);
+            }
+            return BadRequest("User not found");
         }
         [HttpDelete]
         [Route("delete/{id}")]

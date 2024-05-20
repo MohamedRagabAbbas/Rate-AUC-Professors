@@ -1,13 +1,17 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using RateAucProfessors.DTO.Requests;
 using RateAucProfessors.IRepository;
 using RateAucProfessors.Models;
 using RateAucProfessors.ObjectsMapping;
+using System.IdentityModel.Tokens.Jwt;
+using System.Security.Claims;
 
 namespace RateAucProfessors.Controllers
 {
     [Route("api/[controller]")]
+    [Authorize]
     [ApiController]
     public class StudentController : ControllerBase
     {
@@ -52,12 +56,17 @@ namespace RateAucProfessors.Controllers
             return Ok(result);
         }
         [HttpDelete]
-        [Route("delete/{id}")]
-        public async Task<IActionResult> Delete(int id)
+        [Route("delete")]
+        public async Task<IActionResult> Delete()
         {
-            var result = await _unitOfWork.Student.Delete(id);
-            await _unitOfWork.SaveAsync();
-            return Ok(result);
+            var userId = User.FindFirstValue(JwtRegisteredClaimNames.Sub);
+            if (userId is not null)
+            {
+                var result = await _unitOfWork.Student.Delete(userId);
+                await _unitOfWork.SaveAsync();
+                return Ok(result);
+            }
+            return BadRequest("User not found");
         }
     }
 }

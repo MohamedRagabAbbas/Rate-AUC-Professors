@@ -179,6 +179,23 @@ namespace RateAucProfessors.Repository
             }
             return new ResponseMessage<T>() { Message = "Cannot find this object" };
         }
+        public async Task<ResponseMessage<T>> Delete(string id)
+        {
+            var model = await _dbSet.FindAsync(id);
+            if (model is not null)
+            {
+                var obj = _dbSet.Remove(model);
+                if (obj is not null)
+                    return new ResponseMessage<T>()
+                    {
+                        Message = "This object is deleted Successfully...",
+                        Status = true,
+                        Data = obj as T
+                    };
+                return new ResponseMessage<T>() { Message = "Cannot delete this object" };
+            }
+            return new ResponseMessage<T>() { Message = "Cannot find this object" };
+        }
 
         public async Task<ResponseMessage<IEnumerable<T>>> DeleteRange(List<int> ids)
         {

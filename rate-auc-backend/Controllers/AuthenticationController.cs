@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using RateAucProfessors.DTO.Requests;
 using RateAucProfessors.DTO.Response;
@@ -6,6 +7,8 @@ using RateAucProfessors.IRepository;
 using RateAucProfessors.Models;
 using RateAucProfessors.ObjectsMapping;
 using RateAucProfessors.Repository;
+using System.IdentityModel.Tokens.Jwt;
+using System.Security.Claims;
 
 namespace RateAucProfessors.Controllers
 {
@@ -25,38 +28,50 @@ namespace RateAucProfessors.Controllers
             _mapper = mapper;
         }
         // get user(stduent) by userId
-        [HttpGet] 
+        [HttpGet]
+        [Authorize]
         [Route("get-by-id/{id}")]  
         public async Task<IActionResult> GetById(string id)
         {
-            var student = await _unitOfWork.Student.GetByIdAsync(id);
-            return Ok(student);
+            var userId = User.FindFirstValue(JwtRegisteredClaimNames.Sub);
+            if (userId is not null)
+            {
+                var student = await _unitOfWork.Student.GetByIdAsync(id);
+                return Ok(student);
+            }
+            return BadRequest("User not found");
         }
         [HttpGet]
-        [Route("get-majors-name-by-studentId/{studentId}")]
-        public async Task<IActionResult> GetMajorsIdByStudentId(string studentId)
+        [Authorize]
+        [Route("get-majors-name-by-studentId")]
+        public async Task<IActionResult> GetMajorsIdByStudentId()
         {
-            var response = await _authentication.GetMajorsByStudentId(studentId);
-            if(response.Data is null)
+            var userId = User.FindFirstValue(JwtRegisteredClaimNames.Sub);
+            if (userId is not null)
             {
-                return BadRequest(response);
-            }
-            List<int> Ids = response.Data;
-            List<string> Names = new List<string>();
-            foreach (var id in Ids)
-            {
-                var major = await _unitOfWork.Major.GetByIdAsync(id);
-                if(major.Data is null)
+                var response = await _authentication.GetMajorsByStudentId(userId);
+                if (response.Data is null)
                 {
                     return BadRequest(response);
                 }
-                Names.Add(major.Data.Name);
+                List<int> Ids = response.Data;
+                List<string> Names = new List<string>();
+                foreach (var id in Ids)
+                {
+                    var major = await _unitOfWork.Major.GetByIdAsync(id);
+                    if (major.Data is null)
+                    {
+                        return BadRequest(response);
+                    }
+                    Names.Add(major.Data.Name);
+                }
+                ResponseMessage<List<string>> response1 = new ResponseMessage<List<string>>()
+                {
+                    Data = Names
+                };
+                return Ok(response1);
             }
-            ResponseMessage<List<string>> response1 = new ResponseMessage<List<string>>()
-            {
-                Data = Names
-            };
-            return Ok(response1);
+            return BadRequest("User not found");
         }
 
         [HttpPost]
@@ -73,19 +88,32 @@ namespace RateAucProfessors.Controllers
             var result = await _authentication.SignUP(studentInfo);
             return Ok(result);
         }
+        [Authorize]
         [HttpPost]
-        [Route("assign-major-to-student/{studentId}/{majorId}")]
-        public async Task<IActionResult> AssignMajorToStudent(string studentId, int majorId)
+        [Route("assign-major-to-student/{majorId}")]
+        public async Task<IActionResult> AssignMajorToStudent(int majorId)
         {
-            var response = await _authentication.AssignMajorToStudent(studentId,majorId);
-            return Ok(response);
+            var userId = User.FindFirstValue(JwtRegisteredClaimNames.Sub);
+            if (userId is not null)
+            {
+                var response = await _authentication.AssignMajorToStudent(userId, majorId);
+                return Ok(response);
+            }
+            return BadRequest("User not found");
         }
         [HttpPut]
-        [Route("update/{userId}")]
-        public async Task<IActionResult> Update(StudentInfo studentInfo,string userId)
+        [Authorize]
+        [Route("update")]
+        public async Task<IActionResult> Update(StudentInfo studentInfo)
         {
-            var result = await _authentication.Update(studentInfo, userId);
-            return Ok(result);
+            var userId = User.FindFirstValue(JwtRegisteredClaimNames.Sub);
+            if (userId is not null)
+            {
+                var result = await _authentication.Update(studentInfo, userId);
+                return Ok(result);
+            }
+            return BadRequest("User not found");
+
         }
     }
 }
