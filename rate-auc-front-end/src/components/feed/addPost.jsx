@@ -7,29 +7,35 @@ export default function AddPost({ posts, updatePosts }) {
   // console.log("posts", posts);
   const [postText, setPostText] = useState("");
   const handleNewPost = async () => {
+    const YOUR_TOKEN = localStorage.getItem("authToken");
+    // console.log(YOUR_TOKEN);
     try {
-      const response = await fetch(
-        `http://localhost:5243/api/Feed/add?userId=2b6136fe-6763-4e16-b9f9-589334ab248c`,
-        {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify({
-            content: postText,
-          }),
-        }
-      );
+      const response = await fetch(`http://localhost:5243/api/Feed/add`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: `Bearer ${YOUR_TOKEN}`,
+        },
+        body: JSON.stringify({
+          content: postText,
+        }),
+      });
 
       if (response.ok) {
         console.log("Post added successfully");
+        console.log("response::::", response);
         let newPost = await response.json();
         newPost = newPost.data;
         // console.log("newPost", newPost);
 
         const userId = newPost.userId;
         const userResponse = await fetch(
-          `http://localhost:5243/api/Authentication/get-by-id/${userId}`
+          `http://localhost:5243/api/Authentication/get-by-id/${userId}`,
+          {
+            headers: {
+              Authorization: `Bearer ${YOUR_TOKEN}`,
+            },
+          }
         );
         const userData = await userResponse.json();
         newPost.userName = userData.data.email;

@@ -40,20 +40,19 @@ export default function Comment({ comment }) {
     setReplyText(event.target.value);
   };
   const handleReplySubmit = async () => {
+    const YOUR_TOKEN = localStorage.getItem("authToken");
     try {
-      const response = await fetch(
-        `http://localhost:5243/api/Reply/add?userId=1dba6f65-3475-41e4-ac8c-9a015dcf9e0c`,
-        {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify({
-            content: replyText,
-            commentId: comment.id,
-          }),
-        }
-      );
+      const response = await fetch(`http://localhost:5243/api/Reply/add`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: `Bearer ${YOUR_TOKEN}`,
+        },
+        body: JSON.stringify({
+          content: replyText,
+          commentId: comment.id,
+        }),
+      });
 
       if (response.ok) {
         console.log("Reply posted successfully");
@@ -62,7 +61,12 @@ export default function Comment({ comment }) {
 
         const userId = newReply.userId;
         const userResponse = await fetch(
-          `http://localhost:5243/api/Authentication/get-by-id/${userId}`
+          `http://localhost:5243/api/Authentication/get-by-id/${userId}`,
+          {
+            headers: {
+              Authorization: `Bearer ${YOUR_TOKEN}`,
+            },
+          }
         );
         const userData = await userResponse.json();
         console.log("userData", userData.data);

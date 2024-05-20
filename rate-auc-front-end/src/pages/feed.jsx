@@ -96,11 +96,12 @@ export default function Feed() {
             `http://localhost:5243/api/Authentication/get-by-id/${post.userId}`,
             {
               headers: {
-                Authorization: `Bearer ${YOUR_TOKEN}}`,
+                Authorization: `Bearer ${YOUR_TOKEN}`,
               },
             }
           );
           const authorData = await authorResponse.json();
+          // console.log("user: ", authorData);
           const userName = authorData.data.email;
           const postUserColor = authorData.data.color;
           // console.log("postUserColor", postUserColor);
@@ -110,7 +111,7 @@ export default function Feed() {
             `http://localhost:5243/api/Reaction/get-all-reactions-by-feedId/${post.id}`,
             {
               headers: {
-                Authorization: `Bearer ${YOUR_TOKEN}}`,
+                Authorization: `Bearer ${YOUR_TOKEN}`,
               },
             }
           );
@@ -132,7 +133,7 @@ export default function Feed() {
             `http://localhost:5243/api/Comment/get-all-comments-by-feedId/${post.id}`,
             {
               headers: {
-                Authorization: `Bearer ${YOUR_TOKEN}}`,
+                Authorization: `Bearer ${YOUR_TOKEN}`,
               },
             }
           );
@@ -147,7 +148,7 @@ export default function Feed() {
                 `http://localhost:5243/api/Authentication/get-by-id/${comment.userId}`,
                 {
                   headers: {
-                    Authorization: `Bearer ${YOUR_TOKEN}}`,
+                    Authorization: `Bearer ${YOUR_TOKEN}`,
                   },
                 }
               );
@@ -160,7 +161,7 @@ export default function Feed() {
                 `http://localhost:5243/api/Reaction/get-all-reactions-by-commentId/${comment.id}`,
                 {
                   headers: {
-                    Authorization: `Bearer ${YOUR_TOKEN}}`,
+                    Authorization: `Bearer ${YOUR_TOKEN}`,
                   },
                 }
               );
@@ -185,7 +186,7 @@ export default function Feed() {
                 `http://localhost:5243/api/Reply/get-all-replys-by-commentId/${comment.id}`,
                 {
                   headers: {
-                    Authorization: `Bearer ${YOUR_TOKEN}}`,
+                    Authorization: `Bearer ${YOUR_TOKEN}`,
                   },
                 }
               );
@@ -200,7 +201,7 @@ export default function Feed() {
                     `http://localhost:5243/api/Authentication/get-by-id/${reply.userId}`,
                     {
                       headers: {
-                        Authorization: `Bearer ${YOUR_TOKEN}}`,
+                        Authorization: `Bearer ${YOUR_TOKEN}`,
                       },
                     }
                   );
@@ -213,7 +214,7 @@ export default function Feed() {
                     `http://localhost:5243/api/Reaction/get-all-reactions-by-replyId/${reply.id}`,
                     {
                       headers: {
-                        Authorization: `Bearer ${YOUR_TOKEN}}`,
+                        Authorization: `Bearer ${YOUR_TOKEN}`,
                       },
                     }
                   );
