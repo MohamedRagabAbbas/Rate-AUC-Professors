@@ -65,12 +65,22 @@ export default function Feed() {
       comments: [],
     },
   ];
+  const currToken =
+    "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJmN2RmNWY3NS0xMmNhLTQ0MGUtYmYwYi1kNWY2MDZjYmQwMzkiLCJleHAiOjE3MTYxNTY3NjQsImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3Q6MzAwMCIsImF1ZCI6Imh0dHA6Ly9sb2NhbGhvc3Q6MzAwMCJ9.S9D-5q95LQ5eeht49WoUsPY5wOTQSGBoNt0tKa4SWzs";
 
+  // const YOUR_TOKEN =
+  //   "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJmN2RmNWY3NS0xMmNhLTQ0MGUtYmYwYi1kNWY2MDZjYmQwMzkiLCJleHAiOjE3MTYxOTEwODcsImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3Q6MzAwMCIsImF1ZCI6Imh0dHA6Ly9sb2NhbGhvc3Q6MzAwMCJ9.ZwwgXHUqA27xqle5jYkVnQ24V-TJtJYMw2_ch1xEkb0";
+  const YOUR_TOKEN = localStorage.getItem("authToken");
   const fetchData = async () => {
     try {
       // Fetch all posts
       const postsResponse = await fetch(
-        "http://localhost:5243/api/Feed/get-all"
+        "http://localhost:5243/api/Feed/get-all",
+        {
+          headers: {
+            Authorization: `Bearer ${YOUR_TOKEN}`,
+          },
+        }
       );
       if (!postsResponse.ok) {
         throw new Error("Failed to fetch posts data");
@@ -83,7 +93,12 @@ export default function Feed() {
         posts.map(async (post) => {
           // Fetch user name for the post author
           const authorResponse = await fetch(
-            `http://localhost:5243/api/Authentication/get-by-id/${post.userId}`
+            `http://localhost:5243/api/Authentication/get-by-id/${post.userId}`,
+            {
+              headers: {
+                Authorization: `Bearer ${YOUR_TOKEN}}`,
+              },
+            }
           );
           const authorData = await authorResponse.json();
           const userName = authorData.data.email;
@@ -92,7 +107,12 @@ export default function Feed() {
 
           // Fetch reactions for the post
           const reactionsResponse = await fetch(
-            `http://localhost:5243/api/Reaction/get-all-reactions-by-feedId/${post.id}`
+            `http://localhost:5243/api/Reaction/get-all-reactions-by-feedId/${post.id}`,
+            {
+              headers: {
+                Authorization: `Bearer ${YOUR_TOKEN}}`,
+              },
+            }
           );
           const reactionsData = await reactionsResponse.json();
           const postReactions = reactionsData.status ? reactionsData.data : [];
@@ -109,7 +129,12 @@ export default function Feed() {
 
           // Fetch comments for the post
           const commentsResponse = await fetch(
-            `http://localhost:5243/api/Comment/get-all-comments-by-feedId/${post.id}`
+            `http://localhost:5243/api/Comment/get-all-comments-by-feedId/${post.id}`,
+            {
+              headers: {
+                Authorization: `Bearer ${YOUR_TOKEN}}`,
+              },
+            }
           );
           const commentsData = await commentsResponse.json();
           let comments = commentsData.data;
@@ -119,7 +144,12 @@ export default function Feed() {
             comments.map(async (comment) => {
               // Fetch user name for the comment author
               const commentAuthorResponse = await fetch(
-                `http://localhost:5243/api/Authentication/get-by-id/${comment.userId}`
+                `http://localhost:5243/api/Authentication/get-by-id/${comment.userId}`,
+                {
+                  headers: {
+                    Authorization: `Bearer ${YOUR_TOKEN}}`,
+                  },
+                }
               );
               const commentAuthorData = await commentAuthorResponse.json();
               const commentuserName = commentAuthorData.data.email;
@@ -127,7 +157,12 @@ export default function Feed() {
               // console.log("commentUserColor", commentUserColor);
               // Fetch reactions for the comment
               const commentReactionsResponse = await fetch(
-                `http://localhost:5243/api/Reaction/get-all-reactions-by-commentId/${comment.id}`
+                `http://localhost:5243/api/Reaction/get-all-reactions-by-commentId/${comment.id}`,
+                {
+                  headers: {
+                    Authorization: `Bearer ${YOUR_TOKEN}}`,
+                  },
+                }
               );
               const commentReactionsData =
                 await commentReactionsResponse.json();
@@ -147,7 +182,12 @@ export default function Feed() {
 
               // Fetch replies for the comment
               const repliesResponse = await fetch(
-                `http://localhost:5243/api/Reply/get-all-replys-by-commentId/${comment.id}`
+                `http://localhost:5243/api/Reply/get-all-replys-by-commentId/${comment.id}`,
+                {
+                  headers: {
+                    Authorization: `Bearer ${YOUR_TOKEN}}`,
+                  },
+                }
               );
               const repliesData = await repliesResponse.json();
               let replies = repliesData.data;
@@ -157,7 +197,12 @@ export default function Feed() {
                 replies.map(async (reply) => {
                   // Fetch user name for the reply author
                   const replyAuthorResponse = await fetch(
-                    `http://localhost:5243/api/Authentication/get-by-id/${reply.userId}`
+                    `http://localhost:5243/api/Authentication/get-by-id/${reply.userId}`,
+                    {
+                      headers: {
+                        Authorization: `Bearer ${YOUR_TOKEN}}`,
+                      },
+                    }
                   );
                   const replyAuthorData = await replyAuthorResponse.json();
                   const replyuserName = replyAuthorData.data.email;
@@ -165,7 +210,12 @@ export default function Feed() {
 
                   // Fetch reactions for the reply
                   const replyReactionsResponse = await fetch(
-                    `http://localhost:5243/api/Reaction/get-all-reactions-by-replyId/${reply.id}`
+                    `http://localhost:5243/api/Reaction/get-all-reactions-by-replyId/${reply.id}`,
+                    {
+                      headers: {
+                        Authorization: `Bearer ${YOUR_TOKEN}}`,
+                      },
+                    }
                   );
                   const replyReactionsData =
                     await replyReactionsResponse.json();
@@ -226,29 +276,7 @@ export default function Feed() {
     }
   };
 
-  // useEffect(() => {
-  //   // console.log("updated posts:", updatedPosts);
-  // }, [updatedPosts]);
-
   useEffect(() => {
-    // let userColors = {};
-    // posts.forEach((post) => {
-    //   if (!userColors[post.userId]) {
-    //     userColors[post.userId] = getRandomColor();
-    //   }
-    //   post.comments.forEach((comment) => {
-    //     if (!userColors[comment.userId]) {
-    //       userColors[comment.userId] = getRandomColor();
-    //     }
-    //     comment.replies.forEach((reply) => {
-    //       if (!userColors[reply.userId]) {
-    //         userColors[reply.userId] = getRandomColor();
-    //       }
-    //     });
-    //   });
-    // });
-    // setUserColors(userColors);
-
     fetchData();
   }, []);
 
