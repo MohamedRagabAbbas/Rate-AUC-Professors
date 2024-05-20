@@ -1,13 +1,17 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using RateAucProfessors.DTO.Requests;
 using RateAucProfessors.IRepository;
 using RateAucProfessors.Models;
 using RateAucProfessors.ObjectsMapping;
+using System.IdentityModel.Tokens.Jwt;
+using System.Security.Claims;
 
 namespace RateAucProfessors.Controllers
 {
     [Route("api/[controller]")]
+    [Authorize]
     [ApiController]
     public class ReplyController : ControllerBase
     {
@@ -43,21 +47,31 @@ namespace RateAucProfessors.Controllers
         }
         [HttpPost]
         [Route("add")]
-        public async Task<IActionResult> Add(ReplyInfo replyInfo, string userId)
+        public async Task<IActionResult> Add(ReplyInfo replyInfo)
         {
-            Reply reply = _mapper.MapToReply(replyInfo, userId);
-            var result = await _unitOfWork.Reply.Add(reply);
-            await _unitOfWork.SaveAsync();
-            return Ok(result);
+            var userId = User.FindFirstValue(JwtRegisteredClaimNames.Sub);
+            if (userId is not null)
+            {
+                Reply reply = _mapper.MapToReply(replyInfo, userId);
+                var result = await _unitOfWork.Reply.Add(reply);
+                await _unitOfWork.SaveAsync();
+                return Ok(result);
+            }
+            return BadRequest("User not found");
         }
         [HttpPut]
         [Route("update")]
-        public IActionResult Update(ReplyInfo replyInfo, string userId)
+        public IActionResult Update(ReplyInfo replyInfo)
         {
-            Reply reply = _mapper.MapToReply(replyInfo, userId);
-            var result = _unitOfWork.Reply.Update(reply);
-            _unitOfWork.SaveAsync();
-            return Ok(result);
+            var userId = User.FindFirstValue(JwtRegisteredClaimNames.Sub);
+            if (userId is not null)
+            {
+                Reply reply = _mapper.MapToReply(replyInfo, userId);
+                var result = _unitOfWork.Reply.Update(reply);
+                _unitOfWork.SaveAsync();
+                return Ok(result);
+            }
+            return BadRequest("User not found");
         }
         [HttpDelete]
         [Route("delete/{id}")]

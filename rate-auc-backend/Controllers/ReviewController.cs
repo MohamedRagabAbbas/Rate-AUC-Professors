@@ -1,13 +1,17 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using RateAucProfessors.DTO.Requests;
 using RateAucProfessors.IRepository;
 using RateAucProfessors.Models;
 using RateAucProfessors.ObjectsMapping;
+using System.IdentityModel.Tokens.Jwt;
+using System.Security.Claims;
 
 namespace RateAucProfessors.Controllers
 {
     [Route("api/[controller]")]
+    [Authorize]
     [ApiController]
     public class ReviewController : ControllerBase
     {
@@ -48,21 +52,31 @@ namespace RateAucProfessors.Controllers
         }
         [HttpPost]
         [Route("add")]
-        public async Task<IActionResult> Add(ReviewInfo reviewInfo, string userId)
+        public async Task<IActionResult> Add(ReviewInfo reviewInfo)
         {
-            Review review = _mapper.MapToReview(reviewInfo, userId);
-            var result = await _unitOfWork.Review.Add(review);
-            await _unitOfWork.SaveAsync();
-            return Ok(result);
+            var userId = User.FindFirstValue(JwtRegisteredClaimNames.Sub);
+            if (userId is not null)
+            {
+                Review review = _mapper.MapToReview(reviewInfo, userId);
+                var result = await _unitOfWork.Review.Add(review);
+                await _unitOfWork.SaveAsync();
+                return Ok(result);
+            }
+            return BadRequest("User not found");
         }
         [HttpPut]
         [Route("update")]
-        public IActionResult Update(ReviewInfo reviewInfo, string userId)
+        public IActionResult Update(ReviewInfo reviewInfo)
         {
-            Review review = _mapper.MapToReview(reviewInfo, userId);
-            var result = _unitOfWork.Review.Update(review);
-            _unitOfWork.SaveAsync();
-            return Ok(result);
+            var userId = User.FindFirstValue(JwtRegisteredClaimNames.Sub);
+            if (userId is not null)
+            {
+                Review review = _mapper.MapToReview(reviewInfo, userId);
+                var result = _unitOfWork.Review.Update(review);
+                _unitOfWork.SaveAsync();
+                return Ok(result);
+            }
+            return BadRequest("User not found");
         }
         [HttpDelete]
         [Route("delete/{id}")]
