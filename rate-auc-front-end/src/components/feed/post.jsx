@@ -35,20 +35,19 @@ export default function Post({ post }) {
   };
 
   const handlePostComment = async () => {
+    const YOUR_TOKEN = localStorage.getItem("authToken");
     try {
-      const response = await fetch(
-        `http://localhost:5243/api/Comment/add?userName=c5825d88-af41-4157-ad97-18353455d806`,
-        {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify({
-            content: commentText,
-            feedId: post.id,
-          }),
-        }
-      );
+      const response = await fetch(`http://localhost:5243/api/Comment/add`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: `Bearer ${YOUR_TOKEN}`,
+        },
+        body: JSON.stringify({
+          content: commentText,
+          feedId: post.id,
+        }),
+      });
 
       if (response.ok) {
         // console.log("response::::", response);
@@ -58,7 +57,12 @@ export default function Post({ post }) {
 
         const userId = newComment.userId;
         const userResponse = await fetch(
-          `http://localhost:5243/api/Authentication/get-by-id/${userId}`
+          `http://localhost:5243/api/Authentication/get-by-id/${userId}`,
+          {
+            headers: {
+              Authorization: `Bearer ${YOUR_TOKEN}`,
+            },
+          }
         );
         const userData = await userResponse.json();
         console.log("userData", userData.data);

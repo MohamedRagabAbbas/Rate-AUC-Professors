@@ -24,6 +24,7 @@ const settings = ["Profile", "Logout"];
 function ResponsiveAppBar({ onPageChange }) {
   const [anchorElNav, setAnchorElNav] = useState(null);
   const [anchorElUser, setAnchorElUser] = useState(null);
+  const [firstLetter, setFirstLetter] = useState("");
 
   const handleOpenNavMenu = (event) => {
     setAnchorElNav(event.currentTarget);
@@ -41,7 +42,29 @@ function ResponsiveAppBar({ onPageChange }) {
   };
   const navigate = useNavigate();
 
+  // async function getUserName() {
+  //   const YOUR_TOKEN = localStorage.getItem("authToken");
+  //   try {
+  //     const response = await fetch(
+  //       `http://localhost:5243/api/Authentication/user`,
+  //       {
+  //         method: "GET",
+  //         headers: {
+  //           "Content-Type": "application/json",
+  //           Authorization: `Bearer ${YOUR_TOKEN}`,
+  //         },
+  //       }
+  //     );
 
+  //     if (response.ok) {
+  //       let user = await response.json();
+  //       user = user.data;
+  //       return user.username;
+  //     }
+  //   } catch (error) {
+  //     console.error("Error fetching user name: ", error);
+  //   }
+  // }
 
   return (
     <>
@@ -176,11 +199,9 @@ function ResponsiveAppBar({ onPageChange }) {
             <Box sx={{ flexGrow: 0 }}>
               <Tooltip title="Open settings">
                 <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
-                  <Avatar
-                    sx={{ backgroundColor: "#cd7bb0" }}
-                    alt="Remy Sharp"
-                    src="/static/images/avatar/2.jpg"
-                  />
+                  <Avatar sx={{ backgroundColor: "#cd7bb0" }}>
+                    {firstLetter}
+                  </Avatar>
                 </IconButton>
               </Tooltip>
               <Menu
@@ -204,15 +225,17 @@ function ResponsiveAppBar({ onPageChange }) {
                     <Typography textAlign="center">{setting}</Typography> */}
 
                 {settings.map((setting) => (
-                  <MenuItem key={setting} onClick={() => {
-                    handleCloseUserMenu();
-                    if (setting === "Profile") {
-                      navigate("/profile");
-                    }
-                  }}>
-                <Typography textAlign="center">{setting}</Typography>
+                  <MenuItem
+                    key={setting}
+                    onClick={() => {
+                      handleCloseUserMenu();
+                      if (setting === "Profile") {
+                        navigate("/profile");
+                      }
+                    }}
+                  >
+                    <Typography textAlign="center">{setting}</Typography>
                   </MenuItem>
-                  
                 ))}
               </Menu>
             </Box>
