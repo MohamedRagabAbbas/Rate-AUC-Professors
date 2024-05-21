@@ -9,7 +9,7 @@ using RateAucProfessors.ObjectsMapping;
 namespace RateAucProfessors.Controllers
 {
     [Route("api/[controller]")]
-    [Authorize]
+    //[Authorize]
     [ApiController]
     public class CourseController : ControllerBase
     {
