@@ -7,6 +7,7 @@ Welcome to the Rate AUC Professors project repository. This project aims to prov
 [![Forks][forks-shield]][forks-url]
 [![Stargazers][stars-shield]][stars-url]
 [![Issues][issues-shield]][issues-url]
+[![License][license-shield]][license-url]
 
 
 ## Table of Contents
@@ -126,4 +127,5 @@ This project is licensed under the MIT License. See the **LICENSE** file for mor
 [issues-url]: https://github.com/MohamedRagabAbbas/Rate-AUC-Professors/issues
 [license-shield]: https://img.shields.io/github/license/MohamedRagabAbbas/Rate-AUC-Professors.svg?style=for-the-badge
 [license-url]: https://github.com/MohamedRagabAbbas/Rate-AUC-Professors/blob/main/LICENSE
+
 
