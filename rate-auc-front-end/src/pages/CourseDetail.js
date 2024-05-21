@@ -1,61 +1,99 @@
-import React from 'react';
+import React, { useState, useEffect, useMemo } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
-import { Typography, Button, Grid, Paper, Container } from '@mui/material';
-import professors from './professorDetail.json';
-import './CourseDetail.css'; // Ensure CSS is tailored to handle grid and paper styling
+import { TextField, CircularProgress } from '@mui/material';
 import NavBar from "../components/NavBar";
+import '../components/departments.css';
 
 function CourseDetail() {
-    const { courseName } = useParams(); // This gets the course name from the URL
+    const { courseId } = useParams();
     const navigate = useNavigate();
+    const [courseDetails, setCourseDetails] = useState(null);
+    const [professors, setProfessors] = useState([]);
+    const [searchTerm, setSearchTerm] = useState('');
+    const [loading, setLoading] = useState(true);
+    const [error, setError] = useState(null);
 
-    const courseProfessors = professors.filter(prof => prof.Courses && prof.Courses.includes(courseName));
+    useEffect(() => {
+        const fetchData = async () => {
+            try {
+                setLoading(true);
+                const [courseResponse, professorResponse] = await Promise.all([
+                    fetch(`http://localhost:5243/api/Course/get-all/`),
+                    fetch(`http://localhost:5243/api/Professor/get-all/`)
+                ]);
 
-    const handleProfessorClick = (profId) => {
-        navigate(`/professors/${profId}`);
+                if (!courseResponse.ok || !professorResponse.ok) {
+                    throw new Error('Failed to fetch data from server');
+                }
+
+                const courseData = await courseResponse.json();
+                const professorData = await professorResponse.json();
+
+                if (courseData.status && courseData.data) {
+                    const foundCourse = courseData.data.find(course => course.id.toString() === courseId);
+                    if (!foundCourse) {
+                        throw new Error('Course not found');
+                    }
+                    setCourseDetails(foundCourse);
+
+                    const departmentProfessors = professorData.data.filter(professor => professor.departmentId === foundCourse.departmentId);
+                    setProfessors(departmentProfessors);
+                } else {
+                    throw new Error('Failed to load course details');
+                }
+            } catch (error) {
+                console.error('Error fetching course and professor details:', error);
+                setError(error.message);
+            } finally {
+                setLoading(false);
+            }
+        };
+        fetchData();
+    }, [courseId]);
+
+    const handleProfessorClick = (professorId) => {
+        navigate(`/professors/${professorId}`);
     };
 
+    if (loading) return <CircularProgress />;
+    if (error) return <div>Error: {error}</div>;
+    if (!courseDetails) return <div>No course details available.</div>;
+
     return (
-	<>
-	<NavBar/>
-        <div className="departments-list-container">
-            <Container maxWidth="lg">
-                <Paper elevation={3} style={{ padding: '20px', marginBottom: '20px' }}>
-                    {/* Replace "General Courses" with dynamic course name */}
-                    <Typography variant="h3" component="h1" className="centered-title" gutterBottom>
-                    <h1> {courseName} </h1>
-                    </Typography>
-                    <Typography variant="h6" gutterBottom>
-                    <header>Course Objectives</header>
-                    </Typography>
-                    <Typography variant="body1" paragraph>
-                        Detail the objectives of the course here...
-                    </Typography>
-                    <Typography variant="h6" gutterBottom>
-                    <header>Prerequisites</header>
-                    </Typography>
-                    <Typography variant="body1" paragraph>
-                        List prerequisites here...
-                    </Typography>
-                </Paper>
-                <Grid container spacing={2}>
-                    {courseProfessors.map((prof, index) => (
-                        <Grid item xs={6} sm={4} md={3} lg={2} key={index}>
-                            <Button
-                                className="button-size"
-                                variant="contained"
-                                color="primary"
-                                fullWidth
-                                onClick={() => handleProfessorClick(prof.id)}
-                            >
-                                {prof.Name.toUpperCase()}
-                            </Button>
-                        </Grid>
-                    ))}
-                </Grid>
-            </Container>
-        </div>
-		</>
+        <>
+            <NavBar />
+            <div className="departments-list-container">
+                <h1>Course Details</h1>
+                <div className="cards-container">
+                    <div className="card">
+                        <div className="card-content">
+                            <h2>{courseDetails.name.trim()}</h2>
+                            <p><strong>Description:</strong> {courseDetails.description}</p>
+                            <p><strong>Course Code:</strong> {courseDetails.code}</p>
+                            <p><strong>Credit Hours:</strong> {courseDetails.credit_Hours}</p>
+                            <p><strong>Department:</strong> {courseDetails.department?.name || 'Department information not available'}</p>
+                        </div>
+                    </div>
+                </div>
+                <h2>Professors</h2>
+                <div className="cards-container">
+                    {professors.length > 0 ? (
+                        professors.map((professor) => (
+                            <div className="card" key={professor.id}>
+                                <div className="card-content" onClick={() => handleProfessorClick(professor.id)}>
+                                    {professor.name}
+                                </div>
+                                <button onClick={() => handleProfessorClick(professor.id)}>
+                                    View Details
+                                </button>
+                            </div>
+                        ))
+                    ) : (
+                        <div>No professors found</div>
+                    )}
+                </div>
+            </div>
+        </>
     );
 }
 
