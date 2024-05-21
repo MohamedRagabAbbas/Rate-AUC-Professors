@@ -1,0 +1,76 @@
+.login-container {
+    font-family: 'SF Pro Display', Arial, sans-serif;
+    background-color: #ffffff; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+  }
+  
+  .login-form {
+    background-color: #E6E6FA; 
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 320px;
+  }
+  
+  h2 {
+    color: #000000; 
+    margin-bottom: 2rem;
+  }
+  
+  .input-group {
+    margin-bottom: 1rem;
+    border: 1px solid #000; 
+    border-radius: 4px;
+  }
+  
+  .input-group input {
+    width: calc(100% - 20px);
+    padding: 10px;
+    border: none;
+    outline: none;
+  }
+  
+  .input-remember {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+  }
+  
+  .input-remember input[type='checkbox'] {
+    margin-right: 10px; 
+  }
+  
+  .input-remember label {
+    margin-left: -10px; 
+  }
+  
+  .login-button {
+    background-color: #EF8CCB; 
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    margin-bottom: 0.5rem;
+    width: 100%;
+    cursor: pointer;
+  }
+  
+  
+  
+  
+  .sign-up-button {
+    background-color: #EF8CCB; 
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    margin-bottom: 0.5rem;
+    width: 100%;
+    cursor: pointer;
+  }

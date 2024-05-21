@@ -1,18 +1,27 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using RateAucProfessors.DTO.Requests;
 using RateAucProfessors.IRepository;
 using RateAucProfessors.Models;
+using RateAucProfessors.ObjectsMapping;
+using System.IdentityModel.Tokens.Jwt;
+using System.Security.Claims;
 
 namespace RateAucProfessors.Controllers
 {
     [Route("api/[controller]")]
+    [Authorize]
     [ApiController]
     public class StudentController : ControllerBase
     {
         private readonly IUnitOfWork _unitOfWork;
-        public StudentController(IUnitOfWork unitOfWork)
+
+        private readonly Mapper _mapper;
+        public StudentController(IUnitOfWork unitOfWork, Mapper mapper)
         {
             _unitOfWork = unitOfWork;
+            _mapper = mapper;
         }
         [HttpGet]
         [Route("get-all")]
@@ -30,24 +39,34 @@ namespace RateAucProfessors.Controllers
         }
         [HttpPost]
         [Route("add")]
-        public async Task<IActionResult> Add(Student student)
+        public async Task<IActionResult> Add(StudentInfo studentinfo)
         {
+            Student student = _mapper.MapToStudent(studentinfo);
             var result = await _unitOfWork.Student.Add(student);
+            await _unitOfWork.SaveAsync();
             return Ok(result);
         }
         [HttpPut]
         [Route("update")]
-        public IActionResult Update(Student student)
+        public IActionResult Update(StudentInfo studentinfo)
         {
+            Student student = _mapper.MapToStudent(studentinfo);
             var result = _unitOfWork.Student.Update(student);
+            _unitOfWork.SaveAsync();
             return Ok(result);
         }
         [HttpDelete]
-        [Route("delete/{id}")]
-        public async Task<IActionResult> Delete(int id)
+        [Route("delete")]
+        public async Task<IActionResult> Delete()
         {
-            var result = await _unitOfWork.Student.Delete(id);
-            return Ok(result);
+            var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+            if (userId is not null)
+            {
+                var result = await _unitOfWork.Student.Delete(userId);
+                await _unitOfWork.SaveAsync();
+                return Ok(result);
+            }
+            return BadRequest("User not found");
         }
     }
 }

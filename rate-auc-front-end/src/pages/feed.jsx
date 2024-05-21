@@ -1,29 +1,16 @@
 import React, { useState, useEffect } from "react";
-// import data from "../assets/feedPosts.json";
-import {
-  Typography,
-  Card,
-  Box,
-  CardHeader,
-  Avatar,
-  IconButton,
-  CardContent,
-  CardActions,
-} from "@mui/material";
-import ThumbUpIcon from "@mui/icons-material/ThumbUp";
-import CommentIcon from "@mui/icons-material/Comment";
-import ThumbDownIcon from "@mui/icons-material/ThumbDown";
-import TextField from "@mui/material/TextField";
+import { Box } from "@mui/material";
 import NavBar from "../components/NavBar";
-import "../index.css";
+import "../components/feed/feed.css";
+import Post from "../components/feed/post";
+import AddPost from "../components/feed/addPost";
 
 export default function Feed() {
   let colors = ["#6171BA", "#218B8B", "#EF8CCB", "#31B0CD", "#A083C9"];
-  const [userColors, setUserColors] = useState({});
   function getRandomColor() {
     return colors[Math.floor(Math.random() * colors.length)];
   }
-
+  const [updatedPosts, setUpdatedPosts] = useState([]);
   let posts = [
     {
       id: 1,
@@ -78,219 +65,221 @@ export default function Feed() {
       comments: [],
     },
   ];
+  const currToken =
+    "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJmN2RmNWY3NS0xMmNhLTQ0MGUtYmYwYi1kNWY2MDZjYmQwMzkiLCJleHAiOjE3MTYxNTY3NjQsImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3Q6MzAwMCIsImF1ZCI6Imh0dHA6Ly9sb2NhbGhvc3Q6MzAwMCJ9.S9D-5q95LQ5eeht49WoUsPY5wOTQSGBoNt0tKa4SWzs";
+
+  // const YOUR_TOKEN =
+  //   "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJmN2RmNWY3NS0xMmNhLTQ0MGUtYmYwYi1kNWY2MDZjYmQwMzkiLCJleHAiOjE3MTYxOTEwODcsImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3Q6MzAwMCIsImF1ZCI6Imh0dHA6Ly9sb2NhbGhvc3Q6MzAwMCJ9.ZwwgXHUqA27xqle5jYkVnQ24V-TJtJYMw2_ch1xEkb0";
+  const YOUR_TOKEN = localStorage.getItem("authToken");
+  const fetchData = async () => {
+    try {
+      // Fetch all posts
+      const postsResponse = await fetch(
+        "http://localhost:5243/api/Feed/get-all",
+        {
+          headers: {
+            Authorization: `Bearer ${YOUR_TOKEN}`,
+          },
+        }
+      );
+      if (!postsResponse.ok) {
+        throw new Error("Failed to fetch posts data");
+      }
+      const postsData = await postsResponse.json();
+      let posts = postsData.data;
+
+      // Fetch additional data for each post
+      const updatedPostsData = await Promise.all(
+        posts.map(async (post) => {
+          // Fetch user name for the post author
+          const authorResponse = await fetch(
+            `http://localhost:5243/api/Authentication/get-by-id/${post.userId}`,
+            {
+              headers: {
+                Authorization: `Bearer ${YOUR_TOKEN}`,
+              },
+            }
+          );
+          const authorData = await authorResponse.json();
+          // console.log("user: ", authorData);
+          const userName = authorData.data.email;
+          const postUserColor = authorData.data.color;
+          // console.log("postUserColor", postUserColor);
+
+          // Fetch reactions for the post
+          const reactionsResponse = await fetch(
+            `http://localhost:5243/api/Reaction/get-all-reactions-by-feedId/${post.id}`,
+            {
+              headers: {
+                Authorization: `Bearer ${YOUR_TOKEN}`,
+              },
+            }
+          );
+          const reactionsData = await reactionsResponse.json();
+          const postReactions = reactionsData.status ? reactionsData.data : [];
+          // Count number of likes and dislikes for the post
+          let postLikes = 0;
+          let postDislikes = 0;
+          postReactions.forEach((reaction) => {
+            if (reaction.isLike) {
+              postLikes++;
+            } else {
+              postDislikes++;
+            }
+          });
+
+          // Fetch comments for the post
+          const commentsResponse = await fetch(
+            `http://localhost:5243/api/Comment/get-all-comments-by-feedId/${post.id}`,
+            {
+              headers: {
+                Authorization: `Bearer ${YOUR_TOKEN}`,
+              },
+            }
+          );
+          const commentsData = await commentsResponse.json();
+          let comments = commentsData.data;
+
+          // Fetch additional data for each comment
+          const updatedComments = await Promise.all(
+            comments.map(async (comment) => {
+              // Fetch user name for the comment author
+              const commentAuthorResponse = await fetch(
+                `http://localhost:5243/api/Authentication/get-by-id/${comment.userId}`,
+                {
+                  headers: {
+                    Authorization: `Bearer ${YOUR_TOKEN}`,
+                  },
+                }
+              );
+              const commentAuthorData = await commentAuthorResponse.json();
+              const commentuserName = commentAuthorData.data.email;
+              const commentUserColor = commentAuthorData.data.color;
+              // console.log("commentUserColor", commentUserColor);
+              // Fetch reactions for the comment
+              const commentReactionsResponse = await fetch(
+                `http://localhost:5243/api/Reaction/get-all-reactions-by-commentId/${comment.id}`,
+                {
+                  headers: {
+                    Authorization: `Bearer ${YOUR_TOKEN}`,
+                  },
+                }
+              );
+              const commentReactionsData =
+                await commentReactionsResponse.json();
+              const commentReactions = commentReactionsData.status
+                ? commentReactionsData.data
+                : [];
+              // Count number of likes and dislikes for the comment
+              let commentLikes = 0;
+              let commentDislikes = 0;
+              commentReactions.forEach((reaction) => {
+                if (reaction.isLike) {
+                  commentLikes++;
+                } else {
+                  commentDislikes++;
+                }
+              });
+
+              // Fetch replies for the comment
+              const repliesResponse = await fetch(
+                `http://localhost:5243/api/Reply/get-all-replys-by-commentId/${comment.id}`,
+                {
+                  headers: {
+                    Authorization: `Bearer ${YOUR_TOKEN}`,
+                  },
+                }
+              );
+              const repliesData = await repliesResponse.json();
+              let replies = repliesData.data;
+
+              // Fetch additional data for each reply
+              const updatedReplies = await Promise.all(
+                replies.map(async (reply) => {
+                  // Fetch user name for the reply author
+                  const replyAuthorResponse = await fetch(
+                    `http://localhost:5243/api/Authentication/get-by-id/${reply.userId}`,
+                    {
+                      headers: {
+                        Authorization: `Bearer ${YOUR_TOKEN}`,
+                      },
+                    }
+                  );
+                  const replyAuthorData = await replyAuthorResponse.json();
+                  const replyuserName = replyAuthorData.data.email;
+                  const replyUserColor = replyAuthorData.data.color;
+
+                  // Fetch reactions for the reply
+                  const replyReactionsResponse = await fetch(
+                    `http://localhost:5243/api/Reaction/get-all-reactions-by-replyId/${reply.id}`,
+                    {
+                      headers: {
+                        Authorization: `Bearer ${YOUR_TOKEN}`,
+                      },
+                    }
+                  );
+                  const replyReactionsData =
+                    await replyReactionsResponse.json();
+                  const replyReactions = replyReactionsData.status
+                    ? replyReactionsData.data
+                    : [];
+                  // Count number of likes and dislikes for the reply
+                  let replyLikes = 0;
+                  let replyDislikes = 0;
+                  replyReactions.forEach((reaction) => {
+                    if (reaction.isLike) {
+                      replyLikes++;
+                    } else {
+                      replyDislikes++;
+                    }
+                  });
+
+                  return {
+                    ...reply,
+                    userName: replyuserName,
+                    likes: replyLikes,
+                    dislikes: replyDislikes,
+                    color: replyUserColor,
+                  };
+                })
+              );
+
+              return {
+                ...comment,
+                userName: commentuserName,
+                likes: commentLikes,
+                dislikes: commentDislikes,
+                replies: updatedReplies,
+                color: commentUserColor,
+              };
+            })
+          );
+
+          return {
+            ...post,
+            userName: userName,
+            likes: postLikes,
+            dislikes: postDislikes,
+            comments: updatedComments,
+            color: postUserColor,
+          };
+        })
+      );
+
+      // console.log("Updated Posts:", updatedPostsData);
+      const updatedPostComponents = updatedPostsData.map((post) => (
+        <Post key={post.id} post={post} />
+      ));
+      setUpdatedPosts(updatedPostComponents);
+      // console.log("updated posts:", updatedPosts);
+    } catch (error) {
+      console.error("Error:", error.message);
+    }
+  };
 
   useEffect(() => {
-    let userColors = {};
-    posts.forEach((post) => {
-      if (!userColors[post.userId]) {
-        userColors[post.userId] = getRandomColor();
-      }
-      post.comments.forEach((comment) => {
-        if (!userColors[comment.userId]) {
-          userColors[comment.userId] = getRandomColor();
-        }
-        comment.replies.forEach((reply) => {
-          if (!userColors[reply.userId]) {
-            userColors[reply.userId] = getRandomColor();
-          }
-        });
-      });
-    });
-    setUserColors(userColors);
+    fetchData();
   }, []);
-
-  const [expandedPostId, setExpandedPostId] = useState(null);
-
-  const toggleComments = (postId) => {
-    setExpandedPostId(postId === expandedPostId ? null : postId);
-  };
-
-  const renderReplies = (replies) => {
-    return replies.map((reply) => (
-      <Card
-        key={reply.id}
-        sx={{
-          ml: 20,
-          // width: "100%",
-          display: "flex",
-          justifyContent: "center",
-          flexDirection: "column",
-          mb: 0.75,
-          boxShadow: "0",
-          // backgroundColor: "rgba(239, 140, 203, 0.3)",
-          backgroundColor: "rgba(156,128,196, 0.3)",
-          borderRadius: "15px",
-        }}
-      >
-        {/* Render reply content */}
-        <CardHeader
-          avatar={
-            // background color corresponding to state
-            <Avatar sx={{ bgcolor: userColors[reply.userId] }}>
-              {reply.user[0]}
-            </Avatar>
-          }
-          title={reply.user}
-          subheader={reply.datePosted}
-        />
-        <CardContent sx={{ py: 0.4 }}>
-          <Typography
-            variant="body2"
-            color="text.secondary"
-            sx={{ fontFamily: "SF Pro Display Light", fontSize: "1.05rem" }}
-          >
-            {reply.content}
-          </Typography>
-        </CardContent>
-        <CardActions disableSpacing>
-          <IconButton aria-label="like post">
-            <ThumbUpIcon />
-          </IconButton>
-          <Typography sx={{ color: "#808080", fontSize: "2" }}>
-            {reply.likes}
-          </Typography>
-          <IconButton aria-label="dislike post">
-            <ThumbDownIcon />
-          </IconButton>
-          <Typography sx={{ color: "#808080", fontSize: "2" }}>
-            {reply.dislikes}
-          </Typography>
-          <IconButton aria-label="comment">
-            {/* <CommentIcon /> */}
-            <Typography sx={{ color: "#808080", fontSize: "2" }}>
-              Reply
-            </Typography>
-          </IconButton>
-        </CardActions>
-      </Card>
-    ));
-  };
-
-  const renderComments = (comments) => {
-    return comments.map((comment) => (
-      <div>
-        <Card
-          key={comment.id}
-          sx={{
-            ml: 10,
-            // width: 750,
-            display: "flex",
-            justifyContent: "center",
-            flexDirection: "column",
-            mb: 0.75,
-            paddingBottom: 0.75,
-            boxShadow: "0",
-            // backgroundColor: "rgba(239, 140, 203, 0.3)",
-            backgroundColor: "rgba(156,128,196, 0.5)",
-            borderRadius: "15px",
-          }}
-        >
-          {/* Render comment content */}
-          <CardHeader
-            avatar={
-              <Avatar sx={{ bgcolor: userColors[comment.userId] }}>
-                {comment.user[0]}
-              </Avatar>
-            }
-            title={comment.user}
-            subheader={comment.datePosted}
-          />
-          <CardContent sx={{ py: 0.4 }}>
-            <Typography
-              variant="body2"
-              color="text.secondary"
-              sx={{ fontFamily: "SF Pro Display Light", fontSize: "1.05rem" }}
-            >
-              {comment.content}
-            </Typography>
-          </CardContent>
-          <CardActions disableSpacing>
-            <IconButton aria-label="like post">
-              <ThumbUpIcon />
-            </IconButton>
-            <Typography sx={{ color: "#808080", fontSize: "2" }}>
-              {comment.likes}
-            </Typography>
-            <IconButton aria-label="dislike post">
-              <ThumbDownIcon />
-            </IconButton>
-            <Typography sx={{ color: "#808080", fontSize: "2" }}>
-              {comment.dislikes}
-            </Typography>
-            <IconButton aria-label="comment">
-              {/* <CommentIcon /> */}
-              <Typography sx={{ color: "#808080", fontSize: "2" }}>
-                Reply
-              </Typography>
-            </IconButton>
-          </CardActions>
-          {/* Replies */}
-        </Card>
-        {renderReplies(comment.replies)}
-      </div>
-    ));
-  };
-
-  const renderPosts = () => {
-    return posts.map((post) => (
-      <div key={post.id} style={{ borderBottom: "1px solid #909090" }}>
-        <Card
-          sx={{
-            width: "100%",
-            display: "flex",
-            justifyContent: "center",
-            flexDirection: "column",
-            // mb: 0.75,
-            paddingBottom: 1,
-            boxShadow: "0",
-          }}
-        >
-          <CardHeader
-            avatar={
-              <Avatar sx={{ bgcolor: userColors[post.userId] }}>
-                {post.user[0]}
-              </Avatar>
-            }
-            title={post.user}
-            subheader={post.datePosted}
-            sx={{ fontFamily: "SF Pro Display Light" }}
-          />
-          <CardContent sx={{ py: 0.5 }}>
-            <Typography
-              variant="body2"
-              color="text.secondary"
-              sx={{ fontFamily: "SF Pro Display Light", fontSize: "1.05rem" }}
-            >
-              {post.content}
-            </Typography>
-          </CardContent>
-          <CardActions disableSpacing>
-            <IconButton aria-label="like post">
-              <ThumbUpIcon />
-            </IconButton>
-            <Typography sx={{ color: "#808080", fontSize: "2" }}>
-              {post.likes}
-            </Typography>
-            <IconButton aria-label="dislike post">
-              <ThumbDownIcon />
-            </IconButton>
-            <Typography sx={{ color: "#808080", fontSize: "2" }}>
-              {post.dislikes}
-            </Typography>
-            <IconButton
-              aria-label="comment"
-              sx={{ ml: "auto" }}
-              onClick={() => toggleComments(post.id)}
-            >
-              <CommentIcon />
-            </IconButton>
-          </CardActions>
-        </Card>
-        {/* Render expanded comments if post is expanded */}
-        {expandedPostId === post.id && renderComments(post.comments)}
-      </div>
-    ));
-  };
 
   return (
     <>
@@ -299,6 +288,7 @@ export default function Feed() {
         style={{
           width: "800px",
           margin: "auto",
+          // paddingTop: "50px",
         }}
       >
         <div>
@@ -316,318 +306,15 @@ export default function Feed() {
             <div
               style={{
                 position: "relative",
-                height: "400px",
                 marginBottom: "500px",
-                // overflowY: "auto",
               }}
             >
-              {renderPosts()}
+              {updatedPosts}
             </div>
           </Box>
-          <Box
-            sx={{
-              display: "flex",
-              flexDirection: "column",
-              alignItems: "center",
-              position: "fixed",
-              bottom: "10px",
-              mt: 2, // Add some top margin
-              zIndex: 999,
-              backgroundColor: "white",
-              left: "50%",
-              transform: "translateX(-50%)",
-              width: "800px",
-              padding: "20px",
-              // boxShadow: "0px 0px 10px rgba(0, 0, 0, 0.1)",
-              borderRadius: "8px",
-            }}
-          >
-            <textarea
-              placeholder="Add a new post?"
-              style={{
-                width: "100%",
-                minHeight: "100px",
-                padding: "10px",
-                borderRadius: "4px",
-                border: "1px solid #ccc",
-                resize: "vertical",
-                marginBottom: "10px",
-                fontFamily: "SF Pro Display Light",
-                fontSize: "1.02rem",
-                // change the border color when text area is clicked on
-                // ":focus": {
-                //   border: "1px solid red",
-                // },
-              }}
-            />
-            <div style={{ display: "flex", flexDirection: "row" }}>
-              {/* Input for uploading images */}
-              <label htmlFor="file-upload" className="custom-file-label">
-                Choose file
-              </label>
-              <input
-                type="file"
-                className="custom-file-input"
-                accept="image/*"
-                style={{
-                  marginBottom: "10px",
-                  fontFamily: "SF Pro Display Light",
-                }}
-              />
-              {/* Add a button or action to submit the post */}
-              <button className="custom-button">Post</button>
-            </div>
-          </Box>
+          <AddPost posts={updatedPosts} updatePosts={setUpdatedPosts} />
         </div>
       </div>
     </>
   );
 }
-
-// SAME PAGE BUT WITH NESTED COMPONENTS FOR COMMENTS AND REPLIES
-// export default function Feed() {
-//   let [showComments, setShowComments] = useState({});
-//   let posts = [
-//     {
-//       id: 1,
-//       user: "John Doe",
-//       content:
-//         "Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-//       likes: 5,
-//       dislikes: 1,
-//       datePosted: "September 14, 2016",
-//       comments: [
-//         {
-//           id: 1,
-//           user: "Jane Doe",
-//           content: "I agree with this post!",
-//           likes: 2,
-//           dislikes: 0,
-//           commentId: 1,
-//           datePosted: "September 14, 2016",
-//           replies: [
-//             {
-//               id: 1,
-//               user: "Scott Something",
-//               content: "I agree with this comment!",
-//               likes: 2,
-//               dislikes: 0,
-//               datePosted: "September 14, 2016",
-//             },
-//             {
-//               id: 2,
-//               user: "Emilia Clarke",
-//               content: "I agree with this comment!",
-//               likes: 2,
-//               dislikes: 0,
-//               datePosted: "September 14, 2016",
-//             },
-//           ],
-//         },
-//       ],
-//     },
-//     {
-//       id: 2,
-//       user: "Jane Doe",
-//       content: "This is another post",
-//       likes: 2,
-//       dislikes: 0,
-//       datePosted: "September 14, 2016",
-//       comments: [],
-//     },
-//   ];
-
-//   const toggleComments = (postId) => {
-//     setShowComments((prev) => ({ ...prev, [postId]: !prev[postId] }));
-//   };
-
-//   const renderReplies = (replies) => {
-//     return replies.map((reply) => (
-//       <Card
-//         key={reply.id}
-//         sx={{
-//           ml: 2,
-//           width: 700,
-//           display: "flex",
-//           justifyContent: "center",
-//           flexDirection: "column",
-//           mb: 0.75,
-//           boxShadow: "0",
-//           backgroundColor: "rgba(239, 140, 203, 0.3)",
-//         }}
-//       >
-//         <CardHeader
-//           avatar={<Avatar sx={{ bgcolor: "#7389ea" }}>{reply.user[0]}</Avatar>}
-//           title={reply.user}
-//           subheader={reply.datePosted}
-//         />
-//         <CardContent sx={{ py: 0.4 }}>
-//           <Typography
-//             variant="body2"
-//             color="text.secondary"
-//             sx={{ fontFamily: "SF Pro Display Light", fontSize: "1.05rem" }}
-//           >
-//             {reply.content}
-//           </Typography>
-//         </CardContent>
-//         <CardActions disableSpacing>
-//           <IconButton aria-label="like post">
-//             <ThumbUpIcon />
-//           </IconButton>
-//           <Typography sx={{ color: "#808080", fontSize: "2" }}>
-//             {reply.likes}
-//           </Typography>
-//           <IconButton aria-label="dislike post">
-//             <ThumbDownIcon />
-//           </IconButton>
-//           <Typography sx={{ color: "#808080", fontSize: "2" }}>
-//             {reply.dislikes}
-//           </Typography>
-//           <IconButton aria-label="comment">
-//             {/* <CommentIcon /> */}
-//             <Typography sx={{ color: "#808080", fontSize: "2" }}>
-//               Reply
-//             </Typography>
-//           </IconButton>
-//         </CardActions>
-//       </Card>
-//     ));
-//   };
-
-//   const renderComments = (comments, postId) => {
-//     return showComments[postId]
-//       ? comments.map((comment) => (
-//           <Card
-//             key={comment.id}
-//             sx={{
-//               ml: 2,
-//               width: 750,
-//               display: "flex",
-//               justifyContent: "center",
-//               flexDirection: "column",
-//               mb: 0.75,
-//               paddingBottom: 0.75,
-//               boxShadow: "0",
-//               // border: "1px solid red",
-//               // borderRadius: "20px",
-//               backgroundColor: "rgba(239, 140, 203, 0.3)",
-//             }}
-//           >
-//             <CardHeader
-//               avatar={
-//                 <Avatar sx={{ bgcolor: "#7389ea" }}>{comment.user[0]}</Avatar>
-//               }
-//               title={comment.user}
-//               subheader={comment.datePosted}
-//             />
-//             <CardContent sx={{ py: 0.4 }}>
-//               <Typography
-//                 variant="body2"
-//                 color="text.secondary"
-//                 sx={{ fontFamily: "SF Pro Display Light", fontSize: "1.05rem" }}
-//               >
-//                 {comment.content}
-//               </Typography>
-//             </CardContent>
-//             <CardActions disableSpacing>
-//               <IconButton aria-label="like post">
-//                 <ThumbUpIcon />
-//               </IconButton>
-//               <Typography sx={{ color: "#808080", fontSize: "2" }}>
-//                 {comment.likes}
-//               </Typography>
-//               <IconButton aria-label="dislike post">
-//                 <ThumbDownIcon />
-//               </IconButton>
-//               <Typography sx={{ color: "#808080", fontSize: "2" }}>
-//                 {comment.dislikes}
-//               </Typography>
-//               <IconButton aria-label="comment">
-//                 {/* <CommentIcon /> */}
-//                 <Typography sx={{ color: "#808080", fontSize: "2" }}>
-//                   Reply
-//                 </Typography>
-//               </IconButton>
-//             </CardActions>
-//             {/* Replies */}
-//             {renderReplies(comment.replies)}
-//           </Card>
-//         ))
-//       : null;
-//   };
-
-//   const renderPosts = () => {
-//     return posts.map((post) => (
-//       <Card
-//         sx={{
-//           width: 800,
-//           display: "flex",
-//           justifyContent: "center",
-//           flexDirection: "column",
-//           mb: 0.75,
-//           paddingBottom: 1,
-//           boxShadow: "0",
-//           // borderBottom: "1px solid #A9A9A9",
-//           // borderRadius: "20px",
-//           borderRadius: 0,
-//           // mode: "dark",
-//           backgroundColor: "rgba(239, 140, 203, 0.3)",
-//           // backgroundColor: "rgba(204, 119, 173, 0.5)",
-//         }}
-//         key={post.id}
-//       >
-//         <CardHeader
-//           avatar={<Avatar sx={{ bgcolor: "#7389ea" }}>{post.user[0]}</Avatar>}
-//           title={post.user}
-//           subheader={post.datePosted}
-//           sx={{ fontFamily: "SF Pro Display Light" }}
-//         />
-//         <CardContent sx={{ py: 0.5 }}>
-//           <Typography
-//             variant="body2"
-//             color="text.secondary"
-//             sx={{ fontFamily: "SF Pro Display Light", fontSize: "1.05rem" }}
-//           >
-//             {post.content}
-//           </Typography>
-//         </CardContent>
-//         <CardActions disableSpacing>
-//           <IconButton aria-label="like post">
-//             <ThumbUpIcon />
-//           </IconButton>
-//           <Typography sx={{ color: "#808080", fontSize: "2" }}>
-//             {post.likes}
-//           </Typography>
-//           <IconButton aria-label="dislike post">
-//             <ThumbDownIcon />
-//           </IconButton>
-//           <Typography sx={{ color: "#808080", fontSize: "2" }}>
-//             {post.dislikes}
-//           </Typography>
-//           <IconButton
-//             aria-label="comment"
-//             sx={{ ml: "auto" }}
-//             onClick={() => toggleComments(post.id)}
-//           >
-//             <CommentIcon />
-//           </IconButton>
-//         </CardActions>
-//         {/* Comments */}
-//         {renderComments(post.comments, post.id)}
-//       </Card>
-//     ));
-//   };
-//   return (
-//     <Box
-//       sx={{
-//         display: "flex",
-//         flexDirection: "column",
-//         alignItems: "center",
-//         margin: "0 auto", // Center horizontally
-//         mt: 2, // Add some top margin
-//       }}
-//     >
-//       <div>{renderPosts()}</div>
-//     </Box>
-//   );
-// }

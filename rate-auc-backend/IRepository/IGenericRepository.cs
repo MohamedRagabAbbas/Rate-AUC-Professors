@@ -9,12 +9,15 @@ namespace RateAucProfessors.IRepository
         // get methods
         Task<ResponseMessage<IEnumerable<T>>> GetAllAsync();
         Task<ResponseMessage<T>> GetByIdAsync(int id);
+        Task<ResponseMessage<T>> GetByIdAsync(string id);
         Task<ResponseMessage<IEnumerable<T>>> GetWhereAsync(Expression<Func<T, bool>> predicate);
         Task<ResponseMessage<T>> GetFirstAsync(Expression<Func<T, bool>> predicate);
-
+        Task<ResponseMessage<T2>> GetAttributeAsync<T2>(Expression<Func<T, bool>> predicate1, Expression<Func<T, T2>> predicate2);
+        Task<ResponseMessage<T>> GetFirstAsyncWithInclude(Expression<Func<T, bool>> predicate, string include);
+        Task<ResponseMessage<IEnumerable<T>>> GetWhereAsyncWithInclude(Expression<Func<T, bool>> predicate, string include);
         // add methods
         Task<ResponseMessage<T>> Add(T model);
-        Task AppRanage(List<T> models);
+        Task AddRange(List<T> models);
 
         // update methods
         ResponseMessage<T> Update(T model);
@@ -22,7 +25,10 @@ namespace RateAucProfessors.IRepository
 
         // delete method
         Task<ResponseMessage<T>> Delete(int id);
+        Task<ResponseMessage<T>> Delete(string id);
         Task<ResponseMessage<IEnumerable<T>>> DeleteRange(List<int> ids);
+        Task<ResponseMessage<IEnumerable<T>>> DeleteAllAsync();
+
 
     }
 }

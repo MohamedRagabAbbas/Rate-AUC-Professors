@@ -10,13 +10,14 @@ namespace RateAucProfessors.Models
         public string Content { get; set; } = string.Empty;
         public DateTime Timestamp { get; set; } = DateTime.Now;
 
-
         // Relationships
-        public int FeedId { get; set; }
-        public Feed? Feed { get; set; }
-
-        public string UserId { get; set; }
+        public string UserId { get; set; } 
         public Student? Student { get; set; }
+        public int? FeedId { get; set; }
+        public Feed? Feed { get; set; }
+        public int? ReviewId { get; set; }
+        public Review? Review { get; set; }
+        public ICollection<Reaction>? Reactions { get; set; }
         public ICollection<Reply>? Replies { get; set; }
     }
 }

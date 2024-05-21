@@ -1,11 +1,16 @@
 import React, { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom'; // Import useNavigate
 import './departments.css'; // Import CSS file for styling
 import Papa from 'papaparse'; // Import PapaParse library
+import { TextField } from '@mui/material'; // Import TextField component for the search bar
+import professors from '../pages/professorDetail.json';
 
 function DepartmentsList() {
     const [categories, setCategories] = useState([]);
     const [selectedCategory, setSelectedCategory] = useState(null);
     const [parsedCsv, setParsedCsv] = useState(null);
+    const [searchTerm, setSearchTerm] = useState('');
+    const navigate = useNavigate(); // Initialize navigate function
 
     useEffect(() => {
         const fetchCategories = async () => {
@@ -18,7 +23,13 @@ function DepartmentsList() {
                 const parsedData = Papa.parse(csv, { header: true });
                 const uniqueCategories = [...new Set(parsedData.data.map(row => row.Category))];
                 setCategories(uniqueCategories);
-                setParsedCsv(parsedData);
+                setParsedCsv({
+                    ...parsedData,
+                    data: parsedData.data.map(row => ({
+                        ...row,
+                        Professor: standardizeName(row.Professor)
+                    }))
+                });
             } catch (error) {
                 console.error('Error fetching categories:', error);
             }
@@ -35,6 +46,29 @@ function DepartmentsList() {
         setSelectedCategory(null);
     };
 
+    const handleSearchChange = (event) => {
+        setSearchTerm(event.target.value);
+    };
+
+    const handleProfessorClick = (professorName) => {
+        let formattedName = standardizeName(professorName);
+        let professor = professors.find(p => standardizeName(p.Name) === formattedName);
+        if (professor) {
+            navigate(`/rate-professor/${professor.id}`);
+        } else {
+            console.error("Professor not found");
+        }
+    };
+
+    const filteredCategories = categories.filter(category => 
+        category.toLowerCase().includes(searchTerm.toLowerCase()));
+
+    function standardizeName(name) {
+        let parts = name.split(/,|\./).join("").split(/\s+/);
+        let lastName = parts.shift();
+        return [...parts, lastName].join(" ");
+    }
+
     return (
         <div className="departments-list-container">
             {selectedCategory ? (
@@ -47,7 +81,7 @@ function DepartmentsList() {
                         {parsedCsv && parsedCsv.data.map((row, index) => {
                             if (row.Category === selectedCategory) {
                                 return (
-                                    <div className="card" key={index}>
+                                    <div className="card" key={index} onClick={() => handleProfessorClick(row.Professor)}>
                                         {row.Professor}
                                     </div>
                                 );
@@ -58,10 +92,18 @@ function DepartmentsList() {
                 </div>
             ) : (
                 <>
-                    <h1>Departments</h1>
+                    <h1>Search For Departments</h1>
+                    <TextField
+                        label="Search Departments"
+                        variant="outlined"
+                        value={searchTerm}
+                        onChange={handleSearchChange}
+                        fullWidth
+                        sx={{ marginBottom: '20px' }}
+                    />
                     <div className="cards-container">
-                        {categories && categories.length > 0 ? (
-                            categories.map((category, index) => (
+                        {filteredCategories && filteredCategories.length > 0 ? (
+                            filteredCategories.map((category, index) => (
                                 <div className="card" key={index} onClick={() => handleCategoryClick(category)}>
                                     {category}
                                 </div>

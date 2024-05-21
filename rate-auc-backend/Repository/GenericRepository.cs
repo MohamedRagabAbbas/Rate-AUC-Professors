@@ -46,10 +46,36 @@ namespace RateAucProfessors.Repository
             return new ResponseMessage<T>() { Message = "The object is not found..." };
 
         }
+        public async Task<ResponseMessage<T>> GetByIdAsync(string id)
+        {
+            var obj = await _dbSet.FindAsync(id);
+            if (obj is not null)
+                return new ResponseMessage<T>()
+                {
+                    Message = "The object is successfully found...",
+                    Status = true,
+                    Data = obj
+                };
+            return new ResponseMessage<T>() { Message = "The object is not found..." };
+
+        }
 
         public async Task<ResponseMessage<T>> GetFirstAsync(Expression<Func<T, bool>> predicate)
         {
             var obj = await _dbSet.Where<T>(predicate).FirstAsync();
+            if (obj is not null)
+                return new ResponseMessage<T>()
+                {
+                    Message = "The object is successfully found...",
+                    Status = true,
+                    Data = obj
+                };
+            return new ResponseMessage<T>() { Message = "The object is not found..." };
+        }
+        //GetFirstAsyncWithInclude
+        public async Task<ResponseMessage<T>> GetFirstAsyncWithInclude(Expression<Func<T, bool>> predicate, string include)
+        {
+            var obj = await _dbSet.Include(include).Where<T>(predicate).FirstAsync();
             if (obj is not null)
                 return new ResponseMessage<T>()
                 {
@@ -72,9 +98,34 @@ namespace RateAucProfessors.Repository
                 };
             return new ResponseMessage<IEnumerable<T>>() { Message = "The object is not found..." };
         }
+        //GetWhereAsyncWithInclude
+        public async Task<ResponseMessage<IEnumerable<T>>> GetWhereAsyncWithInclude(Expression<Func<T, bool>> predicate, string include)
+        {
+            var objs = await _dbSet.Include(include).Where<T>(predicate).ToListAsync();
+            if (objs is not null)
+                return new ResponseMessage<IEnumerable<T>>()
+                {
+                    Message = "The object is successfully found...",
+                    Status = true,
+                    Data = objs
+                };
+            return new ResponseMessage<IEnumerable<T>>() { Message = "The object is not found..." };
+        }
 
-
-
+        public async Task<ResponseMessage<T2>> GetAttributeAsync<T2>(Expression<Func<T, bool>> predicate1, Expression<Func<T, T2>> predicate2)
+        {
+            var obj = await _dbSet.Where(predicate1).Select(predicate2).FirstOrDefaultAsync();
+            if (obj != null)
+            {
+                return new ResponseMessage<T2>()
+                {
+                    Message = "The object is successfully found...",
+                    Status = true,
+                    Data = obj
+                };
+            }
+            return new ResponseMessage<T2>() { Message = "The object is not found..." };
+        }
         public async Task<ResponseMessage<T>> Add(T model)
         {
             var obj = await _dbSet.AddAsync(model);
@@ -88,7 +139,7 @@ namespace RateAucProfessors.Repository
             return new ResponseMessage<T>() { Message = "This object is not added..." };
         }
 
-        public async Task AppRanage(List<T> models)
+        public async Task AddRange(List<T> models)
         {
             await _dbSet.AddRangeAsync(models);
         }
@@ -128,6 +179,23 @@ namespace RateAucProfessors.Repository
             }
             return new ResponseMessage<T>() { Message = "Cannot find this object" };
         }
+        public async Task<ResponseMessage<T>> Delete(string id)
+        {
+            var model = await _dbSet.FindAsync(id);
+            if (model is not null)
+            {
+                var obj = _dbSet.Remove(model);
+                if (obj is not null)
+                    return new ResponseMessage<T>()
+                    {
+                        Message = "This object is deleted Successfully...",
+                        Status = true,
+                        Data = obj as T
+                    };
+                return new ResponseMessage<T>() { Message = "Cannot delete this object" };
+            }
+            return new ResponseMessage<T>() { Message = "Cannot find this object" };
+        }
 
         public async Task<ResponseMessage<IEnumerable<T>>> DeleteRange(List<int> ids)
         {
@@ -147,7 +215,26 @@ namespace RateAucProfessors.Repository
                 responseMessage.Status = true;
             return responseMessage;
         }
-
+        public async Task<ResponseMessage<IEnumerable<T>>> DeleteAllAsync()
+    {
+        var all = await _dbSet.ToListAsync();
+        if (all.Any())
+        {
+            _dbSet.RemoveRange(all);
+            return new ResponseMessage<IEnumerable<T>>()
+            {
+                Message = "All objects are deleted successfully...",
+                Status = true,
+                Data = all
+            };
+        }
+        return new ResponseMessage<IEnumerable<T>>()
+        {
+            Message = "No objects found to delete..."
+        };
+    }
+       
 
     }
+    
 }
