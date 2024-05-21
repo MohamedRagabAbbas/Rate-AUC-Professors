@@ -56,7 +56,7 @@ The primary objective of the Rate AUC Professors application is to assist studen
 
 ### Sentiment Analysis
 
-- **Hugging Face API:** Integrated for sentiment analysis using pre-trained natural language processing models.
+- **Hugging Face API:** Integrated for sentiment analysis using pre-trained natural language processing models `roberto-base-go-emotions`.
 - **Python Requests Library:** Utilized for making HTTP requests to the sentiment analysis API.
 - **Sentiment-to-Emoji Mapping:** A predefined dictionary mapping sentiment labels to corresponding emojis for visual representation.
 - **Predict Sentiment Function:** Responsible for sending input queries to the sentiment analysis API, retrieving the predicted sentiment labels, and mapping them to emojis based on the predefined dictionary.
