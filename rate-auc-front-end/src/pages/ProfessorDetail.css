@@ -1,0 +1,22 @@
+.professor-detail-layout {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    min-height: 100vh;
+  }
+  
+  .professor-content {
+    flex: 1;
+    max-width: calc(100% / 3);  /* Limit the width to one third of the page */
+    padding: 20px;
+    width: 33%;
+    padding: 20px;
+  }
+  
+  .empty-space {
+    width: 67%;
+    flex: 2;
+    /* This part is intentionally left blank. You might want to add some placeholder or background style here */
+    background-color: #f4f4f4; /* Light grey background to show it's intentionally left empty */
+  }
+  
