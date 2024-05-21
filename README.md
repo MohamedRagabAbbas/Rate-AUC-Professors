@@ -54,6 +54,15 @@ The primary objective of the Rate AUC Professors application is to assist studen
 - **ERD Design:** Entity Relationship Diagram depicting the architecture of the database.
 - **ApplicationDbContext:** Manages database context and entity relationships.
 
+### Sentiment Analysis
+
+- **Hugging Face API:** Integrated for sentiment analysis using pre-trained natural language processing models.
+- **Python Requests Library:** Utilized for making HTTP requests to the sentiment analysis API.
+- **Sentiment-to-Emoji Mapping:** A predefined dictionary mapping sentiment labels to corresponding emojis for visual representation.
+- **Predict Sentiment Function:** Responsible for sending input queries to the sentiment analysis API, retrieving the predicted sentiment labels, and mapping them to emojis based on the predefined dictionary.
+- **Unit Testing:** Implemented using the `unittest` framework to ensure the accuracy and reliability of the sentiment prediction function under various scenarios.
+
+
 ## Technologies Used
 
 - **Front-end:** React.js, React Router, JWT
