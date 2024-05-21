@@ -1,121 +1,136 @@
-import React, { useState } from 'react';
-import { useParams, useNavigate } from 'react-router-dom';
-import {
-  Typography,
-  Box,
-  TextField,
-  Button,
-  Radio,
-  RadioGroup,
-  FormControlLabel,
-  FormControl,
-  FormLabel,
-  Paper
-} from '@mui/material';
-import StarBorder from '@mui/icons-material/StarBorder';
-import Star from '@mui/icons-material/Star';
-import professors from './professorDetail.json'; // Ensure this path is correct
-import './ProfessorFeed.css';
+import React, { useState, useEffect } from 'react';
+import { Button, TextField, Box, Typography, Rating, FormControl, useTheme } from '@mui/material';
+import { teal, red } from '@mui/material/colors';
+import { motion } from 'framer-motion';
+import { useNavigate } from 'react-router-dom'; // Import useNavigate for navigation
 import NavBar from "../components/NavBar";
+import axios from 'axios'; // Make sure to import axios if not already imported
+import { useParams } from 'react-router-dom';
 
-function RateProfessor() {
+
+
+export default function RateProfessor() {
   const { professorId } = useParams();
-  const navigate = useNavigate();
-  const professor = professors.find(p => p.id === professorId);
-  const [ratings, setRatings] = useState({
-    easiness: '',
-    helpfulness: '',
-    clarity: '',
-    comments: ''
-  });
+  const [professor, setProfessor] = useState(null);
+  const [leniency, setLeniency] = useState(0);
+  const [workload, setWorkload] = useState(0);
+  const [explanation, setExplanation] = useState(0);
+  const [comment, setComment] = useState('');
+  const [submitStatus, setSubmitStatus] = useState('');
+  const navigate = useNavigate(); // Hook for navigation
 
-  const handleChange = (event) => {
-    const { name, value } = event.target;
-    setRatings({
-      ...ratings,
-      [name]: value
-    });
+  useEffect(() => {
+    const fetchProfessor = async () => {
+      try {
+        const response = await axios.get(`http://localhost:5243/api/Professor/get-by-id/${professorId}`);
+        if (response.data.status) {
+          setProfessor(response.data.data); // Assuming response.data.data contains the professor data
+        } else {
+          throw new Error(response.data.message);
+        }
+      } catch (error) {
+        console.error('Failed to fetch professor details:', error);
+      }
+    };
+
+    fetchProfessor();
+  }, [professorId]);
+
+
+  const handleBack = () => {
+    navigate(-1); // Uses the navigate hook to go back
   };
 
-  const validateForm = () => {
-    if (!ratings.easiness || !ratings.helpfulness || !ratings.clarity || ratings.comments.trim() === '') {
-      alert('All fields must be filled out.');
-      return false;
-    }
-    return true;
-  };
-
-  const handleSubmit = (event) => {
+  const handleSubmit = async (event) => {
     event.preventDefault();
-    if (!validateForm()) {
-      return;
+    const userId = "2b6136fe-6763-4e16-b9f9-589334ab248c";
+    const review = {
+      professorId, // Include the professorId in the review (linking)
+      leniency,
+      workload,
+      explanation,
+      content: comment
+    };
+
+    const YOUR_TOKEN = localStorage.getItem("authToken");
+
+    try {
+      const response = await fetch(`http://localhost:5243/api/review/add/?userId=${userId}`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          Authorization: `Bearer ${YOUR_TOKEN}`,
+        },
+        body: JSON.stringify(review)
+      });
+
+      const responseData = await response.json();
+
+      if (response.ok) {
+        setSubmitStatus('Review submitted successfully!');
+      } else {
+        throw new Error(responseData.message || 'Failed to submit review');
+      }
+    } catch (error) {
+      setSubmitStatus(`Error: ${error.message}`);
     }
-    console.log('Submitted Ratings:', ratings);
-    navigate(-1);
   };
+  
 
-  if (!professor) {
-    return <Typography variant="h6" color="error">Professor not found.</Typography>;
-  }
-
-  return (
-  <>
-  <NavBar/>
-    <Box className="container">
-      <Box component={Paper} elevation={3} sx={{ p: 3, width: '95%', maxWidth: 'none', mx: 'auto', mt: 5, border: '1px solid black' }}>
-        <Typography variant="h4" sx={{ mb: 2 }}>Rate: {professor.Name}</Typography>
-        <FormControl component="fieldset" fullWidth>
-          <FormLabel component="legend">Leniency</FormLabel>
-          <RadioGroup row name="easiness" value={ratings.easiness} onChange={handleChange}>
-            {/* Easiness Ratings */}
-            <FormControlLabel value="1" control={<Radio icon={<StarBorder />} checkedIcon={<Star />} />} label="1 (Hard)" />
-            <FormControlLabel value="2" control={<Radio icon={<StarBorder />} checkedIcon={<Star />} />} label="2" />
-            <FormControlLabel value="3" control={<Radio icon={<StarBorder />} checkedIcon={<Star />} />} label="3" />
-            <FormControlLabel value="4" control={<Radio icon={<StarBorder />} checkedIcon={<Star />} />} label="4" />
-            <FormControlLabel value="5" control={<Radio icon={<StarBorder />} checkedIcon={<Star />} />} label="5 (Easy)" />
-          </RadioGroup>
-          <FormLabel component="legend">Workload</FormLabel>
-          <RadioGroup row name="helpfulness" value={ratings.helpfulness} onChange={handleChange}>
-            {/* Helpfulness Ratings */}
-            <FormControlLabel value="1" control={<Radio icon={<StarBorder />} checkedIcon={<Star />} />} label="1 (Useless)" />
-            <FormControlLabel value="2" control={<Radio icon={<StarBorder />} checkedIcon={<Star />} />} label="2" />
-            <FormControlLabel value="3" control={<Radio icon={<StarBorder />} checkedIcon={<Star />} />} label="3" />
-            <FormControlLabel value="4" control={<Radio icon={<StarBorder />} checkedIcon={<Star />} />} label="4" />
-            <FormControlLabel value="5" control={<Radio icon={<StarBorder />} checkedIcon={<Star />} />} label="5 (Extremely Helpful)" />
-          </RadioGroup>
-          <FormLabel component="legend">Explanation</FormLabel>
-          <RadioGroup row name="clarity" value={ratings.clarity} onChange={handleChange}>
-            {/* Clarity Ratings */}
-            <FormControlLabel value="1" control={<Radio icon={<StarBorder />} checkedIcon={<Star />} />} label="1 (None)" />
-            <FormControlLabel value="2" control={<Radio icon={<StarBorder />} checkedIcon={<Star />} />} label="2" />
-            <FormControlLabel value="3" control={<Radio icon={<StarBorder />} checkedIcon={<Star />} />} label="3" />
-            <FormControlLabel value="4" control={<Radio icon={<StarBorder />} checkedIcon={<Star />} />} label="4" />
-            <FormControlLabel value="5" control={<Radio icon={<StarBorder />} checkedIcon={<Star />} />} label="5 (Crystal)" />
-          </RadioGroup>
-          <TextField
-            fullWidth
-            multiline
-            rows={4}
-            name="comments"
-            label="Comments"
-            variant="outlined"
-            value={ratings.comments}
-            onChange={handleChange}
-            margin="normal"
-            helperText="Please keep comments clean. Libelous comments will be removed."
-            sx={{ mt: 2 }}
-          />
-          <Button type="submit" variant="contained" color="primary" onClick={handleSubmit} sx={{ mt: 2 }}>
-            Rate this Professor
-          </Button>
-          <Button variant="contained" color="secondary" onClick={() => navigate(-1)} sx={{ mt: 2, bgcolor: 'red' }}>
-            Return to Previous Page
-          </Button>
-        </FormControl>
-      </Box>
-    </Box>
-	</>
-  );
+    return (
+        <>
+            <NavBar />
+            <Box sx={{ width: '95vw', minHeight: '91vh', bgcolor: teal[50], p: 3, overflowX: 'hidden', mx: 'auto' }}> {/* Adjusted dimensions */}
+                <Typography variant="h4" component={motion.div} initial={{ scale: 0.9 }} animate={{ scale: 1 }} transition={{ duration: 0.5 }}>
+                    Rate Professor {professor ? professor.name : 'Loading...'}
+                </Typography>
+                <form onSubmit={handleSubmit} style={{ width: '100%', padding: '20px', boxSizing: 'border-box' }}>
+                    <FormControl fullWidth margin="normal">
+                        <Typography component="legend">Leniency</Typography>
+                        <Rating
+                            name="leniency-rating"
+                            value={leniency}
+                            onChange={(event, newValue) => {
+                                setLeniency(newValue);
+                            }}
+                        />
+                    </FormControl>
+                    <FormControl fullWidth margin="normal">
+                        <Typography component="legend">Workload</Typography>
+                        <Rating
+                            name="workload-rating"
+                            value={workload}
+                            onChange={(event, newValue) => {
+                                setWorkload(newValue);
+                            }}
+                        />
+                    </FormControl>
+                    <FormControl fullWidth margin="normal">
+                        <Typography component="legend">Explanation</Typography>
+                        <Rating
+                            name="explanation-rating"
+                            value={explanation}
+                            onChange={(event, newValue) => {
+                                setExplanation(newValue);
+                            }}
+                        />
+                    </FormControl>
+                    <TextField
+                        fullWidth
+                        label="Comment"
+                        multiline
+                        rows={4}
+                        value={comment}
+                        onChange={e => setComment(e.target.value)}
+                        margin="normal"
+                    />
+                    <Box sx={{ display: 'flex', justifyContent: 'space-between', mt: 2 }}>
+                        <Button type="submit" variant="contained" color="primary">Submit Review</Button>
+                        <Button onClick={handleBack} variant="contained" sx={{ bgcolor: red[500] }}>Go Back</Button>
+                    </Box>
+                </form>
+                <Typography variant="body2" color="error">{submitStatus}</Typography>
+            </Box>
+        </>
+    );
 }
-
-export default RateProfessor;
