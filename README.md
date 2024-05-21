@@ -65,7 +65,7 @@ The primary objective of the Rate AUC Professors application is to assist studen
 
 1. **Clone the repository:**
    ```bash
-   git clone https://github.com/yourusername/rate-auc-professors.git
+   git clone https://github.com/MohamedRagabAbbas/rate-auc-professors.git
    cd rate-auc-professors
 2. **Install front-end dependencies:**
    ```bash
