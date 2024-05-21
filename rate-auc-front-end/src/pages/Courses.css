@@ -19,12 +19,15 @@ h1 {
 }
 
 .card {
-    padding: 30px; /* Increased padding */
+    padding: 20px; /* Increased padding */
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     background-color: rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     cursor: pointer;
+    display: flex;
+    height: 40%;
+    flex-direction: column;
 }
 
 .card:hover {
@@ -47,6 +50,7 @@ h1 {
     margin-top: 20px;
 }
 
+
 .return-button {
     background-color: #007bff;
     color: #fff;
@@ -61,4 +65,6 @@ h1 {
 .return-button:hover {
     background-color: #0056b3;
 }
+
+
 
