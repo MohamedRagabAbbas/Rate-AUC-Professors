@@ -54,8 +54,9 @@ function App() {
           <Route path="/professors/:professorId" element={<ProfessorDetail />} />
           <Route path="/rate-professor/:professorId" element={<RateProfessor />} />
           <Route path="/departments" element={<Departments />} />
+          <Route path="/departments/:professorId" element={<ProfessorDetail />} />
           <Route path="/courses" element={<Courses />} />
-          <Route path="/courses/detail/:courseName" element={<CourseDetail />} />
+          <Route path="/courses/detail/:courseId" element={<CourseDetail />} />
           <Route path="*" element={<NotFound />} />
           <Route path="/profile" element={<PersonalProfile />} /> 
         </Routes>
