@@ -1,61 +1,88 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect, useMemo } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { Typography, Grid, TextField } from '@mui/material';
-import professors from './professorDetail.json';
-import './Courses.css'; // Make sure this CSS file includes the necessary styles
+import { TextField, CircularProgress } from '@mui/material';
 import NavBar from "../components/NavBar";
+import '../components/departments.css';
 
 function Courses() {
     const navigate = useNavigate();
-    const coursesSet = new Set();
+    const [courses, setCourses] = useState([]);
     const [searchTerm, setSearchTerm] = useState('');
+    const [loading, setLoading] = useState(true);
+    const [error, setError] = useState(null);
 
-    // Collect all unique courses
-    professors.forEach(prof => {
-        prof.Courses.split(', ').forEach(course => {
-            coursesSet.add(course.trim());
-        });
-    });
-    const courses = Array.from(coursesSet).filter(course =>
-        course.toLowerCase().includes(searchTerm.toLowerCase())
-    );
+    useEffect(() => {
+        const fetchCourses = async () => {
+            try {
+                setLoading(true);
+                const response = await fetch('http://localhost:5243/api/Course/get-all');
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+                const data = await response.json();
+                if (data.status && data.data) {
+                    setCourses(data.data);
+                } else {
+                    throw new Error('No courses found in the response');
+                }
+            } catch (error) {
+                console.error('Error fetching courses:', error);
+                setError(error.message);
+            } finally {
+                setLoading(false);
+            }
+        };
+        fetchCourses();
+    }, []);
 
-    const handleCourseClick = (courseName) => {
-        navigate(`/courses/detail/${courseName}`);
+    const handleCourseClick = (courseId) => {
+        navigate(`/courses/detail/${courseId}`);
     };
 
     const handleSearchChange = (event) => {
         setSearchTerm(event.target.value);
     };
 
+    const filteredCourses = useMemo(() => {
+        return courses.filter(course =>
+            course.name.toLowerCase().includes(searchTerm.toLowerCase())
+        );
+    }, [courses, searchTerm]);
+
+    if (loading) {
+        return <CircularProgress />;
+    }
+
+    if (error) {
+        return <div>Error: {error}</div>;
+    }
+
     return (
-	<>
-	<NavBar/>
-        <div className="departments-list-container">
-            <h1>Search For Courses</h1>
-            <TextField
-                label="Search Courses"
-                variant="outlined"
-                value={searchTerm}
-                onChange={handleSearchChange}
-                fullWidth
-                sx={{ marginBottom: '20px' }}
-            />
-            <Grid container spacing={2}>
-                {courses.map((course, index) => (
-                    <Grid item xs={12} sm={6} md={3} key={index}>
-                        <div className="card" onClick={() => handleCourseClick(course)}>
-                            <div className="card-content">
-                                <Typography gutterBottom variant="h7">
-                                    {course}
-                                </Typography>
+        <>
+            <NavBar />
+            <div className="departments-list-container">
+                <h1>Search For Courses</h1>
+                <TextField
+                    label="Search Courses"
+                    variant="outlined"
+                    value={searchTerm}
+                    onChange={handleSearchChange}
+                    fullWidth
+                    sx={{ marginBottom: '20px' }}
+                />
+                <div className="cards-container">
+                    {filteredCourses.length > 0 ? (
+                        filteredCourses.map((course) => (
+                            <div className="card" key={course.id} onClick={() => handleCourseClick(course.id)}>
+                                {course.name}
                             </div>
-                        </div>
-                    </Grid>
-                ))}
-            </Grid>
-        </div>
-		</>
+                        ))
+                    ) : (
+                        <div>No courses found</div>
+                    )}
+                </div>
+            </div>
+        </>
     );
 }
 
