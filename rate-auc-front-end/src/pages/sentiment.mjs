@@ -52,9 +52,11 @@ const getSentimentEmoji = async (sentence) => {
     return emoji;
 };
 
-// Example usage:
-const inputSentence = "Really good! Definitely go for her. The class could be a bit demanding but you will learn a lot.";
+export default getSentimentEmoji;
 
-getSentimentEmoji(inputSentence).then((emoji) => {
-    console.log(`Predicted Sentiment: ${emoji}`);
-});
+// Example usage:
+// const inputSentence = "Really good! Definitely go for her. The class could be a bit demanding but you will learn a lot.";
+
+// getSentimentEmoji(inputSentence).then((emoji) => {
+//     console.log(`Predicted Sentiment: ${emoji}`);
+// });

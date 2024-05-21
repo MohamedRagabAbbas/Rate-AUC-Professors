@@ -4,6 +4,7 @@ import NavBar from "../components/NavBar";
 import "../components/feed/feed.css";
 import Post from "../components/feed/post";
 import AddPost from "../components/feed/addPost";
+import getSentimentEmoji from "./sentiment.mjs";
 
 export default function Feed() {
   let colors = ["#6171BA", "#218B8B", "#EF8CCB", "#31B0CD", "#A083C9"];
